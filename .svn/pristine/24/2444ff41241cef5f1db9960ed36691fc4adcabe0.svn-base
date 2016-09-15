@@ -1,0 +1,16 @@
+
+
+/mydet/beamZ 10
+/mydet/beamA 21
+/mydet/beamCharge 10
+/mydet/energy 90 MeV
+
+
+/mydet/centralZ 10
+/mydet/centralA 21
+/mydet/centralQ 10
+/mydet/centralE 90
+/mydet/updategeo
+
+/mydet/nEvents 10
+/mydet/doBeam

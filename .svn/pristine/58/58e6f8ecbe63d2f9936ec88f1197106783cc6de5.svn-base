@@ -1,0 +1,67 @@
+#
+# Macro file for visualising all the vacuum volumes
+#
+
+########################################################################################
+# Use this open statement to create an OpenGL view:
+/vis/open OGL 800x400-0+0
+
+# To draw individual parts only (must add physical not logical volumes)
+/vis/drawVolume targetPhys
+/vis/scene/add/volume degrader1Phys
+/vis/scene/add/volume degrader2Phys
+#/vis/scene/add/volume Pipe0WallPhysical
+#/vis/scene/add/volume Pipe1WallPhysical
+/vis/scene/add/volume Pipe0Physical
+#/vis/scene/add/volume Q1WallPhysical
+/vis/scene/add/volume Q1Physical
+
+
+# Wait for all draw commands to finish before drawing to avoid excess redrawing
+/vis/viewer/set/autoRefresh false
+
+########################################################################################
+# viewing all of EMMA
+/vis/viewer/zoomTo 2
+/vis/viewer/set/viewpointThetaPhi 90 89
+/vis/viewer/panTo 0 0.5 m  
+
+# Turn on/off hidden line removal
+/vis/viewer/set/hiddenEdge 1
+
+# Specify style (surface or wireframe):
+/vis/viewer/set/style surface
+
+# Edges become visible/invisible in surface mode.
+/vis/viewer/set/edge 1
+
+# Draw coordinate axes:
+/vis/scene/add/axes 1.0 0 1.0 0.5 m
+
+########################################################################################
+# Sets colour of logical volume(s)  (must manipulate logical not physical volumes)
+/vis/geometry/set/colour degrader1Logical 0 green 
+/vis/geometry/set/colour degrader2Logical 0 magenta 
+/vis/geometry/set/colour Pipe0WallLogical 0 grey 
+/vis/geometry/set/colour Pipe1WallLogical 0 grey 
+/vis/geometry/set/colour Pipe0Logical 0 blue 
+/vis/geometry/set/colour Q1Logical 0 red 
+
+
+########################################################################################
+# Wait for all draw commands to finish before drawing to avoid excess redrawing
+/vis/viewer/set/autoRefresh true
+
+########################################################################################
+# Change color of background and volumes
+/vis/viewer/set/background white
+/vis/viewer/set/defaultColour grey
+
+# To print
+/vis/ogl/set/printMode vectored
+/vis/ogl/set/printSize 1000 500
+#/vis/ogl/set/printFilename drawings/frontVolumes
+#/vis/ogl/printEPS
+#/vis/viewer/set/background black
+#/vis/viewer/set/defaultColour white
+

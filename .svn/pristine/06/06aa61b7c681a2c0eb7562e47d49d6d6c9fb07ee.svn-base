@@ -1,0 +1,22 @@
+# Prepare 84Rb Contaminent 
+#---------------------------------------------------------------
+/mydet/beamZ 37
+/mydet/beamA 84
+/mydet/beamCharge 26
+/mydet/energy 164 MeV
+/mydet/sigmaEnergy 0.17           # beam-energy resolution (sigma) in percent of beam energy
+/mydet/Angle 0.036 deg   	  # beam angle sampled uniformly between 0 and theta=sigmaAngle
+/mydet/beamSpotDiameter 2.0 mm
+/mydet/transEmittance 2.0 mm
+#---------------------------------------------------------------
+
+
+# Run contaminent simulation
+#-----------------------
+/mydet/nEvents 100     
+/mydet/doPrepare
+/mydet/doBeam
+/mydet/doReaction
+#-----------------------
+
+

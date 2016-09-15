@@ -1,0 +1,3 @@
+IN       # IN/OUT
+40         # pressure (torr)
+20         # temperature (degrees Celsius)

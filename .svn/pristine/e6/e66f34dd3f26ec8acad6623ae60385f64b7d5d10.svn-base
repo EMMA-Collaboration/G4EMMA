@@ -1,0 +1,19 @@
+
+
+/mydet/beamZ 40
+/mydet/beamA 87
+/mydet/beamCharge 18
+/mydet/energy 50 MeV
+#/mydet/sigmaEnergy 0.1
+#/mydet/beamSpotDiameter 1
+
+
+/mydet/centralZ 40
+/mydet/centralA 87
+/mydet/centralQ 18
+/mydet/centralE 50
+/mydet/updategeo
+
+
+/mydet/nEvents 1
+/mydet/doBeam

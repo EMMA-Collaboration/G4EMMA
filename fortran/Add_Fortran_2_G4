@@ -1,0 +1,45 @@
+To add fortran to GEANT4 need to change a few items in the makefiles.
+
+1.  In file $(G4INSTALL)/config/sys/Darwin-g++.gmk
+
+	The def of FCLIBS on line 39 needs to be 
+
+36: FC := gfortran
+37:	#  FCFLAGS += -fno-automatic -fno-backslash -fno-second-underscore
+38: LDFLAGS += -bind_at_load -arch_multiple
+39: FCLIBS := -lg2c
+40: SHEXT   := dylib
+
+	which requires removing the "-lnsl" tag
+	Also comment out line 37 for the FCLFLAGS	
+	
+2.  In the file $(G4INSTALL)/config/common.gmk
+
+	add to the file
+	
+19: fortsources  := $(wildcard fortran/*.f)
+20: objects      += $(patsubst fortran/%.f,$(G4TMPDIR)/%.o,$(fortsources))
+
+----------------------------------------------------------	
+	
+75:	#
+76:	# Compile fortran files
+77:	#
+78:
+79: $(G4TMPDIR)%.o: fortran/%.f
+80:	@echo Compiling $*.f ...
+81:	@$(FC) $(FCFLAGS) -c $(OUT_OBJ)$(G4TMPDIR)/$(*F).o fortran/$*.f
+
+3.  In the file $(G4INSTALL)/config/binmake.gmk
+
+	The tag "$(FCLIBS)" was added to line 356 and 361
+	
+353:	ifdef CPPVERBOSE
+354:	$(CXX) $(CXXFLAGS) $(CPPFLAGS) \
+355:	  $(OUT)$(G4BINDIR)/$(G4TARGET) $(objects) $(LDFLAGS) \
+356:	  $(LDLIBS) $(FCLIBS)
+357:	else
+358:	@echo Linking $(G4TARGET)
+359:	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) \
+360:	  $(OUT)$(G4BINDIR)/$(G4TARGET) $(objects) $(LDFLAGS) \
+361:	  $(LDLIBS) $(FCLIBS)

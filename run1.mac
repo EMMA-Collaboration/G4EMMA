@@ -1,0 +1,47 @@
+
+/mydet/centralZ 40
+/mydet/centralA 87
+/mydet/centralQ 18
+/mydet/centralE 50
+/mydet/updategeo
+
+###########################
+/mydet/beamZ 40
+/mydet/beamA 87
+/mydet/beamCharge 18
+/mydet/energy 50 MeV
+
+/mydet/nEvents 1
+/mydet/doBeam
+##########################
+/mydet/beamZ 40
+/mydet/beamA 86
+/mydet/beamCharge 18
+/mydet/energy 50 MeV
+
+/mydet/nEvents 1
+/mydet/doBeam
+##########################
+/mydet/beamZ 40
+/mydet/beamA 85
+/mydet/beamCharge 18
+/mydet/energy 50 MeV
+
+/mydet/nEvents 1
+/mydet/doBeam
+##########################
+/mydet/beamZ 40
+/mydet/beamA 88
+/mydet/beamCharge 18
+/mydet/energy 50 MeV
+
+/mydet/nEvents 1
+/mydet/doBeam
+##########################
+/mydet/beamZ 40
+/mydet/beamA 89
+/mydet/beamCharge 18
+/mydet/energy 50 MeV
+
+/mydet/nEvents 1
+/mydet/doBeam
