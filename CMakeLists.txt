@@ -36,16 +36,28 @@ endif()
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include 
                     ${Geant4_INCLUDE_DIR}
                     ${ROOT_INCLUDE_DIR})
-file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
-file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
+
+#Grab all source/header files aren't hidden / edits				  
+file(GLOB sources "${PROJECT_SOURCE_DIR}/src/[^.]*.cc")
+file(GLOB headers "${PROJECT_SOURCE_DIR}/include/[^.]*.hh")
+
 
 #----------------------------------------------------------------------------
-# Add the executable, and link it to the Geant4 libraries
-#
-set(F2C_LIBRARIES /opt/local/lib/libf2c.a)
+# Find the fortran2c library for mitray
+find_library(F2C_LIBRARY
+    NAMES libf2c.a
+    PATHS 
+    /opt/local/lib/
+    /usr/local/lib/
+    /usr/lib
+	[NO_DEFAULT_PATH]
+    )
+message(STATUS "Lib file detected: [${F2C_LIBRARY}].")
+
+#---------------------------------------------------------------------------
+#Make the executable with all the necessary libs
 add_executable(EMMAapp EMMAapp.cc ${sources} ${headers})
-target_link_libraries(EMMAapp ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} 
-${F2C_LIBRARIES} )
+target_link_libraries(EMMAapp ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} ${F2C_LIBRARY} )
 
 #----------------------------------------------------------------------------
 # Copy all scripts to the build directory, i.e. the directory in which we
