@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nicholas/Code/copy/G4EMMA
+CMAKE_SOURCE_DIR = /home/nicholas/Code/G4EMMA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nicholas/Code/copy/G4EMMA/G4EMMA-build
+CMAKE_BINARY_DIR = /home/nicholas/Code/G4EMMA/G4EMMA-build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/EMMAapp.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/EMMAapp.dir/flags.make
 
 CMakeFiles/EMMAapp.dir/EMMAapp.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/EMMAapp.cc.o: ../EMMAapp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EMMAapp.dir/EMMAapp.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/EMMAapp.cc.o -c /home/nicholas/Code/copy/G4EMMA/EMMAapp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EMMAapp.dir/EMMAapp.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/EMMAapp.cc.o -c /home/nicholas/Code/G4EMMA/EMMAapp.cc
 
 CMakeFiles/EMMAapp.dir/EMMAapp.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/EMMAapp.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/EMMAapp.cc > CMakeFiles/EMMAapp.dir/EMMAapp.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/EMMAapp.cc > CMakeFiles/EMMAapp.dir/EMMAapp.cc.i
 
 CMakeFiles/EMMAapp.dir/EMMAapp.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/EMMAapp.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/EMMAapp.cc -o CMakeFiles/EMMAapp.dir/EMMAapp.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/EMMAapp.cc -o CMakeFiles/EMMAapp.dir/EMMAapp.cc.s
 
 CMakeFiles/EMMAapp.dir/EMMAapp.cc.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/EMMAapp.dir/EMMAapp.cc.o.provides.build: CMakeFiles/EMMAapp.dir/EMMAa
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o: ../src/EMMADetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMADetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMADetectorConstruction.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMADetectorConstruction.cc > CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMADetectorConstruction.cc > CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMADetectorConstruction.cc -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMADetectorConstruction.cc -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/EMMAapp.dir/src/EMMADetectorConstruction.cc.o.provides.build: CMakeFi
 
 CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o: ../src/EMMAAnalysisManager.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAAnalysisManager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAAnalysisManager.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAAnalysisManager.cc > CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAAnalysisManager.cc > CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAAnalysisManager.cc -o CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAAnalysisManager.cc -o CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAAnalysisManager.cc.o.provides.build: CMakeFiles/E
 
 CMakeFiles/EMMAapp.dir/src/BGField3.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField3.cc.o: ../src/BGField3.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField3.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField3.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField3.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField3.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField3.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField3.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField3.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField3.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField3.cc > CMakeFiles/EMMAapp.dir/src/BGField3.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField3.cc > CMakeFiles/EMMAapp.dir/src/BGField3.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField3.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField3.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField3.cc -o CMakeFiles/EMMAapp.dir/src/BGField3.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField3.cc -o CMakeFiles/EMMAapp.dir/src/BGField3.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField3.cc.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/EMMAapp.dir/src/BGField3.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o: ../src/EMMAMuonPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAMuonPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAMuonPhysics.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAMuonPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAMuonPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAMuonPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAMuonPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAMuonPhysics.cc.o.provides.build: CMakeFiles/EMMAa
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o: ../src/EMMAIonChamber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAIonChamber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAIonChamber.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAIonChamber.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAIonChamber.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAIonChamber.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAIonChamber.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAIonChamber.cc.o.provides.build: CMakeFiles/EMMAap
 
 CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o: ../src/G4LindhardPartition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/G4LindhardPartition.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o -c /home/nicholas/Code/G4EMMA/src/G4LindhardPartition.cc
 
 CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/G4LindhardPartition.cc > CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/G4LindhardPartition.cc > CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.i
 
 CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/G4LindhardPartition.cc -o CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/G4LindhardPartition.cc -o CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.s
 
 CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/EMMAapp.dir/src/G4LindhardPartition.cc.o.provides.build: CMakeFiles/E
 
 CMakeFiles/EMMAapp.dir/src/BGField4.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField4.cc.o: ../src/BGField4.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField4.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField4.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField4.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField4.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField4.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField4.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField4.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField4.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField4.cc > CMakeFiles/EMMAapp.dir/src/BGField4.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField4.cc > CMakeFiles/EMMAapp.dir/src/BGField4.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField4.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField4.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField4.cc -o CMakeFiles/EMMAapp.dir/src/BGField4.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField4.cc -o CMakeFiles/EMMAapp.dir/src/BGField4.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField4.cc.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/EMMAapp.dir/src/BGField4.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o: ../src/EMMAElementField.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAElementField.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAElementField.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAElementField.cc > CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAElementField.cc > CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAElementField.cc -o CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAElementField.cc -o CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAElementField.cc.o.provides.build: CMakeFiles/EMMA
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o: ../src/EMMADetectorConstMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMADetectorConstMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMADetectorConstMessenger.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMADetectorConstMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMADetectorConstMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMADetectorConstMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMADetectorConstMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/EMMAapp.dir/src/EMMADetectorConstMessenger.cc.o.provides.build: CMake
 
 CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o: ../src/F04StepMax.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/F04StepMax.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o -c /home/nicholas/Code/G4EMMA/src/F04StepMax.cc
 
 CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/F04StepMax.cc > CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/F04StepMax.cc > CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.i
 
 CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/F04StepMax.cc -o CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/F04StepMax.cc -o CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.s
 
 CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/EMMAapp.dir/src/F04StepMax.cc.o.provides.build: CMakeFiles/EMMAapp.di
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o: ../src/EMMAIonPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAIonPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAIonPhysics.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAIonPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAIonPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAIonPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAIonPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAIonPhysics.cc.o.provides.build: CMakeFiles/EMMAap
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o: ../src/EMMANuclearReactionDataSet.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionDataSet.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionDataSet.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionDataSet.cc > CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionDataSet.cc > CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionDataSet.cc -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionDataSet.cc -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionDataSet.cc.o.provides.build: CMake
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o: ../src/EMMAIonPhysicsMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAIonPhysicsMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAIonPhysicsMessenger.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAIonPhysicsMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAIonPhysicsMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAIonPhysicsMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAIonPhysicsMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAIonPhysicsMessenger.cc.o.provides.build: CMakeFil
 
 CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o: ../src/TrackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/TrackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o -c /home/nicholas/Code/G4EMMA/src/TrackingAction.cc
 
 CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/TrackingAction.cc > CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/TrackingAction.cc > CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/TrackingAction.cc -o CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/TrackingAction.cc -o CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/EMMAapp.dir/src/TrackingAction.cc.o.provides.build: CMakeFiles/EMMAap
 
 CMakeFiles/EMMAapp.dir/src/BGField6.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField6.cc.o: ../src/BGField6.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField6.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField6.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField6.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField6.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField6.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField6.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField6.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField6.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField6.cc > CMakeFiles/EMMAapp.dir/src/BGField6.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField6.cc > CMakeFiles/EMMAapp.dir/src/BGField6.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField6.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField6.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField6.cc -o CMakeFiles/EMMAapp.dir/src/BGField6.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField6.cc -o CMakeFiles/EMMAapp.dir/src/BGField6.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField6.cc.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/EMMAapp.dir/src/BGField6.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o: ../src/EMMASteppingVerbose.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMASteppingVerbose.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMASteppingVerbose.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMASteppingVerbose.cc > CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMASteppingVerbose.cc > CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMASteppingVerbose.cc -o CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMASteppingVerbose.cc -o CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/EMMAapp.dir/src/EMMASteppingVerbose.cc.o.provides.build: CMakeFiles/E
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o: ../src/EMMAIonChamberHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAIonChamberHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAIonChamberHit.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAIonChamberHit.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAIonChamberHit.cc > CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAIonChamberHit.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAIonChamberHit.cc -o CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAIonChamberHit.cc.o.provides.build: CMakeFiles/EMM
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o: ../src/EMMAPrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAPrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAPrimaryGeneratorAction.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAPrimaryGeneratorAction.cc > CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAPrimaryGeneratorAction.cc > CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAPrimaryGeneratorAction.cc -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAPrimaryGeneratorAction.cc -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorAction.cc.o.provides.build: CMake
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o: ../src/EMMADriftChamberHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMADriftChamberHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMADriftChamberHit.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMADriftChamberHit.cc > CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMADriftChamberHit.cc > CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMADriftChamberHit.cc -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMADriftChamberHit.cc -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/EMMAapp.dir/src/EMMADriftChamberHit.cc.o.provides.build: CMakeFiles/E
 
 CMakeFiles/EMMAapp.dir/src/mitray.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/mitray.cc.o: ../src/mitray.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/EMMAapp.dir/src/mitray.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/mitray.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/mitray.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/EMMAapp.dir/src/mitray.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/mitray.cc.o -c /home/nicholas/Code/G4EMMA/src/mitray.cc
 
 CMakeFiles/EMMAapp.dir/src/mitray.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/mitray.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/mitray.cc > CMakeFiles/EMMAapp.dir/src/mitray.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/mitray.cc > CMakeFiles/EMMAapp.dir/src/mitray.cc.i
 
 CMakeFiles/EMMAapp.dir/src/mitray.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/mitray.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/mitray.cc -o CMakeFiles/EMMAapp.dir/src/mitray.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/mitray.cc -o CMakeFiles/EMMAapp.dir/src/mitray.cc.s
 
 CMakeFiles/EMMAapp.dir/src/mitray.cc.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/EMMAapp.dir/src/mitray.cc.o.provides.build: CMakeFiles/EMMAapp.dir/sr
 
 CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o: ../src/EMMAPhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAPhysicsList.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAPhysicsList.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAPhysicsList.cc > CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAPhysicsList.cc > CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAPhysicsList.cc -o CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAPhysicsList.cc -o CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAPhysicsList.cc.o.provides.build: CMakeFiles/EMMAa
 
 CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o: ../src/EMMAGlobalField.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAGlobalField.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAGlobalField.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAGlobalField.cc > CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAGlobalField.cc > CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAGlobalField.cc -o CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAGlobalField.cc -o CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAGlobalField.cc.o.provides.build: CMakeFiles/EMMAa
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o: ../src/EMMAEventActionMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAEventActionMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAEventActionMessenger.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAEventActionMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAEventActionMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAEventActionMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAEventActionMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o.requires:
 
@@ -635,16 +635,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAEventActionMessenger.cc.o.provides.build: CMakeFi
 
 CMakeFiles/EMMAapp.dir/src/BGField7.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField7.cc.o: ../src/BGField7.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField7.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField7.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField7.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField7.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField7.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField7.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField7.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField7.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField7.cc > CMakeFiles/EMMAapp.dir/src/BGField7.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField7.cc > CMakeFiles/EMMAapp.dir/src/BGField7.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField7.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField7.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField7.cc -o CMakeFiles/EMMAapp.dir/src/BGField7.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField7.cc -o CMakeFiles/EMMAapp.dir/src/BGField7.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField7.cc.o.requires:
 
@@ -659,16 +659,16 @@ CMakeFiles/EMMAapp.dir/src/BGField7.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/BGField5.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField5.cc.o: ../src/BGField5.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField5.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField5.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField5.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField5.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField5.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField5.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField5.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField5.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField5.cc > CMakeFiles/EMMAapp.dir/src/BGField5.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField5.cc > CMakeFiles/EMMAapp.dir/src/BGField5.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField5.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField5.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField5.cc -o CMakeFiles/EMMAapp.dir/src/BGField5.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField5.cc -o CMakeFiles/EMMAapp.dir/src/BGField5.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField5.cc.o.requires:
 
@@ -683,16 +683,16 @@ CMakeFiles/EMMAapp.dir/src/BGField5.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o: ../src/EMMASteppingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMASteppingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMASteppingAction.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMASteppingAction.cc > CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMASteppingAction.cc > CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMASteppingAction.cc -o CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMASteppingAction.cc -o CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o.requires:
 
@@ -707,16 +707,16 @@ CMakeFiles/EMMAapp.dir/src/EMMASteppingAction.cc.o.provides.build: CMakeFiles/EM
 
 CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o: ../src/EMMAEMPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAEMPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAEMPhysics.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAEMPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAEMPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAEMPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAEMPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o.requires:
 
@@ -731,16 +731,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAEMPhysics.cc.o.provides.build: CMakeFiles/EMMAapp
 
 CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o: ../src/SpectrometerConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/SpectrometerConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o -c /home/nicholas/Code/G4EMMA/src/SpectrometerConstruction.cc
 
 CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/SpectrometerConstruction.cc > CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/SpectrometerConstruction.cc > CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/SpectrometerConstruction.cc -o CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/SpectrometerConstruction.cc -o CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o.requires:
 
@@ -755,16 +755,16 @@ CMakeFiles/EMMAapp.dir/src/SpectrometerConstruction.cc.o.provides.build: CMakeFi
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o: ../src/EMMANuclearReactionProcess.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionProcess.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionProcess.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionProcess.cc > CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionProcess.cc > CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionProcess.cc -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionProcess.cc -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o.requires:
 
@@ -779,16 +779,16 @@ CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionProcess.cc.o.provides.build: CMake
 
 CMakeFiles/EMMAapp.dir/src/BGField1.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField1.cc.o: ../src/BGField1.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField1.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField1.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField1.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField1.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField1.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField1.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField1.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField1.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField1.cc > CMakeFiles/EMMAapp.dir/src/BGField1.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField1.cc > CMakeFiles/EMMAapp.dir/src/BGField1.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField1.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField1.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField1.cc -o CMakeFiles/EMMAapp.dir/src/BGField1.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField1.cc -o CMakeFiles/EMMAapp.dir/src/BGField1.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField1.cc.o.requires:
 
@@ -803,16 +803,16 @@ CMakeFiles/EMMAapp.dir/src/BGField1.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o: ../src/G4ScreenedNuclearRecoil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/G4ScreenedNuclearRecoil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o -c /home/nicholas/Code/G4EMMA/src/G4ScreenedNuclearRecoil.cc
 
 CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/G4ScreenedNuclearRecoil.cc > CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/G4ScreenedNuclearRecoil.cc > CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.i
 
 CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/G4ScreenedNuclearRecoil.cc -o CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/G4ScreenedNuclearRecoil.cc -o CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.s
 
 CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o.requires:
 
@@ -827,16 +827,16 @@ CMakeFiles/EMMAapp.dir/src/G4ScreenedNuclearRecoil.cc.o.provides.build: CMakeFil
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o: ../src/EMMANuclearReactionTwoBody.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionTwoBody.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionTwoBody.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionTwoBody.cc > CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionTwoBody.cc > CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMANuclearReactionTwoBody.cc -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMANuclearReactionTwoBody.cc -o CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o.requires:
 
@@ -851,16 +851,16 @@ CMakeFiles/EMMAapp.dir/src/EMMANuclearReactionTwoBody.cc.o.provides.build: CMake
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o: ../src/EMMAEventAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAEventAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAEventAction.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAEventAction.cc > CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAEventAction.cc > CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAEventAction.cc -o CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAEventAction.cc -o CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o.requires:
 
@@ -875,16 +875,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAEventAction.cc.o.provides.build: CMakeFiles/EMMAa
 
 CMakeFiles/EMMAapp.dir/src/BGField2.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/BGField2.cc.o: ../src/BGField2.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField2.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField2.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/BGField2.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/EMMAapp.dir/src/BGField2.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/BGField2.cc.o -c /home/nicholas/Code/G4EMMA/src/BGField2.cc
 
 CMakeFiles/EMMAapp.dir/src/BGField2.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/BGField2.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/BGField2.cc > CMakeFiles/EMMAapp.dir/src/BGField2.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/BGField2.cc > CMakeFiles/EMMAapp.dir/src/BGField2.cc.i
 
 CMakeFiles/EMMAapp.dir/src/BGField2.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/BGField2.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/BGField2.cc -o CMakeFiles/EMMAapp.dir/src/BGField2.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/BGField2.cc -o CMakeFiles/EMMAapp.dir/src/BGField2.cc.s
 
 CMakeFiles/EMMAapp.dir/src/BGField2.cc.o.requires:
 
@@ -899,16 +899,16 @@ CMakeFiles/EMMAapp.dir/src/BGField2.cc.o.provides.build: CMakeFiles/EMMAapp.dir/
 
 CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o: ../src/StackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/StackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o -c /home/nicholas/Code/G4EMMA/src/StackingAction.cc
 
 CMakeFiles/EMMAapp.dir/src/StackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/StackingAction.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/StackingAction.cc > CMakeFiles/EMMAapp.dir/src/StackingAction.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/StackingAction.cc > CMakeFiles/EMMAapp.dir/src/StackingAction.cc.i
 
 CMakeFiles/EMMAapp.dir/src/StackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/StackingAction.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/StackingAction.cc -o CMakeFiles/EMMAapp.dir/src/StackingAction.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/StackingAction.cc -o CMakeFiles/EMMAapp.dir/src/StackingAction.cc.s
 
 CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o.requires:
 
@@ -923,16 +923,16 @@ CMakeFiles/EMMAapp.dir/src/StackingAction.cc.o.provides.build: CMakeFiles/EMMAap
 
 CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o: ../src/EMFieldDebugger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMFieldDebugger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o -c /home/nicholas/Code/G4EMMA/src/EMFieldDebugger.cc
 
 CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMFieldDebugger.cc > CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMFieldDebugger.cc > CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMFieldDebugger.cc -o CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMFieldDebugger.cc -o CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o.requires:
 
@@ -947,16 +947,16 @@ CMakeFiles/EMMAapp.dir/src/EMFieldDebugger.cc.o.provides.build: CMakeFiles/EMMAa
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o: ../src/EMMADriftChamber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMADriftChamber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMADriftChamber.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMADriftChamber.cc > CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMADriftChamber.cc > CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMADriftChamber.cc -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMADriftChamber.cc -o CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o.requires:
 
@@ -971,16 +971,16 @@ CMakeFiles/EMMAapp.dir/src/EMMADriftChamber.cc.o.provides.build: CMakeFiles/EMMA
 
 CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o: ../src/EMMAHadronPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAHadronPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAHadronPhysics.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAHadronPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAHadronPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAHadronPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAHadronPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o.requires:
 
@@ -995,16 +995,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAHadronPhysics.cc.o.provides.build: CMakeFiles/EMM
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o: ../src/EMMAPrimaryGeneratorMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAPrimaryGeneratorMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAPrimaryGeneratorMessenger.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAPrimaryGeneratorMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAPrimaryGeneratorMessenger.cc > CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAPrimaryGeneratorMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAPrimaryGeneratorMessenger.cc -o CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o.requires:
 
@@ -1019,16 +1019,16 @@ CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.o.provides.build: CM
 
 CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o: CMakeFiles/EMMAapp.dir/flags.make
 CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o: ../src/EMMAGeneralPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o -c /home/nicholas/Code/copy/G4EMMA/src/EMMAGeneralPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o -c /home/nicholas/Code/G4EMMA/src/EMMAGeneralPhysics.cc
 
 CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/copy/G4EMMA/src/EMMAGeneralPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicholas/Code/G4EMMA/src/EMMAGeneralPhysics.cc > CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.i
 
 CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/copy/G4EMMA/src/EMMAGeneralPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicholas/Code/G4EMMA/src/EMMAGeneralPhysics.cc -o CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.s
 
 CMakeFiles/EMMAapp.dir/src/EMMAGeneralPhysics.cc.o.requires:
 
@@ -1172,7 +1172,7 @@ EMMAapp: /opt/geant4/geant4.9.6.p04-install/lib/libG4intercoms.so
 EMMAapp: /opt/geant4/geant4.9.6.p04-install/lib/libG4global.so
 EMMAapp: /opt/geant4/geant4.9.6.p04-install/lib/libG4clhep.so
 EMMAapp: CMakeFiles/EMMAapp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable EMMAapp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable EMMAapp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EMMAapp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1229,6 +1229,6 @@ CMakeFiles/EMMAapp.dir/clean:
 .PHONY : CMakeFiles/EMMAapp.dir/clean
 
 CMakeFiles/EMMAapp.dir/depend:
-	cd /home/nicholas/Code/copy/G4EMMA/G4EMMA-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nicholas/Code/copy/G4EMMA /home/nicholas/Code/copy/G4EMMA /home/nicholas/Code/copy/G4EMMA/G4EMMA-build /home/nicholas/Code/copy/G4EMMA/G4EMMA-build /home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/EMMAapp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nicholas/Code/G4EMMA/G4EMMA-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nicholas/Code/G4EMMA /home/nicholas/Code/G4EMMA /home/nicholas/Code/G4EMMA/G4EMMA-build /home/nicholas/Code/G4EMMA/G4EMMA-build /home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/EMMAapp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/EMMAapp.dir/depend
 

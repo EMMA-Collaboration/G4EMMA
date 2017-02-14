@@ -1,8 +1,8 @@
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/rebuild_cache.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/edit_cache.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/install.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/list_install_components.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/EMMA.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/EMMAapp.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/install/strip.dir
-/home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/install/local.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/rebuild_cache.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/edit_cache.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/install.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/list_install_components.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/EMMA.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/EMMAapp.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/install/strip.dir
+/home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/install/local.dir

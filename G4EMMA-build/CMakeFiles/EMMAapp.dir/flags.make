@@ -6,5 +6,5 @@ CXX_FLAGS =  -W -Wall -pedantic -Wno-non-virtual-dtor -Wno-long-long -Wwrite-str
 
 CXX_DEFINES = -DG4ANALYSIS_USE -DG4INTY_USE_XT -DG4UI_USE -DG4UI_USE_TCSH -DG4VERBOSE -DG4VIS_USE -DG4VIS_USE_OPENGL -DG4VIS_USE_OPENGLX -DG4_STORE_TRAJECTORY
 
-CXX_INCLUDES = -I/opt/geant4/geant4.9.6.p04-install/include/Geant4 -I/home/nicholas/Code/copy/G4EMMA/include -I/opt/root-cern/root_v5.34/root-install/include/root 
+CXX_INCLUDES = -I/opt/geant4/geant4.9.6.p04-install/include/Geant4 -I/home/nicholas/Code/G4EMMA/include -I/opt/root-cern/root_v5.34/root-install/include/root 
 

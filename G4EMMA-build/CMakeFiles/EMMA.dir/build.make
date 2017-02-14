@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nicholas/Code/copy/G4EMMA
+CMAKE_SOURCE_DIR = /home/nicholas/Code/G4EMMA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nicholas/Code/copy/G4EMMA/G4EMMA-build
+CMAKE_BINARY_DIR = /home/nicholas/Code/G4EMMA/G4EMMA-build
 
 # Utility rule file for EMMA.
 
@@ -71,6 +71,6 @@ CMakeFiles/EMMA.dir/clean:
 .PHONY : CMakeFiles/EMMA.dir/clean
 
 CMakeFiles/EMMA.dir/depend:
-	cd /home/nicholas/Code/copy/G4EMMA/G4EMMA-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nicholas/Code/copy/G4EMMA /home/nicholas/Code/copy/G4EMMA /home/nicholas/Code/copy/G4EMMA/G4EMMA-build /home/nicholas/Code/copy/G4EMMA/G4EMMA-build /home/nicholas/Code/copy/G4EMMA/G4EMMA-build/CMakeFiles/EMMA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nicholas/Code/G4EMMA/G4EMMA-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nicholas/Code/G4EMMA /home/nicholas/Code/G4EMMA /home/nicholas/Code/G4EMMA/G4EMMA-build /home/nicholas/Code/G4EMMA/G4EMMA-build /home/nicholas/Code/G4EMMA/G4EMMA-build/CMakeFiles/EMMA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/EMMA.dir/depend
 
