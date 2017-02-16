@@ -13,7 +13,9 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "/usr/local/include/f2c.h"
+
+#include <f2c.h>
+//#include "/usr/local/include/f2c.h"
 
 
 /* Common Block Declarations */
