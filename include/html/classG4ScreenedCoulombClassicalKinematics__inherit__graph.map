@@ -1,0 +1,4 @@
+<map id="G4ScreenedCoulombClassicalKinematics" name="G4ScreenedCoulombClassicalKinematics">
+<area shape="rect" id="node2" href="$classG4ScreenedCoulombCrossSectionInfo.html" title="{G4ScreenedCoulombCrossSectionInfo\n||+ G4ScreenedCoulombCrossSectionInfo()\l+ ~G4ScreenedCoulombCrossSectionInfo()\l+ CVSHeaderVers()\l+ CVSFileVers()\l}" alt="" coords="5,5,280,127"/>
+<area shape="rect" id="node3" href="$classG4ScreenedCollisionStage.html" title="{G4ScreenedCollisionStage\n||+ DoCollisionStep()\l+ ~G4ScreenedCollisionStage()\l}" alt="" coords="305,20,511,112"/>
+</map>

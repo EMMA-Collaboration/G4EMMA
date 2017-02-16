@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classG4ScreenedCollisionStage.html" title="G4ScreenedCollisionStage" alt="" coords="39,35,218,61"/>
+<area shape="rect" id="node2" href="$classG4ScreenedCoulombClassicalKinematics.html" title="G4ScreenedCoulombClassical\lKinematics" alt="" coords="313,57,513,98"/>
+<area shape="rect" id="node3" href="$classG4SingleScatter.html" title="G4SingleScatter" alt="" coords="354,5,471,32"/>
+<area shape="rect" id="node4" href="$classG4ScreenedCoulombCrossSectionInfo.html" title="G4ScreenedCoulombCrossSectionInfo" alt="" coords="5,111,252,137"/>
+<area shape="rect" id="node5" href="$classG4ScreenedCoulombCrossSection.html" title="G4ScreenedCoulombCrossSection" alt="" coords="300,123,525,149"/>
+<area shape="rect" id="node7" href="$classG4ScreenedNuclearRecoil.html" title="A process which handles screened Coulomb collisions between nuclei. " alt="" coords="325,173,501,200"/>
+<area shape="rect" id="node6" href="$classG4NativeScreenedCoulombCrossSection.html" title="G4NativeScreenedCoulombCross\lSection" alt="" coords="573,115,792,157"/>
+<area shape="rect" id="node8" href="$classG4VDiscreteProcess.html" title="G4VDiscreteProcess" alt="" coords="56,187,201,213"/>
+<area shape="rect" id="node9" href="$classF04StepMax.html" title="F04StepMax" alt="" coords="365,224,461,251"/>
+</map>

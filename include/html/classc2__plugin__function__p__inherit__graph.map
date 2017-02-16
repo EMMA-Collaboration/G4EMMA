@@ -1,0 +1,6 @@
+<map id="c2_plugin_function_p&lt; float_type &gt;" name="c2_plugin_function_p&lt; float_type &gt;">
+<area shape="rect" id="node3" href="$classc2__const__plugin__function__p.html" title="a c2_plugin_function_p which promises not to fiddle with the plugged function.The factory function c2..." alt="" coords="5,1049,216,1200"/>
+<area shape="rect" id="node5" href="$classc2__plugin__function__p.html" title="{c2_plugin_function\l_p\&lt; G4double \&gt;\n|# func\l|+ c2_plugin_function_p()\l+ c2_plugin_function_p()\l+ set_function()\l+ value_with_derivatives()\l+ ~c2_plugin_function_p()\l+ unset_function()\l+ get_sampling_grid()\l}" alt="" coords="241,1035,415,1215"/>
+<area shape="rect" id="node2" href="$classc2__function.html" title="the parent class for all c2_functions.c2_functions know their value, first, and second derivative at ..." alt="" coords="73,5,277,743"/>
+<area shape="rect" id="node4" href="$classc2__const__plugin__function__p.html" title="{c2_const_plugin_function\l_p\&lt; G4double \&gt;\n||+ c2_const_plugin_function_p()\l+ c2_const_plugin_function_p()\l+ set_function()\l+ ~c2_const_plugin_function_p()\l+ get()\l}" alt="" coords="127,1277,337,1428"/>
+</map>

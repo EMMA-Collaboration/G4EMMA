@@ -1,0 +1,40 @@
+\hypertarget{group__arithmetic__functions}{}\section{Arithmetic Functions}
+\label{group__arithmetic__functions}\index{Arithmetic Functions@{Arithmetic Functions}}
+Collaboration diagram for Arithmetic Functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__arithmetic__functions}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classc2__scaled__function__p}{c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em Create a very lightweight method to return a scalar multiple of another function. \textbackslash{} \textbackslash{}
+
+The factory function \hyperlink{classc2__factory_a81a7b686b7ffa389ad4dcd8d18997332}{c2\+\_\+factory\+::scaled\+\_\+function()} creates $\ast$new \hyperlink{classc2__scaled__function__p}{c2\+\_\+scaled\+\_\+function\+\_\+p}. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__composed__function__p}{c2\+\_\+composed\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em Provides function composition (nesting)
+
+This allows evaluation of {\itshape f(g(x))} where {\itshape f} and {\itshape g} are \hyperlink{classc2__function}{c2\+\_\+function} objects. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__sum__p}{c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classc2__function}{c2\+\_\+function} which is the sum of two other \hyperlink{classc2__function}{c2\+\_\+function} objects.
+
+This should always be constructed using \hyperlink{classc2__function_a268b206b47c55e635e5f0a9e0f3e8ded}{c2\+\_\+function\+::operator+()} \end{DoxyCompactList}\item 
+class \hyperlink{classc2__diff__p}{c2\+\_\+diff\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classc2__function}{c2\+\_\+function} which is the difference of two other c2\+\_\+functions.
+
+This should always be constructed using \hyperlink{classc2__function_a4c56a4673e00bfad37143c403a0c94c8}{c2\+\_\+function\+::operator-\/()} \end{DoxyCompactList}\item 
+class \hyperlink{classc2__product__p}{c2\+\_\+product\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classc2__function}{c2\+\_\+function} which is the product of two other c2\+\_\+functions.
+
+This should always be constructed using \hyperlink{classc2__function_a7744675c98a8ec63320ac1c0b61bec9c}{c2\+\_\+function\+::operator$\ast$()} \end{DoxyCompactList}\item 
+class \hyperlink{classc2__ratio__p}{c2\+\_\+ratio\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classc2__function}{c2\+\_\+function} which is the ratio of two other c2\+\_\+functions.
+
+This should always be constructed using \hyperlink{classc2__function_a93ac28dfe5daebea84d147b8e346e60c}{c2\+\_\+function\+::operator/()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

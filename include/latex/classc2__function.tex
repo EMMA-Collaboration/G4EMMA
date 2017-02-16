@@ -1,0 +1,921 @@
+\hypertarget{classc2__function}{}\section{c2\+\_\+function$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__function}\index{c2\+\_\+function$<$ float\+\_\+type $>$@{c2\+\_\+function$<$ float\+\_\+type $>$}}
+
+
+the parent class for all c2\+\_\+functions.
+
+c2\+\_\+functions know their value, first, and second derivative at almost every point. They can be efficiently combined with binary operators, via \hyperlink{classc2__binary__function}{c2\+\_\+binary\+\_\+function}, composed via c2\+\_\+composed\+\_\+function\+\_\+, have their roots found via \hyperlink{classc2__function_acd17a7191226578c866d82cb2e9ff89f}{find\+\_\+root()}, and be adaptively integrated via \hyperlink{classc2__function_a89ce5e2f44ebfaf9eb4d66605cde4fde}{partial\+\_\+integrals()} or \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral()}. They also can carry information with them about how to find \textquotesingle{}interesting\textquotesingle{} points on the function. This information is set with \hyperlink{classc2__function_a23828c75121b442899ab7a80cf5abbb0}{set\+\_\+sampling\+\_\+grid()} and extracted with \hyperlink{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{get\+\_\+sampling\+\_\+grid()}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+function$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+function$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{classc2__function_a851a9e8dca6e8fa9c2da12c8705566b2}{cvs\+\_\+header\+\_\+vers} () const 
+\begin{DoxyCompactList}\small\item\em get versioning information for the header file \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{classc2__function_a2304b7543724be829571336da02b0f91}{cvs\+\_\+file\+\_\+vers} () const 
+\begin{DoxyCompactList}\small\item\em get versioning information for the source file \end{DoxyCompactList}\item 
+virtual \hyperlink{classc2__function_ab17870e5af508c66ec154195b837466e}{$\sim$c2\+\_\+function} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__function_a44e0201159111350be7f746fc9026f67}{value\+\_\+with\+\_\+derivatives} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const =0  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get the value and derivatives. \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_a0658cb22966f0ff9072d4d0e04b54c61}{operator()} (float\+\_\+type x) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em evaluate the function in the classic way, ignoring derivatives. \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_a25c89b64e6cbd749314d0a61063240cc}{operator()} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get the value and derivatives. \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_acd17a7191226578c866d82cb2e9ff89f}{find\+\_\+root} (float\+\_\+type lower\+\_\+bracket, float\+\_\+type upper\+\_\+bracket, float\+\_\+type start, float\+\_\+type value, int $\ast$error=0, float\+\_\+type $\ast$final\+\_\+yprime=0, float\+\_\+type $\ast$final\+\_\+yprime2=0) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em solve f(x)==value very efficiently, with explicit knowledge of derivatives of the function \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_a89ce5e2f44ebfaf9eb4d66605cde4fde}{partial\+\_\+integrals} (std\+::vector$<$ float\+\_\+type $>$ xgrid, std\+::vector$<$ float\+\_\+type $>$ $\ast$partials=0, float\+\_\+type abs\+\_\+tol=1e-\/12, float\+\_\+type rel\+\_\+tol=1e-\/12, int derivs=2, bool adapt=true, bool extrapolate=true) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em for points in xgrid, adaptively return Integral\mbox{[}f(x),\{x,xgrid\mbox{[}i\mbox{]},xgrid\mbox{[}i+1\mbox{]}\}\mbox{]} and return in vector, along with sum \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral} (float\+\_\+type amin, float\+\_\+type amax, std\+::vector$<$ float\+\_\+type $>$ $\ast$partials=0, float\+\_\+type abs\+\_\+tol=1e-\/12, float\+\_\+type rel\+\_\+tol=1e-\/12, int derivs=2, bool adapt=true, bool extrapolate=true) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em a fully-\/automated integrator which uses the information provided by the \hyperlink{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{get\+\_\+sampling\+\_\+grid()} function to figure out what to do. \end{DoxyCompactList}\item 
+\hyperlink{classc2__piecewise__function__p}{c2\+\_\+piecewise\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ $\ast$ \hyperlink{classc2__function_aea75f73d6a97087571c163ae4e514652}{adaptively\+\_\+sample} (float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type abs\+\_\+tol=1e-\/12, float\+\_\+type rel\+\_\+tol=1e-\/12, int derivs=2, std\+::vector$<$ float\+\_\+type $>$ $\ast$xvals=0, std\+::vector$<$ float\+\_\+type $>$ $\ast$yvals=0) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classc2__piecewise__function__p}{c2\+\_\+piecewise\+\_\+function\+\_\+p} from \hyperlink{classc2__connector__function__p}{c2\+\_\+connector\+\_\+function\+\_\+p} segments which is a representation of the parent function to the specified accuracy, but maybe much cheaper to evaluate \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_acddff2d033c7f3205658e246d806204b}{xmin} () const 
+\begin{DoxyCompactList}\small\item\em return the lower bound of the domain for this function as set by \hyperlink{classc2__function_adeb70da9c75011e9abd71142dca4c22e}{set\+\_\+domain()} \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_a7f3ac790b6659b2d137f4c90eadb6ef0}{xmax} () const 
+\begin{DoxyCompactList}\small\item\em return the upper bound of the domain for this function as set by \hyperlink{classc2__function_adeb70da9c75011e9abd71142dca4c22e}{set\+\_\+domain()} \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_adeb70da9c75011e9abd71142dca4c22e}{set\+\_\+domain} (float\+\_\+type amin, float\+\_\+type amax)
+\begin{DoxyCompactList}\small\item\em set the domain for this function. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classc2__function_ab6ff0c597019dfb38b1d3d76bfd71e6c}{get\+\_\+evaluations} () const 
+\begin{DoxyCompactList}\small\item\em this is a counter owned by the function but which can be used to monitor efficiency of algorithms. \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_a8003c40247b7255de5ffbcd3ec21e395}{reset\+\_\+evaluations} () const 
+\begin{DoxyCompactList}\small\item\em reset the counter \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_a43555fd6a4ce48f5739e16483170c096}{increment\+\_\+evaluations} () const 
+\begin{DoxyCompactList}\small\item\em count evaluations \end{DoxyCompactList}\item 
+bool \hyperlink{classc2__function_a8fffb02df5bbff25b0fde67115eae196}{check\+\_\+monotonicity} (const std\+::vector$<$ float\+\_\+type $>$ \&data, const char message\mbox{[}$\,$\mbox{]}) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em check that a vector is monotonic, throw an exception if not, and return a flag if it is reversed \end{DoxyCompactList}\item 
+virtual void \hyperlink{classc2__function_a23828c75121b442899ab7a80cf5abbb0}{set\+\_\+sampling\+\_\+grid} (const std\+::vector$<$ float\+\_\+type $>$ \&grid)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em establish a grid of \textquotesingle{}interesting\textquotesingle{} points on the function. \end{DoxyCompactList}\item 
+std\+::vector$<$ float\+\_\+type $>$ $\ast$ \hyperlink{classc2__function_a78b0427521403da116691bab7695906a}{get\+\_\+sampling\+\_\+grid\+\_\+pointer} () const 
+\begin{DoxyCompactList}\small\item\em get the sampling grid, which may be a null pointer \end{DoxyCompactList}\item 
+virtual void \hyperlink{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{get\+\_\+sampling\+\_\+grid} (float\+\_\+type amin, float\+\_\+type amax, std\+::vector$<$ float\+\_\+type $>$ \&grid) const 
+\begin{DoxyCompactList}\small\item\em return the grid of \textquotesingle{}interesting\textquotesingle{} points along this function which lie in the region requested \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_a3f461317f09a62101e6114fd693fa20c}{preen\+\_\+sampling\+\_\+grid} (std\+::vector$<$ float\+\_\+type $>$ $\ast$result) const 
+\begin{DoxyCompactList}\small\item\em clean up endpoints on a grid of points \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_a25004cf23f56fafd0b64901354892f3c}{refine\+\_\+sampling\+\_\+grid} (std\+::vector$<$ float\+\_\+type $>$ \&grid, size\+\_\+t refinement) const 
+\begin{DoxyCompactList}\small\item\em refine a grid by splitting each interval into more intervals \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_ad908929d3a8d8022caf4f3f1c65d5e71}{normalized\+\_\+function} (float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type norm=1.\+0) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em create a new \hyperlink{classc2__function}{c2\+\_\+function} from this one which is normalized on the interval \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_adcf8bcc841ca3a1155ae115178ea88af}{square\+\_\+normalized\+\_\+function} (float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type norm=1.\+0) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em create a new \hyperlink{classc2__function}{c2\+\_\+function} from this one which is square-\/normalized on the interval \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_a9d8716e8abb9e02a188c243f825acf9b}{square\+\_\+normalized\+\_\+function} (float\+\_\+type amin, float\+\_\+type amax, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&weight, float\+\_\+type norm=1.\+0) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em create a new \hyperlink{classc2__function}{c2\+\_\+function} from this one which is square-\/normalized with the provided {\itshape weight} on the interval \end{DoxyCompactList}\item 
+\hyperlink{classc2__sum__p}{c2\+\_\+sum\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_a268b206b47c55e635e5f0a9e0f3e8ded}{operator+} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em factory function to create a \hyperlink{classc2__sum__p}{c2\+\_\+sum\+\_\+p} from a regular algebraic expression. \end{DoxyCompactList}\item 
+\hyperlink{classc2__diff__p}{c2\+\_\+diff\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_a4c56a4673e00bfad37143c403a0c94c8}{operator-\/} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em factory function to create a \hyperlink{classc2__diff__p}{c2\+\_\+diff\+\_\+p} from a regular algebraic expression. \end{DoxyCompactList}\item 
+\hyperlink{classc2__product__p}{c2\+\_\+product\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_a7744675c98a8ec63320ac1c0b61bec9c}{operator$\ast$} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em factory function to create a \hyperlink{classc2__product__p}{c2\+\_\+product\+\_\+p} from a regular algebraic expression. \end{DoxyCompactList}\item 
+\hyperlink{classc2__ratio__p}{c2\+\_\+ratio\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_a93ac28dfe5daebea84d147b8e346e60c}{operator/} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em factory function to create a \hyperlink{classc2__ratio__p}{c2\+\_\+ratio\+\_\+p} from a regular algebraic expression. \end{DoxyCompactList}\item 
+\hyperlink{classc2__composed__function__p}{c2\+\_\+composed\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function_a9332f7b389579a9b03eb57578649e07f}{operator()} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&inner) const 
+\begin{DoxyCompactList}\small\item\em compose this function outside another. \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__function_a8e575976851a0b93a9dc2803b4ac2123}{get\+\_\+trouble\+\_\+point} () const 
+\begin{DoxyCompactList}\small\item\em Find out where a calculation ran into trouble, if it got a nan. If the most recent computation did not return a nan, this is undefined. \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_acd32e22d0b47878dc9fb399a722db61e}{claim\+\_\+ownership} () const 
+\begin{DoxyCompactList}\small\item\em increment our reference count. Destruction is only legal if the count is zero. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classc2__function_af003b3e29357ccf65b7eba38be877b8c}{release\+\_\+ownership\+\_\+for\+\_\+return} () const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em decrement our reference count. Do not destroy at zero. \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_ac98aa40f78c487df141a67174662d749}{release\+\_\+ownership} () const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em decrement our reference count. If the count reaches zero, destroy ourself. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classc2__function_a1df932c78b3521d6a4493972f2642020}{count\+\_\+owners} () const 
+\begin{DoxyCompactList}\small\item\em get the reference count, mostly for debugging \end{DoxyCompactList}\item 
+void \hyperlink{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}{fill\+\_\+fblock} (\hyperlink{classc2__fblock}{c2\+\_\+fblock}$<$ float\+\_\+type $>$ \&fb) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em fill in a c2\+\_\+fblock$<$float\+\_\+type$>$... a shortcut for the integrator \& sampler \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__function_a0dcc0aa8129ea37e46a72bcafd5d1dc3}{c2\+\_\+function} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&src)
+\item 
+\hyperlink{classc2__function_acc63ccad3b4a2151c641695003aa977f}{c2\+\_\+function} ()
+\item 
+virtual void \hyperlink{classc2__function_af06d3b95c044d5ece8343badec919d17}{set\+\_\+sampling\+\_\+grid\+\_\+pointer} (std\+::vector$<$ float\+\_\+type $>$ \&grid)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float\+\_\+type $>$ $\ast$ \hyperlink{classc2__function_ad9714faf2c3d053a77fd733b52834754}{sampling\+\_\+grid}
+\item 
+bool \hyperlink{classc2__function_a12085ddfc5716c442bb59c5672e140dd}{no\+\_\+overwrite\+\_\+grid}
+\item 
+float\+\_\+type \hyperlink{classc2__function_a72d60216e8a9c61039d4895c6a15b0ce}{f\+X\+Min}
+\item 
+float\+\_\+type \hyperlink{classc2__function_a8d000a2d3ca13a119f4bcf4e31a9bca6}{f\+X\+Max}
+\item 
+size\+\_\+t \hyperlink{classc2__function_a0737663eb36818cd357852479e6b96f2}{evaluations}
+\item 
+float\+\_\+type \hyperlink{classc2__function_a19b31dd52b778a2fe5f156def38e41d4}{bad\+\_\+x\+\_\+point}
+\begin{DoxyCompactList}\small\item\em this point may be used to record where a calculation ran into trouble \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class c2\+\_\+function$<$ float\+\_\+type $>$}
+
+the parent class for all c2\+\_\+functions.
+
+c2\+\_\+functions know their value, first, and second derivative at almost every point. They can be efficiently combined with binary operators, via \hyperlink{classc2__binary__function}{c2\+\_\+binary\+\_\+function}, composed via c2\+\_\+composed\+\_\+function\+\_\+, have their roots found via \hyperlink{classc2__function_acd17a7191226578c866d82cb2e9ff89f}{find\+\_\+root()}, and be adaptively integrated via \hyperlink{classc2__function_a89ce5e2f44ebfaf9eb4d66605cde4fde}{partial\+\_\+integrals()} or \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral()}. They also can carry information with them about how to find \textquotesingle{}interesting\textquotesingle{} points on the function. This information is set with \hyperlink{classc2__function_a23828c75121b442899ab7a80cf5abbb0}{set\+\_\+sampling\+\_\+grid()} and extracted with \hyperlink{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{get\+\_\+sampling\+\_\+grid()}. 
+
+Particularly important subclasses are the interpolating functions classes, interpolating\+\_\+function , lin\+\_\+log\+\_\+interpolating\+\_\+function, log\+\_\+lin\+\_\+interpolating\+\_\+function, log\+\_\+log\+\_\+interpolating\+\_\+function, and arrhenius\+\_\+interpolating\+\_\+function, as well as the template functions inverse\+\_\+integrated\+\_\+density\+\_\+function().
+
+For a discussion of memory management, see memory\+\_\+management 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+function@{c2\+\_\+function}!````~c2\+\_\+function@{$\sim$c2\+\_\+function}}
+\index{````~c2\+\_\+function@{$\sim$c2\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{$\sim$c2\+\_\+function()}{~c2_function()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::$\sim${\bf c2\+\_\+function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__function_ab17870e5af508c66ec154195b837466e}{}\label{classc2__function_ab17870e5af508c66ec154195b837466e}
+
+
+destructor 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\index{c2\+\_\+function@{c2\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{c2\+\_\+function(const c2\+\_\+function$<$ float\+\_\+type $>$ \&src)}{c2_function(const c2_function< float_type > &src)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+function} (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classc2__function_a0dcc0aa8129ea37e46a72bcafd5d1dc3}{}\label{classc2__function_a0dcc0aa8129ea37e46a72bcafd5d1dc3}
+\index{c2\+\_\+function@{c2\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\index{c2\+\_\+function@{c2\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{c2\+\_\+function()}{c2_function()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classc2__function_acc63ccad3b4a2151c641695003aa977f}{}\label{classc2__function_acc63ccad3b4a2151c641695003aa977f}
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+function@{c2\+\_\+function}!adaptively\+\_\+sample@{adaptively\+\_\+sample}}
+\index{adaptively\+\_\+sample@{adaptively\+\_\+sample}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{adaptively\+\_\+sample(float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type abs\+\_\+tol=1e-\/12, float\+\_\+type rel\+\_\+tol=1e-\/12, int derivs=2, std\+::vector$<$ float\+\_\+type $>$ $\ast$xvals=0, std\+::vector$<$ float\+\_\+type $>$ $\ast$yvals=0) const }{adaptively_sample(float_type amin, float_type amax, float_type abs_tol=1e-12, float_type rel_tol=1e-12, int derivs=2, std::vector< float_type > *xvals=0, std::vector< float_type > *yvals=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+piecewise\+\_\+function\+\_\+p}$<$float\+\_\+type$>$$\ast$ {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::adaptively\+\_\+sample (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{float\+\_\+type}]{abs\+\_\+tol = {\ttfamily 1e-\/12}, }
+\item[{float\+\_\+type}]{rel\+\_\+tol = {\ttfamily 1e-\/12}, }
+\item[{int}]{derivs = {\ttfamily 2}, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ $\ast$}]{xvals = {\ttfamily 0}, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ $\ast$}]{yvals = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_aea75f73d6a97087571c163ae4e514652}{}\label{classc2__function_aea75f73d6a97087571c163ae4e514652}
+
+
+create a \hyperlink{classc2__piecewise__function__p}{c2\+\_\+piecewise\+\_\+function\+\_\+p} from \hyperlink{classc2__connector__function__p}{c2\+\_\+connector\+\_\+function\+\_\+p} segments which is a representation of the parent function to the specified accuracy, but maybe much cheaper to evaluate 
+
+This method has three modes, depending on the {\itshape derivs} flag.
+
+If {\itshape derivs} is 2, it computes a \hyperlink{classc2__piecewise__function__p}{c2\+\_\+piecewise\+\_\+function\+\_\+p} representation of its parent function, which may be a much faster function to use in codes if the parent function is expensive. If {\itshape xvals} and {\itshape yvals} are non-\/null, it will also fill them in with the function values at each grid point the adaptive algorithm chooses.
+
+If {\itshape derivs} is 1, this does not create the connectors, and returns an null pointer, but will fill in the {\itshape xvals} and {\itshape yvals} vectors with values of the function at points such that the linear interpolation error between the points is bounded by the tolerance values given. Because it uses derivative information from the function to manage the error control, it is almost completely free of issues with missing periods of oscillatory functions, even with no information provided in the sampling grid. This is typically useful for sampling a function for plotting.
+
+If {\itshape derivs} is 0, this does something very like what it does if {\itshape derivs} = 1, but without derivatives. Instead, to compute the intermediate value of the function for error control, it just uses 3-\/point parabolic interpolation. This is useful amost exclusively for converting a non-\/c2\+\_\+function, with no derivatives, but wrapped in a c2\+\_\+classic\+\_\+function wrapper, into a table of values to seed an \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}. Note, however, that without derivatives, this is very susceptible to missing periods of oscillatory functions, so it is important to set a sampling grid which isn\textquotesingle{}t too much coarser than the typical oscillations.
+
+\begin{DoxyNote}{Note}
+the {\itshape sampling\+\_\+grid} of the returned function matches the {\itshape sampling\+\_\+grid} of its parent. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Adaptive Sampling Examples 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em amin} & lower bound of the domain for sampling \\
+\hline
+ & {\em amax} & upper bound of the domain for sampling \\
+\hline
+ & {\em abs\+\_\+tol} & the absolute error bound for each segment \\
+\hline
+ & {\em rel\+\_\+tol} & the fractional error bound for each segment. \\
+\hline
+ & {\em derivs} & if 0 or 1, return a useless function, but fill in the {\itshape xvals} and {\itshape yvals} vectors (if non-\/null). Also, if 0 or 1, tolerances refer to linear interpolation, not high-\/order interpolation. If 2, return a full piecewise collection of \hyperlink{classc2__connector__function__p}{c2\+\_\+connector\+\_\+function\+\_\+p} segments. See discussion above. \\
+\hline
+\mbox{\tt in,out}  & {\em xvals} & vector of abscissas at which the function was actually sampled (if non-\/null) \\
+\hline
+\mbox{\tt in,out}  & {\em yvals} & vector of function values corresponding to {\itshape xvals} (if non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new, sampled representation, if {\itshape derivs} is 2. A null pointer if {\itshape derivs} is 0 or 1. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!check\+\_\+monotonicity@{check\+\_\+monotonicity}}
+\index{check\+\_\+monotonicity@{check\+\_\+monotonicity}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{check\+\_\+monotonicity(const std\+::vector$<$ float\+\_\+type $>$ \&data, const char message[]) const }{check_monotonicity(const std::vector< float_type > &data, const char message[]) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ bool {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::check\+\_\+monotonicity (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{data, }
+\item[{const char}]{message\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_a8fffb02df5bbff25b0fde67115eae196}{}\label{classc2__function_a8fffb02df5bbff25b0fde67115eae196}
+
+
+check that a vector is monotonic, throw an exception if not, and return a flag if it is reversed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & a vector of data points which are expected to be monotonic. \\
+\hline
+{\em message} & an informative string to include in an exception if this throws \hyperlink{classc2__exception}{c2\+\_\+exception} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if in decreasing order, false if increasing 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!claim\+\_\+ownership@{claim\+\_\+ownership}}
+\index{claim\+\_\+ownership@{claim\+\_\+ownership}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{claim\+\_\+ownership() const }{claim_ownership() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::claim\+\_\+ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_acd32e22d0b47878dc9fb399a722db61e}{}\label{classc2__function_acd32e22d0b47878dc9fb399a722db61e}
+
+
+increment our reference count. Destruction is only legal if the count is zero. 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!count\+\_\+owners@{count\+\_\+owners}}
+\index{count\+\_\+owners@{count\+\_\+owners}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{count\+\_\+owners() const }{count_owners() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ size\+\_\+t {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::count\+\_\+owners (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a1df932c78b3521d6a4493972f2642020}{}\label{classc2__function_a1df932c78b3521d6a4493972f2642020}
+
+
+get the reference count, mostly for debugging 
+
+\begin{DoxyReturn}{Returns}
+the count 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!cvs\+\_\+file\+\_\+vers@{cvs\+\_\+file\+\_\+vers}}
+\index{cvs\+\_\+file\+\_\+vers@{cvs\+\_\+file\+\_\+vers}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{cvs\+\_\+file\+\_\+vers() const }{cvs_file_vers() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ const std\+::string {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::cvs\+\_\+file\+\_\+vers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classc2__function_a2304b7543724be829571336da02b0f91}{}\label{classc2__function_a2304b7543724be829571336da02b0f91}
+
+
+get versioning information for the source file 
+
+\begin{DoxyReturn}{Returns}
+the C\+VS Id string 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!cvs\+\_\+header\+\_\+vers@{cvs\+\_\+header\+\_\+vers}}
+\index{cvs\+\_\+header\+\_\+vers@{cvs\+\_\+header\+\_\+vers}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{cvs\+\_\+header\+\_\+vers() const }{cvs_header_vers() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ const std\+::string {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::cvs\+\_\+header\+\_\+vers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a851a9e8dca6e8fa9c2da12c8705566b2}{}\label{classc2__function_a851a9e8dca6e8fa9c2da12c8705566b2}
+
+
+get versioning information for the header file 
+
+\begin{DoxyReturn}{Returns}
+the C\+VS Id string 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!fill\+\_\+fblock@{fill\+\_\+fblock}}
+\index{fill\+\_\+fblock@{fill\+\_\+fblock}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{fill\+\_\+fblock(c2\+\_\+fblock$<$ float\+\_\+type $>$ \&fb) const }{fill_fblock(c2_fblock< float_type > &fb) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::fill\+\_\+fblock (
+\begin{DoxyParamCaption}
+\item[{{\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$ \&}]{fb}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}{}\label{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}
+
+
+fill in a c2\+\_\+fblock$<$float\+\_\+type$>$... a shortcut for the integrator \& sampler 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em fb} & the block to fill in with information \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+function@{c2\+\_\+function}!find\+\_\+root@{find\+\_\+root}}
+\index{find\+\_\+root@{find\+\_\+root}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{find\+\_\+root(float\+\_\+type lower\+\_\+bracket, float\+\_\+type upper\+\_\+bracket, float\+\_\+type start, float\+\_\+type value, int $\ast$error=0, float\+\_\+type $\ast$final\+\_\+yprime=0, float\+\_\+type $\ast$final\+\_\+yprime2=0) const }{find_root(float_type lower_bracket, float_type upper_bracket, float_type start, float_type value, int *error=0, float_type *final_yprime=0, float_type *final_yprime2=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::find\+\_\+root (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{lower\+\_\+bracket, }
+\item[{float\+\_\+type}]{upper\+\_\+bracket, }
+\item[{float\+\_\+type}]{start, }
+\item[{float\+\_\+type}]{value, }
+\item[{int $\ast$}]{error = {\ttfamily 0}, }
+\item[{float\+\_\+type $\ast$}]{final\+\_\+yprime = {\ttfamily 0}, }
+\item[{float\+\_\+type $\ast$}]{final\+\_\+yprime2 = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_acd17a7191226578c866d82cb2e9ff89f}{}\label{classc2__function_acd17a7191226578c866d82cb2e9ff89f}
+
+
+solve f(x)==value very efficiently, with explicit knowledge of derivatives of the function 
+
+find\+\_\+root solves by iterated inverse quadratic extrapolation for a solution to f(x)=y. It includes checks against bad convergence, so it should never be able to fail. Unlike typical secant method or fancier Brent\textquotesingle{}s method finders, this does not depend in any strong wasy on the brackets, unless the finder has to resort to successive approximations to close in on a root. Often, it is possible to make the brackets equal to the domain of the function, if there is any clue as to where the root lies, as given by the parameter {\itshape start}. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em lower\+\_\+bracket} & the lower bound for the search \\
+\hline
+ & {\em upper\+\_\+bracket} & the upper bound for the search. Function sign must be opposite to that at {\itshape lower\+\_\+bracket} \\
+\hline
+ & {\em start} & starting value for the search \\
+\hline
+ & {\em value} & the value of the function being sought (solves f(x) = {\itshape value}) \\
+\hline
+\mbox{\tt out}  & {\em error} & If pointer is zero, errors raise exception. Otherwise, returns error here. \\
+\hline
+\mbox{\tt out}  & {\em final\+\_\+yprime} & If pointer is not zero, return derivative of function at root \\
+\hline
+\mbox{\tt out}  & {\em final\+\_\+yprime2} & If pointer is not zero, return second derivative of function at root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the position of the root. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Root finding sample 
+\end{DoxySeeAlso}
+\index{c2\+\_\+function@{c2\+\_\+function}!get\+\_\+evaluations@{get\+\_\+evaluations}}
+\index{get\+\_\+evaluations@{get\+\_\+evaluations}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{get\+\_\+evaluations() const }{get_evaluations() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ size\+\_\+t {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::get\+\_\+evaluations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_ab6ff0c597019dfb38b1d3d76bfd71e6c}{}\label{classc2__function_ab6ff0c597019dfb38b1d3d76bfd71e6c}
+
+
+this is a counter owned by the function but which can be used to monitor efficiency of algorithms. 
+
+It is not maintained automatically in general! The root finder, integrator, and sampler do increment it. \begin{DoxyReturn}{Returns}
+number of evaluations logged since last reset. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!get\+\_\+sampling\+\_\+grid@{get\+\_\+sampling\+\_\+grid}}
+\index{get\+\_\+sampling\+\_\+grid@{get\+\_\+sampling\+\_\+grid}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{get\+\_\+sampling\+\_\+grid(float\+\_\+type amin, float\+\_\+type amax, std\+::vector$<$ float\+\_\+type $>$ \&grid) const }{get_sampling_grid(float_type amin, float_type amax, std::vector< float_type > &grid) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::get\+\_\+sampling\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{grid}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{}\label{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}
+
+
+return the grid of \textquotesingle{}interesting\textquotesingle{} points along this function which lie in the region requested 
+
+if a sampling grid is defined, work from there, otherwise return vector of (amin, amax) 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em amin} & the lower bound for which the function is to be sampled \\
+\hline
+ & {\em amax} & the upper bound for which the function is to be sampled \\
+\hline
+\mbox{\tt in,out}  & {\em grid} & filled vector containing the samplng grid. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classc2__sin__p_a24cee8161741bd4a4dbb24dd782514c1}{c2\+\_\+sin\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__plugin__function__p_a0e7ff48329a648b3966efba72b15e3ed}{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, and \hyperlink{classc2__plugin__function__p_a0e7ff48329a648b3966efba72b15e3ed}{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ G4double $>$}.
+
+\index{c2\+\_\+function@{c2\+\_\+function}!get\+\_\+sampling\+\_\+grid\+\_\+pointer@{get\+\_\+sampling\+\_\+grid\+\_\+pointer}}
+\index{get\+\_\+sampling\+\_\+grid\+\_\+pointer@{get\+\_\+sampling\+\_\+grid\+\_\+pointer}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{get\+\_\+sampling\+\_\+grid\+\_\+pointer() const }{get_sampling_grid_pointer() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ std\+::vector$<$float\+\_\+type$>$$\ast$ {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::get\+\_\+sampling\+\_\+grid\+\_\+pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a78b0427521403da116691bab7695906a}{}\label{classc2__function_a78b0427521403da116691bab7695906a}
+
+
+get the sampling grid, which may be a null pointer 
+
+\begin{DoxyReturn}{Returns}
+pointer to the sampling grid 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!get\+\_\+trouble\+\_\+point@{get\+\_\+trouble\+\_\+point}}
+\index{get\+\_\+trouble\+\_\+point@{get\+\_\+trouble\+\_\+point}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{get\+\_\+trouble\+\_\+point() const }{get_trouble_point() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::get\+\_\+trouble\+\_\+point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a8e575976851a0b93a9dc2803b4ac2123}{}\label{classc2__function_a8e575976851a0b93a9dc2803b4ac2123}
+
+
+Find out where a calculation ran into trouble, if it got a nan. If the most recent computation did not return a nan, this is undefined. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape x} value of point at which something went wrong, if integrator (or otherwise) returned a nan. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!increment\+\_\+evaluations@{increment\+\_\+evaluations}}
+\index{increment\+\_\+evaluations@{increment\+\_\+evaluations}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{increment\+\_\+evaluations() const }{increment_evaluations() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::increment\+\_\+evaluations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a43555fd6a4ce48f5739e16483170c096}{}\label{classc2__function_a43555fd6a4ce48f5739e16483170c096}
+
+
+count evaluations 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!integral@{integral}}
+\index{integral@{integral}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{integral(float\+\_\+type amin, float\+\_\+type amax, std\+::vector$<$ float\+\_\+type $>$ $\ast$partials=0, float\+\_\+type abs\+\_\+tol=1e-\/12, float\+\_\+type rel\+\_\+tol=1e-\/12, int derivs=2, bool adapt=true, bool extrapolate=true) const }{integral(float_type amin, float_type amax, std::vector< float_type > *partials=0, float_type abs_tol=1e-12, float_type rel_tol=1e-12, int derivs=2, bool adapt=true, bool extrapolate=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::integral (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ $\ast$}]{partials = {\ttfamily 0}, }
+\item[{float\+\_\+type}]{abs\+\_\+tol = {\ttfamily 1e-\/12}, }
+\item[{float\+\_\+type}]{rel\+\_\+tol = {\ttfamily 1e-\/12}, }
+\item[{int}]{derivs = {\ttfamily 2}, }
+\item[{bool}]{adapt = {\ttfamily true}, }
+\item[{bool}]{extrapolate = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_a675c5056562332be2e49b38485d322b7}{}\label{classc2__function_a675c5056562332be2e49b38485d322b7}
+
+
+a fully-\/automated integrator which uses the information provided by the \hyperlink{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{get\+\_\+sampling\+\_\+grid()} function to figure out what to do. 
+
+It returns the integral of the function over the domain requested with error tolerances as specified. It is just a front-\/end to \hyperlink{classc2__function_a89ce5e2f44ebfaf9eb4d66605cde4fde}{partial\+\_\+integrals()}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amin} & lower bound of the domain for integration \\
+\hline
+{\em amax} & upper bound of the domain for integration \\
+\hline
+{\em partials} & if non-\/\+N\+U\+LL, a vector in which to receive the partial integrals. It will automatically be sized appropriately, if provided, to contain {\itshape n} -\/ 1 elements where {\itshape n} is the length of {\itshape xgrid} \\
+\hline
+{\em abs\+\_\+tol} & the absolute error bound for each segment \\
+\hline
+{\em rel\+\_\+tol} & the fractional error bound for each segment. If the error is smaller than either the relative or absolute tolerance, the integration step is finished. \\
+\hline
+{\em derivs} & number of derivatives to trust, which sets the order of the integrator. The order is 3$\ast${\itshape derivs} + 4. {\itshape derivs} can be 0, 1, or 2. \\
+\hline
+{\em adapt} & if true, use recursive adaptation, otherwise do simple evaluation on the grid provided with no error checking. \\
+\hline
+{\em extrapolate} & if true, use simple Richardson extrapolation on the final 2 steps to reduce the error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum of partial integrals, which is the definite integral from the first value in {\itshape xgrid} to the last. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!normalized\+\_\+function@{normalized\+\_\+function}}
+\index{normalized\+\_\+function@{normalized\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{normalized\+\_\+function(float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type norm=1.\+0) const }{normalized_function(float_type amin, float_type amax, float_type norm=1.0) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::normalized\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{float\+\_\+type}]{norm = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_ad908929d3a8d8022caf4f3f1c65d5e71}{}\label{classc2__function_ad908929d3a8d8022caf4f3f1c65d5e71}
+
+
+create a new \hyperlink{classc2__function}{c2\+\_\+function} from this one which is normalized on the interval 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amin} & lower bound of the domain for integration \\
+\hline
+{\em amax} & upper bound of the domain for integration \\
+\hline
+{\em norm} & the desired integral for the function over the region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} with the desired {\itshape norm}. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator()@{operator()}}
+\index{operator()@{operator()}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator()(float\+\_\+type x) const }{operator()(float_type x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a0658cb22966f0ff9072d4d0e04b54c61}{}\label{classc2__function_a0658cb22966f0ff9072d4d0e04b54c61}
+
+
+evaluate the function in the classic way, ignoring derivatives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the point at which to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator()@{operator()}}
+\index{operator()@{operator()}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator()(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{operator()(float_type x, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a25c89b64e6cbd749314d0a61063240cc}{}\label{classc2__function_a25c89b64e6cbd749314d0a61063240cc}
+
+
+get the value and derivatives. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & the point at which to evaluate the function \\
+\hline
+\mbox{\tt out}  & {\em yprime} & the first derivative (if pointer is non-\/null) \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & the second derivative (if pointer is non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator()@{operator()}}
+\index{operator()@{operator()}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator()(const c2\+\_\+function$<$ float\+\_\+type $>$ \&inner) const }{operator()(const c2_function< float_type > &inner) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+composed\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{inner}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a9332f7b389579a9b03eb57578649e07f}{}\label{classc2__function_a9332f7b389579a9b03eb57578649e07f}
+
+
+compose this function outside another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inner} & the inner function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the composed function \label{classc2__function_compose_operator}%
+\hypertarget{classc2__function_compose_operator}{}%
+ 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{operator*(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+product\+\_\+p}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a7744675c98a8ec63320ac1c0b61bec9c}{}\label{classc2__function_a7744675c98a8ec63320ac1c0b61bec9c}
+
+
+factory function to create a \hyperlink{classc2__product__p}{c2\+\_\+product\+\_\+p} from a regular algebraic expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right-\/hand term of the product \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator+@{operator+}}
+\index{operator+@{operator+}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator+(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{operator+(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+sum\+\_\+p}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a268b206b47c55e635e5f0a9e0f3e8ded}{}\label{classc2__function_a268b206b47c55e635e5f0a9e0f3e8ded}
+
+
+factory function to create a \hyperlink{classc2__sum__p}{c2\+\_\+sum\+\_\+p} from a regular algebraic expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right-\/hand term of the sum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator-\/(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{operator-(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+diff\+\_\+p}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a4c56a4673e00bfad37143c403a0c94c8}{}\label{classc2__function_a4c56a4673e00bfad37143c403a0c94c8}
+
+
+factory function to create a \hyperlink{classc2__diff__p}{c2\+\_\+diff\+\_\+p} from a regular algebraic expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right-\/hand term of the difference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!operator/@{operator/}}
+\index{operator/@{operator/}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{operator/(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{operator/(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+ratio\+\_\+p}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a93ac28dfe5daebea84d147b8e346e60c}{}\label{classc2__function_a93ac28dfe5daebea84d147b8e346e60c}
+
+
+factory function to create a \hyperlink{classc2__ratio__p}{c2\+\_\+ratio\+\_\+p} from a regular algebraic expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right-\/hand term of the ratio (the denominator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!partial\+\_\+integrals@{partial\+\_\+integrals}}
+\index{partial\+\_\+integrals@{partial\+\_\+integrals}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{partial\+\_\+integrals(std\+::vector$<$ float\+\_\+type $>$ xgrid, std\+::vector$<$ float\+\_\+type $>$ $\ast$partials=0, float\+\_\+type abs\+\_\+tol=1e-\/12, float\+\_\+type rel\+\_\+tol=1e-\/12, int derivs=2, bool adapt=true, bool extrapolate=true) const }{partial_integrals(std::vector< float_type > xgrid, std::vector< float_type > *partials=0, float_type abs_tol=1e-12, float_type rel_tol=1e-12, int derivs=2, bool adapt=true, bool extrapolate=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::partial\+\_\+integrals (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float\+\_\+type $>$}]{xgrid, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ $\ast$}]{partials = {\ttfamily 0}, }
+\item[{float\+\_\+type}]{abs\+\_\+tol = {\ttfamily 1e-\/12}, }
+\item[{float\+\_\+type}]{rel\+\_\+tol = {\ttfamily 1e-\/12}, }
+\item[{int}]{derivs = {\ttfamily 2}, }
+\item[{bool}]{adapt = {\ttfamily true}, }
+\item[{bool}]{extrapolate = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_a89ce5e2f44ebfaf9eb4d66605cde4fde}{}\label{classc2__function_a89ce5e2f44ebfaf9eb4d66605cde4fde}
+
+
+for points in xgrid, adaptively return Integral\mbox{[}f(x),\{x,xgrid\mbox{[}i\mbox{]},xgrid\mbox{[}i+1\mbox{]}\}\mbox{]} and return in vector, along with sum 
+
+partial\+\_\+integrals uses a method with an error O(dx$\ast$$\ast$10) with full information from the derivatives, and falls back to lower order methods if informed of incomplete derivatives. It uses exact midpoint splitting of the intervals for recursion, resulting in no recomputation of the function during recursive descent at previously computed points. 
+\begin{DoxyParams}{Parameters}
+{\em xgrid} & points between which to evaluate definite integrals. \\
+\hline
+{\em partials} & if non-\/\+N\+U\+LL, a vector in which to receive the partial integrals. It will automatically be sized apprpropriately, if provided, to contain {\itshape n} -\/ 1 elements where {\itshape n} is the length of {\itshape xgrid} \\
+\hline
+{\em abs\+\_\+tol} & the absolute error bound for each segment \\
+\hline
+{\em rel\+\_\+tol} & the fractional error bound for each segment. If the error is smaller than either the relative or absolute tolerance, the integration step is finished. \\
+\hline
+{\em derivs} & number of derivatives to trust, which sets the order of the integrator. The order is 3$\ast${\itshape derivs} + 4. {\itshape derivs} can be 0, 1, or 2. \\
+\hline
+{\em adapt} & if true, use recursive adaptation, otherwise do simple evaluation on the grid provided with no error checking. \\
+\hline
+{\em extrapolate} & if true, use simple Richardson extrapolation on the final 2 steps to reduce the error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum of partial integrals, which is the definite integral from the first value in {\itshape xgrid} to the last. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!preen\+\_\+sampling\+\_\+grid@{preen\+\_\+sampling\+\_\+grid}}
+\index{preen\+\_\+sampling\+\_\+grid@{preen\+\_\+sampling\+\_\+grid}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{preen\+\_\+sampling\+\_\+grid(std\+::vector$<$ float\+\_\+type $>$ $\ast$result) const }{preen_sampling_grid(std::vector< float_type > *result) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::preen\+\_\+sampling\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float\+\_\+type $>$ $\ast$}]{result}
+\end{DoxyParamCaption}
+) const}\hypertarget{classc2__function_a3f461317f09a62101e6114fd693fa20c}{}\label{classc2__function_a3f461317f09a62101e6114fd693fa20c}
+
+
+clean up endpoints on a grid of points 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em result} & the sampling grid with excessively closely space endpoints removed. The grid is modified in place. \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+function@{c2\+\_\+function}!refine\+\_\+sampling\+\_\+grid@{refine\+\_\+sampling\+\_\+grid}}
+\index{refine\+\_\+sampling\+\_\+grid@{refine\+\_\+sampling\+\_\+grid}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{refine\+\_\+sampling\+\_\+grid(std\+::vector$<$ float\+\_\+type $>$ \&grid, size\+\_\+t refinement) const }{refine_sampling_grid(std::vector< float_type > &grid, size_t refinement) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::refine\+\_\+sampling\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{grid, }
+\item[{size\+\_\+t}]{refinement}
+\end{DoxyParamCaption}
+) const}\hypertarget{classc2__function_a25004cf23f56fafd0b64901354892f3c}{}\label{classc2__function_a25004cf23f56fafd0b64901354892f3c}
+
+
+refine a grid by splitting each interval into more intervals 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em grid} & the grid to refine in place \\
+\hline
+ & {\em refinement} & the number of new steps for each old step \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+function@{c2\+\_\+function}!release\+\_\+ownership@{release\+\_\+ownership}}
+\index{release\+\_\+ownership@{release\+\_\+ownership}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{release\+\_\+ownership() const }{release_ownership() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::release\+\_\+ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_ac98aa40f78c487df141a67174662d749}{}\label{classc2__function_ac98aa40f78c487df141a67174662d749}
+
+
+decrement our reference count. If the count reaches zero, destroy ourself. 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!release\+\_\+ownership\+\_\+for\+\_\+return@{release\+\_\+ownership\+\_\+for\+\_\+return}}
+\index{release\+\_\+ownership\+\_\+for\+\_\+return@{release\+\_\+ownership\+\_\+for\+\_\+return}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{release\+\_\+ownership\+\_\+for\+\_\+return() const }{release_ownership_for_return() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ size\+\_\+t {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::release\+\_\+ownership\+\_\+for\+\_\+return (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_af003b3e29357ccf65b7eba38be877b8c}{}\label{classc2__function_af003b3e29357ccf65b7eba38be877b8c}
+
+
+decrement our reference count. Do not destroy at zero. 
+
+\begin{DoxyReturn}{Returns}
+final owner count, to check whether object should disappear. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!reset\+\_\+evaluations@{reset\+\_\+evaluations}}
+\index{reset\+\_\+evaluations@{reset\+\_\+evaluations}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{reset\+\_\+evaluations() const }{reset_evaluations() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::reset\+\_\+evaluations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a8003c40247b7255de5ffbcd3ec21e395}{}\label{classc2__function_a8003c40247b7255de5ffbcd3ec21e395}
+
+
+reset the counter 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!set\+\_\+domain@{set\+\_\+domain}}
+\index{set\+\_\+domain@{set\+\_\+domain}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{set\+\_\+domain(float\+\_\+type amin, float\+\_\+type amax)}{set_domain(float_type amin, float_type amax)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::set\+\_\+domain (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_adeb70da9c75011e9abd71142dca4c22e}{}\label{classc2__function_adeb70da9c75011e9abd71142dca4c22e}
+
+
+set the domain for this function. 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!set\+\_\+sampling\+\_\+grid@{set\+\_\+sampling\+\_\+grid}}
+\index{set\+\_\+sampling\+\_\+grid@{set\+\_\+sampling\+\_\+grid}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{set\+\_\+sampling\+\_\+grid(const std\+::vector$<$ float\+\_\+type $>$ \&grid)}{set_sampling_grid(const std::vector< float_type > &grid)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::set\+\_\+sampling\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{grid}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classc2__function_a23828c75121b442899ab7a80cf5abbb0}{}\label{classc2__function_a23828c75121b442899ab7a80cf5abbb0}
+
+
+establish a grid of \textquotesingle{}interesting\textquotesingle{} points on the function. 
+
+The sampling grid describes a reasonable initial set of points to look at the function. this should generally be set at a scale which is quite coarse, and sufficient for initializing adaptive integration or possibly root bracketing. For sampling a function to build a new interpolating function, one may want to refine this for accuracy. However, interpolating\+\_\+functions themselves return their original X grid by default, so refining the grid in this case might be a bad idea. 
+\begin{DoxyParams}{Parameters}
+{\em grid} & a vector of abscissas. The contents is copied into an internal vector, so the {\itshape grid} can be discarded after passingin. \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+function@{c2\+\_\+function}!set\+\_\+sampling\+\_\+grid\+\_\+pointer@{set\+\_\+sampling\+\_\+grid\+\_\+pointer}}
+\index{set\+\_\+sampling\+\_\+grid\+\_\+pointer@{set\+\_\+sampling\+\_\+grid\+\_\+pointer}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{set\+\_\+sampling\+\_\+grid\+\_\+pointer(std\+::vector$<$ float\+\_\+type $>$ \&grid)}{set_sampling_grid_pointer(std::vector< float_type > &grid)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual void {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::set\+\_\+sampling\+\_\+grid\+\_\+pointer (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classc2__function_af06d3b95c044d5ece8343badec919d17}{}\label{classc2__function_af06d3b95c044d5ece8343badec919d17}
+\index{c2\+\_\+function@{c2\+\_\+function}!square\+\_\+normalized\+\_\+function@{square\+\_\+normalized\+\_\+function}}
+\index{square\+\_\+normalized\+\_\+function@{square\+\_\+normalized\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{square\+\_\+normalized\+\_\+function(float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type norm=1.\+0) const }{square_normalized_function(float_type amin, float_type amax, float_type norm=1.0) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::square\+\_\+normalized\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{float\+\_\+type}]{norm = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_adcf8bcc841ca3a1155ae115178ea88af}{}\label{classc2__function_adcf8bcc841ca3a1155ae115178ea88af}
+
+
+create a new \hyperlink{classc2__function}{c2\+\_\+function} from this one which is square-\/normalized on the interval 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amin} & lower bound of the domain for integration \\
+\hline
+{\em amax} & upper bound of the domain for integration \\
+\hline
+{\em norm} & the desired integral for the function over the region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} with the desired {\itshape norm}. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!square\+\_\+normalized\+\_\+function@{square\+\_\+normalized\+\_\+function}}
+\index{square\+\_\+normalized\+\_\+function@{square\+\_\+normalized\+\_\+function}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{square\+\_\+normalized\+\_\+function(float\+\_\+type amin, float\+\_\+type amax, const c2\+\_\+function$<$ float\+\_\+type $>$ \&weight, float\+\_\+type norm=1.\+0) const }{square_normalized_function(float_type amin, float_type amax, const c2_function< float_type > &weight, float_type norm=1.0) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::square\+\_\+normalized\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{weight, }
+\item[{float\+\_\+type}]{norm = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) }\hypertarget{classc2__function_a9d8716e8abb9e02a188c243f825acf9b}{}\label{classc2__function_a9d8716e8abb9e02a188c243f825acf9b}
+
+
+create a new \hyperlink{classc2__function}{c2\+\_\+function} from this one which is square-\/normalized with the provided {\itshape weight} on the interval 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amin} & lower bound of the domain for integration \\
+\hline
+{\em amax} & upper bound of the domain for integration \\
+\hline
+{\em weight} & a \hyperlink{classc2__function}{c2\+\_\+function} providing the weight \\
+\hline
+{\em norm} & the desired integral for the function over the region \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classc2__function}{c2\+\_\+function} with the desired {\itshape norm}. 
+\end{DoxyReturn}
+\index{c2\+\_\+function@{c2\+\_\+function}!value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}}
+\index{value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{value\+\_\+with\+\_\+derivatives(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const =0}{value_with_derivatives(float_type x, float_type *yprime, float_type *yprime2) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::value\+\_\+with\+\_\+derivatives (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classc2__function_a44e0201159111350be7f746fc9026f67}{}\label{classc2__function_a44e0201159111350be7f746fc9026f67}
+
+
+get the value and derivatives. 
+
+There is required checking for null pointers on the derivatives, and most implementations should operate faster if derivatives are not needed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & the point at which to evaluate the function \\
+\hline
+\mbox{\tt out}  & {\em yprime} & the first derivative (if pointer is non-\/null) \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & the second derivative (if pointer is non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classc2__piecewise__function__p_a24dda73e84778fa9eb2160195403c45f}{c2\+\_\+piecewise\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__connector__function__p_a0c748860e1ef547a0cce583c01abe175}{c2\+\_\+connector\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__inverse__function__p_a907dbfc4a1ea0530ae76a1ae8704f8ce}{c2\+\_\+inverse\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__power__law__p_a21f0088450f7b7110a001f4960e95fa1}{c2\+\_\+power\+\_\+law\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__quadratic__p_ade79e98941853a179b2be14b6cc6daa3}{c2\+\_\+quadratic\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__linear__p_a1d6ce127c8e991c4293f530f341ce617}{c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__linear__p_a1d6ce127c8e991c4293f530f341ce617}{c2\+\_\+linear\+\_\+p$<$ G4double $>$}, \hyperlink{classc2__identity__p_a69a30999382af761b9360179dbedbc88}{c2\+\_\+identity\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__recip__p_a0f05f680a8074a14c6d2ed5f5e1ebeca}{c2\+\_\+recip\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__sqrt__p_aef50454e3f093a7e956c3a994b46ce9d}{c2\+\_\+sqrt\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__exp__p_a1c5cb28b65356b2f2290ae11d651f93e}{c2\+\_\+exp\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__log__p_acd98067684930659e4a47390385e56b3}{c2\+\_\+log\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__tan__p_ac1e6ff8fd74a4d33ce189297fd16bbee}{c2\+\_\+tan\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__cos__p_ae4e275f2739d33bfbf1f2efc741535d5}{c2\+\_\+cos\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__sin__p_a9710a5d48360f4c6e1568f1ad849dd7b}{c2\+\_\+sin\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classinterpolating__function__p_a321e6a9a8e598ebb0ae77ce265742ed7}{interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__constant__p_a75ec878f6eb48c5ea0187197c645dd66}{c2\+\_\+constant\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__cached__function__p_a09f22efcdcf81c1a7b353d10e29b193c}{c2\+\_\+cached\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__scaled__function__p_a29f90a45574f413a18349e220287fb5d}{c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__binary__function_a7ab60d022222ce65e99f8708bf2aae0d}{c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$}, \hyperlink{classc2__plugin__function__p_a7a5f8926ecec5b73f32ad5f90cefe80e}{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classc2__plugin__function__p_a7a5f8926ecec5b73f32ad5f90cefe80e}{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ G4double $>$}, and \hyperlink{classc2__classic__function__p_abf7fc11b0396fc249eb3300ed39b3cc3}{c2\+\_\+classic\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}.
+
+\index{c2\+\_\+function@{c2\+\_\+function}!xmax@{xmax}}
+\index{xmax@{xmax}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{xmax() const }{xmax() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::xmax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_a7f3ac790b6659b2d137f4c90eadb6ef0}{}\label{classc2__function_a7f3ac790b6659b2d137f4c90eadb6ef0}
+
+
+return the upper bound of the domain for this function as set by \hyperlink{classc2__function_adeb70da9c75011e9abd71142dca4c22e}{set\+\_\+domain()} 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!xmin@{xmin}}
+\index{xmin@{xmin}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{xmin() const }{xmin() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::xmin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function_acddff2d033c7f3205658e246d806204b}{}\label{classc2__function_acddff2d033c7f3205658e246d806204b}
+
+
+return the lower bound of the domain for this function as set by \hyperlink{classc2__function_adeb70da9c75011e9abd71142dca4c22e}{set\+\_\+domain()} 
+
+
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+function@{c2\+\_\+function}!bad\+\_\+x\+\_\+point@{bad\+\_\+x\+\_\+point}}
+\index{bad\+\_\+x\+\_\+point@{bad\+\_\+x\+\_\+point}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{bad\+\_\+x\+\_\+point}{bad_x_point}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::bad\+\_\+x\+\_\+point\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}\hypertarget{classc2__function_a19b31dd52b778a2fe5f156def38e41d4}{}\label{classc2__function_a19b31dd52b778a2fe5f156def38e41d4}
+
+
+this point may be used to record where a calculation ran into trouble 
+
+\index{c2\+\_\+function@{c2\+\_\+function}!evaluations@{evaluations}}
+\index{evaluations@{evaluations}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{evaluations}{evaluations}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ size\+\_\+t {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::evaluations\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}\hypertarget{classc2__function_a0737663eb36818cd357852479e6b96f2}{}\label{classc2__function_a0737663eb36818cd357852479e6b96f2}
+\index{c2\+\_\+function@{c2\+\_\+function}!f\+X\+Max@{f\+X\+Max}}
+\index{f\+X\+Max@{f\+X\+Max}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{f\+X\+Max}{fXMax}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::f\+X\+Max\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__function_a8d000a2d3ca13a119f4bcf4e31a9bca6}{}\label{classc2__function_a8d000a2d3ca13a119f4bcf4e31a9bca6}
+\index{c2\+\_\+function@{c2\+\_\+function}!f\+X\+Min@{f\+X\+Min}}
+\index{f\+X\+Min@{f\+X\+Min}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{f\+X\+Min}{fXMin}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::f\+X\+Min\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__function_a72d60216e8a9c61039d4895c6a15b0ce}{}\label{classc2__function_a72d60216e8a9c61039d4895c6a15b0ce}
+\index{c2\+\_\+function@{c2\+\_\+function}!no\+\_\+overwrite\+\_\+grid@{no\+\_\+overwrite\+\_\+grid}}
+\index{no\+\_\+overwrite\+\_\+grid@{no\+\_\+overwrite\+\_\+grid}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{no\+\_\+overwrite\+\_\+grid}{no_overwrite_grid}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ bool {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::no\+\_\+overwrite\+\_\+grid\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__function_a12085ddfc5716c442bb59c5672e140dd}{}\label{classc2__function_a12085ddfc5716c442bb59c5672e140dd}
+\index{c2\+\_\+function@{c2\+\_\+function}!sampling\+\_\+grid@{sampling\+\_\+grid}}
+\index{sampling\+\_\+grid@{sampling\+\_\+grid}!c2\+\_\+function@{c2\+\_\+function}}
+\subsubsection[{\texorpdfstring{sampling\+\_\+grid}{sampling_grid}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ std\+::vector$<$float\+\_\+type$>$$\ast$ {\bf c2\+\_\+function}$<$ float\+\_\+type $>$\+::sampling\+\_\+grid\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__function_ad9714faf2c3d053a77fd733b52834754}{}\label{classc2__function_ad9714faf2c3d053a77fd733b52834754}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

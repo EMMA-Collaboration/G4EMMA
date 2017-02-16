@@ -1,0 +1,157 @@
+\hypertarget{classEMMAIonChamberHit}{}\section{E\+M\+M\+A\+Ion\+Chamber\+Hit Class Reference}
+\label{classEMMAIonChamberHit}\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+
+
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Ion\+Chamber\+Hit.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for E\+M\+M\+A\+Ion\+Chamber\+Hit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classEMMAIonChamberHit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for E\+M\+M\+A\+Ion\+Chamber\+Hit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classEMMAIonChamberHit__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEMMAIonChamberHit_ad75cfe53db42c1240ec128d092502e26}{E\+M\+M\+A\+Ion\+Chamber\+Hit} ()
+\item 
+\hyperlink{classEMMAIonChamberHit_a03c3e59efa7a8abfc4294613d6faf345}{E\+M\+M\+A\+Ion\+Chamber\+Hit} (const \hyperlink{classEMMAIonChamberHit}{E\+M\+M\+A\+Ion\+Chamber\+Hit} \&)
+\item 
+virtual \hyperlink{classEMMAIonChamberHit_afd35a6db52837d8d218062d3bcfe1afc}{$\sim$\+E\+M\+M\+A\+Ion\+Chamber\+Hit} ()
+\item 
+const \hyperlink{classEMMAIonChamberHit}{E\+M\+M\+A\+Ion\+Chamber\+Hit} \& \hyperlink{classEMMAIonChamberHit_ad3777b164c0d892b2e313ee7cc5250d3}{operator=} (const \hyperlink{classEMMAIonChamberHit}{E\+M\+M\+A\+Ion\+Chamber\+Hit} \&)
+\item 
+G4int \hyperlink{classEMMAIonChamberHit_a722ef0deb569abe0db3b2edc57bf0218}{operator==} (const \hyperlink{classEMMAIonChamberHit}{E\+M\+M\+A\+Ion\+Chamber\+Hit} \&) const 
+\item 
+void $\ast$ \hyperlink{classEMMAIonChamberHit_a8a1a1579a39cf66b06c5250082fa9211}{operator new} (size\+\_\+t)
+\item 
+void \hyperlink{classEMMAIonChamberHit_abadf1dbdcf33fb515226e1acb5ceb0bd}{operator delete} (void $\ast$)
+\item 
+virtual void \hyperlink{classEMMAIonChamberHit_a2119bc84fec4904d53bf88e154983605}{Draw} ()
+\item 
+virtual void \hyperlink{classEMMAIonChamberHit_a41a76101e2f0faf2201e6fd5792254cd}{Print} ()
+\item 
+void \hyperlink{classEMMAIonChamberHit_af688556d82929479e004e0b87568ecfd}{Add} (G4double de, G4double dl)
+\item 
+G4double \hyperlink{classEMMAIonChamberHit_a860a0546567cd25f41f9a28c48dd913a}{Get\+Edep} () const 
+\item 
+G4double \hyperlink{classEMMAIonChamberHit_a90dfd4ddd328e40aa2294eab4ee30ec3}{Get\+Track\+Length} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Calorimeter hit class
+
+It defines data members to store the the energy deposit and track lengths of charged particles in a selected volume\+:
+\begin{DoxyItemize}
+\item f\+Edep, f\+Track\+Length 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Ion\+Chamber\+Hit()}{EMMAIonChamberHit()}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+E\+M\+M\+A\+Ion\+Chamber\+Hit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAIonChamberHit_ad75cfe53db42c1240ec128d092502e26}{}\label{classEMMAIonChamberHit_ad75cfe53db42c1240ec128d092502e26}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Ion\+Chamber\+Hit(const E\+M\+M\+A\+Ion\+Chamber\+Hit \&)}{EMMAIonChamberHit(const EMMAIonChamberHit &)}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+E\+M\+M\+A\+Ion\+Chamber\+Hit (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+M\+M\+A\+Ion\+Chamber\+Hit} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAIonChamberHit_a03c3e59efa7a8abfc4294613d6faf345}{}\label{classEMMAIonChamberHit_a03c3e59efa7a8abfc4294613d6faf345}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!````~E\+M\+M\+A\+Ion\+Chamber\+Hit@{$\sim$\+E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\index{````~E\+M\+M\+A\+Ion\+Chamber\+Hit@{$\sim$\+E\+M\+M\+A\+Ion\+Chamber\+Hit}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{$\sim$\+E\+M\+M\+A\+Ion\+Chamber\+Hit()}{~EMMAIonChamberHit()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual E\+M\+M\+A\+Ion\+Chamber\+Hit\+::$\sim$\+E\+M\+M\+A\+Ion\+Chamber\+Hit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAIonChamberHit_afd35a6db52837d8d218062d3bcfe1afc}{}\label{classEMMAIonChamberHit_afd35a6db52837d8d218062d3bcfe1afc}
+
+
+\subsection{Member Function Documentation}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!Add@{Add}}
+\index{Add@{Add}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{Add(\+G4double de, G4double dl)}{Add(G4double de, G4double dl)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+Add (
+\begin{DoxyParamCaption}
+\item[{G4double}]{de, }
+\item[{G4double}]{dl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAIonChamberHit_af688556d82929479e004e0b87568ecfd}{}\label{classEMMAIonChamberHit_af688556d82929479e004e0b87568ecfd}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!Draw@{Draw}}
+\index{Draw@{Draw}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{Draw()}{Draw()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classEMMAIonChamberHit_a2119bc84fec4904d53bf88e154983605}{}\label{classEMMAIonChamberHit_a2119bc84fec4904d53bf88e154983605}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!Get\+Edep@{Get\+Edep}}
+\index{Get\+Edep@{Get\+Edep}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{Get\+Edep() const }{GetEdep() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+Get\+Edep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAIonChamberHit_a860a0546567cd25f41f9a28c48dd913a}{}\label{classEMMAIonChamberHit_a860a0546567cd25f41f9a28c48dd913a}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!Get\+Track\+Length@{Get\+Track\+Length}}
+\index{Get\+Track\+Length@{Get\+Track\+Length}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{Get\+Track\+Length() const }{GetTrackLength() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+Get\+Track\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAIonChamberHit_a90dfd4ddd328e40aa2294eab4ee30ec3}{}\label{classEMMAIonChamberHit_a90dfd4ddd328e40aa2294eab4ee30ec3}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{operator delete(void $\ast$)}{operator delete(void *)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Ion\+Chamber\+Hit\+::operator delete (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{hit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAIonChamberHit_abadf1dbdcf33fb515226e1acb5ceb0bd}{}\label{classEMMAIonChamberHit_abadf1dbdcf33fb515226e1acb5ceb0bd}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!operator new@{operator new}}
+\index{operator new@{operator new}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{operator new(size\+\_\+t)}{operator new(size_t)}}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ E\+M\+M\+A\+Ion\+Chamber\+Hit\+::operator new (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAIonChamberHit_a8a1a1579a39cf66b06c5250082fa9211}{}\label{classEMMAIonChamberHit_a8a1a1579a39cf66b06c5250082fa9211}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!operator=@{operator=}}
+\index{operator=@{operator=}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{operator=(const E\+M\+M\+A\+Ion\+Chamber\+Hit \&)}{operator=(const EMMAIonChamberHit &)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf E\+M\+M\+A\+Ion\+Chamber\+Hit}\& E\+M\+M\+A\+Ion\+Chamber\+Hit\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+M\+M\+A\+Ion\+Chamber\+Hit} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAIonChamberHit_ad3777b164c0d892b2e313ee7cc5250d3}{}\label{classEMMAIonChamberHit_ad3777b164c0d892b2e313ee7cc5250d3}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!operator==@{operator==}}
+\index{operator==@{operator==}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{operator==(const E\+M\+M\+A\+Ion\+Chamber\+Hit \&) const }{operator==(const EMMAIonChamberHit &) const }}]{\setlength{\rightskip}{0pt plus 5cm}G4int E\+M\+M\+A\+Ion\+Chamber\+Hit\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+M\+M\+A\+Ion\+Chamber\+Hit} \&}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classEMMAIonChamberHit_a722ef0deb569abe0db3b2edc57bf0218}{}\label{classEMMAIonChamberHit_a722ef0deb569abe0db3b2edc57bf0218}
+\index{E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}!Print@{Print}}
+\index{Print@{Print}!E\+M\+M\+A\+Ion\+Chamber\+Hit@{E\+M\+M\+A\+Ion\+Chamber\+Hit}}
+\subsubsection[{\texorpdfstring{Print()}{Print()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void E\+M\+M\+A\+Ion\+Chamber\+Hit\+::\+Print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAIonChamberHit_a41a76101e2f0faf2201e6fd5792254cd}{}\label{classEMMAIonChamberHit_a41a76101e2f0faf2201e6fd5792254cd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{EMMAIonChamberHit_8hh}{E\+M\+M\+A\+Ion\+Chamber\+Hit.\+hh}\end{DoxyCompactItemize}

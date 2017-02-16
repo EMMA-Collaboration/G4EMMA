@@ -1,0 +1,8 @@
+<map id="c2_binary_function&lt; float_type &gt;" name="c2_binary_function&lt; float_type &gt;">
+<area shape="rect" id="node3" href="$classc2__composed__function__p.html" title="Provides function composition (nesting)This allows evaluation of f(g(x)) where f and g are c2_functio..." alt="" coords="5,1019,196,1140"/>
+<area shape="rect" id="node4" href="$classc2__diff__p.html" title="create a c2_function which is the difference of two other c2_functions.This should always be construc..." alt="" coords="220,1026,376,1133"/>
+<area shape="rect" id="node5" href="$classc2__product__p.html" title="create a c2_function which is the product of two other c2_functions.This should always be constructed..." alt="" coords="400,1019,537,1140"/>
+<area shape="rect" id="node6" href="$classc2__ratio__p.html" title="create a c2_function which is the ratio of two other c2_functions.This should always be constructed u..." alt="" coords="562,1026,725,1133"/>
+<area shape="rect" id="node7" href="$classc2__sum__p.html" title="create a c2_function which is the sum of two other c2_function objects.This should always be construc..." alt="" coords="749,1026,911,1133"/>
+<area shape="rect" id="node2" href="$classc2__function.html" title="the parent class for all c2_functions.c2_functions know their value, first, and second derivative at ..." alt="" coords="367,5,571,743"/>
+</map>

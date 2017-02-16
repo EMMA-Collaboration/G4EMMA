@@ -1719,7 +1719,7 @@ G4ios.hh
 /home/nicholas/Code/G4EMMA/src/fortran_subs.inc
 
 /home/nicholas/Code/G4EMMA/src/mitray.cc
-/usr/local/include/f2c.h
+f2c.h
 -
 
 /opt/geant4/geant4.9.6.p04-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
@@ -7735,6 +7735,4 @@ unistd.h
 -
 sys/types.h
 -
-
-/usr/local/include/f2c.h
 

@@ -1,0 +1,197 @@
+\hypertarget{classc2__plugin__function__p}{}\section{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__plugin__function__p}\index{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$@{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}}
+
+
+a container into which any other \hyperlink{classc2__function}{c2\+\_\+function} can be dropped, to allow expressions with replacable components.
+
+It is useful for plugging different Interpolating\+Functions into a \hyperlink{classc2__function}{c2\+\_\+function} expression. It saves a lot of effort in other places with casting away const declarations.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__plugin__function__p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__plugin__function__p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__plugin__function__p_aead9e593b067ffcb7387b350db7ea920}{c2\+\_\+plugin\+\_\+function\+\_\+p} ()
+\begin{DoxyCompactList}\small\item\em construct the container with no function \end{DoxyCompactList}\item 
+\hyperlink{classc2__plugin__function__p_a6b2825f01dffa6eaf84f7d4355a97f03}{c2\+\_\+plugin\+\_\+function\+\_\+p} (\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&f)
+\begin{DoxyCompactList}\small\item\em construct the container with a pre-\/defined function \end{DoxyCompactList}\item 
+void \hyperlink{classc2__plugin__function__p_a5d06682ac3e78308631700b1cde961ef}{set\+\_\+function} (\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ $\ast$f)
+\begin{DoxyCompactList}\small\item\em fill the container with a new function, or clear it with a null pointer and copy our domain \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__plugin__function__p_a7a5f8926ecec5b73f32ad5f90cefe80e}{value\+\_\+with\+\_\+derivatives} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get the value and derivatives. \end{DoxyCompactList}\item 
+virtual \hyperlink{classc2__plugin__function__p_aac74d9e2221ee6b8fee5adc579960530}{$\sim$c2\+\_\+plugin\+\_\+function\+\_\+p} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+void \hyperlink{classc2__plugin__function__p_aebe716e59908fe373f85e5aac964441f}{unset\+\_\+function} ()
+\begin{DoxyCompactList}\small\item\em clear our function \end{DoxyCompactList}\item 
+virtual void \hyperlink{classc2__plugin__function__p_a0e7ff48329a648b3966efba72b15e3ed}{get\+\_\+sampling\+\_\+grid} (float\+\_\+type amin, float\+\_\+type amax, std\+::vector$<$ float\+\_\+type $>$ \&grid) const 
+\begin{DoxyCompactList}\small\item\em return the grid of \textquotesingle{}interesting\textquotesingle{} points along this function which lie in the region requested \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__ptr}{c2\+\_\+ptr}$<$ float\+\_\+type $>$ \hyperlink{classc2__plugin__function__p_a9f3ca0419f50aa9792da2a9b54716849}{func}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+
+a container into which any other \hyperlink{classc2__function}{c2\+\_\+function} can be dropped, to allow expressions with replacable components.
+
+It is useful for plugging different Interpolating\+Functions into a \hyperlink{classc2__function}{c2\+\_\+function} expression. It saves a lot of effort in other places with casting away const declarations. 
+
+It is also useful as a wrapper for a function if it is necessary to have a copy of a function which has a different domain or sampling grid than the parent function. This can be be used, for example, to patch badly-\/behaved functions with \hyperlink{classc2__piecewise__function__p}{c2\+\_\+piecewise\+\_\+function\+\_\+p} by taking the parent function, creating two plugins of it with domains on each side of the nasty bit, and then inserting a nice function in the hole.
+
+This can also be used as a fancier \hyperlink{classc2__ptr}{c2\+\_\+ptr} which allows direct evaluation instead of having to dereference the container first.
+
+The factory function \hyperlink{classc2__factory_aaea82fa4f0b1f0183314a45923a3b673}{c2\+\_\+factory\+::plugin\+\_\+function()} creates $\ast$new \hyperlink{classc2__plugin__function__p_aead9e593b067ffcb7387b350db7ea920}{c2\+\_\+plugin\+\_\+function\+\_\+p()} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+plugin\+\_\+function\+\_\+p()}{c2_plugin_function_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+plugin\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__plugin__function__p_aead9e593b067ffcb7387b350db7ea920}{}\label{classc2__plugin__function__p_aead9e593b067ffcb7387b350db7ea920}
+
+
+construct the container with no function 
+
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+plugin\+\_\+function\+\_\+p(c2\+\_\+function$<$ float\+\_\+type $>$ \&f)}{c2_plugin_function_p(c2_function< float_type > &f)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+plugin\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+\item[{{\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__plugin__function__p_a6b2825f01dffa6eaf84f7d4355a97f03}{}\label{classc2__plugin__function__p_a6b2825f01dffa6eaf84f7d4355a97f03}
+
+
+construct the container with a pre-\/defined function 
+
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!````~c2\+\_\+plugin\+\_\+function\+\_\+p@{$\sim$c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\index{````~c2\+\_\+plugin\+\_\+function\+\_\+p@{$\sim$c2\+\_\+plugin\+\_\+function\+\_\+p}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{$\sim$c2\+\_\+plugin\+\_\+function\+\_\+p()}{~c2_plugin_function_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::$\sim${\bf c2\+\_\+plugin\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__plugin__function__p_aac74d9e2221ee6b8fee5adc579960530}{}\label{classc2__plugin__function__p_aac74d9e2221ee6b8fee5adc579960530}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!get\+\_\+sampling\+\_\+grid@{get\+\_\+sampling\+\_\+grid}}
+\index{get\+\_\+sampling\+\_\+grid@{get\+\_\+sampling\+\_\+grid}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{get\+\_\+sampling\+\_\+grid(float\+\_\+type amin, float\+\_\+type amax, std\+::vector$<$ float\+\_\+type $>$ \&grid) const }{get_sampling_grid(float_type amin, float_type amax, std::vector< float_type > &grid) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual void {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::get\+\_\+sampling\+\_\+grid (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{grid}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__plugin__function__p_a0e7ff48329a648b3966efba72b15e3ed}{}\label{classc2__plugin__function__p_a0e7ff48329a648b3966efba72b15e3ed}
+
+
+return the grid of \textquotesingle{}interesting\textquotesingle{} points along this function which lie in the region requested 
+
+if a sampling grid is defined, work from there, otherwise return vector of (amin, amax) 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em amin} & the lower bound for which the function is to be sampled \\
+\hline
+ & {\em amax} & the upper bound for which the function is to be sampled \\
+\hline
+\mbox{\tt in,out}  & {\em grid} & filled vector containing the samplng grid. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classc2__function_ad03264dcc015e5d0b1b6eb30df3f32be}{c2\+\_\+function$<$ float\+\_\+type $>$}.
+
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!set\+\_\+function@{set\+\_\+function}}
+\index{set\+\_\+function@{set\+\_\+function}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{set\+\_\+function(c2\+\_\+function$<$ float\+\_\+type $>$ $\ast$f)}{set_function(c2_function< float_type > *f)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::set\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{{\bf c2\+\_\+function}$<$ float\+\_\+type $>$ $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__plugin__function__p_a5d06682ac3e78308631700b1cde961ef}{}\label{classc2__plugin__function__p_a5d06682ac3e78308631700b1cde961ef}
+
+
+fill the container with a new function, or clear it with a null pointer and copy our domain 
+
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!unset\+\_\+function@{unset\+\_\+function}}
+\index{unset\+\_\+function@{unset\+\_\+function}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{unset\+\_\+function()}{unset_function()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::unset\+\_\+function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__plugin__function__p_aebe716e59908fe373f85e5aac964441f}{}\label{classc2__plugin__function__p_aebe716e59908fe373f85e5aac964441f}
+
+
+clear our function 
+
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}}
+\index{value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{value\+\_\+with\+\_\+derivatives(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{value_with_derivatives(float_type x, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual float\+\_\+type {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::value\+\_\+with\+\_\+derivatives (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__plugin__function__p_a7a5f8926ecec5b73f32ad5f90cefe80e}{}\label{classc2__plugin__function__p_a7a5f8926ecec5b73f32ad5f90cefe80e}
+
+
+get the value and derivatives. 
+
+There is required checking for null pointers on the derivatives, and most implementations should operate faster if derivatives are not needed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & the point at which to evaluate the function \\
+\hline
+\mbox{\tt out}  & {\em yprime} & the first derivative (if pointer is non-\/null) \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & the second derivative (if pointer is non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function Uses the internal function pointer set by \hyperlink{classc2__plugin__function__p_a5d06682ac3e78308631700b1cde961ef}{set\+\_\+function()}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classc2__function_a44e0201159111350be7f746fc9026f67}{c2\+\_\+function$<$ float\+\_\+type $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}!func@{func}}
+\index{func@{func}!c2\+\_\+plugin\+\_\+function\+\_\+p@{c2\+\_\+plugin\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{func}{func}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+ptr}$<$float\+\_\+type$>$ {\bf c2\+\_\+plugin\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::func\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__plugin__function__p_a9f3ca0419f50aa9792da2a9b54716849}{}\label{classc2__plugin__function__p_a9f3ca0419f50aa9792da2a9b54716849}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

@@ -1,0 +1,212 @@
+\hypertarget{classG4ScreenedCoulombCrossSection}{}\section{G4\+Screened\+Coulomb\+Cross\+Section Class Reference}
+\label{classG4ScreenedCoulombCrossSection}\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+
+
+{\ttfamily \#include \char`\"{}G4\+Screened\+Nuclear\+Recoil.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for G4\+Screened\+Coulomb\+Cross\+Section\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classG4ScreenedCoulombCrossSection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G4\+Screened\+Coulomb\+Cross\+Section\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classG4ScreenedCoulombCrossSection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classG4ScreenedCoulombCrossSection_a8d1c04f63ce3f9412b8944b136a43a1baecfd1e5d90fb05d4c6e0a311ed092bfb}{n\+Mass\+Map\+Elements} =116
+ \}
+\item 
+typedef std\+::map$<$ G4int, \hyperlink{structG4ScreeningTables}{G4\+Screening\+Tables} $>$ \hyperlink{classG4ScreenedCoulombCrossSection_a936cd19a7a45353257f74f1e061de448}{Screening\+Map}
+\item 
+typedef std\+::map$<$ G4int, class G4\+Particle\+Definition $\ast$ $>$ \hyperlink{classG4ScreenedCoulombCrossSection_a89d84b815b40ba7fe83462843964d3e4}{Particle\+Cache}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classG4ScreenedCoulombCrossSection_aa28efa2005fe5926327fb4876c653dd9}{G4\+Screened\+Coulomb\+Cross\+Section} ()
+\item 
+\hyperlink{classG4ScreenedCoulombCrossSection_a59e0eca08ea23847ea01fab7c7f2a98c}{G4\+Screened\+Coulomb\+Cross\+Section} (const \hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} \&src)
+\item 
+virtual \hyperlink{classG4ScreenedCoulombCrossSection_a8f1b09470e3a5e04b4d6ff1ef4f041b8}{$\sim$\+G4\+Screened\+Coulomb\+Cross\+Section} ()
+\item 
+virtual void \hyperlink{classG4ScreenedCoulombCrossSection_a36f7010b3075c363a96c037b018cdfa5}{Load\+Data} (G4\+String screening\+Key, G4int z1, G4double m1, G4double recoil\+Cutoff)=0
+\item 
+void \hyperlink{classG4ScreenedCoulombCrossSection_a21351e02c8b9eccdea7ae30f2e7db3fe}{Build\+M\+F\+P\+Tables} (void)
+\item 
+virtual \hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} $\ast$ \hyperlink{classG4ScreenedCoulombCrossSection_a381cca52e9ba2c41cb838474334629ce}{create} ()=0
+\item 
+const \hyperlink{structG4ScreeningTables}{G4\+Screening\+Tables} $\ast$ \hyperlink{classG4ScreenedCoulombCrossSection_accbe78a66a124161bd938c5fa1217d2a}{Get\+Screening} (G4int Z)
+\item 
+void \hyperlink{classG4ScreenedCoulombCrossSection_a8aff8c06482b63d344883107bf1a93d4}{Set\+Verbosity} (G4int v)
+\item 
+G4\+Particle\+Definition $\ast$ \hyperlink{classG4ScreenedCoulombCrossSection_ab072a5e6932cf49bd8c2e24512dcf78f}{Select\+Random\+Unweighted\+Target} (const G4\+Material\+Cuts\+Couple $\ast$couple)
+\item 
+G4double \hyperlink{classG4ScreenedCoulombCrossSection_a90cfe2fb3343c4ef563d558cf3df21f8}{standardmass} (G4int z1)
+\item 
+const \hyperlink{G4ScreenedNuclearRecoil_8hh_a679aa602c6cfde1625601e0314b3cc01}{G4\+\_\+c2\+\_\+function} $\ast$ \hyperlink{classG4ScreenedCoulombCrossSection_a102e24c7581ba1249306290eff349225}{operator\mbox{[}$\,$\mbox{]}} (G4int material\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classG4ScreenedCoulombCrossSection_a936cd19a7a45353257f74f1e061de448}{Screening\+Map} \hyperlink{classG4ScreenedCoulombCrossSection_acee3c711dd831c718fc22d5c98334f56}{screening\+Data}
+\item 
+\hyperlink{classG4ScreenedCoulombCrossSection_a89d84b815b40ba7fe83462843964d3e4}{Particle\+Cache} \hyperlink{classG4ScreenedCoulombCrossSection_a4f47a69e60be10d7040de1fbc9612887}{target\+Map}
+\item 
+G4int \hyperlink{classG4ScreenedCoulombCrossSection_a9b29c3d5aa9807d66afee4e59905d7e3}{verbosity}
+\item 
+std\+::map$<$ G4int, \hyperlink{G4ScreenedNuclearRecoil_8hh_a1252ac0bd90119ed9cc3298296b77c2a}{G4\+\_\+c2\+\_\+const\+\_\+ptr} $>$ \hyperlink{classG4ScreenedCoulombCrossSection_ae6c847c6a7aac54186ab96ea4d44be3a}{sigma\+Map}
+\item 
+std\+::map$<$ G4int, \hyperlink{G4ScreenedNuclearRecoil_8hh_a1252ac0bd90119ed9cc3298296b77c2a}{G4\+\_\+c2\+\_\+const\+\_\+ptr} $>$ \hyperlink{classG4ScreenedCoulombCrossSection_a4edd4f54a2c248eb398f06127962e550}{M\+F\+P\+Tables}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Particle\+Cache@{Particle\+Cache}}
+\index{Particle\+Cache@{Particle\+Cache}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Particle\+Cache}{ParticleCache}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$G4int, class G4\+Particle\+Definition $\ast$$>$ {\bf G4\+Screened\+Coulomb\+Cross\+Section\+::\+Particle\+Cache}}\hypertarget{classG4ScreenedCoulombCrossSection_a89d84b815b40ba7fe83462843964d3e4}{}\label{classG4ScreenedCoulombCrossSection_a89d84b815b40ba7fe83462843964d3e4}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Screening\+Map@{Screening\+Map}}
+\index{Screening\+Map@{Screening\+Map}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Screening\+Map}{ScreeningMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$G4int, {\bf G4\+Screening\+Tables}$>$ {\bf G4\+Screened\+Coulomb\+Cross\+Section\+::\+Screening\+Map}}\hypertarget{classG4ScreenedCoulombCrossSection_a936cd19a7a45353257f74f1e061de448}{}\label{classG4ScreenedCoulombCrossSection_a936cd19a7a45353257f74f1e061de448}
+
+
+\subsection{Member Enumeration Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{classG4ScreenedCoulombCrossSection_a8d1c04f63ce3f9412b8944b136a43a1b}{}\label{classG4ScreenedCoulombCrossSection_a8d1c04f63ce3f9412b8944b136a43a1b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{n\+Mass\+Map\+Elements@{n\+Mass\+Map\+Elements}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!n\+Mass\+Map\+Elements@{n\+Mass\+Map\+Elements}}\item[{\em 
+n\+Mass\+Map\+Elements\hypertarget{classG4ScreenedCoulombCrossSection_a8d1c04f63ce3f9412b8944b136a43a1baecfd1e5d90fb05d4c6e0a311ed092bfb}{}\label{classG4ScreenedCoulombCrossSection_a8d1c04f63ce3f9412b8944b136a43a1baecfd1e5d90fb05d4c6e0a311ed092bfb}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{G4\+Screened\+Coulomb\+Cross\+Section()}{G4ScreenedCoulombCrossSection()}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Screened\+Coulomb\+Cross\+Section\+::\+G4\+Screened\+Coulomb\+Cross\+Section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedCoulombCrossSection_aa28efa2005fe5926327fb4876c653dd9}{}\label{classG4ScreenedCoulombCrossSection_aa28efa2005fe5926327fb4876c653dd9}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{G4\+Screened\+Coulomb\+Cross\+Section(const G4\+Screened\+Coulomb\+Cross\+Section \&src)}{G4ScreenedCoulombCrossSection(const G4ScreenedCoulombCrossSection &src)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Screened\+Coulomb\+Cross\+Section\+::\+G4\+Screened\+Coulomb\+Cross\+Section (
+\begin{DoxyParamCaption}
+\item[{const {\bf G4\+Screened\+Coulomb\+Cross\+Section} \&}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedCoulombCrossSection_a59e0eca08ea23847ea01fab7c7f2a98c}{}\label{classG4ScreenedCoulombCrossSection_a59e0eca08ea23847ea01fab7c7f2a98c}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!````~G4\+Screened\+Coulomb\+Cross\+Section@{$\sim$\+G4\+Screened\+Coulomb\+Cross\+Section}}
+\index{````~G4\+Screened\+Coulomb\+Cross\+Section@{$\sim$\+G4\+Screened\+Coulomb\+Cross\+Section}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{$\sim$\+G4\+Screened\+Coulomb\+Cross\+Section()}{~G4ScreenedCoulombCrossSection()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4\+Screened\+Coulomb\+Cross\+Section\+::$\sim$\+G4\+Screened\+Coulomb\+Cross\+Section (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedCoulombCrossSection_a8f1b09470e3a5e04b4d6ff1ef4f041b8}{}\label{classG4ScreenedCoulombCrossSection_a8f1b09470e3a5e04b4d6ff1ef4f041b8}
+
+
+\subsection{Member Function Documentation}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Build\+M\+F\+P\+Tables@{Build\+M\+F\+P\+Tables}}
+\index{Build\+M\+F\+P\+Tables@{Build\+M\+F\+P\+Tables}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Build\+M\+F\+P\+Tables(void)}{BuildMFPTables(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Coulomb\+Cross\+Section\+::\+Build\+M\+F\+P\+Tables (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedCoulombCrossSection_a21351e02c8b9eccdea7ae30f2e7db3fe}{}\label{classG4ScreenedCoulombCrossSection_a21351e02c8b9eccdea7ae30f2e7db3fe}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!create@{create}}
+\index{create@{create}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{create()=0}{create()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G4\+Screened\+Coulomb\+Cross\+Section}$\ast$ G4\+Screened\+Coulomb\+Cross\+Section\+::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classG4ScreenedCoulombCrossSection_a381cca52e9ba2c41cb838474334629ce}{}\label{classG4ScreenedCoulombCrossSection_a381cca52e9ba2c41cb838474334629ce}
+
+
+Implemented in \hyperlink{classG4NativeScreenedCoulombCrossSection_a13aac6dd8ff1af94467217d261b81898}{G4\+Native\+Screened\+Coulomb\+Cross\+Section}.
+
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Get\+Screening@{Get\+Screening}}
+\index{Get\+Screening@{Get\+Screening}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Get\+Screening(\+G4int Z)}{GetScreening(G4int Z)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf G4\+Screening\+Tables}$\ast$ G4\+Screened\+Coulomb\+Cross\+Section\+::\+Get\+Screening (
+\begin{DoxyParamCaption}
+\item[{G4int}]{Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedCoulombCrossSection_accbe78a66a124161bd938c5fa1217d2a}{}\label{classG4ScreenedCoulombCrossSection_accbe78a66a124161bd938c5fa1217d2a}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Load\+Data@{Load\+Data}}
+\index{Load\+Data@{Load\+Data}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Load\+Data(\+G4\+String screening\+Key, G4int z1, G4double m1, G4double recoil\+Cutoff)=0}{LoadData(G4String screeningKey, G4int z1, G4double m1, G4double recoilCutoff)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G4\+Screened\+Coulomb\+Cross\+Section\+::\+Load\+Data (
+\begin{DoxyParamCaption}
+\item[{G4\+String}]{screening\+Key, }
+\item[{G4int}]{z1, }
+\item[{G4double}]{m1, }
+\item[{G4double}]{recoil\+Cutoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classG4ScreenedCoulombCrossSection_a36f7010b3075c363a96c037b018cdfa5}{}\label{classG4ScreenedCoulombCrossSection_a36f7010b3075c363a96c037b018cdfa5}
+
+
+Implemented in \hyperlink{classG4NativeScreenedCoulombCrossSection_ab616397fbc1b8275cdc68a93268e80ad}{G4\+Native\+Screened\+Coulomb\+Cross\+Section}.
+
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{operator[](\+G4int material\+Index)}{operator[](G4int materialIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf G4\+\_\+c2\+\_\+function}$\ast$ G4\+Screened\+Coulomb\+Cross\+Section\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{G4int}]{material\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedCoulombCrossSection_a102e24c7581ba1249306290eff349225}{}\label{classG4ScreenedCoulombCrossSection_a102e24c7581ba1249306290eff349225}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Select\+Random\+Unweighted\+Target@{Select\+Random\+Unweighted\+Target}}
+\index{Select\+Random\+Unweighted\+Target@{Select\+Random\+Unweighted\+Target}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Select\+Random\+Unweighted\+Target(const G4\+Material\+Cuts\+Couple $\ast$couple)}{SelectRandomUnweightedTarget(const G4MaterialCutsCouple *couple)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Particle\+Definition$\ast$ G4\+Screened\+Coulomb\+Cross\+Section\+::\+Select\+Random\+Unweighted\+Target (
+\begin{DoxyParamCaption}
+\item[{const G4\+Material\+Cuts\+Couple $\ast$}]{couple}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedCoulombCrossSection_ab072a5e6932cf49bd8c2e24512dcf78f}{}\label{classG4ScreenedCoulombCrossSection_ab072a5e6932cf49bd8c2e24512dcf78f}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!Set\+Verbosity@{Set\+Verbosity}}
+\index{Set\+Verbosity@{Set\+Verbosity}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{Set\+Verbosity(\+G4int v)}{SetVerbosity(G4int v)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Coulomb\+Cross\+Section\+::\+Set\+Verbosity (
+\begin{DoxyParamCaption}
+\item[{G4int}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedCoulombCrossSection_a8aff8c06482b63d344883107bf1a93d4}{}\label{classG4ScreenedCoulombCrossSection_a8aff8c06482b63d344883107bf1a93d4}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!standardmass@{standardmass}}
+\index{standardmass@{standardmass}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{standardmass(\+G4int z1)}{standardmass(G4int z1)}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Coulomb\+Cross\+Section\+::standardmass (
+\begin{DoxyParamCaption}
+\item[{G4int}]{z1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedCoulombCrossSection_a90cfe2fb3343c4ef563d558cf3df21f8}{}\label{classG4ScreenedCoulombCrossSection_a90cfe2fb3343c4ef563d558cf3df21f8}
+
+
+\subsection{Member Data Documentation}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!M\+F\+P\+Tables@{M\+F\+P\+Tables}}
+\index{M\+F\+P\+Tables@{M\+F\+P\+Tables}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{M\+F\+P\+Tables}{MFPTables}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$G4int, {\bf G4\+\_\+c2\+\_\+const\+\_\+ptr} $>$ G4\+Screened\+Coulomb\+Cross\+Section\+::\+M\+F\+P\+Tables\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombCrossSection_a4edd4f54a2c248eb398f06127962e550}{}\label{classG4ScreenedCoulombCrossSection_a4edd4f54a2c248eb398f06127962e550}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!screening\+Data@{screening\+Data}}
+\index{screening\+Data@{screening\+Data}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{screening\+Data}{screeningData}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Screening\+Map} G4\+Screened\+Coulomb\+Cross\+Section\+::screening\+Data\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombCrossSection_acee3c711dd831c718fc22d5c98334f56}{}\label{classG4ScreenedCoulombCrossSection_acee3c711dd831c718fc22d5c98334f56}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!sigma\+Map@{sigma\+Map}}
+\index{sigma\+Map@{sigma\+Map}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{sigma\+Map}{sigmaMap}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$G4int, {\bf G4\+\_\+c2\+\_\+const\+\_\+ptr} $>$ G4\+Screened\+Coulomb\+Cross\+Section\+::sigma\+Map\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombCrossSection_ae6c847c6a7aac54186ab96ea4d44be3a}{}\label{classG4ScreenedCoulombCrossSection_ae6c847c6a7aac54186ab96ea4d44be3a}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!target\+Map@{target\+Map}}
+\index{target\+Map@{target\+Map}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{target\+Map}{targetMap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Particle\+Cache} G4\+Screened\+Coulomb\+Cross\+Section\+::target\+Map\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombCrossSection_a4f47a69e60be10d7040de1fbc9612887}{}\label{classG4ScreenedCoulombCrossSection_a4f47a69e60be10d7040de1fbc9612887}
+\index{G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!G4\+Screened\+Coulomb\+Cross\+Section@{G4\+Screened\+Coulomb\+Cross\+Section}}
+\subsubsection[{\texorpdfstring{verbosity}{verbosity}}]{\setlength{\rightskip}{0pt plus 5cm}G4int G4\+Screened\+Coulomb\+Cross\+Section\+::verbosity\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombCrossSection_a9b29c3d5aa9807d66afee4e59905d7e3}{}\label{classG4ScreenedCoulombCrossSection_a9b29c3d5aa9807d66afee4e59905d7e3}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{G4ScreenedNuclearRecoil_8hh}{G4\+Screened\+Nuclear\+Recoil.\+hh}\end{DoxyCompactItemize}

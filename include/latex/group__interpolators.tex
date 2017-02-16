@@ -1,0 +1,32 @@
+\hypertarget{group__interpolators}{}\section{Interpolating Functions}
+\label{group__interpolators}\index{Interpolating Functions@{Interpolating Functions}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a cubic spline interpolation of a set of (x,y) pairs
+
+This is one of the main reasons for \hyperlink{classc2__function}{c2\+\_\+function} objects to exist. \end{DoxyCompactList}\item 
+class \hyperlink{classlog__lin__interpolating__function__p}{log\+\_\+lin\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em A spline with X transformed into log space.
+
+Most useful for functions looking like y=log(x) or any other function with a huge X dynamic range, and a slowly varying Y. \end{DoxyCompactList}\item 
+class \hyperlink{classlin__log__interpolating__function__p}{lin\+\_\+log\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em A spline with Y transformed into log space.
+
+Most useful for functions looking like y=exp(x) \end{DoxyCompactList}\item 
+class \hyperlink{classlog__log__interpolating__function__p}{log\+\_\+log\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em A spline with X and Y transformed into log space.
+
+Most useful for functions looking like y=x$^\wedge$n or any other function with a huge X and Y dynamic range. \end{DoxyCompactList}\item 
+class \hyperlink{classarrhenius__interpolating__function__p}{arrhenius\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em A spline with X in reciprocal space and Y transformed in log space.
+
+Most useful for thermodynamic types of data where Y is roughly A$\ast$exp(-\/\+B/x). Typical examples are reaction rate data, and thermistor calibration data. \end{DoxyCompactList}\item 
+class \hyperlink{classaccumulated__histogram}{accumulated\+\_\+histogram$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em An \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the cumulative integral of a histogram.
+
+Note than binedges should be one element longer than binheights, since the lower \& upper edges are specified. Note that this is a malformed spline, since the second derivatives are all zero, so it has less continuity. Also, note that the bin edges can be given in backwards order to generate the reversed accumulation (starting at the high end) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

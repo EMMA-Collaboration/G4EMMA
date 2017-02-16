@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['readuserinput',['ReadUserInput',['../classEMMADetectorConstruction.html#aa89a859f846c3321c6fde018b58e4b41',1,'EMMADetectorConstruction::ReadUserInput()'],['../classSpectrometerConstruction.html#a34b3ae954aafe7734b3d5451a2339886',1,'SpectrometerConstruction::ReadUserInput()']]],
+  ['recip',['recip',['../classc2__factory.html#adda01279d6b1059843e2aecc5be5d95e',1,'c2_factory::recip()'],['../classc2__transformation.html#a201c2df7a29fc20946f3814816d88bbc',1,'c2_transformation::recip()']]],
+  ['recip_5fprime',['recip_prime',['../classc2__transformation.html#aac46f68fd9037c3f65b9578e0d7000fe',1,'c2_transformation']]],
+  ['recip_5fprime2',['recip_prime2',['../classc2__transformation.html#a58e93b52b477a022e7b74c5e1056d3d7',1,'c2_transformation']]],
+  ['recoilcutoff',['recoilCutoff',['../classG4ScreenedNuclearRecoil.html#ad3319321c3b8319822dc9d4a11e046d2',1,'G4ScreenedNuclearRecoil']]],
+  ['recoilion',['recoilIon',['../structG4CoulombKinematicsInfo.html#a93b6572dfdbb30fc64ce5cf99a7b9bc7',1,'G4CoulombKinematicsInfo']]],
+  ['red',['rED',['../EMFieldDebugger_8hh.html#a715d053d73470185e7c2c4702d9dc2de',1,'EMFieldDebugger.hh']]],
+  ['refine_5fsampling_5fgrid',['refine_sampling_grid',['../classc2__function.html#a25004cf23f56fafd0b64901354892f3c',1,'c2_function']]],
+  ['registerdepositedenergy',['registerDepositedEnergy',['../classG4ScreenedNuclearRecoil.html#a216384f2d51fb1a347124b977e093c05',1,'G4ScreenedNuclearRecoil']]],
+  ['release_5ffor_5freturn',['release_for_return',['../classc2__const__ptr.html#a278e797ec2e770eaa80e84eb615819ac',1,'c2_const_ptr']]],
+  ['release_5fownership',['release_ownership',['../classc2__function.html#ac98aa40f78c487df141a67174662d749',1,'c2_function']]],
+  ['release_5fownership_5ffor_5freturn',['release_ownership_for_return',['../classc2__function.html#af003b3e29357ccf65b7eba38be877b8c',1,'c2_function']]],
+  ['report_5ferror',['report_error',['../classc2__transformation.html#a79f51b6fefc32d826735daf184f76613',1,'c2_transformation']]],
+  ['reset',['reset',['../classc2__scaled__function__p.html#ab6a2af982a51bc321609a8cc91c7ff42',1,'c2_scaled_function_p::reset()'],['../classc2__constant__p.html#a5dd45be662a8358a43e25bab057e3aa9',1,'c2_constant_p::reset()'],['../classc2__recip__p.html#a94758675f4ec349d45b4449a8e51dbbd',1,'c2_recip_p::reset()'],['../classc2__linear__p.html#ada2849448ebb2b5b493f45a2db6ab908',1,'c2_linear_p::reset()'],['../classc2__quadratic__p.html#a6db1d57b13356c732236b4df69a3570a',1,'c2_quadratic_p::reset()'],['../classc2__power__law__p.html#a2ac1227acd7b9bf34afd26efadc47ccb',1,'c2_power_law_p::reset()']]],
+  ['reset_5fevaluations',['reset_evaluations',['../classc2__function.html#a8003c40247b7255de5ffbcd3ec21e395',1,'c2_function']]],
+  ['resettables',['ResetTables',['../classG4ScreenedNuclearRecoil.html#a18b5ff579de48e81e6fc001240aebdad',1,'G4ScreenedNuclearRecoil']]],
+  ['right',['Right',['../classc2__binary__function.html#a52b7fcaed6a4c3e3146dea43f562db8d',1,'c2_binary_function']]],
+  ['rmd',['rMD',['../EMFieldDebugger_8hh.html#a7fd4fbedfa36308277282111f3a02a2e',1,'EMFieldDebugger.hh']]]
+];

@@ -1,0 +1,651 @@
+\hypertarget{classinterpolating__function__p}{}\section{interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classinterpolating__function__p}\index{interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$@{interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}}
+
+
+create a cubic spline interpolation of a set of (x,y) pairs
+
+This is one of the main reasons for \hyperlink{classc2__function}{c2\+\_\+function} objects to exist.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classinterpolating__function__p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classinterpolating__function__p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinterpolating__function__p_ad964e7b37271708c1d505ae3fd9c7722}{interpolating\+\_\+function\+\_\+p} ()
+\begin{DoxyCompactList}\small\item\em an empty linear-\/linear cubic-\/spline \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p_aac529a5b217fb8b362e008ce2ddcfccc}{interpolating\+\_\+function\+\_\+p} (const \hyperlink{classc2__function__transformation}{c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$ \&transform)
+\begin{DoxyCompactList}\small\item\em an empty cubic-\/spline \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} with a specific transform \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a9a5f9a3a83dcb3d8addae44e5f40e2ee}{load} (const std\+::vector$<$ float\+\_\+type $>$ \&x, const std\+::vector$<$ float\+\_\+type $>$ \&f, bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope, bool splined=true)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em do the dirty work of constructing the spline from a function. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a1cfe18539d86f381a2e91749480f237d}{load\+\_\+pairs} (std\+::vector$<$ std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ $>$ \&data, bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope, bool splined=true)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em do the dirty work of constructing the spline from a function. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a7a241d879e2fb7cf50566fbb06c63066}{sample\+\_\+function} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&func, float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type abs\+\_\+tol, float\+\_\+type rel\+\_\+tol, bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em do the dirty work of constructing the spline from a function. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_ad9a0b81a99d4ee1fe4511e2435a7f0e0}{load\+\_\+random\+\_\+generator\+\_\+function} (const std\+::vector$<$ float\+\_\+type $>$ \&bincenters, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&binheights)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em initialize from a grid of points and a \hyperlink{classc2__function}{c2\+\_\+function} (un-\/normalized) to an interpolator which, when evaluated with a uniform random variate on \mbox{[}0,1\mbox{]} returns random numbers distributed as the input function. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a8587a27f028c9f6d8889967c38d25d88}{load\+\_\+random\+\_\+generator\+\_\+bins} (const std\+::vector$<$ float\+\_\+type $>$ \&bins, const std\+::vector$<$ float\+\_\+type $>$ \&binheights, bool splined=true)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em initialize from a grid of points and an std\+::vector of probability densities (un-\/normalized) to an interpolator which, when evaluated with a uniform random variate on \mbox{[}0,1\mbox{]} returns random numbers distributed as the input histogram. \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classinterpolating__function__p_a321e6a9a8e598ebb0ae77ce265742ed7}{value\+\_\+with\+\_\+derivatives} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get the value and derivatives. \end{DoxyCompactList}\item 
+virtual \hyperlink{classinterpolating__function__p_a24f78c2f0f5dc80cfbd87ada46d1367e}{$\sim$interpolating\+\_\+function\+\_\+p} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a8a2c601fde0ef3226e51d1f51b4f5f2f}{clone} () const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em create a new, empty interpolating function of this type (virtual constructor) \end{DoxyCompactList}\item 
+void \hyperlink{classinterpolating__function__p_a93652fb1b325f38c9a0c0101f6064ee4}{get\+\_\+data} (std\+::vector$<$ float\+\_\+type $>$ \&xvals, std\+::vector$<$ float\+\_\+type $>$ \&yvals) const   throw ()
+\begin{DoxyCompactList}\small\item\em retrieve copies of the x \& y tables from which this was built \end{DoxyCompactList}\item 
+void \hyperlink{classinterpolating__function__p_aefc83ca152cbefa5fc9278b26b5b2aee}{get\+\_\+internal\+\_\+data} (std\+::vector$<$ float\+\_\+type $>$ \&xvals, std\+::vector$<$ float\+\_\+type $>$ \&yvals, std\+::vector$<$ float\+\_\+type $>$ \&y2vals) const 
+\begin{DoxyCompactList}\small\item\em retrieve copies of the transformed x, y and y2 tables from which this was built \end{DoxyCompactList}\item 
+void \hyperlink{classinterpolating__function__p_a2c3f8e1552a4d7ff43361baef34d5ae5}{set\+\_\+lower\+\_\+extrapolation} (float\+\_\+type bound)
+\begin{DoxyCompactList}\small\item\em enable extrapolation of the function below the tabulated data. \end{DoxyCompactList}\item 
+void \hyperlink{classinterpolating__function__p_ad9efb0fd01af689dd8218262891d6ab9}{set\+\_\+upper\+\_\+extrapolation} (float\+\_\+type bound)
+\begin{DoxyCompactList}\small\item\em enable extrapolation of the function above the tabulated data. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_aae37d6b9356c6bb5d1bed631b036abba}{unary\+\_\+operator} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&source) const 
+\begin{DoxyCompactList}\small\item\em create a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the {\itshape source} function applied to every point in the interpolating tables \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_acb0a8005ae431aa90098bc6466f7bd77}{binary\+\_\+operator} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs, const \hyperlink{classc2__binary__function}{c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$ $\ast$combining\+\_\+stub) const 
+\begin{DoxyCompactList}\small\item\em create a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the parent \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} combined with {\itshape rhs} using {\itshape combiner} at every point in the interpolating tables \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_ac40d79c0de3ceab3168ac8906de4f719}{add\+\_\+pointwise} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified sum. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_aa27983f5383b557005bc49d21cc268fa}{subtract\+\_\+pointwise} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified difference. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a5640f0ebe0ac71481ccb4d8fd1405c72}{multiply\+\_\+pointwise} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified product. \end{DoxyCompactList}\item 
+\hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_aaf55fce715316d9e25415d1ad9432385}{divide\+\_\+pointwise} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&rhs) const 
+\begin{DoxyCompactList}\small\item\em produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified ratio. \end{DoxyCompactList}\item 
+void \hyperlink{classinterpolating__function__p_ab73a92cc7c402a1cf5a2653fef17f662}{clone\+\_\+data} (const \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em copy data from another interpolating function. This only makes sense if the source \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classc2__function__transformation}{c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$ \& \hyperlink{classinterpolating__function__p_a51af1a7077b6f904abe2ede816972eb7}{f\+Transform}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classinterpolating__function__p_aa2cfb88d95864c68d5be6e4812f8ec51}{spline} (bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em create the spline coefficients \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classinterpolating__function__p_a06bbf33a20dac7faa95458cf384e33a2}{comp\+\_\+pair} (std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ const \&i, std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ const \&j)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float\+\_\+type $>$ \hyperlink{classinterpolating__function__p_acd71560b0fc125d028847ad906207a62}{Xraw}
+\item 
+std\+::vector$<$ float\+\_\+type $>$ \hyperlink{classinterpolating__function__p_a2ae94315914ef71afb6e9f84f8383e61}{X}
+\item 
+std\+::vector$<$ float\+\_\+type $>$ \hyperlink{classinterpolating__function__p_a481dee592a5a5ec9ec3fb1aae31a8865}{F}
+\item 
+std\+::vector$<$ float\+\_\+type $>$ \hyperlink{classinterpolating__function__p_a7d9729f0ccd503a4eb2f1880f035805a}{y2}
+\item 
+\hyperlink{classc2__const__ptr}{c2\+\_\+const\+\_\+ptr}$<$ float\+\_\+type $>$ \hyperlink{classinterpolating__function__p_aa0c58578b4b40ec3f9154cb06d18764e}{sampler\+\_\+function}
+\item 
+bool \hyperlink{classinterpolating__function__p_a2eaaea5d2083d93d0a8d4825a9f5bbfe}{x\+Inverted}
+\item 
+size\+\_\+t \hyperlink{classinterpolating__function__p_a2f051073f09c909c5770a324862099b6}{last\+K\+Low}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+
+create a cubic spline interpolation of a set of (x,y) pairs
+
+This is one of the main reasons for \hyperlink{classc2__function}{c2\+\_\+function} objects to exist. 
+
+It provides support for cubic spline interpolation of data provides from tables of {\itshape x}, {\itshape y} pairs. It supports automatic, transparent linearization of the data before storing in its tables (through subclasses such as log\+\_\+lin\+\_\+interpolating\+\_\+function, lin\+\_\+log\+\_\+interpolating\+\_\+function, and log\+\_\+log\+\_\+interpolating\+\_\+function) to permit very high accuracy representations of data which have a suitable structure. It provides utility functions Linear\+Interpolating\+Grid() and Log\+Log\+Interpolating\+Grid() to create grids for mapping other functions onto a arithmetic or geometric grid.
+
+In its simplest form, an untransformed cubic spline of a data set, using natural boundary conditions (vanishing second derivative), is created as\+: ~\newline
+
+\begin{DoxyCode}
+    \hyperlink{classc2__ptr}{c2\_ptr<double>} c2p;
+    \hyperlink{classc2__factory}{c2\_factory<double>} c2;
+std::vector<double> xvals(10), yvals(10); 
+\textcolor{comment}{// < fill in xvals and yvals >}
+c2p myfunc=c2.\hyperlink{classc2__factory_ab43eaad040801a28019b917c4195b8d5}{interpolating\_function}().load(xvals, yvals,\textcolor{keyword}{true},0,\textcolor{keyword}{true},0);
+\textcolor{comment}{// and it can be evaluated at a point for its value only by: }
+\textcolor{keywordtype}{double} y=myfunc(x); 
+\textcolor{comment}{// or it can be evaluated with its derivatives by}
+\textcolor{keywordtype}{double} yprime, yprime2; 
+\textcolor{keywordtype}{double} y=myfunc(x,&yprime, &yprime2);
+\end{DoxyCode}
+ \begin{DoxyVerb}The factory function c2_factory::interpolating_function() creates *new interpolating_function_p()\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{interpolating\+\_\+function\+\_\+p()}{interpolating_function_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf interpolating\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_ad964e7b37271708c1d505ae3fd9c7722}{}\label{classinterpolating__function__p_ad964e7b37271708c1d505ae3fd9c7722}
+
+
+an empty linear-\/linear cubic-\/spline \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} 
+
+lots to say here, but see Numerical Recipes for a discussion of cubic splines. \index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{interpolating\+\_\+function\+\_\+p(const c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$ \&transform)}{interpolating_function_p(const c2_function_transformation< float_type > &transform)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf interpolating\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$ \&}]{transform}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_aac529a5b217fb8b362e008ce2ddcfccc}{}\label{classinterpolating__function__p_aac529a5b217fb8b362e008ce2ddcfccc}
+
+
+an empty cubic-\/spline \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} with a specific transform 
+
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!````~interpolating\+\_\+function\+\_\+p@{$\sim$interpolating\+\_\+function\+\_\+p}}
+\index{````~interpolating\+\_\+function\+\_\+p@{$\sim$interpolating\+\_\+function\+\_\+p}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{$\sim$interpolating\+\_\+function\+\_\+p()}{~interpolating_function_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::$\sim${\bf interpolating\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classinterpolating__function__p_a24f78c2f0f5dc80cfbd87ada46d1367e}{}\label{classinterpolating__function__p_a24f78c2f0f5dc80cfbd87ada46d1367e}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!add\+\_\+pointwise@{add\+\_\+pointwise}}
+\index{add\+\_\+pointwise@{add\+\_\+pointwise}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{add\+\_\+pointwise(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{add_pointwise(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::add\+\_\+pointwise (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_ac40d79c0de3ceab3168ac8906de4f719}{}\label{classinterpolating__function__p_ac40d79c0de3ceab3168ac8906de4f719}
+
+
+produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified sum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the function to add, pointwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!binary\+\_\+operator@{binary\+\_\+operator}}
+\index{binary\+\_\+operator@{binary\+\_\+operator}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{binary\+\_\+operator(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs, const c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$ $\ast$combining\+\_\+stub) const }{binary_operator(const c2_function< float_type > &rhs, const c2_binary_function< float_type > *combining_stub) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::binary\+\_\+operator (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs, }
+\item[{const {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$ $\ast$}]{combining\+\_\+stub}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinterpolating__function__p_acb0a8005ae431aa90098bc6466f7bd77}{}\label{classinterpolating__function__p_acb0a8005ae431aa90098bc6466f7bd77}
+
+
+create a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the parent \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} combined with {\itshape rhs} using {\itshape combiner} at every point in the interpolating tables 
+
+This carefully manages the derivative of the composed function at the two ends. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the function to apply \\
+\hline
+{\em combining\+\_\+stub} & a function which defines which binary operation to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} with the same mappings for x and y 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!clone@{clone}}
+\index{clone@{clone}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classinterpolating__function__p_a8a2c601fde0ef3226e51d1f51b4f5f2f}{}\label{classinterpolating__function__p_a8a2c601fde0ef3226e51d1f51b4f5f2f}
+
+
+create a new, empty interpolating function of this type (virtual constructor) 
+
+
+
+Reimplemented in \hyperlink{classarrhenius__interpolating__function__p_aad3096d6df4488e4226036fb52298ffa}{arrhenius\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classlog__log__interpolating__function__p_a637bcf13085568e0a5e6b9336873221c}{log\+\_\+log\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, \hyperlink{classlin__log__interpolating__function__p_aaedeb95125e4f77a5ff00e1124ac53ab}{lin\+\_\+log\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}, and \hyperlink{classlog__lin__interpolating__function__p_af1c28001b280a053e9b2bdaa9fed8da6}{log\+\_\+lin\+\_\+interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}.
+
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!clone\+\_\+data@{clone\+\_\+data}}
+\index{clone\+\_\+data@{clone\+\_\+data}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{clone\+\_\+data(const interpolating\+\_\+function\+\_\+p$<$ float\+\_\+type $>$ \&rhs)}{clone_data(const interpolating_function_p< float_type > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::clone\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{const {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_ab73a92cc7c402a1cf5a2653fef17f662}{}\label{classinterpolating__function__p_ab73a92cc7c402a1cf5a2653fef17f662}
+
+
+copy data from another interpolating function. This only makes sense if the source 
+
+function has the same transforms as the destination. 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} to copy from \\
+\hline
+\end{DoxyParams}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!comp\+\_\+pair@{comp\+\_\+pair}}
+\index{comp\+\_\+pair@{comp\+\_\+pair}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{comp\+\_\+pair(std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ const \&i, std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ const \&j)}{comp_pair(std::pair< float_type, float_type > const &i, std::pair< float_type, float_type > const &j)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ static bool {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::comp\+\_\+pair (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ const \&}]{i, }
+\item[{std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ const \&}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_a06bbf33a20dac7faa95458cf384e33a2}{}\label{classinterpolating__function__p_a06bbf33a20dac7faa95458cf384e33a2}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!divide\+\_\+pointwise@{divide\+\_\+pointwise}}
+\index{divide\+\_\+pointwise@{divide\+\_\+pointwise}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{divide\+\_\+pointwise(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{divide_pointwise(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::divide\+\_\+pointwise (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_aaf55fce715316d9e25415d1ad9432385}{}\label{classinterpolating__function__p_aaf55fce715316d9e25415d1ad9432385}
+
+
+produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified ratio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the function to divide, pointwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!get\+\_\+data@{get\+\_\+data}}
+\index{get\+\_\+data@{get\+\_\+data}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{get\+\_\+data(std\+::vector$<$ float\+\_\+type $>$ \&xvals, std\+::vector$<$ float\+\_\+type $>$ \&yvals) const }{get_data(std::vector< float_type > &xvals, std::vector< float_type > &yvals) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::get\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{xvals, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{yvals}
+\end{DoxyParamCaption}
+) const throw  ) }\hypertarget{classinterpolating__function__p_a93652fb1b325f38c9a0c0101f6064ee4}{}\label{classinterpolating__function__p_a93652fb1b325f38c9a0c0101f6064ee4}
+
+
+retrieve copies of the x \& y tables from which this was built 
+
+This is often useful in the creation of new interpolating functions with transformed data. The vectors will have their sizes set correctly on return. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xvals} & the abscissas \\
+\hline
+\mbox{\tt in,out}  & {\em yvals} & the ordinates \\
+\hline
+\end{DoxyParams}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!get\+\_\+internal\+\_\+data@{get\+\_\+internal\+\_\+data}}
+\index{get\+\_\+internal\+\_\+data@{get\+\_\+internal\+\_\+data}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{get\+\_\+internal\+\_\+data(std\+::vector$<$ float\+\_\+type $>$ \&xvals, std\+::vector$<$ float\+\_\+type $>$ \&yvals, std\+::vector$<$ float\+\_\+type $>$ \&y2vals) const }{get_internal_data(std::vector< float_type > &xvals, std::vector< float_type > &yvals, std::vector< float_type > &y2vals) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::get\+\_\+internal\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{xvals, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{yvals, }
+\item[{std\+::vector$<$ float\+\_\+type $>$ \&}]{y2vals}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_aefc83ca152cbefa5fc9278b26b5b2aee}{}\label{classinterpolating__function__p_aefc83ca152cbefa5fc9278b26b5b2aee}
+
+
+retrieve copies of the transformed x, y and y2 tables from which this was built 
+
+The vectors will have their sizes set correctly on return. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em xvals} & the transformed abscissas \\
+\hline
+\mbox{\tt in,out}  & {\em yvals} & the transformed ordinates \\
+\hline
+\mbox{\tt in,out}  & {\em y2vals} & the second derivatives \\
+\hline
+\end{DoxyParams}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!load@{load}}
+\index{load@{load}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{load(const std\+::vector$<$ float\+\_\+type $>$ \&x, const std\+::vector$<$ float\+\_\+type $>$ \&f, bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope, bool splined=true)}{load(const std::vector< float_type > &x, const std::vector< float_type > &f, bool lowerSlopeNatural, float_type lowerSlope, bool upperSlopeNatural, float_type upperSlope, bool splined=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{x, }
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{f, }
+\item[{bool}]{lower\+Slope\+Natural, }
+\item[{float\+\_\+type}]{lower\+Slope, }
+\item[{bool}]{upper\+Slope\+Natural, }
+\item[{float\+\_\+type}]{upper\+Slope, }
+\item[{bool}]{splined = {\ttfamily true}}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) }\hypertarget{classinterpolating__function__p_a9a5f9a3a83dcb3d8addae44e5f40e2ee}{}\label{classinterpolating__function__p_a9a5f9a3a83dcb3d8addae44e5f40e2ee}
+
+
+do the dirty work of constructing the spline from a function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the list of abscissas. Must be either strictly increasing or strictly decreasing. Strictly increasing is preferred, as less memory is used since a copy is not required for the sampling grid. \\
+\hline
+{\em f} & the list of function values. \\
+\hline
+{\em lower\+Slope\+Natural} & if true, set y\textquotesingle{}\textquotesingle{}(first point)=0, otherwise compute it from {\itshape lower\+Sope} \\
+\hline
+{\em lower\+Slope} & derivative of the function at the lower bound, used only if {\itshape lower\+Slope\+Natural} is false \\
+\hline
+{\em upper\+Slope\+Natural} & if true, set y\textquotesingle{}\textquotesingle{}(last point)=0, otherwise compute it from {\itshape upper\+Sope} \\
+\hline
+{\em upper\+Slope} & derivative of the function at the upper bound, used only if {\itshape upper\+Slope\+Natural} is false \\
+\hline
+{\em splined} & if true (default), use cubic spline, if false, use linear interpolation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the same interpolating function, filled 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!load\+\_\+pairs@{load\+\_\+pairs}}
+\index{load\+\_\+pairs@{load\+\_\+pairs}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{load\+\_\+pairs(std\+::vector$<$ std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ $>$ \&data, bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope, bool splined=true)}{load_pairs(std::vector< std::pair< float_type, float_type > > &data, bool lowerSlopeNatural, float_type lowerSlope, bool upperSlopeNatural, float_type upperSlope, bool splined=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::load\+\_\+pairs (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::pair$<$ float\+\_\+type, float\+\_\+type $>$ $>$ \&}]{data, }
+\item[{bool}]{lower\+Slope\+Natural, }
+\item[{float\+\_\+type}]{lower\+Slope, }
+\item[{bool}]{upper\+Slope\+Natural, }
+\item[{float\+\_\+type}]{upper\+Slope, }
+\item[{bool}]{splined = {\ttfamily true}}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) }\hypertarget{classinterpolating__function__p_a1cfe18539d86f381a2e91749480f237d}{}\label{classinterpolating__function__p_a1cfe18539d86f381a2e91749480f237d}
+
+
+do the dirty work of constructing the spline from a function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & std\+::vector of std\+::pairs of x,y. Will be sorted into x increasing order in place. \\
+\hline
+{\em lower\+Slope\+Natural} & if true, set y\textquotesingle{}\textquotesingle{}(first point)=0, otherwise compute it from {\itshape lower\+Sope} \\
+\hline
+{\em lower\+Slope} & derivative of the function at the lower bound, used only if {\itshape lower\+Slope\+Natural} is false \\
+\hline
+{\em upper\+Slope\+Natural} & if true, set y\textquotesingle{}\textquotesingle{}(last point)=0, otherwise compute it from {\itshape upper\+Sope} \\
+\hline
+{\em upper\+Slope} & derivative of the function at the upper bound, used only if {\itshape upper\+Slope\+Natural} is false \\
+\hline
+{\em splined} & if true (default), use cubic spline, if false, use linear interpolation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the same interpolating function, filled 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!load\+\_\+random\+\_\+generator\+\_\+bins@{load\+\_\+random\+\_\+generator\+\_\+bins}}
+\index{load\+\_\+random\+\_\+generator\+\_\+bins@{load\+\_\+random\+\_\+generator\+\_\+bins}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{load\+\_\+random\+\_\+generator\+\_\+bins(const std\+::vector$<$ float\+\_\+type $>$ \&bins, const std\+::vector$<$ float\+\_\+type $>$ \&binheights, bool splined=true)}{load_random_generator_bins(const std::vector< float_type > &bins, const std::vector< float_type > &binheights, bool splined=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::load\+\_\+random\+\_\+generator\+\_\+bins (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{bins, }
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{binheights, }
+\item[{bool}]{splined = {\ttfamily true}}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) }\hypertarget{classinterpolating__function__p_a8587a27f028c9f6d8889967c38d25d88}{}\label{classinterpolating__function__p_a8587a27f028c9f6d8889967c38d25d88}
+
+
+initialize from a grid of points and an std\+::vector of probability densities (un-\/normalized) to an interpolator which, when evaluated with a uniform random variate on \mbox{[}0,1\mbox{]} returns random numbers distributed as the input histogram. 
+
+\begin{DoxySeeAlso}{See also}
+Arbitrary random generation inverse\+\_\+integrated\+\_\+density starts with a probability density std\+::vector, generates the \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral}, and generates an \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} of the inverse function which, when evaluated using a uniform random on \mbox{[}0,1\mbox{]} returns values with a density distribution equal to the input distribution If the data are passed in reverse order (large \hyperlink{classinterpolating__function__p_a2ae94315914ef71afb6e9f84f8383e61}{X} first), the \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral} is carried out from the big end. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em bins} & if {\itshape bins} .size()=={\itshape binheights} .size(), the centers of the bins. ~\newline
+if {\itshape bins} .size()=={\itshape binheights} .size()+1, the edges of the bins \\
+\hline
+{\em binheights} & a vector which describes the density of the random number distribution to be produced. Note density... the numbers in the bins are not counts, but counts/unit bin width. \\
+\hline
+{\em splined} & if true (default), use cubic spline, if false, use linear interpolation. This can often be used to fix ringing if there are very sharp features in the generator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an initialized interpolator, which if evaluated randomly with a uniform variate on \mbox{[}0,1\mbox{]} produces numbers distributed according to {\itshape binheights} 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!load\+\_\+random\+\_\+generator\+\_\+function@{load\+\_\+random\+\_\+generator\+\_\+function}}
+\index{load\+\_\+random\+\_\+generator\+\_\+function@{load\+\_\+random\+\_\+generator\+\_\+function}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{load\+\_\+random\+\_\+generator\+\_\+function(const std\+::vector$<$ float\+\_\+type $>$ \&bincenters, const c2\+\_\+function$<$ float\+\_\+type $>$ \&binheights)}{load_random_generator_function(const std::vector< float_type > &bincenters, const c2_function< float_type > &binheights)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::load\+\_\+random\+\_\+generator\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ float\+\_\+type $>$ \&}]{bincenters, }
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{binheights}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) }\hypertarget{classinterpolating__function__p_ad9a0b81a99d4ee1fe4511e2435a7f0e0}{}\label{classinterpolating__function__p_ad9a0b81a99d4ee1fe4511e2435a7f0e0}
+
+
+initialize from a grid of points and a \hyperlink{classc2__function}{c2\+\_\+function} (un-\/normalized) to an interpolator which, when evaluated with a uniform random variate on \mbox{[}0,1\mbox{]} returns random numbers distributed as the input function. 
+
+\begin{DoxySeeAlso}{See also}
+Arbitrary random generation inverse\+\_\+integrated\+\_\+density starts with a probability density std\+::vector, generates the \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral}, and generates an \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} of the inverse function which, when evaluated using a uniform random on \mbox{[}0,1\mbox{]} returns values with a density distribution equal to the input distribution If the data are passed in reverse order (large \hyperlink{classinterpolating__function__p_a2ae94315914ef71afb6e9f84f8383e61}{X} first), the \hyperlink{classc2__function_a675c5056562332be2e49b38485d322b7}{integral} is carried out from the big end. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em bincenters} & the positions at which to sample the function {\itshape binheights} \\
+\hline
+{\em binheights} & a function which describes the density of the random number distribution to be produced. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an initialized interpolator, which if evaluated randomly with a uniform variate on \mbox{[}0,1\mbox{]} produces numbers distributed according to {\itshape binheights} 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!multiply\+\_\+pointwise@{multiply\+\_\+pointwise}}
+\index{multiply\+\_\+pointwise@{multiply\+\_\+pointwise}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{multiply\+\_\+pointwise(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{multiply_pointwise(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::multiply\+\_\+pointwise (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_a5640f0ebe0ac71481ccb4d8fd1405c72}{}\label{classinterpolating__function__p_a5640f0ebe0ac71481ccb4d8fd1405c72}
+
+
+produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the function to multiply, pointwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!sample\+\_\+function@{sample\+\_\+function}}
+\index{sample\+\_\+function@{sample\+\_\+function}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{sample\+\_\+function(const c2\+\_\+function$<$ float\+\_\+type $>$ \&func, float\+\_\+type amin, float\+\_\+type amax, float\+\_\+type abs\+\_\+tol, float\+\_\+type rel\+\_\+tol, bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope)}{sample_function(const c2_function< float_type > &func, float_type amin, float_type amax, float_type abs_tol, float_type rel_tol, bool lowerSlopeNatural, float_type lowerSlope, bool upperSlopeNatural, float_type upperSlope)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::sample\+\_\+function (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{func, }
+\item[{float\+\_\+type}]{amin, }
+\item[{float\+\_\+type}]{amax, }
+\item[{float\+\_\+type}]{abs\+\_\+tol, }
+\item[{float\+\_\+type}]{rel\+\_\+tol, }
+\item[{bool}]{lower\+Slope\+Natural, }
+\item[{float\+\_\+type}]{lower\+Slope, }
+\item[{bool}]{upper\+Slope\+Natural, }
+\item[{float\+\_\+type}]{upper\+Slope}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) }\hypertarget{classinterpolating__function__p_a7a241d879e2fb7cf50566fbb06c63066}{}\label{classinterpolating__function__p_a7a241d879e2fb7cf50566fbb06c63066}
+
+
+do the dirty work of constructing the spline from a function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & a function without any requirement of valid derivatives to sample into an interpolating function. Very probably a c2\+\_\+classic\+\_\+function. \\
+\hline
+{\em amin} & the lower bound of the region to sample \\
+\hline
+{\em amax} & the upper bound of the region to sample \\
+\hline
+{\em abs\+\_\+tol} & the maximum absolute error permitted when linearly interpolating the points. the real error will be much smaller, since this uses cubic splines at the end. \\
+\hline
+{\em rel\+\_\+tol} & the maximum relative error permitted when linearly interpolating the points. the real error will be much smaller, since this uses cubic splines at the end. \\
+\hline
+{\em lower\+Slope\+Natural} & if true, set y\textquotesingle{}(first point) from 3-\/point parabola, otherwise compute it from {\itshape lower\+Sope} \\
+\hline
+{\em lower\+Slope} & derivative of the function at the lower bound, used only if {\itshape lower\+Slope\+Natural} is false \\
+\hline
+{\em upper\+Slope\+Natural} & if true, set y\textquotesingle{}(last point) from 3-\/point parabola, otherwise compute it from {\itshape upper\+Sope} \\
+\hline
+{\em upper\+Slope} & derivative of the function at the upper bound, used only if {\itshape upper\+Slope\+Natural} is false \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the same interpolating function, filled 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the interpolator being filled has a log vertical axis, put the desired relative error in {\itshape abs\+\_\+tol}, and 0 in {\itshape rel\+\_\+tol} since the absolute error on the log of a function is the relative error on the function itself. 
+\end{DoxyNote}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!set\+\_\+lower\+\_\+extrapolation@{set\+\_\+lower\+\_\+extrapolation}}
+\index{set\+\_\+lower\+\_\+extrapolation@{set\+\_\+lower\+\_\+extrapolation}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{set\+\_\+lower\+\_\+extrapolation(float\+\_\+type bound)}{set_lower_extrapolation(float_type bound)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::set\+\_\+lower\+\_\+extrapolation (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{bound}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterpolating__function__p_a2c3f8e1552a4d7ff43361baef34d5ae5}{}\label{classinterpolating__function__p_a2c3f8e1552a4d7ff43361baef34d5ae5}
+
+
+enable extrapolation of the function below the tabulated data. 
+
+This allows the interpolator to be extrapolated outside the bounds of the data, using whatever derivatives it already had at the lower bound. 
+\begin{DoxyParams}{Parameters}
+{\em bound} & the abscissa to which the function should be extended. \\
+\hline
+\end{DoxyParams}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!set\+\_\+upper\+\_\+extrapolation@{set\+\_\+upper\+\_\+extrapolation}}
+\index{set\+\_\+upper\+\_\+extrapolation@{set\+\_\+upper\+\_\+extrapolation}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{set\+\_\+upper\+\_\+extrapolation(float\+\_\+type bound)}{set_upper_extrapolation(float_type bound)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::set\+\_\+upper\+\_\+extrapolation (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{bound}
+\end{DoxyParamCaption}
+)}\hypertarget{classinterpolating__function__p_ad9efb0fd01af689dd8218262891d6ab9}{}\label{classinterpolating__function__p_ad9efb0fd01af689dd8218262891d6ab9}
+
+
+enable extrapolation of the function above the tabulated data. 
+
+This allows the interpolator to be extrapolated outside the bounds of the data, using whatever derivatives it already had at the upper bound. 
+\begin{DoxyParams}{Parameters}
+{\em bound} & the abscissa to which the function should be extended. \\
+\hline
+\end{DoxyParams}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!spline@{spline}}
+\index{spline@{spline}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{spline(bool lower\+Slope\+Natural, float\+\_\+type lower\+Slope, bool upper\+Slope\+Natural, float\+\_\+type upper\+Slope)}{spline(bool lowerSlopeNatural, float_type lowerSlope, bool upperSlopeNatural, float_type upperSlope)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::spline (
+\begin{DoxyParamCaption}
+\item[{bool}]{lower\+Slope\+Natural, }
+\item[{float\+\_\+type}]{lower\+Slope, }
+\item[{bool}]{upper\+Slope\+Natural, }
+\item[{float\+\_\+type}]{upper\+Slope}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_aa2cfb88d95864c68d5be6e4812f8ec51}{}\label{classinterpolating__function__p_aa2cfb88d95864c68d5be6e4812f8ec51}
+
+
+create the spline coefficients 
+
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!subtract\+\_\+pointwise@{subtract\+\_\+pointwise}}
+\index{subtract\+\_\+pointwise@{subtract\+\_\+pointwise}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{subtract\+\_\+pointwise(const c2\+\_\+function$<$ float\+\_\+type $>$ \&rhs) const }{subtract_pointwise(const c2_function< float_type > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::subtract\+\_\+pointwise (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classinterpolating__function__p_aa27983f5383b557005bc49d21cc268fa}{}\label{classinterpolating__function__p_aa27983f5383b557005bc49d21cc268fa}
+
+
+produce a newly resampled \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the specified difference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the function to subtract, pointwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!unary\+\_\+operator@{unary\+\_\+operator}}
+\index{unary\+\_\+operator@{unary\+\_\+operator}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{unary\+\_\+operator(const c2\+\_\+function$<$ float\+\_\+type $>$ \&source) const }{unary_operator(const c2_function< float_type > &source) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::unary\+\_\+operator (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{source}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinterpolating__function__p_aae37d6b9356c6bb5d1bed631b036abba}{}\label{classinterpolating__function__p_aae37d6b9356c6bb5d1bed631b036abba}
+
+
+create a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the {\itshape source} function applied to every point in the interpolating tables 
+
+This carefully manages the derivative of the composed function at the two ends. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the function to apply \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} with the same mappings for x and y 
+\end{DoxyReturn}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}}
+\index{value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{value\+\_\+with\+\_\+derivatives(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{value_with_derivatives(float_type x, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual float\+\_\+type {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::value\+\_\+with\+\_\+derivatives (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classinterpolating__function__p_a321e6a9a8e598ebb0ae77ce265742ed7}{}\label{classinterpolating__function__p_a321e6a9a8e598ebb0ae77ce265742ed7}
+
+
+get the value and derivatives. 
+
+There is required checking for null pointers on the derivatives, and most implementations should operate faster if derivatives are not needed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & the point at which to evaluate the function \\
+\hline
+\mbox{\tt out}  & {\em yprime} & the first derivative (if pointer is non-\/null) \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & the second derivative (if pointer is non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classc2__function_a44e0201159111350be7f746fc9026f67}{c2\+\_\+function$<$ float\+\_\+type $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!F@{F}}
+\index{F@{F}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{F}{F}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ std\+::vector$<$float\+\_\+type$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::F\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_a481dee592a5a5ec9ec3fb1aae31a8865}{}\label{classinterpolating__function__p_a481dee592a5a5ec9ec3fb1aae31a8865}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!f\+Transform@{f\+Transform}}
+\index{f\+Transform@{f\+Transform}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{f\+Transform}{fTransform}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ const {\bf c2\+\_\+function\+\_\+transformation}$<$float\+\_\+type$>$\& {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::f\+Transform}\hypertarget{classinterpolating__function__p_a51af1a7077b6f904abe2ede816972eb7}{}\label{classinterpolating__function__p_a51af1a7077b6f904abe2ede816972eb7}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!last\+K\+Low@{last\+K\+Low}}
+\index{last\+K\+Low@{last\+K\+Low}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{last\+K\+Low}{lastKLow}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ size\+\_\+t {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::last\+K\+Low\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_a2f051073f09c909c5770a324862099b6}{}\label{classinterpolating__function__p_a2f051073f09c909c5770a324862099b6}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!sampler\+\_\+function@{sampler\+\_\+function}}
+\index{sampler\+\_\+function@{sampler\+\_\+function}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{sampler\+\_\+function}{sampler_function}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+const\+\_\+ptr}$<$float\+\_\+type$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::sampler\+\_\+function\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_aa0c58578b4b40ec3f9154cb06d18764e}{}\label{classinterpolating__function__p_aa0c58578b4b40ec3f9154cb06d18764e}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!X@{X}}
+\index{X@{X}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ std\+::vector$<$float\+\_\+type$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::X\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_a2ae94315914ef71afb6e9f84f8383e61}{}\label{classinterpolating__function__p_a2ae94315914ef71afb6e9f84f8383e61}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!x\+Inverted@{x\+Inverted}}
+\index{x\+Inverted@{x\+Inverted}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{x\+Inverted}{xInverted}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ bool {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::x\+Inverted\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_a2eaaea5d2083d93d0a8d4825a9f5bbfe}{}\label{classinterpolating__function__p_a2eaaea5d2083d93d0a8d4825a9f5bbfe}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!Xraw@{Xraw}}
+\index{Xraw@{Xraw}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{Xraw}{Xraw}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ std\+::vector$<$float\+\_\+type$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::Xraw\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_acd71560b0fc125d028847ad906207a62}{}\label{classinterpolating__function__p_acd71560b0fc125d028847ad906207a62}
+\index{interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}!y2@{y2}}
+\index{y2@{y2}!interpolating\+\_\+function\+\_\+p@{interpolating\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{y2}{y2}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ std\+::vector$<$float\+\_\+type$>$ {\bf interpolating\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::y2\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinterpolating__function__p_a7d9729f0ccd503a4eb2f1880f035805a}{}\label{classinterpolating__function__p_a7d9729f0ccd503a4eb2f1880f035805a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

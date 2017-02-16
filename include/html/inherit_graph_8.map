@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classc2__transformation.html" title="a transformation of a coordinate, including an inverse " alt="" coords="5,71,140,112"/>
+<area shape="rect" id="node2" href="$classc2__transformation__linear.html" title="the identity transform " alt="" coords="188,5,352,47"/>
+<area shape="rect" id="node3" href="$classc2__transformation__log.html" title="log axis transform " alt="" coords="195,71,345,112"/>
+<area shape="rect" id="node4" href="$classc2__transformation__recip.html" title="reciprocal axis transform " alt="" coords="189,136,351,177"/>
+</map>

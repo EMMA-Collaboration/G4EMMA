@@ -1,0 +1,767 @@
+\hypertarget{classG4ScreenedNuclearRecoil}{}\section{G4\+Screened\+Nuclear\+Recoil Class Reference}
+\label{classG4ScreenedNuclearRecoil}\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+
+
+A process which handles screened Coulomb collisions between nuclei.  
+
+
+
+
+{\ttfamily \#include \char`\"{}G4\+Screened\+Nuclear\+Recoil.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for G4\+Screened\+Nuclear\+Recoil\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classG4ScreenedNuclearRecoil__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G4\+Screened\+Nuclear\+Recoil\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classG4ScreenedNuclearRecoil__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classG4ScreenedNuclearRecoil_aef8f67b31b487b3fff30f773b9ad6a65}{G4\+Screened\+Nuclear\+Recoil} (const G4\+String \&process\+Name=\char`\"{}Screened\+Elastic\char`\"{}, const G4\+String \&Screening\+Key=\char`\"{}zbl\char`\"{}, G4bool Generate\+Recoils=1, G4double Recoil\+Cutoff=100.\+0 $\ast$C\+L\+H\+E\+P\+::eV, G4double Physics\+Cutoff=10.\+0 $\ast$C\+L\+H\+E\+P\+::eV)
+\begin{DoxyCompactList}\small\item\em Construct the process and set some physics parameters for it. \end{DoxyCompactList}\item 
+virtual \hyperlink{classG4ScreenedNuclearRecoil_ab0abe5d31e651ae07660f01dbeb4981f}{$\sim$\+G4\+Screened\+Nuclear\+Recoil} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual G4double \hyperlink{classG4ScreenedNuclearRecoil_ab00d6e1a7592a577e9c10ca4c62375ae}{Get\+Mean\+Free\+Path} (const G4\+Track \&, G4double, G4\+Force\+Condition $\ast$)
+\begin{DoxyCompactList}\small\item\em used internally by Geant4 machinery \end{DoxyCompactList}\item 
+virtual G4\+V\+Particle\+Change $\ast$ \hyperlink{classG4ScreenedNuclearRecoil_afd0ebeb0fa559a64263c27d7d9912919}{Post\+Step\+Do\+It} (const G4\+Track \&a\+Track, const G4\+Step \&a\+Step)
+\begin{DoxyCompactList}\small\item\em used internally by Geant4 machinery \end{DoxyCompactList}\item 
+virtual G4bool \hyperlink{classG4ScreenedNuclearRecoil_a3f764c88f7a12951ff16b184081f7fd9}{Is\+Applicable} (const G4\+Particle\+Definition \&a\+Particle\+Type)
+\begin{DoxyCompactList}\small\item\em test if a prticle of type {\itshape a\+Particle\+Type} can use this process \end{DoxyCompactList}\item 
+virtual void \hyperlink{classG4ScreenedNuclearRecoil_a8862a7af081d952a63839157d7c653d2}{Build\+Physics\+Table} (const G4\+Particle\+Definition \&)
+\begin{DoxyCompactList}\small\item\em Build physics tables in advance. Not Implemented. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classG4ScreenedNuclearRecoil_a29563bde39caea67caadd4e60d9f736d}{Dump\+Physics\+Table} (const G4\+Particle\+Definition \&a\+Particle\+Type)
+\begin{DoxyCompactList}\small\item\em Export physics tables for persistency. Not Implemented. \end{DoxyCompactList}\item 
+virtual G4bool \hyperlink{classG4ScreenedNuclearRecoil_aa22d29f8744e5c8f55935f6d1bd88478}{Check\+Nuclear\+Collision} (G4double A, G4double A1, G4double apsis)
+\begin{DoxyCompactList}\small\item\em deterine if the moving particle is within the strong force range of the selected nucleus \end{DoxyCompactList}\item 
+virtual \hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} $\ast$ \hyperlink{classG4ScreenedNuclearRecoil_a97e43210067375ffcdc61742b57e4d47}{Get\+New\+Cross\+Section\+Handler} (void)
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_ae05a88f90d98f618a236e7a5c9b3a460}{Get\+N\+I\+EL} () const 
+\begin{DoxyCompactList}\small\item\em Get non-\/ionizing energy loss for last step. \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_a18b5ff579de48e81e6fc001240aebdad}{Reset\+Tables} ()
+\begin{DoxyCompactList}\small\item\em clear precomputed screening tables \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_aff68cd261bf6f47ca064e226710faa33}{Set\+Max\+Energy\+For\+Scattering} (G4double energy)
+\begin{DoxyCompactList}\small\item\em set the upper energy beyond which this process has no cross section \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classG4ScreenedNuclearRecoil_a0d49c385b785d8b883e6b165ec4f34bc}{Get\+Screening\+Key} () const 
+\begin{DoxyCompactList}\small\item\em find out what screening funciton we are using \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_ace84b594276d0b2b44350c1de6bfdb9e}{Allow\+Energy\+Deposition} (G4bool flag)
+\begin{DoxyCompactList}\small\item\em enable or disable all energy deposition by this process \end{DoxyCompactList}\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_abac8f36bad05cdcc18e309d6e7f4f627}{Get\+Allow\+Energy\+Deposition} () const 
+\begin{DoxyCompactList}\small\item\em get flag indicating whether deposition is enabled \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_ab99bd0156eee60815ddba434a2bb9b0b}{Enable\+Recoils} (G4bool flag)
+\begin{DoxyCompactList}\small\item\em enable or disable the generation of recoils. If recoils are disabled, the energy they would have received is just deposited. \end{DoxyCompactList}\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a4a4569aed4465249a0aa17f842e7ec01}{Get\+Enable\+Recoils} () const 
+\begin{DoxyCompactList}\small\item\em find out if generation of recoils is enabled. \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_afb077516aea7a307c456a9455368ed5f}{Set\+M\+F\+P\+Scaling} (G4double scale)
+\begin{DoxyCompactList}\small\item\em set the mean free path scaling as specified \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a6e1a160fe83222c2bc7c9a5428cf4e50}{Get\+M\+F\+P\+Scaling} () const 
+\begin{DoxyCompactList}\small\item\em get the M\+F\+P\+Scaling parameter \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_ad22e86de4211cbffd8788e05c022af92}{Avoid\+Nuclear\+Reactions} (G4bool flag)
+\begin{DoxyCompactList}\small\item\em enable or disable whether this process will skip collisions which are close enough they need hadronic phsyics. Default is true (skip close collisions). Disabling this results in excess nuclear stopping power. \end{DoxyCompactList}\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a92e935e0c66bfa16608e64edb51077fa}{Get\+Avoid\+Nuclear\+Reactions} () const 
+\begin{DoxyCompactList}\small\item\em get the flag indicating whether hadronic collisions are ignored. \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_a8be39fad23e6953b217f79174c73e9d2}{Set\+Recoil\+Cutoff} (G4double energy)
+\begin{DoxyCompactList}\small\item\em set the minimum energy (per nucleon) at which recoils can be generated, and the energy (per nucleon) below which all ions are stopped. \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_aa9a631028b0882942e3af26694fbc659}{Get\+Recoil\+Cutoff} () const 
+\begin{DoxyCompactList}\small\item\em get the recoil cutoff \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_afb8cc92010d3246798fab2eb2983bb4a}{Set\+Physics\+Cutoff} (G4double energy)
+\begin{DoxyCompactList}\small\item\em set the energy to which screening tables are computed. Typically, this is 10 eV or so, and not often changed. \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_adcb1df2fdb14a093551c9d9acc675c5f}{Get\+Physics\+Cutoff} () const 
+\begin{DoxyCompactList}\small\item\em get the physics cutoff energy. \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_aebaeb123c972f0b1fd884b680da9ada6}{Set\+N\+I\+E\+L\+Partition\+Function} (const \hyperlink{classG4VNIELPartition}{G4\+V\+N\+I\+E\+L\+Partition} $\ast$part)
+\begin{DoxyCompactList}\small\item\em set the pointer to a class for paritioning energy into N\+I\+EL \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_a82efdd93ae72c169ba4d137c0b1bd37f}{Set\+Cross\+Section\+Hardening} (G4double fraction, G4double Hardening\+Factor)
+\begin{DoxyCompactList}\small\item\em set the cross section boost to provide faster computation of backscattering \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a2effa40b95cec0d0323a2f40f040aaff}{Get\+Hardening\+Fraction} () const 
+\begin{DoxyCompactList}\small\item\em get the fraction of particles which will have boosted scattering \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a4aba65202fa37745d11c2b689fa36f00}{Get\+Hardening\+Factor} () const 
+\begin{DoxyCompactList}\small\item\em get the boost factor in use. \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_abe7517bfaa74ef1144acc5a221cd7ffa}{Get\+Current\+Interaction\+Length} () const 
+\begin{DoxyCompactList}\small\item\em the the interaciton length used in the last scattering. \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_aa98210f990a3b80391f6f661c17f09e5}{Set\+External\+Cross\+Section\+Handler} (\hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} $\ast$cs)
+\begin{DoxyCompactList}\small\item\em set a function to compute screening tables, if the user needs non-\/standard behavior. \end{DoxyCompactList}\item 
+G4int \hyperlink{classG4ScreenedNuclearRecoil_a1f1eb71aa90e9b9d83b3c2f082f404cb}{Get\+Verbose\+Level} () const 
+\begin{DoxyCompactList}\small\item\em get the verbosity. \end{DoxyCompactList}\item 
+std\+::map$<$ G4int, \hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} $\ast$ $>$ \& \hyperlink{classG4ScreenedNuclearRecoil_a35030d3bcb0af6a855d08f76c1a1c86f}{Get\+Cross\+Section\+Handlers} ()
+\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_af480fe92eb5a8c80b38db068d4da7eb1}{Clear\+Stages} (void)
+\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_aa6030349f3853422d0a27a836bfd7ca9}{Add\+Stage} (\hyperlink{classG4ScreenedCollisionStage}{G4\+Screened\+Collision\+Stage} $\ast$stage)
+\item 
+\hyperlink{structG4CoulombKinematicsInfo}{G4\+Coulomb\+Kinematics\+Info} \& \hyperlink{classG4ScreenedNuclearRecoil_a3ce5de95a63428383e130859d00ac7fa}{Get\+Kinematics} ()
+\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_a75b348643f84ad9824bb4efc7d9dc860}{Set\+Valid\+Collision} (G4bool flag)
+\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a5f1566375dfc829984e3f98e316e28ae}{Get\+Valid\+Collision} () const 
+\item 
+class G4\+Particle\+Change \& \hyperlink{classG4ScreenedNuclearRecoil_a06bd05510257f5ee6ad18d887a28926c}{Get\+Particle\+Change} ()
+\begin{DoxyCompactList}\small\item\em get the pointer to our Particle\+Change object. for internal use, primarily. \end{DoxyCompactList}\item 
+void \hyperlink{classG4ScreenedNuclearRecoil_ae0ab6a6c98402cbf573ebda97a21f529}{Deposit\+Energy} (G4int z1, G4double a1, const G4\+Material $\ast$material, G4double energy)
+\begin{DoxyCompactList}\small\item\em take the given energy, and use the material information to partition it into N\+I\+EL and ionizing energy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a2851b050a8dd1473dd893737ae0d9c3a}{high\+Energy\+Limit}
+\begin{DoxyCompactList}\small\item\em the energy per nucleon above which the M\+FP is constant \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_aea83086541a85ac4cc0ad44c11e0fc21}{low\+Energy\+Limit}
+\begin{DoxyCompactList}\small\item\em the energy per nucleon below which the M\+FP is zero \end{DoxyCompactList}\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a1953ae04bf9ef546cc16d07291cd8819}{process\+Max\+Energy}
+\begin{DoxyCompactList}\small\item\em the energy per nucleon beyond which the cross section is zero, to cross over to G4\+M\+SC \end{DoxyCompactList}\item 
+G4\+String \hyperlink{classG4ScreenedNuclearRecoil_a297640f55e7819423579c1123501123d}{screening\+Key}
+\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a89431b3d4402b888a5d422e153a45296}{generate\+Recoils}
+\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a09d5f47fb3f261d777d2dd0a663d199f}{avoid\+Reactions}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_ad3319321c3b8319822dc9d4a11e046d2}{recoil\+Cutoff}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a8d61b6227a742762fe364e1f376d3265}{physics\+Cutoff}
+\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a216384f2d51fb1a347124b977e093c05}{register\+Deposited\+Energy}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_afa3ff45a02312f7b6a6c1d500fd01f28}{Ionizing\+Loss}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_ad659b5541a6a1e34109bf3a38a805cf7}{N\+I\+EL}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a3dd51e98d3a0ce4c351633bd79eac590}{M\+F\+P\+Scale}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_ad07667d26ae00e2498cdb6ed9c96f4c6}{hardening\+Fraction}
+\item 
+G4double \hyperlink{classG4ScreenedNuclearRecoil_a988377cb58e0d3ea9e9b8b47fdff0668}{hardening\+Factor}
+\item 
+\hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} $\ast$ \hyperlink{classG4ScreenedNuclearRecoil_ae7c806b57b6b3af7dae77fa53ed76e8a}{external\+Cross\+Section\+Constructor}
+\item 
+std\+::vector$<$ \hyperlink{classG4ScreenedCollisionStage}{G4\+Screened\+Collision\+Stage} $\ast$ $>$ \hyperlink{classG4ScreenedNuclearRecoil_a0d3ecbaa25714e7a92a69fcae7833662}{collision\+Stages}
+\item 
+std\+::map$<$ G4int, \hyperlink{classG4ScreenedCoulombCrossSection}{G4\+Screened\+Coulomb\+Cross\+Section} $\ast$ $>$ \hyperlink{classG4ScreenedNuclearRecoil_a9860a5abf8c2239adad8d1635612d6a1}{cross\+Section\+Handlers}
+\item 
+G4bool \hyperlink{classG4ScreenedNuclearRecoil_a995a78de62358db496505ab0f39de0a1}{valid\+Collision}
+\item 
+\hyperlink{structG4CoulombKinematicsInfo}{G4\+Coulomb\+Kinematics\+Info} \hyperlink{classG4ScreenedNuclearRecoil_ae7539ec7406f555a9655e4da0b78f05b}{kinematics}
+\item 
+const \hyperlink{classG4VNIELPartition}{G4\+V\+N\+I\+E\+L\+Partition} $\ast$ \hyperlink{classG4ScreenedNuclearRecoil_a23c8089692df12b1bc82b5402f86dfea}{N\+I\+E\+L\+Partition\+Function}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classG4ScreenedNuclearRecoil_a13d7049bfd5b31725b6ce577a38eb362}{G4\+Screened\+Collision\+Stage}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A process which handles screened Coulomb collisions between nuclei. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{G4\+Screened\+Nuclear\+Recoil(const G4\+String \&process\+Name=""Screened\+Elastic"", const G4\+String \&\+Screening\+Key=""zbl"", G4bool Generate\+Recoils=1, G4double Recoil\+Cutoff=100.\+0 $\ast$\+C\+L\+H\+E\+P\+::e\+V, G4double Physics\+Cutoff=10.\+0 $\ast$\+C\+L\+H\+E\+P\+::e\+V)}{G4ScreenedNuclearRecoil(const G4String &processName="ScreenedElastic", const G4String &ScreeningKey="zbl", G4bool GenerateRecoils=1, G4double RecoilCutoff=100.0 *CLHEP::eV, G4double PhysicsCutoff=10.0 *CLHEP::eV)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Screened\+Nuclear\+Recoil\+::\+G4\+Screened\+Nuclear\+Recoil (
+\begin{DoxyParamCaption}
+\item[{const G4\+String \&}]{process\+Name = {\ttfamily \char`\"{}ScreenedElastic\char`\"{}}, }
+\item[{const G4\+String \&}]{Screening\+Key = {\ttfamily \char`\"{}zbl\char`\"{}}, }
+\item[{G4bool}]{Generate\+Recoils = {\ttfamily 1}, }
+\item[{G4double}]{Recoil\+Cutoff = {\ttfamily 100.0~$\ast$CLHEP\+:\+:eV}, }
+\item[{G4double}]{Physics\+Cutoff = {\ttfamily 10.0~$\ast$CLHEP\+:\+:eV}}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedNuclearRecoil_aef8f67b31b487b3fff30f773b9ad6a65}{}\label{classG4ScreenedNuclearRecoil_aef8f67b31b487b3fff30f773b9ad6a65}
+
+
+Construct the process and set some physics parameters for it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process\+Name} & the name to assign the process \\
+\hline
+{\em Screening\+Key} & the name of a screening function to use. The default functions are \char`\"{}zbl\char`\"{} (recommended for soft scattering), \char`\"{}lj\char`\"{} (recommended for backscattering) and \char`\"{}mol\char`\"{} (Moliere potential) \\
+\hline
+{\em Generate\+Recoils} & if frue, ions struck by primary are converted into new moving particles. If false, energy is deposited, but no new moving ions are created. \\
+\hline
+{\em Recoil\+Cutoff} & energy below which no new moving particles will be created, even if {\itshape Generate\+Recoils} is true. Also, a moving primary particle will be stopped if its energy falls below this limit. \\
+\hline
+{\em Physics\+Cutoff} & the energy transfer to which screening tables are calucalted. There is no really compelling reason to change it from the 10.\+0 eV default. However, see the paper on running this in thin targets for further discussion, and its interaction with \hyperlink{classG4ScreenedNuclearRecoil_afb077516aea7a307c456a9455368ed5f}{Set\+M\+F\+P\+Scaling()} \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!````~G4\+Screened\+Nuclear\+Recoil@{$\sim$\+G4\+Screened\+Nuclear\+Recoil}}
+\index{````~G4\+Screened\+Nuclear\+Recoil@{$\sim$\+G4\+Screened\+Nuclear\+Recoil}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{$\sim$\+G4\+Screened\+Nuclear\+Recoil()}{~G4ScreenedNuclearRecoil()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4\+Screened\+Nuclear\+Recoil\+::$\sim$\+G4\+Screened\+Nuclear\+Recoil (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_ab0abe5d31e651ae07660f01dbeb4981f}{}\label{classG4ScreenedNuclearRecoil_ab0abe5d31e651ae07660f01dbeb4981f}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Add\+Stage@{Add\+Stage}}
+\index{Add\+Stage@{Add\+Stage}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Add\+Stage(\+G4\+Screened\+Collision\+Stage $\ast$stage)}{AddStage(G4ScreenedCollisionStage *stage)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Add\+Stage (
+\begin{DoxyParamCaption}
+\item[{{\bf G4\+Screened\+Collision\+Stage} $\ast$}]{stage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_aa6030349f3853422d0a27a836bfd7ca9}{}\label{classG4ScreenedNuclearRecoil_aa6030349f3853422d0a27a836bfd7ca9}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Allow\+Energy\+Deposition@{Allow\+Energy\+Deposition}}
+\index{Allow\+Energy\+Deposition@{Allow\+Energy\+Deposition}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Allow\+Energy\+Deposition(\+G4bool flag)}{AllowEnergyDeposition(G4bool flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Allow\+Energy\+Deposition (
+\begin{DoxyParamCaption}
+\item[{G4bool}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_ace84b594276d0b2b44350c1de6bfdb9e}{}\label{classG4ScreenedNuclearRecoil_ace84b594276d0b2b44350c1de6bfdb9e}
+
+
+enable or disable all energy deposition by this process 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & if true, enable deposition of energy (the default). If false, disable deposition. \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Avoid\+Nuclear\+Reactions@{Avoid\+Nuclear\+Reactions}}
+\index{Avoid\+Nuclear\+Reactions@{Avoid\+Nuclear\+Reactions}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Avoid\+Nuclear\+Reactions(\+G4bool flag)}{AvoidNuclearReactions(G4bool flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Avoid\+Nuclear\+Reactions (
+\begin{DoxyParamCaption}
+\item[{G4bool}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_ad22e86de4211cbffd8788e05c022af92}{}\label{classG4ScreenedNuclearRecoil_ad22e86de4211cbffd8788e05c022af92}
+
+
+enable or disable whether this process will skip collisions which are close enough they need hadronic phsyics. Default is true (skip close collisions). Disabling this results in excess nuclear stopping power. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & true results in hard collisions being skipped. false allows hard collisions. \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Build\+Physics\+Table@{Build\+Physics\+Table}}
+\index{Build\+Physics\+Table@{Build\+Physics\+Table}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Build\+Physics\+Table(const G4\+Particle\+Definition \&)}{BuildPhysicsTable(const G4ParticleDefinition &)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G4\+Screened\+Nuclear\+Recoil\+::\+Build\+Physics\+Table (
+\begin{DoxyParamCaption}
+\item[{const G4\+Particle\+Definition \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_a8862a7af081d952a63839157d7c653d2}{}\label{classG4ScreenedNuclearRecoil_a8862a7af081d952a63839157d7c653d2}
+
+
+Build physics tables in advance. Not Implemented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Particle\+Type} & the type of particle to build tables for \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Check\+Nuclear\+Collision@{Check\+Nuclear\+Collision}}
+\index{Check\+Nuclear\+Collision@{Check\+Nuclear\+Collision}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Check\+Nuclear\+Collision(\+G4double A, G4double A1, G4double apsis)}{CheckNuclearCollision(G4double A, G4double A1, G4double apsis)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4bool G4\+Screened\+Nuclear\+Recoil\+::\+Check\+Nuclear\+Collision (
+\begin{DoxyParamCaption}
+\item[{G4double}]{A, }
+\item[{G4double}]{A1, }
+\item[{G4double}]{apsis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_aa22d29f8744e5c8f55935f6d1bd88478}{}\label{classG4ScreenedNuclearRecoil_aa22d29f8744e5c8f55935f6d1bd88478}
+
+
+deterine if the moving particle is within the strong force range of the selected nucleus 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & the nucleon number of the beam \\
+\hline
+{\em A1} & the nucleon number of the target \\
+\hline
+{\em apsis} & the distance of closest approach \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Clear\+Stages@{Clear\+Stages}}
+\index{Clear\+Stages@{Clear\+Stages}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Clear\+Stages(void)}{ClearStages(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Clear\+Stages (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedNuclearRecoil_af480fe92eb5a8c80b38db068d4da7eb1}{}\label{classG4ScreenedNuclearRecoil_af480fe92eb5a8c80b38db068d4da7eb1}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Deposit\+Energy@{Deposit\+Energy}}
+\index{Deposit\+Energy@{Deposit\+Energy}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Deposit\+Energy(\+G4int z1, G4double a1, const G4\+Material $\ast$material, G4double energy)}{DepositEnergy(G4int z1, G4double a1, const G4Material *material, G4double energy)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Deposit\+Energy (
+\begin{DoxyParamCaption}
+\item[{G4int}]{z1, }
+\item[{G4double}]{a1, }
+\item[{const G4\+Material $\ast$}]{material, }
+\item[{G4double}]{energy}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedNuclearRecoil_ae0ab6a6c98402cbf573ebda97a21f529}{}\label{classG4ScreenedNuclearRecoil_ae0ab6a6c98402cbf573ebda97a21f529}
+
+
+take the given energy, and use the material information to partition it into N\+I\+EL and ionizing energy. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Dump\+Physics\+Table@{Dump\+Physics\+Table}}
+\index{Dump\+Physics\+Table@{Dump\+Physics\+Table}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Dump\+Physics\+Table(const G4\+Particle\+Definition \&a\+Particle\+Type)}{DumpPhysicsTable(const G4ParticleDefinition &aParticleType)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G4\+Screened\+Nuclear\+Recoil\+::\+Dump\+Physics\+Table (
+\begin{DoxyParamCaption}
+\item[{const G4\+Particle\+Definition \&}]{a\+Particle\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_a29563bde39caea67caadd4e60d9f736d}{}\label{classG4ScreenedNuclearRecoil_a29563bde39caea67caadd4e60d9f736d}
+
+
+Export physics tables for persistency. Not Implemented. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Particle\+Type} & the type of particle to build tables for \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Enable\+Recoils@{Enable\+Recoils}}
+\index{Enable\+Recoils@{Enable\+Recoils}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Enable\+Recoils(\+G4bool flag)}{EnableRecoils(G4bool flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Enable\+Recoils (
+\begin{DoxyParamCaption}
+\item[{G4bool}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_ab99bd0156eee60815ddba434a2bb9b0b}{}\label{classG4ScreenedNuclearRecoil_ab99bd0156eee60815ddba434a2bb9b0b}
+
+
+enable or disable the generation of recoils. If recoils are disabled, the energy they would have received is just deposited. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & if true, create recoil ions in cases in which the energy is above the recoil\+Cutoff. If false, just deposit the energy. \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Allow\+Energy\+Deposition@{Get\+Allow\+Energy\+Deposition}}
+\index{Get\+Allow\+Energy\+Deposition@{Get\+Allow\+Energy\+Deposition}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Allow\+Energy\+Deposition() const }{GetAllowEnergyDeposition() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Allow\+Energy\+Deposition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_abac8f36bad05cdcc18e309d6e7f4f627}{}\label{classG4ScreenedNuclearRecoil_abac8f36bad05cdcc18e309d6e7f4f627}
+
+
+get flag indicating whether deposition is enabled 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Avoid\+Nuclear\+Reactions@{Get\+Avoid\+Nuclear\+Reactions}}
+\index{Get\+Avoid\+Nuclear\+Reactions@{Get\+Avoid\+Nuclear\+Reactions}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Avoid\+Nuclear\+Reactions() const }{GetAvoidNuclearReactions() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Avoid\+Nuclear\+Reactions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a92e935e0c66bfa16608e64edb51077fa}{}\label{classG4ScreenedNuclearRecoil_a92e935e0c66bfa16608e64edb51077fa}
+
+
+get the flag indicating whether hadronic collisions are ignored. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Cross\+Section\+Handlers@{Get\+Cross\+Section\+Handlers}}
+\index{Get\+Cross\+Section\+Handlers@{Get\+Cross\+Section\+Handlers}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Cross\+Section\+Handlers()}{GetCrossSectionHandlers()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$G4int, {\bf G4\+Screened\+Coulomb\+Cross\+Section}$\ast$$>$\& G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Cross\+Section\+Handlers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a35030d3bcb0af6a855d08f76c1a1c86f}{}\label{classG4ScreenedNuclearRecoil_a35030d3bcb0af6a855d08f76c1a1c86f}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Current\+Interaction\+Length@{Get\+Current\+Interaction\+Length}}
+\index{Get\+Current\+Interaction\+Length@{Get\+Current\+Interaction\+Length}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Current\+Interaction\+Length() const }{GetCurrentInteractionLength() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Current\+Interaction\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_abe7517bfaa74ef1144acc5a221cd7ffa}{}\label{classG4ScreenedNuclearRecoil_abe7517bfaa74ef1144acc5a221cd7ffa}
+
+
+the the interaciton length used in the last scattering. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Enable\+Recoils@{Get\+Enable\+Recoils}}
+\index{Get\+Enable\+Recoils@{Get\+Enable\+Recoils}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Enable\+Recoils() const }{GetEnableRecoils() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Enable\+Recoils (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a4a4569aed4465249a0aa17f842e7ec01}{}\label{classG4ScreenedNuclearRecoil_a4a4569aed4465249a0aa17f842e7ec01}
+
+
+find out if generation of recoils is enabled. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Hardening\+Factor@{Get\+Hardening\+Factor}}
+\index{Get\+Hardening\+Factor@{Get\+Hardening\+Factor}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Hardening\+Factor() const }{GetHardeningFactor() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Hardening\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a4aba65202fa37745d11c2b689fa36f00}{}\label{classG4ScreenedNuclearRecoil_a4aba65202fa37745d11c2b689fa36f00}
+
+
+get the boost factor in use. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Hardening\+Fraction@{Get\+Hardening\+Fraction}}
+\index{Get\+Hardening\+Fraction@{Get\+Hardening\+Fraction}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Hardening\+Fraction() const }{GetHardeningFraction() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Hardening\+Fraction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a2effa40b95cec0d0323a2f40f040aaff}{}\label{classG4ScreenedNuclearRecoil_a2effa40b95cec0d0323a2f40f040aaff}
+
+
+get the fraction of particles which will have boosted scattering 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Kinematics@{Get\+Kinematics}}
+\index{Get\+Kinematics@{Get\+Kinematics}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Kinematics()}{GetKinematics()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4\+Coulomb\+Kinematics\+Info}\& G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Kinematics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a3ce5de95a63428383e130859d00ac7fa}{}\label{classG4ScreenedNuclearRecoil_a3ce5de95a63428383e130859d00ac7fa}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Mean\+Free\+Path@{Get\+Mean\+Free\+Path}}
+\index{Get\+Mean\+Free\+Path@{Get\+Mean\+Free\+Path}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Mean\+Free\+Path(const G4\+Track \&, G4double, G4\+Force\+Condition $\ast$)}{GetMeanFreePath(const G4Track &, G4double, G4ForceCondition *)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Mean\+Free\+Path (
+\begin{DoxyParamCaption}
+\item[{const G4\+Track \&}]{, }
+\item[{G4double}]{, }
+\item[{G4\+Force\+Condition $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_ab00d6e1a7592a577e9c10ca4c62375ae}{}\label{classG4ScreenedNuclearRecoil_ab00d6e1a7592a577e9c10ca4c62375ae}
+
+
+used internally by Geant4 machinery 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+M\+F\+P\+Scaling@{Get\+M\+F\+P\+Scaling}}
+\index{Get\+M\+F\+P\+Scaling@{Get\+M\+F\+P\+Scaling}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+M\+F\+P\+Scaling() const }{GetMFPScaling() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+M\+F\+P\+Scaling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a6e1a160fe83222c2bc7c9a5428cf4e50}{}\label{classG4ScreenedNuclearRecoil_a6e1a160fe83222c2bc7c9a5428cf4e50}
+
+
+get the M\+F\+P\+Scaling parameter 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+New\+Cross\+Section\+Handler@{Get\+New\+Cross\+Section\+Handler}}
+\index{Get\+New\+Cross\+Section\+Handler@{Get\+New\+Cross\+Section\+Handler}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+New\+Cross\+Section\+Handler(void)}{GetNewCrossSectionHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G4\+Screened\+Coulomb\+Cross\+Section}$\ast$ G4\+Screened\+Nuclear\+Recoil\+::\+Get\+New\+Cross\+Section\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_a97e43210067375ffcdc61742b57e4d47}{}\label{classG4ScreenedNuclearRecoil_a97e43210067375ffcdc61742b57e4d47}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+N\+I\+EL@{Get\+N\+I\+EL}}
+\index{Get\+N\+I\+EL@{Get\+N\+I\+EL}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+N\+I\+E\+L() const }{GetNIEL() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+N\+I\+EL (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_ae05a88f90d98f618a236e7a5c9b3a460}{}\label{classG4ScreenedNuclearRecoil_ae05a88f90d98f618a236e7a5c9b3a460}
+
+
+Get non-\/ionizing energy loss for last step. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Particle\+Change@{Get\+Particle\+Change}}
+\index{Get\+Particle\+Change@{Get\+Particle\+Change}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Particle\+Change()}{GetParticleChange()}}]{\setlength{\rightskip}{0pt plus 5cm}class G4\+Particle\+Change\& G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Particle\+Change (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a06bd05510257f5ee6ad18d887a28926c}{}\label{classG4ScreenedNuclearRecoil_a06bd05510257f5ee6ad18d887a28926c}
+
+
+get the pointer to our Particle\+Change object. for internal use, primarily. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Physics\+Cutoff@{Get\+Physics\+Cutoff}}
+\index{Get\+Physics\+Cutoff@{Get\+Physics\+Cutoff}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Physics\+Cutoff() const }{GetPhysicsCutoff() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Physics\+Cutoff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_adcb1df2fdb14a093551c9d9acc675c5f}{}\label{classG4ScreenedNuclearRecoil_adcb1df2fdb14a093551c9d9acc675c5f}
+
+
+get the physics cutoff energy. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Recoil\+Cutoff@{Get\+Recoil\+Cutoff}}
+\index{Get\+Recoil\+Cutoff@{Get\+Recoil\+Cutoff}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Recoil\+Cutoff() const }{GetRecoilCutoff() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Recoil\+Cutoff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_aa9a631028b0882942e3af26694fbc659}{}\label{classG4ScreenedNuclearRecoil_aa9a631028b0882942e3af26694fbc659}
+
+
+get the recoil cutoff 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Screening\+Key@{Get\+Screening\+Key}}
+\index{Get\+Screening\+Key@{Get\+Screening\+Key}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Screening\+Key() const }{GetScreeningKey() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Screening\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a0d49c385b785d8b883e6b165ec4f34bc}{}\label{classG4ScreenedNuclearRecoil_a0d49c385b785d8b883e6b165ec4f34bc}
+
+
+find out what screening funciton we are using 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Valid\+Collision@{Get\+Valid\+Collision}}
+\index{Get\+Valid\+Collision@{Get\+Valid\+Collision}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Valid\+Collision() const }{GetValidCollision() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Valid\+Collision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a5f1566375dfc829984e3f98e316e28ae}{}\label{classG4ScreenedNuclearRecoil_a5f1566375dfc829984e3f98e316e28ae}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Get\+Verbose\+Level@{Get\+Verbose\+Level}}
+\index{Get\+Verbose\+Level@{Get\+Verbose\+Level}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Get\+Verbose\+Level() const }{GetVerboseLevel() const }}]{\setlength{\rightskip}{0pt plus 5cm}G4int G4\+Screened\+Nuclear\+Recoil\+::\+Get\+Verbose\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a1f1eb71aa90e9b9d83b3c2f082f404cb}{}\label{classG4ScreenedNuclearRecoil_a1f1eb71aa90e9b9d83b3c2f082f404cb}
+
+
+get the verbosity. 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Is\+Applicable@{Is\+Applicable}}
+\index{Is\+Applicable@{Is\+Applicable}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Is\+Applicable(const G4\+Particle\+Definition \&a\+Particle\+Type)}{IsApplicable(const G4ParticleDefinition &aParticleType)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4bool G4\+Screened\+Nuclear\+Recoil\+::\+Is\+Applicable (
+\begin{DoxyParamCaption}
+\item[{const G4\+Particle\+Definition \&}]{a\+Particle\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_a3f764c88f7a12951ff16b184081f7fd9}{}\label{classG4ScreenedNuclearRecoil_a3f764c88f7a12951ff16b184081f7fd9}
+
+
+test if a prticle of type {\itshape a\+Particle\+Type} can use this process 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Particle\+Type} & the particle to test \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Post\+Step\+Do\+It@{Post\+Step\+Do\+It}}
+\index{Post\+Step\+Do\+It@{Post\+Step\+Do\+It}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Post\+Step\+Do\+It(const G4\+Track \&a\+Track, const G4\+Step \&a\+Step)}{PostStepDoIt(const G4Track &aTrack, const G4Step &aStep)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4\+V\+Particle\+Change$\ast$ G4\+Screened\+Nuclear\+Recoil\+::\+Post\+Step\+Do\+It (
+\begin{DoxyParamCaption}
+\item[{const G4\+Track \&}]{a\+Track, }
+\item[{const G4\+Step \&}]{a\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedNuclearRecoil_afd0ebeb0fa559a64263c27d7d9912919}{}\label{classG4ScreenedNuclearRecoil_afd0ebeb0fa559a64263c27d7d9912919}
+
+
+used internally by Geant4 machinery 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Reset\+Tables@{Reset\+Tables}}
+\index{Reset\+Tables@{Reset\+Tables}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Reset\+Tables()}{ResetTables()}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Reset\+Tables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedNuclearRecoil_a18b5ff579de48e81e6fc001240aebdad}{}\label{classG4ScreenedNuclearRecoil_a18b5ff579de48e81e6fc001240aebdad}
+
+
+clear precomputed screening tables 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+Cross\+Section\+Hardening@{Set\+Cross\+Section\+Hardening}}
+\index{Set\+Cross\+Section\+Hardening@{Set\+Cross\+Section\+Hardening}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+Cross\+Section\+Hardening(\+G4double fraction, G4double Hardening\+Factor)}{SetCrossSectionHardening(G4double fraction, G4double HardeningFactor)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+Cross\+Section\+Hardening (
+\begin{DoxyParamCaption}
+\item[{G4double}]{fraction, }
+\item[{G4double}]{Hardening\+Factor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a82efdd93ae72c169ba4d137c0b1bd37f}{}\label{classG4ScreenedNuclearRecoil_a82efdd93ae72c169ba4d137c0b1bd37f}
+
+
+set the cross section boost to provide faster computation of backscattering 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & the fraction of particles to have their cross section boosted. \\
+\hline
+{\em Hardening\+Factor} & the factor by which to boost the scattering cross section. \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+External\+Cross\+Section\+Handler@{Set\+External\+Cross\+Section\+Handler}}
+\index{Set\+External\+Cross\+Section\+Handler@{Set\+External\+Cross\+Section\+Handler}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+External\+Cross\+Section\+Handler(\+G4\+Screened\+Coulomb\+Cross\+Section $\ast$cs)}{SetExternalCrossSectionHandler(G4ScreenedCoulombCrossSection *cs)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+External\+Cross\+Section\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf G4\+Screened\+Coulomb\+Cross\+Section} $\ast$}]{cs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_aa98210f990a3b80391f6f661c17f09e5}{}\label{classG4ScreenedNuclearRecoil_aa98210f990a3b80391f6f661c17f09e5}
+
+
+set a function to compute screening tables, if the user needs non-\/standard behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & a class which constructs the screening tables. \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+Max\+Energy\+For\+Scattering@{Set\+Max\+Energy\+For\+Scattering}}
+\index{Set\+Max\+Energy\+For\+Scattering@{Set\+Max\+Energy\+For\+Scattering}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+Max\+Energy\+For\+Scattering(\+G4double energy)}{SetMaxEnergyForScattering(G4double energy)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+Max\+Energy\+For\+Scattering (
+\begin{DoxyParamCaption}
+\item[{G4double}]{energy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_aff68cd261bf6f47ca064e226710faa33}{}\label{classG4ScreenedNuclearRecoil_aff68cd261bf6f47ca064e226710faa33}
+
+
+set the upper energy beyond which this process has no cross section 
+
+This funciton is used to coordinate this process with G4\+M\+SC. Typically, G4\+M\+SC should not be allowed to operate in a range which overlaps that of this process. The criterion which is most reasonable is that the transition should be somewhere in the modestly relativistic regime (500 Me\+V/u for example). 
+\begin{DoxyParams}{Parameters}
+{\em energy} & energy per nucleon for the cutoff \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+M\+F\+P\+Scaling@{Set\+M\+F\+P\+Scaling}}
+\index{Set\+M\+F\+P\+Scaling@{Set\+M\+F\+P\+Scaling}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+M\+F\+P\+Scaling(\+G4double scale)}{SetMFPScaling(G4double scale)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+M\+F\+P\+Scaling (
+\begin{DoxyParamCaption}
+\item[{G4double}]{scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_afb077516aea7a307c456a9455368ed5f}{}\label{classG4ScreenedNuclearRecoil_afb077516aea7a307c456a9455368ed5f}
+
+
+set the mean free path scaling as specified 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & the factor by which the default M\+FP will be scaled. Set to less than 1 for very thin films, typically, to sample multiple scattering, or to greater than 1 for quick simulaitons with a very long flight path. \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+N\+I\+E\+L\+Partition\+Function@{Set\+N\+I\+E\+L\+Partition\+Function}}
+\index{Set\+N\+I\+E\+L\+Partition\+Function@{Set\+N\+I\+E\+L\+Partition\+Function}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+N\+I\+E\+L\+Partition\+Function(const G4\+V\+N\+I\+E\+L\+Partition $\ast$part)}{SetNIELPartitionFunction(const G4VNIELPartition *part)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+N\+I\+E\+L\+Partition\+Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf G4\+V\+N\+I\+E\+L\+Partition} $\ast$}]{part}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedNuclearRecoil_aebaeb123c972f0b1fd884b680da9ada6}{}\label{classG4ScreenedNuclearRecoil_aebaeb123c972f0b1fd884b680da9ada6}
+
+
+set the pointer to a class for paritioning energy into N\+I\+EL 
+
+part the pointer to the class. \index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+Physics\+Cutoff@{Set\+Physics\+Cutoff}}
+\index{Set\+Physics\+Cutoff@{Set\+Physics\+Cutoff}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+Physics\+Cutoff(\+G4double energy)}{SetPhysicsCutoff(G4double energy)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+Physics\+Cutoff (
+\begin{DoxyParamCaption}
+\item[{G4double}]{energy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_afb8cc92010d3246798fab2eb2983bb4a}{}\label{classG4ScreenedNuclearRecoil_afb8cc92010d3246798fab2eb2983bb4a}
+
+
+set the energy to which screening tables are computed. Typically, this is 10 eV or so, and not often changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & the cutoff energy \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+Recoil\+Cutoff@{Set\+Recoil\+Cutoff}}
+\index{Set\+Recoil\+Cutoff@{Set\+Recoil\+Cutoff}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+Recoil\+Cutoff(\+G4double energy)}{SetRecoilCutoff(G4double energy)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+Recoil\+Cutoff (
+\begin{DoxyParamCaption}
+\item[{G4double}]{energy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a8be39fad23e6953b217f79174c73e9d2}{}\label{classG4ScreenedNuclearRecoil_a8be39fad23e6953b217f79174c73e9d2}
+
+
+set the minimum energy (per nucleon) at which recoils can be generated, and the energy (per nucleon) below which all ions are stopped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy} & energy per nucleon \\
+\hline
+\end{DoxyParams}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Set\+Valid\+Collision@{Set\+Valid\+Collision}}
+\index{Set\+Valid\+Collision@{Set\+Valid\+Collision}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Set\+Valid\+Collision(\+G4bool flag)}{SetValidCollision(G4bool flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void G4\+Screened\+Nuclear\+Recoil\+::\+Set\+Valid\+Collision (
+\begin{DoxyParamCaption}
+\item[{G4bool}]{flag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classG4ScreenedNuclearRecoil_a75b348643f84ad9824bb4efc7d9dc860}{}\label{classG4ScreenedNuclearRecoil_a75b348643f84ad9824bb4efc7d9dc860}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!G4\+Screened\+Collision\+Stage@{G4\+Screened\+Collision\+Stage}}
+\index{G4\+Screened\+Collision\+Stage@{G4\+Screened\+Collision\+Stage}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{G4\+Screened\+Collision\+Stage}{G4ScreenedCollisionStage}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf G4\+Screened\+Collision\+Stage}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classG4ScreenedNuclearRecoil_a13d7049bfd5b31725b6ce577a38eb362}{}\label{classG4ScreenedNuclearRecoil_a13d7049bfd5b31725b6ce577a38eb362}
+
+
+\subsection{Member Data Documentation}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!avoid\+Reactions@{avoid\+Reactions}}
+\index{avoid\+Reactions@{avoid\+Reactions}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{avoid\+Reactions}{avoidReactions}}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::avoid\+Reactions\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a09d5f47fb3f261d777d2dd0a663d199f}{}\label{classG4ScreenedNuclearRecoil_a09d5f47fb3f261d777d2dd0a663d199f}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!collision\+Stages@{collision\+Stages}}
+\index{collision\+Stages@{collision\+Stages}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{collision\+Stages}{collisionStages}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf G4\+Screened\+Collision\+Stage} $\ast$$>$ G4\+Screened\+Nuclear\+Recoil\+::collision\+Stages\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a0d3ecbaa25714e7a92a69fcae7833662}{}\label{classG4ScreenedNuclearRecoil_a0d3ecbaa25714e7a92a69fcae7833662}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!cross\+Section\+Handlers@{cross\+Section\+Handlers}}
+\index{cross\+Section\+Handlers@{cross\+Section\+Handlers}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{cross\+Section\+Handlers}{crossSectionHandlers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$G4int, {\bf G4\+Screened\+Coulomb\+Cross\+Section}$\ast$$>$ G4\+Screened\+Nuclear\+Recoil\+::cross\+Section\+Handlers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a9860a5abf8c2239adad8d1635612d6a1}{}\label{classG4ScreenedNuclearRecoil_a9860a5abf8c2239adad8d1635612d6a1}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!external\+Cross\+Section\+Constructor@{external\+Cross\+Section\+Constructor}}
+\index{external\+Cross\+Section\+Constructor@{external\+Cross\+Section\+Constructor}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{external\+Cross\+Section\+Constructor}{externalCrossSectionConstructor}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4\+Screened\+Coulomb\+Cross\+Section}$\ast$ G4\+Screened\+Nuclear\+Recoil\+::external\+Cross\+Section\+Constructor\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_ae7c806b57b6b3af7dae77fa53ed76e8a}{}\label{classG4ScreenedNuclearRecoil_ae7c806b57b6b3af7dae77fa53ed76e8a}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!generate\+Recoils@{generate\+Recoils}}
+\index{generate\+Recoils@{generate\+Recoils}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{generate\+Recoils}{generateRecoils}}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::generate\+Recoils\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a89431b3d4402b888a5d422e153a45296}{}\label{classG4ScreenedNuclearRecoil_a89431b3d4402b888a5d422e153a45296}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!hardening\+Factor@{hardening\+Factor}}
+\index{hardening\+Factor@{hardening\+Factor}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{hardening\+Factor}{hardeningFactor}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::hardening\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a988377cb58e0d3ea9e9b8b47fdff0668}{}\label{classG4ScreenedNuclearRecoil_a988377cb58e0d3ea9e9b8b47fdff0668}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!hardening\+Fraction@{hardening\+Fraction}}
+\index{hardening\+Fraction@{hardening\+Fraction}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{hardening\+Fraction}{hardeningFraction}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::hardening\+Fraction\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_ad07667d26ae00e2498cdb6ed9c96f4c6}{}\label{classG4ScreenedNuclearRecoil_ad07667d26ae00e2498cdb6ed9c96f4c6}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!high\+Energy\+Limit@{high\+Energy\+Limit}}
+\index{high\+Energy\+Limit@{high\+Energy\+Limit}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{high\+Energy\+Limit}{highEnergyLimit}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::high\+Energy\+Limit\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a2851b050a8dd1473dd893737ae0d9c3a}{}\label{classG4ScreenedNuclearRecoil_a2851b050a8dd1473dd893737ae0d9c3a}
+
+
+the energy per nucleon above which the M\+FP is constant 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!Ionizing\+Loss@{Ionizing\+Loss}}
+\index{Ionizing\+Loss@{Ionizing\+Loss}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{Ionizing\+Loss}{IonizingLoss}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+Ionizing\+Loss\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_afa3ff45a02312f7b6a6c1d500fd01f28}{}\label{classG4ScreenedNuclearRecoil_afa3ff45a02312f7b6a6c1d500fd01f28}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!kinematics@{kinematics}}
+\index{kinematics@{kinematics}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{kinematics}{kinematics}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4\+Coulomb\+Kinematics\+Info} G4\+Screened\+Nuclear\+Recoil\+::kinematics\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_ae7539ec7406f555a9655e4da0b78f05b}{}\label{classG4ScreenedNuclearRecoil_ae7539ec7406f555a9655e4da0b78f05b}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!low\+Energy\+Limit@{low\+Energy\+Limit}}
+\index{low\+Energy\+Limit@{low\+Energy\+Limit}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{low\+Energy\+Limit}{lowEnergyLimit}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::low\+Energy\+Limit\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_aea83086541a85ac4cc0ad44c11e0fc21}{}\label{classG4ScreenedNuclearRecoil_aea83086541a85ac4cc0ad44c11e0fc21}
+
+
+the energy per nucleon below which the M\+FP is zero 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!M\+F\+P\+Scale@{M\+F\+P\+Scale}}
+\index{M\+F\+P\+Scale@{M\+F\+P\+Scale}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{M\+F\+P\+Scale}{MFPScale}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+M\+F\+P\+Scale\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a3dd51e98d3a0ce4c351633bd79eac590}{}\label{classG4ScreenedNuclearRecoil_a3dd51e98d3a0ce4c351633bd79eac590}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!N\+I\+EL@{N\+I\+EL}}
+\index{N\+I\+EL@{N\+I\+EL}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{N\+I\+EL}{NIEL}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::\+N\+I\+EL\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_ad659b5541a6a1e34109bf3a38a805cf7}{}\label{classG4ScreenedNuclearRecoil_ad659b5541a6a1e34109bf3a38a805cf7}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!N\+I\+E\+L\+Partition\+Function@{N\+I\+E\+L\+Partition\+Function}}
+\index{N\+I\+E\+L\+Partition\+Function@{N\+I\+E\+L\+Partition\+Function}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{N\+I\+E\+L\+Partition\+Function}{NIELPartitionFunction}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf G4\+V\+N\+I\+E\+L\+Partition}$\ast$ G4\+Screened\+Nuclear\+Recoil\+::\+N\+I\+E\+L\+Partition\+Function\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a23c8089692df12b1bc82b5402f86dfea}{}\label{classG4ScreenedNuclearRecoil_a23c8089692df12b1bc82b5402f86dfea}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!physics\+Cutoff@{physics\+Cutoff}}
+\index{physics\+Cutoff@{physics\+Cutoff}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{physics\+Cutoff}{physicsCutoff}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::physics\+Cutoff\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a8d61b6227a742762fe364e1f376d3265}{}\label{classG4ScreenedNuclearRecoil_a8d61b6227a742762fe364e1f376d3265}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!process\+Max\+Energy@{process\+Max\+Energy}}
+\index{process\+Max\+Energy@{process\+Max\+Energy}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{process\+Max\+Energy}{processMaxEnergy}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::process\+Max\+Energy\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a1953ae04bf9ef546cc16d07291cd8819}{}\label{classG4ScreenedNuclearRecoil_a1953ae04bf9ef546cc16d07291cd8819}
+
+
+the energy per nucleon beyond which the cross section is zero, to cross over to G4\+M\+SC 
+
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!recoil\+Cutoff@{recoil\+Cutoff}}
+\index{recoil\+Cutoff@{recoil\+Cutoff}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{recoil\+Cutoff}{recoilCutoff}}]{\setlength{\rightskip}{0pt plus 5cm}G4double G4\+Screened\+Nuclear\+Recoil\+::recoil\+Cutoff\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_ad3319321c3b8319822dc9d4a11e046d2}{}\label{classG4ScreenedNuclearRecoil_ad3319321c3b8319822dc9d4a11e046d2}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!register\+Deposited\+Energy@{register\+Deposited\+Energy}}
+\index{register\+Deposited\+Energy@{register\+Deposited\+Energy}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{register\+Deposited\+Energy}{registerDepositedEnergy}}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::register\+Deposited\+Energy\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a216384f2d51fb1a347124b977e093c05}{}\label{classG4ScreenedNuclearRecoil_a216384f2d51fb1a347124b977e093c05}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!screening\+Key@{screening\+Key}}
+\index{screening\+Key@{screening\+Key}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{screening\+Key}{screeningKey}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String G4\+Screened\+Nuclear\+Recoil\+::screening\+Key\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a297640f55e7819423579c1123501123d}{}\label{classG4ScreenedNuclearRecoil_a297640f55e7819423579c1123501123d}
+\index{G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}!valid\+Collision@{valid\+Collision}}
+\index{valid\+Collision@{valid\+Collision}!G4\+Screened\+Nuclear\+Recoil@{G4\+Screened\+Nuclear\+Recoil}}
+\subsubsection[{\texorpdfstring{valid\+Collision}{validCollision}}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Nuclear\+Recoil\+::valid\+Collision\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedNuclearRecoil_a995a78de62358db496505ab0f39de0a1}{}\label{classG4ScreenedNuclearRecoil_a995a78de62358db496505ab0f39de0a1}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{G4ScreenedNuclearRecoil_8hh}{G4\+Screened\+Nuclear\+Recoil.\+hh}\end{DoxyCompactItemize}

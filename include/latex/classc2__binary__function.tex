@@ -1,0 +1,159 @@
+\hypertarget{classc2__binary__function}{}\section{c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__binary__function}\index{c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$@{c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$}}
+
+
+Provides support for \hyperlink{classc2__function}{c2\+\_\+function} objects which are constructed from two other \hyperlink{classc2__function}{c2\+\_\+function} objects.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__binary__function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__binary__function__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float\+\_\+type \hyperlink{classc2__binary__function_a7ab60d022222ce65e99f8708bf2aae0d}{value\+\_\+with\+\_\+derivatives} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em function to manage the binary operation, used by \hyperlink{classc2__binary__function_a7ab60d022222ce65e99f8708bf2aae0d}{c2\+\_\+binary\+\_\+function\+::value\+\_\+with\+\_\+derivatives()} \end{DoxyCompactList}\item 
+virtual \hyperlink{classc2__binary__function_aaec2d1f2a53845f36974b0b82786d4f2}{$\sim$c2\+\_\+binary\+\_\+function} ()
+\begin{DoxyCompactList}\small\item\em destructor releases ownership of member functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+type($\ast$const \hyperlink{classc2__binary__function_a03189b157a02b97b2f885196616c01a0}{combine} )(const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__binary__function_a1daf580ba04ae495309f9c83bd615f68}{c2\+\_\+binary\+\_\+function} (float\+\_\+type($\ast$combiner)(const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2), const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&right)
+\begin{DoxyCompactList}\small\item\em construct the binary function \end{DoxyCompactList}\item 
+\hyperlink{classc2__binary__function_a99809843f818ae9c451a0339b0f46bdc}{c2\+\_\+binary\+\_\+function} (float\+\_\+type($\ast$combiner)(const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2))
+\begin{DoxyCompactList}\small\item\em construct a \textquotesingle{}stub\textquotesingle{} \hyperlink{classc2__binary__function}{c2\+\_\+binary\+\_\+function}, which provides access to the \hyperlink{classc2__binary__function_a03189b157a02b97b2f885196616c01a0}{combine()} function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classc2__const__ptr}{c2\+\_\+const\+\_\+ptr}$<$ float\+\_\+type $>$ \hyperlink{classc2__binary__function_a53d43543e7057fe762fd14ae58ac327a}{Left}
+\item 
+const \hyperlink{classc2__const__ptr}{c2\+\_\+const\+\_\+ptr}$<$ float\+\_\+type $>$ \hyperlink{classc2__binary__function_a52b7fcaed6a4c3e3146dea43f562db8d}{Right}
+\item 
+bool \hyperlink{classc2__binary__function_a7d6abdb0e7fcfb4fd65833a42f93c561}{stub}
+\begin{DoxyCompactList}\small\item\em if true, we don\textquotesingle{}t own any functions, we are just a source of a combining function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class c2\+\_\+binary\+\_\+function$<$ float\+\_\+type $>$}
+
+Provides support for \hyperlink{classc2__function}{c2\+\_\+function} objects which are constructed from two other \hyperlink{classc2__function}{c2\+\_\+function} objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!````~c2\+\_\+binary\+\_\+function@{$\sim$c2\+\_\+binary\+\_\+function}}
+\index{````~c2\+\_\+binary\+\_\+function@{$\sim$c2\+\_\+binary\+\_\+function}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{$\sim$c2\+\_\+binary\+\_\+function()}{~c2_binary_function()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::$\sim${\bf c2\+\_\+binary\+\_\+function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__binary__function_aaec2d1f2a53845f36974b0b82786d4f2}{}\label{classc2__binary__function_aaec2d1f2a53845f36974b0b82786d4f2}
+
+
+destructor releases ownership of member functions 
+
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{c2\+\_\+binary\+\_\+function(float\+\_\+type($\ast$combiner)(const c2\+\_\+function$<$ float\+\_\+type $>$ \&left, const c2\+\_\+function$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2), const c2\+\_\+function$<$ float\+\_\+type $>$ \&left, const c2\+\_\+function$<$ float\+\_\+type $>$ \&right)}{c2_binary_function(float_type(*combiner)(const c2_function< float_type > &left, const c2_function< float_type > &right, float_type x, float_type *yprime, float_type *yprime2), const c2_function< float_type > &left, const c2_function< float_type > &right)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+binary\+\_\+function} (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type($\ast$)(const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2)}]{combiner, }
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{left, }
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classc2__binary__function_a1daf580ba04ae495309f9c83bd615f68}{}\label{classc2__binary__function_a1daf580ba04ae495309f9c83bd615f68}
+
+
+construct the binary function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em combiner} & pointer to the function which actualy knows how to execute the binary \\
+\hline
+{\em left} & the \hyperlink{classc2__function}{c2\+\_\+function} to be used in the left side of the binary relation \\
+\hline
+{\em right} & the \hyperlink{classc2__function}{c2\+\_\+function} to be used in the right side of the binary relation \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{c2\+\_\+binary\+\_\+function(float\+\_\+type($\ast$combiner)(const c2\+\_\+function$<$ float\+\_\+type $>$ \&left, const c2\+\_\+function$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2))}{c2_binary_function(float_type(*combiner)(const c2_function< float_type > &left, const c2_function< float_type > &right, float_type x, float_type *yprime, float_type *yprime2))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+binary\+\_\+function} (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type($\ast$)(const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2)}]{combiner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classc2__binary__function_a99809843f818ae9c451a0339b0f46bdc}{}\label{classc2__binary__function_a99809843f818ae9c451a0339b0f46bdc}
+
+
+construct a \textquotesingle{}stub\textquotesingle{} \hyperlink{classc2__binary__function}{c2\+\_\+binary\+\_\+function}, which provides access to the \hyperlink{classc2__binary__function_a03189b157a02b97b2f885196616c01a0}{combine()} function 
+
+\begin{DoxyNote}{Note}
+Do not evaluate a \textquotesingle{}stub\textquotesingle{} ever. It is only used so that \hyperlink{classc2__binary__function_a03189b157a02b97b2f885196616c01a0}{combine()} can be called 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}}
+\index{value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{value\+\_\+with\+\_\+derivatives(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{value_with_derivatives(float_type x, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual float\+\_\+type {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::value\+\_\+with\+\_\+derivatives (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__binary__function_a7ab60d022222ce65e99f8708bf2aae0d}{}\label{classc2__binary__function_a7ab60d022222ce65e99f8708bf2aae0d}
+
+
+function to manage the binary operation, used by \hyperlink{classc2__binary__function_a7ab60d022222ce65e99f8708bf2aae0d}{c2\+\_\+binary\+\_\+function\+::value\+\_\+with\+\_\+derivatives()} 
+
+
+
+Implements \hyperlink{classc2__function_a44e0201159111350be7f746fc9026f67}{c2\+\_\+function$<$ float\+\_\+type $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!combine@{combine}}
+\index{combine@{combine}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{combine}{combine}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type($\ast$ const {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::combine) (const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2)}\hypertarget{classc2__binary__function_a03189b157a02b97b2f885196616c01a0}{}\label{classc2__binary__function_a03189b157a02b97b2f885196616c01a0}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!Left@{Left}}
+\index{Left@{Left}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{Left}{Left}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ const {\bf c2\+\_\+const\+\_\+ptr}$<$float\+\_\+type$>$ {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::Left\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__binary__function_a53d43543e7057fe762fd14ae58ac327a}{}\label{classc2__binary__function_a53d43543e7057fe762fd14ae58ac327a}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!Right@{Right}}
+\index{Right@{Right}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{Right}{Right}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ const {\bf c2\+\_\+const\+\_\+ptr}$<$float\+\_\+type$>$ {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::Right\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__binary__function_a52b7fcaed6a4c3e3146dea43f562db8d}{}\label{classc2__binary__function_a52b7fcaed6a4c3e3146dea43f562db8d}
+\index{c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}!stub@{stub}}
+\index{stub@{stub}!c2\+\_\+binary\+\_\+function@{c2\+\_\+binary\+\_\+function}}
+\subsubsection[{\texorpdfstring{stub}{stub}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ bool {\bf c2\+\_\+binary\+\_\+function}$<$ float\+\_\+type $>$\+::stub\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__binary__function_a7d6abdb0e7fcfb4fd65833a42f93c561}{}\label{classc2__binary__function_a7d6abdb0e7fcfb4fd65833a42f93c561}
+
+
+if true, we don\textquotesingle{}t own any functions, we are just a source of a combining function. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

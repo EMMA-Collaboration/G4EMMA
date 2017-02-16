@@ -1,0 +1,5 @@
+<map id="c2_const_plugin_function_p&lt; float_type &gt;" name="c2_const_plugin_function_p&lt; float_type &gt;">
+<area shape="rect" id="node4" href="$classc2__const__plugin__function__p.html" title="{c2_const_plugin_function\l_p\&lt; G4double \&gt;\n||+ c2_const_plugin_function_p()\l+ c2_const_plugin_function_p()\l+ set_function()\l+ ~c2_const_plugin_function_p()\l+ get()\l}" alt="" coords="5,1235,216,1385"/>
+<area shape="rect" id="node2" href="$classc2__plugin__function__p.html" title="a container into which any other c2_function can be dropped, to allow expressions with replacable com..." alt="" coords="23,792,198,972"/>
+<area shape="rect" id="node3" href="$classc2__function.html" title="the parent class for all c2_functions.c2_functions know their value, first, and second derivative at ..." alt="" coords="9,5,213,743"/>
+</map>

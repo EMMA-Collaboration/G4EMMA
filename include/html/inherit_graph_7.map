@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classc2__function__transformation.html" title="a transformation of a function in and out of a coordinate space, using 2 c2_transformations ..." alt="" coords="5,173,184,214"/>
+<area shape="rect" id="node2" href="$classc2__arrhenius__function__transformation.html" title="a transformation of a function in and out of Arrhenius (1/x vs. log(y)) space " alt="" coords="232,5,381,61"/>
+<area shape="rect" id="node3" href="$classc2__lin__lin__function__transformation.html" title="a transformation of a function in and out of lin&#45;lin space " alt="" coords="232,85,381,141"/>
+<area shape="rect" id="node4" href="$classc2__lin__log__function__transformation.html" title="a transformation of a function in and out of lin&#45;log space " alt="" coords="232,165,381,221"/>
+<area shape="rect" id="node5" href="$classc2__log__lin__function__transformation.html" title="a transformation of a function in and out of log&#45;lin space " alt="" coords="232,245,381,301"/>
+<area shape="rect" id="node6" href="$classc2__log__log__function__transformation.html" title="a transformation of a function in and out of log&#45;log space " alt="" coords="232,325,381,381"/>
+</map>

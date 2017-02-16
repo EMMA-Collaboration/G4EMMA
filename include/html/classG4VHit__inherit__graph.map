@@ -1,0 +1,4 @@
+<map id="G4VHit" name="G4VHit">
+<area shape="rect" id="node2" href="$classEMMADriftChamberHit.html" title="{EMMADriftChamberHit\n||+ EMMADriftChamberHit()\l+ EMMADriftChamberHit()\l+ ~EMMADriftChamberHit()\l+ EMMADriftChamberHit()\l+ operator=()\l+ operator==()\l+ operator new()\l+ operator delete()\l+ x()\l+ y()\l+ Draw()\l+ GetAttDefs()\l+ CreateAttValues()\l+ Print()\l+ SetLayerID()\l+ GetLayerID()\l+ SetTime()\l+ GetTime()\l+ SetLocalPos()\l+ GetLocalPos()\l+ SetWorldPos()\l+ GetWorldPos()\l+ SetTheta()\l+ GetTheta()\l+ SetMomentum()\l+ GetMomentum()\l+ SetEkin()\l+ GetEkin()\l}" alt="" coords="5,131,191,604"/>
+<area shape="rect" id="node3" href="$classEMMAIonChamberHit.html" title="{EMMAIonChamberHit\n||+ EMMAIonChamberHit()\l+ EMMAIonChamberHit()\l+ ~EMMAIonChamberHit()\l+ operator=()\l+ operator==()\l+ operator new()\l+ operator delete()\l+ Draw()\l+ Print()\l+ Add()\l+ GetEdep()\l+ GetTrackLength()\l}" alt="" coords="215,248,394,487"/>
+</map>

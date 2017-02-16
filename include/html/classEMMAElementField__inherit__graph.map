@@ -1,0 +1,9 @@
+<map id="EMMAElementField" name="EMMAElementField">
+<area shape="rect" id="node2" href="$classBGField1.html" title="{BGField1\n||+ BGField1()\l+ ~BGField1()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="5,351,157,531"/>
+<area shape="rect" id="node3" href="$classBGField2.html" title="{BGField2\n||+ BGField2()\l+ ~BGField2()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="181,351,333,531"/>
+<area shape="rect" id="node4" href="$classBGField3.html" title="{BGField3\n||+ BGField3()\l+ ~BGField3()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="357,351,509,531"/>
+<area shape="rect" id="node5" href="$classBGField4.html" title="{BGField4\n||+ BGField4()\l+ ~BGField4()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="533,351,685,531"/>
+<area shape="rect" id="node6" href="$classBGField5.html" title="{BGField5\n||+ BGField5()\l+ ~BGField5()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="709,351,861,531"/>
+<area shape="rect" id="node7" href="$classBGField6.html" title="{BGField6\n||+ BGField6()\l+ ~BGField6()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="885,351,1037,531"/>
+<area shape="rect" id="node8" href="$classBGField7.html" title="{BGField7\n||+ BGField7()\l+ ~BGField7()\l+ GetLength()\l+ GetWidth()\l+ GetHeight()\l+ AddFieldValue()\l+ GetFieldStrength()\l+ ScaleFieldStrength()\l}" alt="" coords="1061,351,1213,531"/>
+</map>

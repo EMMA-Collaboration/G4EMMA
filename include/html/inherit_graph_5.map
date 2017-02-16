@@ -1,0 +1,35 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classc2__function.html" title="the parent class for all c2_functions.c2_functions know their value, first, and second derivative at ..." alt="" coords="5,720,132,761"/>
+<area shape="rect" id="node2" href="$classc2__binary__function.html" title="Provides support for c2_function objects which are constructed from two other c2_function objects..." alt="" coords="198,123,329,164"/>
+<area shape="rect" id="node8" href="$classc2__cached__function__p.html" title="A container into which any other c2_function can be dropped.It allows a function to be pre&#45;evaluated ..." alt="" coords="194,188,333,229"/>
+<area shape="rect" id="node9" href="$classc2__classic__function__p.html" title="a container into which any conventional c&#45;style function can be dropped, to create a degenerate c2_fu..." alt="" coords="195,253,332,295"/>
+<area shape="rect" id="node10" href="$classc2__connector__function__p.html" title="create a c2_function which smoothly connects two other c2_functions.This takes two points and generat..." alt="" coords="187,319,340,360"/>
+<area shape="rect" id="node11" href="$classc2__constant__p.html" title="a c2_function which is constantThe factory function c2_factory::constant() creates *new c2_constant_p..." alt="" coords="191,384,335,425"/>
+<area shape="rect" id="node12" href="$classc2__exp__p.html" title="compute exp(x) with its derivatives.The factory function c2_factory::exp() creates *new c2_exp_p ..." alt="" coords="184,450,343,477"/>
+<area shape="rect" id="node13" href="$classc2__identity__p.html" title="compute x with its derivatives.The factory function c2_factory::identity() creates *new c2_identity_p..." alt="" coords="195,501,331,543"/>
+<area shape="rect" id="node14" href="$classc2__inverse__function__p.html" title="create the formal inverse function of another functionfor example, given a c2_function f ..." alt="" coords="194,567,333,608"/>
+<area shape="rect" id="node15" href="$classc2__linear__p.html" title="create a linear mapping of another functionfor example, given a c2_function f " alt="" coords="201,632,326,673"/>
+<area shape="rect" id="node16" href="$classc2__log__p.html" title="compute log(x) with its derivatives.The factory function c2_factory::log() creates *new c2_log_p ..." alt="" coords="186,698,341,725"/>
+<area shape="rect" id="node17" href="$classc2__piecewise__function__p.html" title="create a c2_function which is a piecewise assembly of other c2_functions.The functions must have incr..." alt="" coords="186,749,341,791"/>
+<area shape="rect" id="node18" href="$classc2__plugin__function__p.html" title="a container into which any other c2_function can be dropped, to allow expressions with replacable com..." alt="" coords="198,815,329,856"/>
+<area shape="rect" id="node20" href="$classc2__power__law__p.html" title="create a power law mapping of another functionfor example, given a c2_function f " alt="" coords="185,880,341,921"/>
+<area shape="rect" id="node21" href="$classc2__quadratic__p.html" title="create a quadratic mapping of another functionfor example, given a c2_function f " alt="" coords="190,945,337,987"/>
+<area shape="rect" id="node22" href="$classc2__recip__p.html" title="compute scale/x with its derivatives.The factory function c2_factory::recip() creates *new c2_recip_p..." alt="" coords="180,1011,347,1038"/>
+<area shape="rect" id="node23" href="$classc2__scaled__function__p.html" title="Create a very lightweight method to return a scalar multiple of another function. \ \The factory func..." alt="" coords="196,1063,331,1104"/>
+<area shape="rect" id="node24" href="$classc2__sin__p.html" title="compute sin(x) with its derivatives.The factory function c2_factory::sin() creates *new c2_sin_p ..." alt="" coords="186,1129,341,1155"/>
+<area shape="rect" id="node26" href="$classc2__sqrt__p.html" title="compute sqrt(x) with its derivatives.The factory function c2_factory::sqrt() creates *new c2_sqrt_p()..." alt="" coords="183,1179,343,1206"/>
+<area shape="rect" id="node27" href="$classc2__tan__p.html" title="compute tan(x) with its derivatives.The factory function c2_factory::tan() creates *new c2_tan_p ..." alt="" coords="185,1230,341,1257"/>
+<area shape="rect" id="node28" href="$classinterpolating__function__p.html" title="create a cubic spline interpolation of a set of (x,y) pairsThis is one of the main reasons for c2_fun..." alt="" coords="191,1296,336,1337"/>
+<area shape="rect" id="node3" href="$classc2__composed__function__p.html" title="Provides function composition (nesting)This allows evaluation of f(g(x)) where f and g are c2_functio..." alt="" coords="402,5,558,47"/>
+<area shape="rect" id="node4" href="$classc2__diff__p.html" title="create a c2_function which is the difference of two other c2_functions.This should always be construc..." alt="" coords="402,71,558,98"/>
+<area shape="rect" id="node5" href="$classc2__product__p.html" title="create a c2_function which is the product of two other c2_functions.This should always be constructed..." alt="" coords="411,123,549,164"/>
+<area shape="rect" id="node6" href="$classc2__ratio__p.html" title="create a c2_function which is the ratio of two other c2_functions.This should always be constructed u..." alt="" coords="399,189,561,215"/>
+<area shape="rect" id="node7" href="$classc2__sum__p.html" title="create a c2_function which is the sum of two other c2_function objects.This should always be construc..." alt="" coords="399,239,561,266"/>
+<area shape="rect" id="node19" href="$classc2__const__plugin__function__p.html" title="a c2_plugin_function_p which promises not to fiddle with the plugged function.The factory function c2..." alt="" coords="395,815,565,856"/>
+<area shape="rect" id="node25" href="$classc2__cos__p.html" title="compute cos(x) with its derivatives.The factory function c2_factory::cos() creates *new c2_cos_p ..." alt="" coords="401,1121,559,1147"/>
+<area shape="rect" id="node29" href="$classaccumulated__histogram.html" title="An interpolating_function_p which is the cumulative integral of a histogram.Note than binedges should..." alt="" coords="400,1172,560,1213"/>
+<area shape="rect" id="node30" href="$classarrhenius__interpolating__function__p.html" title="A spline with X in reciprocal space and Y transformed in log space.Most useful for thermodynamic type..." alt="" coords="395,1237,565,1279"/>
+<area shape="rect" id="node31" href="$classlin__log__interpolating__function__p.html" title="A spline with Y transformed into log space.Most useful for functions looking like y=exp(x) ..." alt="" coords="395,1303,565,1344"/>
+<area shape="rect" id="node32" href="$classlog__lin__interpolating__function__p.html" title="A spline with X transformed into log space.Most useful for functions looking like y=log(x) or any oth..." alt="" coords="395,1368,565,1409"/>
+<area shape="rect" id="node33" href="$classlog__log__interpolating__function__p.html" title="A spline with X and Y transformed into log space.Most useful for functions looking like y=x^n or any ..." alt="" coords="395,1433,565,1475"/>
+</map>

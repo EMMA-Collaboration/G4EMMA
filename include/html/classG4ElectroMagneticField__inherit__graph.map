@@ -1,0 +1,3 @@
+<map id="G4ElectroMagneticField" name="G4ElectroMagneticField">
+<area shape="rect" id="node2" href="$classEMMAGlobalField.html" title="{EMMAGlobalField\n||+ EMMAGlobalField()\l+ EMMAGlobalField()\l+ GetFieldValue()\l+ DoesFieldChangeEnergy()\l+ AddElementField()\l+ Clear()\l+ UpdateField()\l+ SetStepperType()\l+ SetStepper()\l+ SetMinStep()\l+ SetDeltaChord()\l+ SetDeltaOneStep()\l+ SetDeltaIntersection()\l+ SetEpsMin()\l+ SetEpsMax()\l+ GetFields()\l+ GetObject()\l# GetGlobalFieldManager()\l}" alt="" coords="5,131,192,457"/>
+</map>

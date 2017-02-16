@@ -1,0 +1,4 @@
+<map id="G4VDiscreteProcess" name="G4VDiscreteProcess">
+<area shape="rect" id="node2" href="$classF04StepMax.html" title="{F04StepMax\n||+ F04StepMax()\l+ F04StepMax()\l+ ~F04StepMax()\l+ IsApplicable()\l+ SetStepMax()\l+ GetStepMax()\l+ PostStepGetPhysicalInteraction\lLength()\l+ PostStepDoIt()\l# GetMeanFreePath()\l}" alt="" coords="5,490,225,699"/>
+<area shape="rect" id="node3" href="$classG4ScreenedNuclearRecoil.html" title="A process which handles screened Coulomb collisions between nuclei. " alt="" coords="250,131,485,1059"/>
+</map>

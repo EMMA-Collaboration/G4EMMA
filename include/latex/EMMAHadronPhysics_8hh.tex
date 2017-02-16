@@ -1,0 +1,99 @@
+\hypertarget{EMMAHadronPhysics_8hh}{}\section{E\+M\+M\+A\+Hadron\+Physics.\+hh File Reference}
+\label{EMMAHadronPhysics_8hh}\index{E\+M\+M\+A\+Hadron\+Physics.\+hh@{E\+M\+M\+A\+Hadron\+Physics.\+hh}}
+{\ttfamily \#include \char`\"{}globals.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4ios.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Physics\+Constructor.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4h\+Multiple\+Scattering.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4h\+Ionisation.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Hadron\+Elastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Hadron\+Fission\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Hadron\+Capture\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Pion\+Plus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Pion\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Kaon\+Plus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Kaon\+Zero\+S\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Kaon\+Zero\+L\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Kaon\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Proton\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Proton\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Neutron\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Neutron\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Lambda\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Lambda\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Sigma\+Plus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Sigma\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Sigma\+Plus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Sigma\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Xi\+Zero\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Xi\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Xi\+Zero\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Xi\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Deuteron\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Triton\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Alpha\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Omega\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Omega\+Minus\+Inelastic\+Process.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+Elastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+Fission.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+Capture.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Pion\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Pion\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Kaon\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Kaon\+Zero\+S\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Kaon\+Zero\+L\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Kaon\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Proton\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Proton\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Neutron\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Neutron\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Lambda\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Lambda\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Sigma\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Sigma\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Sigma\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Sigma\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Xi\+Zero\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Xi\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Xi\+Zero\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Xi\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Deuteron\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Triton\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Alpha\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Omega\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+L\+E\+Anti\+Omega\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Pion\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Pion\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Kaon\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Kaon\+Zero\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Kaon\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Proton\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Proton\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Neutron\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Neutron\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Lambda\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Lambda\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Sigma\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Sigma\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Sigma\+Plus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Sigma\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Xi\+Zero\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Xi\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Xi\+Zero\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Xi\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Omega\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+H\+E\+Anti\+Omega\+Minus\+Inelastic.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Proton\+Annihilation\+At\+Rest.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Anti\+Neutron\+Annihilation\+At\+Rest.\+hh\char`\"{}}\\*
+Include dependency graph for E\+M\+M\+A\+Hadron\+Physics.\+hh\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EMMAHadronPhysics_8hh__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classEMMAHadronPhysics}{E\+M\+M\+A\+Hadron\+Physics}
+\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="G4UImessenger" name="G4UImessenger">
+<area shape="rect" id="node2" href="$classEMMADetectorConstMessenger.html" title="{EMMADetectorConstMessenger\n||+ EMMADetectorConstMessenger()\l+ ~EMMADetectorConstMessenger()\l+ SetNewValue()\l+ GetCurrentValue()\l}" alt="" coords="5,131,244,252"/>
+<area shape="rect" id="node3" href="$classEMMAEventActionMessenger.html" title="{EMMAEventActionMessenger\n||+ EMMAEventActionMessenger()\l+ ~EMMAEventActionMessenger()\l+ SetNewValue()\l+ GetCurrentValue()\l}" alt="" coords="268,131,493,252"/>
+<area shape="rect" id="node4" href="$classEMMAIonPhysicsMessenger.html" title="{EMMAIonPhysicsMessenger\n||+ EMMAIonPhysicsMessenger()\l+ ~EMMAIonPhysicsMessenger()\l+ SetNewValue()\l+ GetCurrentValue()\l}" alt="" coords="518,131,737,252"/>
+<area shape="rect" id="node5" href="$classEMMAPrimaryGeneratorMessenger.html" title="{EMMAPrimaryGeneratorMessenger\n||+ EMMAPrimaryGeneratorMessenger()\l+ ~EMMAPrimaryGeneratorMessenger()\l+ SetNewValue()\l+ GetCurrentValue()\l}" alt="" coords="761,131,1017,252"/>
+</map>

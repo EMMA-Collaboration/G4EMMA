@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classc2__const__ptr.html" title="create a container for a c2_function which handles the reference counting.It is useful as a smart con..." alt="" coords="5,27,140,69"/>
+<area shape="rect" id="node2" href="$classc2__ptr.html" title="create a container for a c2_function which handles the reference counting. " alt="" coords="188,5,327,32"/>
+<area shape="rect" id="node3" href="$classc2__typed__ptr.html" title="create a non&#45;generic container for a c2_function which handles the reference counting. " alt="" coords="190,57,325,98"/>
+</map>

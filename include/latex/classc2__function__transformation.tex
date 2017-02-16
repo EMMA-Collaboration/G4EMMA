@@ -1,0 +1,156 @@
+\hypertarget{classc2__function__transformation}{}\section{c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__function__transformation}\index{c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$@{c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$}}
+
+
+a transformation of a function in and out of a coordinate space, using 2 c2\+\_\+transformations  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__function__transformation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classc2__function__transformation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__function__transformation_a26fa71708edcb8b669b34daea6e9ea79}{c2\+\_\+function\+\_\+transformation} (const \hyperlink{classc2__transformation}{c2\+\_\+transformation}$<$ float\+\_\+type $>$ \&xx, const \hyperlink{classc2__transformation}{c2\+\_\+transformation}$<$ float\+\_\+type $>$ \&yy)
+\begin{DoxyCompactList}\small\item\em construct this from two \hyperlink{classc2__transformation}{c2\+\_\+transformation} instances \end{DoxyCompactList}\item 
+virtual \hyperlink{classc2__function__transformation_ab7cd7a2df0c12d4ce25f2e8a415383ad}{$\sim$c2\+\_\+function\+\_\+transformation} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__function__transformation_a7089747852a044a4a6a9884fadecf871}{evaluate} (float\+\_\+type xraw, float\+\_\+type y, float\+\_\+type yp0, float\+\_\+type ypp0, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const 
+\begin{DoxyCompactList}\small\item\em evaluate the transformation from internal coordinates to external coordinates \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const bool \hyperlink{classc2__function__transformation_ad6c579898f034cf8357d773ec87164a4}{is\+Identity}
+\begin{DoxyCompactList}\small\item\em flag indicating of the transform is the identity, and can be skipped for efficiency \end{DoxyCompactList}\item 
+const \hyperlink{classc2__transformation}{c2\+\_\+transformation}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function__transformation_a2bd1bd477972e8df3ed0e6d641940e92}{X}
+\begin{DoxyCompactList}\small\item\em the X axis transform \end{DoxyCompactList}\item 
+const \hyperlink{classc2__transformation}{c2\+\_\+transformation}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__function__transformation_a867523e0adfac76943984aa5a26d4274}{Y}
+\begin{DoxyCompactList}\small\item\em the Y axis transform \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type$>$\\*
+class c2\+\_\+function\+\_\+transformation$<$ float\+\_\+type $>$}
+
+a transformation of a function in and out of a coordinate space, using 2 c2\+\_\+transformations 
+
+This class is a container for two axis transforms, but also provides the critical \hyperlink{classc2__function__transformation_a7089747852a044a4a6a9884fadecf871}{evaluate()} function which converts a result in internal coordinates (with derivatives) into the external representation 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{c2\+\_\+function\+\_\+transformation(const c2\+\_\+transformation$<$ float\+\_\+type $>$ \&xx, const c2\+\_\+transformation$<$ float\+\_\+type $>$ \&yy)}{c2_function_transformation(const c2_transformation< float_type > &xx, const c2_transformation< float_type > &yy)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+function\+\_\+transformation} (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$ \&}]{xx, }
+\item[{const {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$ \&}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__function__transformation_a26fa71708edcb8b669b34daea6e9ea79}{}\label{classc2__function__transformation_a26fa71708edcb8b669b34daea6e9ea79}
+
+
+construct this from two \hyperlink{classc2__transformation}{c2\+\_\+transformation} instances 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & the X axis transform \\
+\hline
+{\em yy} & the Y axis transform \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!````~c2\+\_\+function\+\_\+transformation@{$\sim$c2\+\_\+function\+\_\+transformation}}
+\index{````~c2\+\_\+function\+\_\+transformation@{$\sim$c2\+\_\+function\+\_\+transformation}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{$\sim$c2\+\_\+function\+\_\+transformation()}{~c2_function_transformation()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$\+::$\sim${\bf c2\+\_\+function\+\_\+transformation} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__function__transformation_ab7cd7a2df0c12d4ce25f2e8a415383ad}{}\label{classc2__function__transformation_ab7cd7a2df0c12d4ce25f2e8a415383ad}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{evaluate(float\+\_\+type xraw, float\+\_\+type y, float\+\_\+type yp0, float\+\_\+type ypp0, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{evaluate(float_type xraw, float_type y, float_type yp0, float_type ypp0, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual float\+\_\+type {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{xraw, }
+\item[{float\+\_\+type}]{y, }
+\item[{float\+\_\+type}]{yp0, }
+\item[{float\+\_\+type}]{ypp0, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classc2__function__transformation_a7089747852a044a4a6a9884fadecf871}{}\label{classc2__function__transformation_a7089747852a044a4a6a9884fadecf871}
+
+
+evaluate the transformation from internal coordinates to external coordinates 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em xraw} & the value of {\itshape x} in external cordinates at which the transform is taking place \\
+\hline
+ & {\em y} & the value of the function in internal coordinates \\
+\hline
+ & {\em yp0} & the derivative in internal coordinates \\
+\hline
+ & {\em ypp0} & the second derivative in internal coordinates \\
+\hline
+\mbox{\tt out}  & {\em yprime} & pointer to the derivative, or N\+U\+LL, in external coordinates \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & pointer to the second derivative, or N\+U\+LL, in external coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function in external coordinates 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!is\+Identity@{is\+Identity}}
+\index{is\+Identity@{is\+Identity}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{is\+Identity}{isIdentity}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ const bool {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$\+::is\+Identity}\hypertarget{classc2__function__transformation_ad6c579898f034cf8357d773ec87164a4}{}\label{classc2__function__transformation_ad6c579898f034cf8357d773ec87164a4}
+
+
+flag indicating of the transform is the identity, and can be skipped for efficiency 
+
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!X@{X}}
+\index{X@{X}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ const {\bf c2\+\_\+transformation}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$\+::X}\hypertarget{classc2__function__transformation_a2bd1bd477972e8df3ed0e6d641940e92}{}\label{classc2__function__transformation_a2bd1bd477972e8df3ed0e6d641940e92}
+
+
+the X axis transform 
+
+\index{c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}!Y@{Y}}
+\index{Y@{Y}!c2\+\_\+function\+\_\+transformation@{c2\+\_\+function\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{Y}{Y}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ const {\bf c2\+\_\+transformation}$<$float\+\_\+type$>$\& {\bf c2\+\_\+function\+\_\+transformation}$<$ float\+\_\+type $>$\+::Y}\hypertarget{classc2__function__transformation_a867523e0adfac76943984aa5a26d4274}{}\label{classc2__function__transformation_a867523e0adfac76943984aa5a26d4274}
+
+
+the Y axis transform 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

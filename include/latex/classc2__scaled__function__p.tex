@@ -1,0 +1,157 @@
+\hypertarget{classc2__scaled__function__p}{}\section{c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__scaled__function__p}\index{c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$@{c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}}
+
+
+Create a very lightweight method to return a scalar multiple of another function. \textbackslash{} \textbackslash{}
+
+The factory function \hyperlink{classc2__factory_a81a7b686b7ffa389ad4dcd8d18997332}{c2\+\_\+factory\+::scaled\+\_\+function()} creates $\ast$new \hyperlink{classc2__scaled__function__p}{c2\+\_\+scaled\+\_\+function\+\_\+p}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__scaled__function__p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__scaled__function__p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__scaled__function__p_a50fe165a75a9fb3597a227b8f028bebb}{c2\+\_\+scaled\+\_\+function\+\_\+p} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&outer, float\+\_\+type scale)
+\begin{DoxyCompactList}\small\item\em construct the function with its scale factor. \end{DoxyCompactList}\item 
+void \hyperlink{classc2__scaled__function__p_ab6a2af982a51bc321609a8cc91c7ff42}{reset} (float\+\_\+type scale)
+\begin{DoxyCompactList}\small\item\em set a new scale factor \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__scaled__function__p_a29f90a45574f413a18349e220287fb5d}{value\+\_\+with\+\_\+derivatives} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get the value and derivatives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__scaled__function__p_a520caf02297faba6cec0f17c6bbd27d6}{c2\+\_\+scaled\+\_\+function\+\_\+p} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classc2__const__ptr}{c2\+\_\+const\+\_\+ptr}$<$ float\+\_\+type $>$ \hyperlink{classc2__scaled__function__p_a4ee175f7c60c6967c44418062b93cbbb}{func}
+\begin{DoxyCompactList}\small\item\em the scaling factor for the function \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__scaled__function__p_a4ea4ca9743bd3783752a9ee5de49ef0f}{yscale}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+
+Create a very lightweight method to return a scalar multiple of another function. \textbackslash{} \textbackslash{}
+
+The factory function \hyperlink{classc2__factory_a81a7b686b7ffa389ad4dcd8d18997332}{c2\+\_\+factory\+::scaled\+\_\+function()} creates $\ast$new \hyperlink{classc2__scaled__function__p}{c2\+\_\+scaled\+\_\+function\+\_\+p}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+scaled\+\_\+function\+\_\+p(const c2\+\_\+function$<$ float\+\_\+type $>$ \&outer, float\+\_\+type scale)}{c2_scaled_function_p(const c2_function< float_type > &outer, float_type scale)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+scaled\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+scaled\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{outer, }
+\item[{float\+\_\+type}]{scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__scaled__function__p_a50fe165a75a9fb3597a227b8f028bebb}{}\label{classc2__scaled__function__p_a50fe165a75a9fb3597a227b8f028bebb}
+
+
+construct the function with its scale factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outer} & the function to be scaled \\
+\hline
+{\em scale} & the multiplicative scale factor \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+scaled\+\_\+function\+\_\+p()}{c2_scaled_function_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+scaled\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+scaled\+\_\+function\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classc2__scaled__function__p_a520caf02297faba6cec0f17c6bbd27d6}{}\label{classc2__scaled__function__p_a520caf02297faba6cec0f17c6bbd27d6}
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!reset@{reset}}
+\index{reset@{reset}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{reset(float\+\_\+type scale)}{reset(float_type scale)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+scaled\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::reset (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__scaled__function__p_ab6a2af982a51bc321609a8cc91c7ff42}{}\label{classc2__scaled__function__p_ab6a2af982a51bc321609a8cc91c7ff42}
+
+
+set a new scale factor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & the new factor \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}}
+\index{value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{value\+\_\+with\+\_\+derivatives(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{value_with_derivatives(float_type x, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual float\+\_\+type {\bf c2\+\_\+scaled\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::value\+\_\+with\+\_\+derivatives (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__scaled__function__p_a29f90a45574f413a18349e220287fb5d}{}\label{classc2__scaled__function__p_a29f90a45574f413a18349e220287fb5d}
+
+
+get the value and derivatives. 
+
+There is required checking for null pointers on the derivatives, and most implementations should operate faster if derivatives are not needed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & the point at which to evaluate the function \\
+\hline
+\mbox{\tt out}  & {\em yprime} & the first derivative (if pointer is non-\/null) \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & the second derivative (if pointer is non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function
+\end{DoxyReturn}
+provide our own value\+\_\+with\+\_\+derivatives which bypasses the combiner for quicker operation 
+
+Implements \hyperlink{classc2__function_a44e0201159111350be7f746fc9026f67}{c2\+\_\+function$<$ float\+\_\+type $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!func@{func}}
+\index{func@{func}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{func}{func}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ const {\bf c2\+\_\+const\+\_\+ptr}$<$float\+\_\+type$>$ {\bf c2\+\_\+scaled\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::func\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__scaled__function__p_a4ee175f7c60c6967c44418062b93cbbb}{}\label{classc2__scaled__function__p_a4ee175f7c60c6967c44418062b93cbbb}
+
+
+the scaling factor for the function 
+
+\index{c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}!yscale@{yscale}}
+\index{yscale@{yscale}!c2\+\_\+scaled\+\_\+function\+\_\+p@{c2\+\_\+scaled\+\_\+function\+\_\+p}}
+\subsubsection[{\texorpdfstring{yscale}{yscale}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ float\+\_\+type {\bf c2\+\_\+scaled\+\_\+function\+\_\+p}$<$ float\+\_\+type $>$\+::yscale\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classc2__scaled__function__p_a4ea4ca9743bd3783752a9ee5de49ef0f}{}\label{classc2__scaled__function__p_a4ea4ca9743bd3783752a9ee5de49ef0f}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

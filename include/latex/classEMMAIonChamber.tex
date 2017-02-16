@@ -1,0 +1,95 @@
+\hypertarget{classEMMAIonChamber}{}\section{E\+M\+M\+A\+Ion\+Chamber Class Reference}
+\label{classEMMAIonChamber}\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+
+
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Ion\+Chamber.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for E\+M\+M\+A\+Ion\+Chamber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classEMMAIonChamber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for E\+M\+M\+A\+Ion\+Chamber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classEMMAIonChamber__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEMMAIonChamber_a8972e800fbf5dce95809f5b876149af8}{E\+M\+M\+A\+Ion\+Chamber} (const G4\+String \&name, const G4\+String \&hits\+Collection\+Name, G4int nof\+Cells)
+\item 
+virtual \hyperlink{classEMMAIonChamber_a7113083473fee442b1df1c8393df5c90}{$\sim$\+E\+M\+M\+A\+Ion\+Chamber} ()
+\item 
+virtual void \hyperlink{classEMMAIonChamber_a3d9455e5e2cbb09b58ae88d1cd57a200}{Initialize} (G4\+H\+Cof\+This\+Event $\ast$hit\+Collection)
+\item 
+virtual G4bool \hyperlink{classEMMAIonChamber_ab0d46e67d9421ac3a165c1e697f8c564}{Process\+Hits} (G4\+Step $\ast$step, G4\+Touchable\+History $\ast$history)
+\item 
+virtual void \hyperlink{classEMMAIonChamber_a0342f4d809c2c309534fd6b6ce985687}{End\+Of\+Event} (G4\+H\+Cof\+This\+Event $\ast$hit\+Collection)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Calorimeter sensitive detector class
+
+In \hyperlink{classEMMAIonChamber_a3d9455e5e2cbb09b58ae88d1cd57a200}{Initialize()}, it creates one hit for each calorimeter layer and one more hit for accounting the total quantities in all layers.
+
+The values are accounted in hits in \hyperlink{classEMMAIonChamber_ab0d46e67d9421ac3a165c1e697f8c564}{Process\+Hits()} function which is called by Geant4 kernel at each step. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}!E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}!E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Ion\+Chamber(const G4\+String \&name, const G4\+String \&hits\+Collection\+Name, G4int nof\+Cells)}{EMMAIonChamber(const G4String &name, const G4String &hitsCollectionName, G4int nofCells)}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Ion\+Chamber\+::\+E\+M\+M\+A\+Ion\+Chamber (
+\begin{DoxyParamCaption}
+\item[{const G4\+String \&}]{name, }
+\item[{const G4\+String \&}]{hits\+Collection\+Name, }
+\item[{G4int}]{nof\+Cells}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAIonChamber_a8972e800fbf5dce95809f5b876149af8}{}\label{classEMMAIonChamber_a8972e800fbf5dce95809f5b876149af8}
+\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}!````~E\+M\+M\+A\+Ion\+Chamber@{$\sim$\+E\+M\+M\+A\+Ion\+Chamber}}
+\index{````~E\+M\+M\+A\+Ion\+Chamber@{$\sim$\+E\+M\+M\+A\+Ion\+Chamber}!E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+\subsubsection[{\texorpdfstring{$\sim$\+E\+M\+M\+A\+Ion\+Chamber()}{~EMMAIonChamber()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual E\+M\+M\+A\+Ion\+Chamber\+::$\sim$\+E\+M\+M\+A\+Ion\+Chamber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAIonChamber_a7113083473fee442b1df1c8393df5c90}{}\label{classEMMAIonChamber_a7113083473fee442b1df1c8393df5c90}
+
+
+\subsection{Member Function Documentation}
+\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}!End\+Of\+Event@{End\+Of\+Event}}
+\index{End\+Of\+Event@{End\+Of\+Event}!E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+\subsubsection[{\texorpdfstring{End\+Of\+Event(\+G4\+H\+Cof\+This\+Event $\ast$hit\+Collection)}{EndOfEvent(G4HCofThisEvent *hitCollection)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void E\+M\+M\+A\+Ion\+Chamber\+::\+End\+Of\+Event (
+\begin{DoxyParamCaption}
+\item[{G4\+H\+Cof\+This\+Event $\ast$}]{hit\+Collection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAIonChamber_a0342f4d809c2c309534fd6b6ce985687}{}\label{classEMMAIonChamber_a0342f4d809c2c309534fd6b6ce985687}
+\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+\subsubsection[{\texorpdfstring{Initialize(\+G4\+H\+Cof\+This\+Event $\ast$hit\+Collection)}{Initialize(G4HCofThisEvent *hitCollection)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void E\+M\+M\+A\+Ion\+Chamber\+::\+Initialize (
+\begin{DoxyParamCaption}
+\item[{G4\+H\+Cof\+This\+Event $\ast$}]{hit\+Collection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAIonChamber_a3d9455e5e2cbb09b58ae88d1cd57a200}{}\label{classEMMAIonChamber_a3d9455e5e2cbb09b58ae88d1cd57a200}
+\index{E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}!Process\+Hits@{Process\+Hits}}
+\index{Process\+Hits@{Process\+Hits}!E\+M\+M\+A\+Ion\+Chamber@{E\+M\+M\+A\+Ion\+Chamber}}
+\subsubsection[{\texorpdfstring{Process\+Hits(\+G4\+Step $\ast$step, G4\+Touchable\+History $\ast$history)}{ProcessHits(G4Step *step, G4TouchableHistory *history)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4bool E\+M\+M\+A\+Ion\+Chamber\+::\+Process\+Hits (
+\begin{DoxyParamCaption}
+\item[{G4\+Step $\ast$}]{step, }
+\item[{G4\+Touchable\+History $\ast$}]{history}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAIonChamber_ab0d46e67d9421ac3a165c1e697f8c564}{}\label{classEMMAIonChamber_ab0d46e67d9421ac3a165c1e697f8c564}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{EMMAIonChamber_8hh}{E\+M\+M\+A\+Ion\+Chamber.\+hh}\end{DoxyCompactItemize}

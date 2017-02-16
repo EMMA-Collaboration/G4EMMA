@@ -1,0 +1,110 @@
+\hypertarget{classc2__sum__p}{}\section{c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__sum__p}\index{c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$@{c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$}}
+
+
+create a \hyperlink{classc2__function}{c2\+\_\+function} which is the sum of two other \hyperlink{classc2__function}{c2\+\_\+function} objects.
+
+This should always be constructed using \hyperlink{classc2__function_a268b206b47c55e635e5f0a9e0f3e8ded}{c2\+\_\+function\+::operator+()}  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__sum__p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__sum__p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__sum__p_ae42d9b2095cb521b23e19f1467d5e61d}{c2\+\_\+sum\+\_\+p} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&right)
+\begin{DoxyCompactList}\small\item\em construct {\itshape left} + {\itshape right} \end{DoxyCompactList}\item 
+\hyperlink{classc2__sum__p_a434a01eaefb0481af72f9ef39b9b812f}{c2\+\_\+sum\+\_\+p} ()
+\begin{DoxyCompactList}\small\item\em Create a stub just for the combiner to avoid statics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float\+\_\+type \hyperlink{classc2__sum__p_a887d3abd4f31de3119a5c97e5558ef24}{combine} (const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&left, const \hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2)  throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em execute math necessary to do addition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class c2\+\_\+sum\+\_\+p$<$ float\+\_\+type $>$}
+
+create a \hyperlink{classc2__function}{c2\+\_\+function} which is the sum of two other \hyperlink{classc2__function}{c2\+\_\+function} objects.
+
+This should always be constructed using \hyperlink{classc2__function_a268b206b47c55e635e5f0a9e0f3e8ded}{c2\+\_\+function\+::operator+()} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}!c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}}
+\index{c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}!c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+sum\+\_\+p(const c2\+\_\+function$<$ float\+\_\+type $>$ \&left, const c2\+\_\+function$<$ float\+\_\+type $>$ \&right)}{c2_sum_p(const c2_function< float_type > &left, const c2_function< float_type > &right)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type  = double$>$ {\bf c2\+\_\+sum\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+sum\+\_\+p} (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{left, }
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__sum__p_ae42d9b2095cb521b23e19f1467d5e61d}{}\label{classc2__sum__p_ae42d9b2095cb521b23e19f1467d5e61d}
+
+
+construct {\itshape left} + {\itshape right} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & the left function \\
+\hline
+{\em right} & the right function \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}!c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}}
+\index{c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}!c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+sum\+\_\+p()}{c2_sum_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type  = double$>$ {\bf c2\+\_\+sum\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+sum\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__sum__p_a434a01eaefb0481af72f9ef39b9b812f}{}\label{classc2__sum__p_a434a01eaefb0481af72f9ef39b9b812f}
+
+
+Create a stub just for the combiner to avoid statics. 
+
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}!combine@{combine}}
+\index{combine@{combine}!c2\+\_\+sum\+\_\+p@{c2\+\_\+sum\+\_\+p}}
+\subsubsection[{\texorpdfstring{combine(const c2\+\_\+function$<$ float\+\_\+type $>$ \&left, const c2\+\_\+function$<$ float\+\_\+type $>$ \&right, float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2)}{combine(const c2_function< float_type > &left, const c2_function< float_type > &right, float_type x, float_type *yprime, float_type *yprime2)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type  = double$>$ static float\+\_\+type {\bf c2\+\_\+sum\+\_\+p}$<$ float\+\_\+type $>$\+::combine (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{left, }
+\item[{const {\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{right, }
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classc2__sum__p_a887d3abd4f31de3119a5c97e5558ef24}{}\label{classc2__sum__p_a887d3abd4f31de3119a5c97e5558ef24}
+
+
+execute math necessary to do addition 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

@@ -1,0 +1,321 @@
+\hypertarget{classc2__transformation}{}\section{c2\+\_\+transformation$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__transformation}\index{c2\+\_\+transformation$<$ float\+\_\+type $>$@{c2\+\_\+transformation$<$ float\+\_\+type $>$}}
+
+
+a transformation of a coordinate, including an inverse  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+transformation$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classc2__transformation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+transformation$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classc2__transformation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__transformation_a2b8606275a019b3a64612ecb28272999}{c2\+\_\+transformation} (bool transformed, float\+\_\+type($\ast$xin)(float\+\_\+type), float\+\_\+type($\ast$xinp)(float\+\_\+type), float\+\_\+type($\ast$xinpp)(float\+\_\+type), float\+\_\+type($\ast$xout)(float\+\_\+type))
+\begin{DoxyCompactList}\small\item\em initialize all our function pointers \end{DoxyCompactList}\item 
+\hyperlink{classc2__transformation_a1cba0d84b0c713e189eb6cf2c08ef1d2}{c2\+\_\+transformation} (bool transformed)
+\begin{DoxyCompactList}\small\item\em initialize all our function pointers so that only the (overridden) virtual functions can be called without an error \end{DoxyCompactList}\item 
+virtual \hyperlink{classc2__transformation_ad0f684d47ebb7fdc089b7d298cf60120}{$\sim$c2\+\_\+transformation} ()
+\begin{DoxyCompactList}\small\item\em the destructor \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__transformation_a30b16abc3cdbcde5a0dacac94794d34f}{f\+In} (float\+\_\+type x) const 
+\begin{DoxyCompactList}\small\item\em virtual input X transform \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__transformation_a6b3b1aa9a73981b93b9fd9dbabe2fcb1}{f\+In\+Prime} (float\+\_\+type x) const 
+\begin{DoxyCompactList}\small\item\em virtual input X transform derivative \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__transformation_a54a2e8100a32c033ceb40b3ef0783b28}{f\+In\+D\+Prime} (float\+\_\+type x) const 
+\begin{DoxyCompactList}\small\item\em virtual input X transform second derivative \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__transformation_a5f0763a91e99b1abc5bd227a2cf19ceb}{f\+Out} (float\+\_\+type x) const 
+\begin{DoxyCompactList}\small\item\em virtual output X transform \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const bool \hyperlink{classc2__transformation_a18c8ee93daf24675a40905aaceeebd72}{f\+Transformed}
+\begin{DoxyCompactList}\small\item\em flag to indicate if this transform is not the identity \end{DoxyCompactList}\item 
+const bool \hyperlink{classc2__transformation_a66489da404feec82b2db467a9c3e7a1e}{f\+Has\+Static\+Transforms}
+\begin{DoxyCompactList}\small\item\em flag to indicate if the static function pointers can be used for efficiency \end{DoxyCompactList}\item 
+float\+\_\+type($\ast$const \hyperlink{classc2__transformation_a4600cf8952fc112bb50f4f312738d022}{p\+In} )(float\+\_\+type)
+\begin{DoxyCompactList}\small\item\em non-\/virtual pointer to input X transform \end{DoxyCompactList}\item 
+float\+\_\+type($\ast$const \hyperlink{classc2__transformation_a4600103aeb9ea6aec1124ac0085bf268}{p\+In\+Prime} )(float\+\_\+type)
+\begin{DoxyCompactList}\small\item\em non-\/virtual pointer to input X transform derivative \end{DoxyCompactList}\item 
+float\+\_\+type($\ast$const \hyperlink{classc2__transformation_a875d75e4e0299753f6ea34bd06594ede}{p\+In\+D\+Prime} )(float\+\_\+type)
+\begin{DoxyCompactList}\small\item\em non-\/virtual pointer to input X transform second derivative \end{DoxyCompactList}\item 
+float\+\_\+type($\ast$const \hyperlink{classc2__transformation_ae898d76b8582ecc9fc7bb5a6eb6ca1b4}{p\+Out} )(float\+\_\+type)
+\begin{DoxyCompactList}\small\item\em non-\/virtual pointer to output X transform \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float\+\_\+type \hyperlink{classc2__transformation_a79f51b6fefc32d826735daf184f76613}{report\+\_\+error} (float\+\_\+type x)
+\begin{DoxyCompactList}\small\item\em utility function for unimplemented conversion \end{DoxyCompactList}\item 
+static float\+\_\+type \hyperlink{classc2__transformation_a2dfa80bc8a5f4103b8093890627c194b}{ident} (float\+\_\+type x)
+\begin{DoxyCompactList}\small\item\em utility function f(x)=x useful in axis transforms \end{DoxyCompactList}\item 
+static float\+\_\+type \hyperlink{classc2__transformation_ad29b2f8bff1298a915fead61babfbf69}{one} (float\+\_\+type)
+\begin{DoxyCompactList}\small\item\em utility function f(x)=1 useful in axis transforms \end{DoxyCompactList}\item 
+static float\+\_\+type \hyperlink{classc2__transformation_a81a65d1c58abae1f7bed846f736a9887}{zero} (float\+\_\+type)
+\begin{DoxyCompactList}\small\item\em utility function f(x)=0 useful in axis transforms \end{DoxyCompactList}\item 
+static float\+\_\+type \hyperlink{classc2__transformation_a201c2df7a29fc20946f3814816d88bbc}{recip} (float\+\_\+type x)
+\begin{DoxyCompactList}\small\item\em utility function f(x)=1/x useful in axis transforms \end{DoxyCompactList}\item 
+static float\+\_\+type \hyperlink{classc2__transformation_aac46f68fd9037c3f65b9578e0d7000fe}{recip\+\_\+prime} (float\+\_\+type x)
+\begin{DoxyCompactList}\small\item\em utility function f(x)=-\/1/x$\ast$$\ast$2 useful in axis transforms \end{DoxyCompactList}\item 
+static float\+\_\+type \hyperlink{classc2__transformation_a58e93b52b477a022e7b74c5e1056d3d7}{recip\+\_\+prime2} (float\+\_\+type x)
+\begin{DoxyCompactList}\small\item\em utility function f(x)=2/x$\ast$$\ast$3 useful in axis transforms \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type$>$\\*
+class c2\+\_\+transformation$<$ float\+\_\+type $>$}
+
+a transformation of a coordinate, including an inverse 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{c2\+\_\+transformation(bool transformed, float\+\_\+type($\ast$xin)(float\+\_\+type), float\+\_\+type($\ast$xinp)(float\+\_\+type), float\+\_\+type($\ast$xinpp)(float\+\_\+type), float\+\_\+type($\ast$xout)(float\+\_\+type))}{c2_transformation(bool transformed, float_type(*xin)(float_type), float_type(*xinp)(float_type), float_type(*xinpp)(float_type), float_type(*xout)(float_type))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+transformation} (
+\begin{DoxyParamCaption}
+\item[{bool}]{transformed, }
+\item[{float\+\_\+type($\ast$)(float\+\_\+type)}]{xin, }
+\item[{float\+\_\+type($\ast$)(float\+\_\+type)}]{xinp, }
+\item[{float\+\_\+type($\ast$)(float\+\_\+type)}]{xinpp, }
+\item[{float\+\_\+type($\ast$)(float\+\_\+type)}]{xout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__transformation_a2b8606275a019b3a64612ecb28272999}{}\label{classc2__transformation_a2b8606275a019b3a64612ecb28272999}
+
+
+initialize all our function pointers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transformed} & true if this function is not the identity \\
+\hline
+{\em xin} & input X transform \\
+\hline
+{\em xinp} & input X transform derivative \\
+\hline
+{\em xinpp} & input X transform second derivative \\
+\hline
+{\em xout} & output X transform, which M\+U\+ST be the inverse of {\itshape xin} \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{c2\+\_\+transformation(bool transformed)}{c2_transformation(bool transformed)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+transformation} (
+\begin{DoxyParamCaption}
+\item[{bool}]{transformed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__transformation_a1cba0d84b0c713e189eb6cf2c08ef1d2}{}\label{classc2__transformation_a1cba0d84b0c713e189eb6cf2c08ef1d2}
+
+
+initialize all our function pointers so that only the (overridden) virtual functions can be called without an error 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transformed} & true if this function is nonlinear \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!````~c2\+\_\+transformation@{$\sim$c2\+\_\+transformation}}
+\index{````~c2\+\_\+transformation@{$\sim$c2\+\_\+transformation}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{$\sim$c2\+\_\+transformation()}{~c2_transformation()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::$\sim${\bf c2\+\_\+transformation} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__transformation_ad0f684d47ebb7fdc089b7d298cf60120}{}\label{classc2__transformation_ad0f684d47ebb7fdc089b7d298cf60120}
+
+
+the destructor 
+
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!f\+In@{f\+In}}
+\index{f\+In@{f\+In}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{f\+In(float\+\_\+type x) const }{fIn(float_type x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::f\+In (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__transformation_a30b16abc3cdbcde5a0dacac94794d34f}{}\label{classc2__transformation_a30b16abc3cdbcde5a0dacac94794d34f}
+
+
+virtual input X transform 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!f\+In\+D\+Prime@{f\+In\+D\+Prime}}
+\index{f\+In\+D\+Prime@{f\+In\+D\+Prime}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{f\+In\+D\+Prime(float\+\_\+type x) const }{fInDPrime(float_type x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::f\+In\+D\+Prime (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__transformation_a54a2e8100a32c033ceb40b3ef0783b28}{}\label{classc2__transformation_a54a2e8100a32c033ceb40b3ef0783b28}
+
+
+virtual input X transform second derivative 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!f\+In\+Prime@{f\+In\+Prime}}
+\index{f\+In\+Prime@{f\+In\+Prime}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{f\+In\+Prime(float\+\_\+type x) const }{fInPrime(float_type x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::f\+In\+Prime (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__transformation_a6b3b1aa9a73981b93b9fd9dbabe2fcb1}{}\label{classc2__transformation_a6b3b1aa9a73981b93b9fd9dbabe2fcb1}
+
+
+virtual input X transform derivative 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!f\+Out@{f\+Out}}
+\index{f\+Out@{f\+Out}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{f\+Out(float\+\_\+type x) const }{fOut(float_type x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ virtual float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::f\+Out (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__transformation_a5f0763a91e99b1abc5bd227a2cf19ceb}{}\label{classc2__transformation_a5f0763a91e99b1abc5bd227a2cf19ceb}
+
+
+virtual output X transform 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!ident@{ident}}
+\index{ident@{ident}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{ident(float\+\_\+type x)}{ident(float_type x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::ident (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_a2dfa80bc8a5f4103b8093890627c194b}{}\label{classc2__transformation_a2dfa80bc8a5f4103b8093890627c194b}
+
+
+utility function f(x)=x useful in axis transforms 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!one@{one}}
+\index{one@{one}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{one(float\+\_\+type)}{one(float_type)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::one (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_ad29b2f8bff1298a915fead61babfbf69}{}\label{classc2__transformation_ad29b2f8bff1298a915fead61babfbf69}
+
+
+utility function f(x)=1 useful in axis transforms 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!recip@{recip}}
+\index{recip@{recip}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{recip(float\+\_\+type x)}{recip(float_type x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::recip (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_a201c2df7a29fc20946f3814816d88bbc}{}\label{classc2__transformation_a201c2df7a29fc20946f3814816d88bbc}
+
+
+utility function f(x)=1/x useful in axis transforms 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!recip\+\_\+prime@{recip\+\_\+prime}}
+\index{recip\+\_\+prime@{recip\+\_\+prime}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{recip\+\_\+prime(float\+\_\+type x)}{recip_prime(float_type x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::recip\+\_\+prime (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_aac46f68fd9037c3f65b9578e0d7000fe}{}\label{classc2__transformation_aac46f68fd9037c3f65b9578e0d7000fe}
+
+
+utility function f(x)=-\/1/x$\ast$$\ast$2 useful in axis transforms 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!recip\+\_\+prime2@{recip\+\_\+prime2}}
+\index{recip\+\_\+prime2@{recip\+\_\+prime2}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{recip\+\_\+prime2(float\+\_\+type x)}{recip_prime2(float_type x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::recip\+\_\+prime2 (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_a58e93b52b477a022e7b74c5e1056d3d7}{}\label{classc2__transformation_a58e93b52b477a022e7b74c5e1056d3d7}
+
+
+utility function f(x)=2/x$\ast$$\ast$3 useful in axis transforms 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!report\+\_\+error@{report\+\_\+error}}
+\index{report\+\_\+error@{report\+\_\+error}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{report\+\_\+error(float\+\_\+type x)}{report_error(float_type x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::report\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_a79f51b6fefc32d826735daf184f76613}{}\label{classc2__transformation_a79f51b6fefc32d826735daf184f76613}
+
+
+utility function for unimplemented conversion 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!zero@{zero}}
+\index{zero@{zero}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{zero(float\+\_\+type)}{zero(float_type)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ static float\+\_\+type {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::zero (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classc2__transformation_a81a65d1c58abae1f7bed846f736a9887}{}\label{classc2__transformation_a81a65d1c58abae1f7bed846f736a9887}
+
+
+utility function f(x)=0 useful in axis transforms 
+
+
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!f\+Has\+Static\+Transforms@{f\+Has\+Static\+Transforms}}
+\index{f\+Has\+Static\+Transforms@{f\+Has\+Static\+Transforms}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{f\+Has\+Static\+Transforms}{fHasStaticTransforms}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ const bool {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::f\+Has\+Static\+Transforms}\hypertarget{classc2__transformation_a66489da404feec82b2db467a9c3e7a1e}{}\label{classc2__transformation_a66489da404feec82b2db467a9c3e7a1e}
+
+
+flag to indicate if the static function pointers can be used for efficiency 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!f\+Transformed@{f\+Transformed}}
+\index{f\+Transformed@{f\+Transformed}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{f\+Transformed}{fTransformed}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ const bool {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::f\+Transformed}\hypertarget{classc2__transformation_a18c8ee93daf24675a40905aaceeebd72}{}\label{classc2__transformation_a18c8ee93daf24675a40905aaceeebd72}
+
+
+flag to indicate if this transform is not the identity 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!p\+In@{p\+In}}
+\index{p\+In@{p\+In}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{p\+In}{pIn}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type($\ast$ const {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::p\+In) (float\+\_\+type)}\hypertarget{classc2__transformation_a4600cf8952fc112bb50f4f312738d022}{}\label{classc2__transformation_a4600cf8952fc112bb50f4f312738d022}
+
+
+non-\/virtual pointer to input X transform 
+
+\begin{DoxyNote}{Note}
+the pointers to functions allow highly optimized access when static functions are available. They are only used inside value\+\_\+with\+\_\+derivatives(), which is assumed to be the most critical routine. 
+\end{DoxyNote}
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!p\+In\+D\+Prime@{p\+In\+D\+Prime}}
+\index{p\+In\+D\+Prime@{p\+In\+D\+Prime}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{p\+In\+D\+Prime}{pInDPrime}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type($\ast$ const {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::p\+In\+D\+Prime) (float\+\_\+type)}\hypertarget{classc2__transformation_a875d75e4e0299753f6ea34bd06594ede}{}\label{classc2__transformation_a875d75e4e0299753f6ea34bd06594ede}
+
+
+non-\/virtual pointer to input X transform second derivative 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!p\+In\+Prime@{p\+In\+Prime}}
+\index{p\+In\+Prime@{p\+In\+Prime}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{p\+In\+Prime}{pInPrime}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type($\ast$ const {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::p\+In\+Prime) (float\+\_\+type)}\hypertarget{classc2__transformation_a4600103aeb9ea6aec1124ac0085bf268}{}\label{classc2__transformation_a4600103aeb9ea6aec1124ac0085bf268}
+
+
+non-\/virtual pointer to input X transform derivative 
+
+\index{c2\+\_\+transformation@{c2\+\_\+transformation}!p\+Out@{p\+Out}}
+\index{p\+Out@{p\+Out}!c2\+\_\+transformation@{c2\+\_\+transformation}}
+\subsubsection[{\texorpdfstring{p\+Out}{pOut}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type($\ast$ const {\bf c2\+\_\+transformation}$<$ float\+\_\+type $>$\+::p\+Out) (float\+\_\+type)}\hypertarget{classc2__transformation_ae898d76b8582ecc9fc7bb5a6eb6ca1b4}{}\label{classc2__transformation_ae898d76b8582ecc9fc7bb5a6eb6ca1b4}
+
+
+non-\/virtual pointer to output X transform 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

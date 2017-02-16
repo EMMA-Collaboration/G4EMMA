@@ -1,0 +1,6 @@
+<map id="c2_const_ptr&lt; float_type &gt;" name="c2_const_ptr&lt; float_type &gt;">
+<area shape="rect" id="node2" href="$classc2__ptr.html" title="create a container for a c2_function which handles the reference counting. " alt="" coords="5,571,144,751"/>
+<area shape="rect" id="node4" href="$classc2__typed__ptr.html" title="create a non&#45;generic container for a c2_function which handles the reference counting. " alt="" coords="169,549,314,773"/>
+<area shape="rect" id="node5" href="$classc2__const__ptr.html" title="{c2_const_ptr\&lt; G4double \&gt;\n|# func\l|+ c2_const_ptr()\l+ c2_const_ptr()\l+ c2_const_ptr()\l+ set_function()\l+ operator=()\l+ operator=()\l+ release_for_return()\l+ unset_function()\l+ ~c2_const_ptr()\l+ get()\l+ get_ptr()\l+ operator&#45;\&gt;()\l+ valid()\l+ operator const c2_function\l\&lt; G4double \&gt; &amp;()\l+ operator()()\l+ operator()()\l+ operator()()\l+ operator+()\l+ operator&#45;()\l+ operator*()\l+ operator/()\l}" alt="" coords="338,468,526,853"/>
+<area shape="rect" id="node3" href="$classc2__ptr.html" title="{c2_ptr\&lt; G4double \&gt;\n||+ c2_ptr()\l+ c2_ptr()\l+ c2_ptr()\l+ get()\l+ get_ptr()\l+ operator&#45;\&gt;()\l+ operator=()\l+ operator=()\l}" alt="" coords="215,916,353,1096"/>
+</map>

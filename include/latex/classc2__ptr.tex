@@ -1,0 +1,181 @@
+\hypertarget{classc2__ptr}{}\section{c2\+\_\+ptr$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__ptr}\index{c2\+\_\+ptr$<$ float\+\_\+type $>$@{c2\+\_\+ptr$<$ float\+\_\+type $>$}}
+
+
+create a container for a \hyperlink{classc2__function}{c2\+\_\+function} which handles the reference counting.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+ptr$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__ptr__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+ptr$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__ptr__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__ptr_ad49d9f28b27b26366c125973f5f7a8c1}{c2\+\_\+ptr} ()
+\begin{DoxyCompactList}\small\item\em construct the container with no function \end{DoxyCompactList}\item 
+\hyperlink{classc2__ptr_a43bb3a5a3c7d65127a4782d305c45d15}{c2\+\_\+ptr} (\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&f)
+\begin{DoxyCompactList}\small\item\em construct the container with a pre-\/defined function \end{DoxyCompactList}\item 
+\hyperlink{classc2__ptr_a0b3aa488bd5a4388048f574c2ef19e60}{c2\+\_\+ptr} (const \hyperlink{classc2__ptr}{c2\+\_\+ptr}$<$ float\+\_\+type $>$ \&src)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__ptr_afa91b91ad5c8c3479b02699afbb46d26}{get} () const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get a checked pointer to our owned function \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ $\ast$ \hyperlink{classc2__ptr_a74378bfb73076c3d49156fdbfa063618}{get\+\_\+ptr} () const 
+\begin{DoxyCompactList}\small\item\em get an unchecked pointer to our owned function \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ $\ast$ \hyperlink{classc2__ptr_ade9595883ae73bfb22843c28045cb448}{operator-\/$>$} () const 
+\begin{DoxyCompactList}\small\item\em get a checked pointer to our owned function \end{DoxyCompactList}\item 
+const \hyperlink{classc2__ptr}{c2\+\_\+ptr}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__ptr_ab176b3afe89de4456f3a4236cbf09008}{operator=} (const \hyperlink{classc2__ptr}{c2\+\_\+ptr}$<$ float\+\_\+type $>$ \&f)
+\begin{DoxyCompactList}\small\item\em fill the container from another container \end{DoxyCompactList}\item 
+\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \& \hyperlink{classc2__ptr_a7174f58864fa8e3439b6cfac256a1096}{operator=} (\hyperlink{classc2__function}{c2\+\_\+function}$<$ float\+\_\+type $>$ \&f)
+\begin{DoxyCompactList}\small\item\em fill the container with a function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type$>$\\*
+class c2\+\_\+ptr$<$ float\+\_\+type $>$}
+
+create a container for a \hyperlink{classc2__function}{c2\+\_\+function} which handles the reference counting. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classc2__const__ptr}{c2\+\_\+const\+\_\+ptr} and Use of c2\+\_\+ptr for memory management 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{c2\+\_\+ptr()}{c2_ptr()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+ptr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_ad49d9f28b27b26366c125973f5f7a8c1}{}\label{classc2__ptr_ad49d9f28b27b26366c125973f5f7a8c1}
+
+
+construct the container with no function 
+
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{c2\+\_\+ptr(c2\+\_\+function$<$ float\+\_\+type $>$ \&f)}{c2_ptr(c2_function< float_type > &f)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+ptr} (
+\begin{DoxyParamCaption}
+\item[{{\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_a43bb3a5a3c7d65127a4782d305c45d15}{}\label{classc2__ptr_a43bb3a5a3c7d65127a4782d305c45d15}
+
+
+construct the container with a pre-\/defined function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & the function to store \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{c2\+\_\+ptr(const c2\+\_\+ptr$<$ float\+\_\+type $>$ \&src)}{c2_ptr(const c2_ptr< float_type > &src)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+ptr} (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$ \&}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_a0b3aa488bd5a4388048f574c2ef19e60}{}\label{classc2__ptr_a0b3aa488bd5a4388048f574c2ef19e60}
+
+
+copy constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & the container to copy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!get@{get}}
+\index{get@{get}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{get() const }{get() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$\& {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_afa91b91ad5c8c3479b02699afbb46d26}{}\label{classc2__ptr_afa91b91ad5c8c3479b02699afbb46d26}
+
+
+get a checked pointer to our owned function 
+
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!get\+\_\+ptr@{get\+\_\+ptr}}
+\index{get\+\_\+ptr@{get\+\_\+ptr}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{get\+\_\+ptr() const }{get_ptr() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$$\ast$ {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::get\+\_\+ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_a74378bfb73076c3d49156fdbfa063618}{}\label{classc2__ptr_a74378bfb73076c3d49156fdbfa063618}
+
+
+get an unchecked pointer to our owned function 
+
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{operator-\/$>$() const }{operator->() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$$\ast$ {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::operator-\/$>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_ade9595883ae73bfb22843c28045cb448}{}\label{classc2__ptr_ade9595883ae73bfb22843c28045cb448}
+
+
+get a checked pointer to our owned function 
+
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!operator=@{operator=}}
+\index{operator=@{operator=}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{operator=(const c2\+\_\+ptr$<$ float\+\_\+type $>$ \&f)}{operator=(const c2_ptr< float_type > &f)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ const {\bf c2\+\_\+ptr}$<$float\+\_\+type$>$\& {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$ \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_ab176b3afe89de4456f3a4236cbf09008}{}\label{classc2__ptr_ab176b3afe89de4456f3a4236cbf09008}
+
+
+fill the container from another container 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & the container to copy \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+ptr@{c2\+\_\+ptr}!operator=@{operator=}}
+\index{operator=@{operator=}!c2\+\_\+ptr@{c2\+\_\+ptr}}
+\subsubsection[{\texorpdfstring{operator=(c2\+\_\+function$<$ float\+\_\+type $>$ \&f)}{operator=(c2_function< float_type > &f)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ {\bf c2\+\_\+function}$<$float\+\_\+type$>$\& {\bf c2\+\_\+ptr}$<$ float\+\_\+type $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf c2\+\_\+function}$<$ float\+\_\+type $>$ \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__ptr_a7174f58864fa8e3439b6cfac256a1096}{}\label{classc2__ptr_a7174f58864fa8e3439b6cfac256a1096}
+
+
+fill the container with a function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & the function \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

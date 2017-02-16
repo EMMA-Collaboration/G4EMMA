@@ -1,0 +1,4 @@
+<map id="G4VPVParameterisation" name="G4VPVParameterisation">
+<area shape="rect" id="node2" href="$classCathodeWireParameterisation.html" title="{CathodeWireParameterisation\n||+ CathodeWireParameterisation()\l+ ~CathodeWireParameterisation()\l+ ComputeTransformation()\l+ ComputeDimensions()\l}" alt="" coords="5,131,229,252"/>
+<area shape="rect" id="node3" href="$classPGACWireParameterisation.html" title="{PGACWireParameterisation\n||+ PGACWireParameterisation()\l+ ~PGACWireParameterisation()\l+ ComputeTransformation()\l+ ComputeDimensions()\l}" alt="" coords="253,131,467,252"/>
+</map>

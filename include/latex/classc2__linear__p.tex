@@ -1,0 +1,155 @@
+\hypertarget{classc2__linear__p}{}\section{c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__linear__p}\index{c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$@{c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$}}
+
+
+create a linear mapping of another function
+
+for example, given a \hyperlink{classc2__function}{c2\+\_\+function} {\itshape f}  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__linear__p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classc2__linear__p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__linear__p_a6a76eba066b8f52636fd4b6cc7307b06}{c2\+\_\+linear\+\_\+p} (float\+\_\+type x0, float\+\_\+type y0, float\+\_\+type slope)
+\begin{DoxyCompactList}\small\item\em Construct the operator f=y0 + slope $\ast$ (x-\/x0) \end{DoxyCompactList}\item 
+void \hyperlink{classc2__linear__p_ada2849448ebb2b5b493f45a2db6ab908}{reset} (float\+\_\+type x0, float\+\_\+type y0, float\+\_\+type slope)
+\begin{DoxyCompactList}\small\item\em Change the slope and intercepts after construction. \end{DoxyCompactList}\item 
+virtual float\+\_\+type \hyperlink{classc2__linear__p_a1d6ce127c8e991c4293f530f341ce617}{value\+\_\+with\+\_\+derivatives} (float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const   throw (c2\+\_\+exception)
+\begin{DoxyCompactList}\small\item\em get the value and derivatives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__linear__p_a33aafddd6c217e41aab925bee699a0eb}{c2\+\_\+linear\+\_\+p} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class c2\+\_\+linear\+\_\+p$<$ float\+\_\+type $>$}
+
+create a linear mapping of another function
+
+for example, given a \hyperlink{classc2__function}{c2\+\_\+function} {\itshape f} 
+
+
+\begin{DoxyCode}
+\hyperlink{classc2__function}{c2\_function<double>} &F=c2\_linear<double>(1.2, 2.0, 3.0)(f);
+\end{DoxyCode}
+ produces a new \hyperlink{classc2__function}{c2\+\_\+function} F=2.\+0+3.0$\ast$({\itshape f} -\/ 1.\+2)
+
+The factory function \hyperlink{classc2__factory_a2113dc577f24931e0cf316137faf557c}{c2\+\_\+factory\+::linear()} creates $\ast$new \hyperlink{classc2__linear__p}{c2\+\_\+linear\+\_\+p} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}!c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}}
+\index{c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}!c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+linear\+\_\+p(float\+\_\+type x0, float\+\_\+type y0, float\+\_\+type slope)}{c2_linear_p(float_type x0, float_type y0, float_type slope)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+linear\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+linear\+\_\+p} (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x0, }
+\item[{float\+\_\+type}]{y0, }
+\item[{float\+\_\+type}]{slope}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__linear__p_a6a76eba066b8f52636fd4b6cc7307b06}{}\label{classc2__linear__p_a6a76eba066b8f52636fd4b6cc7307b06}
+
+
+Construct the operator f=y0 + slope $\ast$ (x-\/x0) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & the x offset \\
+\hline
+{\em y0} & the y-\/intercept i.\+e. f(x0) \\
+\hline
+{\em slope} & the slope of the mapping \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}!c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}}
+\index{c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}!c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}}
+\subsubsection[{\texorpdfstring{c2\+\_\+linear\+\_\+p()}{c2_linear_p()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ {\bf c2\+\_\+linear\+\_\+p}$<$ float\+\_\+type $>$\+::{\bf c2\+\_\+linear\+\_\+p} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classc2__linear__p_a33aafddd6c217e41aab925bee699a0eb}{}\label{classc2__linear__p_a33aafddd6c217e41aab925bee699a0eb}
+
+
+\subsection{Member Function Documentation}
+\index{c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}!reset@{reset}}
+\index{reset@{reset}!c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}}
+\subsubsection[{\texorpdfstring{reset(float\+\_\+type x0, float\+\_\+type y0, float\+\_\+type slope)}{reset(float_type x0, float_type y0, float_type slope)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ void {\bf c2\+\_\+linear\+\_\+p}$<$ float\+\_\+type $>$\+::reset (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x0, }
+\item[{float\+\_\+type}]{y0, }
+\item[{float\+\_\+type}]{slope}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classc2__linear__p_ada2849448ebb2b5b493f45a2db6ab908}{}\label{classc2__linear__p_ada2849448ebb2b5b493f45a2db6ab908}
+
+
+Change the slope and intercepts after construction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & the x offset \\
+\hline
+{\em y0} & the y-\/intercept \\
+\hline
+{\em slope} & the slope of the mapping \\
+\hline
+\end{DoxyParams}
+\index{c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}!value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}}
+\index{value\+\_\+with\+\_\+derivatives@{value\+\_\+with\+\_\+derivatives}!c2\+\_\+linear\+\_\+p@{c2\+\_\+linear\+\_\+p}}
+\subsubsection[{\texorpdfstring{value\+\_\+with\+\_\+derivatives(float\+\_\+type x, float\+\_\+type $\ast$yprime, float\+\_\+type $\ast$yprime2) const }{value_with_derivatives(float_type x, float_type *yprime, float_type *yprime2) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type = double$>$ virtual float\+\_\+type {\bf c2\+\_\+linear\+\_\+p}$<$ float\+\_\+type $>$\+::value\+\_\+with\+\_\+derivatives (
+\begin{DoxyParamCaption}
+\item[{float\+\_\+type}]{x, }
+\item[{float\+\_\+type $\ast$}]{yprime, }
+\item[{float\+\_\+type $\ast$}]{yprime2}
+\end{DoxyParamCaption}
+) const throw  {\bf c2\+\_\+exception}) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classc2__linear__p_a1d6ce127c8e991c4293f530f341ce617}{}\label{classc2__linear__p_a1d6ce127c8e991c4293f530f341ce617}
+
+
+get the value and derivatives. 
+
+There is required checking for null pointers on the derivatives, and most implementations should operate faster if derivatives are not needed. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & the point at which to evaluate the function \\
+\hline
+\mbox{\tt out}  & {\em yprime} & the first derivative (if pointer is non-\/null) \\
+\hline
+\mbox{\tt out}  & {\em yprime2} & the second derivative (if pointer is non-\/null) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the function 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classc2__function_a44e0201159111350be7f746fc9026f67}{c2\+\_\+function$<$ float\+\_\+type $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

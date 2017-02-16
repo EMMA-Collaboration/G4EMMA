@@ -1,0 +1,243 @@
+\hypertarget{classEMMAElementField}{}\section{E\+M\+M\+A\+Element\+Field Class Reference}
+\label{classEMMAElementField}\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+
+
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Element\+Field.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for E\+M\+M\+A\+Element\+Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEMMAElementField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for E\+M\+M\+A\+Element\+Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classEMMAElementField__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEMMAElementField_add98f76bf86d66edd4f94119c20e95e5}{E\+M\+M\+A\+Element\+Field} (const G4\+Three\+Vector, G4\+Logical\+Volume $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAElementField_ac9fc590e35ae0a7a81253de6a3271379}{Construct} ()
+\begin{DoxyCompactList}\small\item\em the actual implementation constructs the F04\+Element\+Field \end{DoxyCompactList}\item 
+virtual \hyperlink{classEMMAElementField_afda9d839a3caadc03a68a603f8c64d1a}{$\sim$\+E\+M\+M\+A\+Element\+Field} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAElementField_ac77a8d456ddba267a86c37577b6d8237}{Set\+Max\+Step} (G4double stp)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEMMAElementField_ac77a8d456ddba267a86c37577b6d8237}{Set\+Max\+Step(\+G4double)} sets the max. step size. \end{DoxyCompactList}\item 
+G4double \hyperlink{classEMMAElementField_ad3dc48616b3869104b10dc1007b6c95e}{Get\+Max\+Step} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEMMAElementField_ad3dc48616b3869104b10dc1007b6c95e}{Get\+Max\+Step()} returns the max. step size. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAElementField_aa5c4c2ca091dd120a76a59ef790a6758}{Set\+Color} (G4\+String c)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEMMAElementField_aa5c4c2ca091dd120a76a59ef790a6758}{Set\+Color(\+G4\+String)} sets the color. \end{DoxyCompactList}\item 
+G4\+String \hyperlink{classEMMAElementField_a0a67e3bc2f8393d62ee76503f9aeaf7c}{Get\+Color} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEMMAElementField_a0a67e3bc2f8393d62ee76503f9aeaf7c}{Get\+Color()} returns the color. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAElementField_af4362c2dbb660e9eaab6d9207e29acda}{Set\+Global\+Point} (const G4double point\mbox{[}4\mbox{]})
+\item 
+bool \hyperlink{classEMMAElementField_aabb0a5f52245b11bcd16efa8c9dc7338}{Is\+In\+Bounding\+Box} (const G4double point\mbox{[}4\mbox{]}) const 
+\item 
+virtual void \hyperlink{classEMMAElementField_acec8d9002f079755715ffd5b7ba7e900}{Add\+Field\+Value} (const G4double point\mbox{[}4\mbox{]}, G4double field\mbox{[}6\mbox{]}) const =0
+\item 
+virtual G4double \hyperlink{classEMMAElementField_adb2d90c3fdf25e17be541903bffca35b}{Get\+Length} ()=0
+\item 
+virtual G4double \hyperlink{classEMMAElementField_a41708a8f1e72d7788c0a53c80c297bf9}{Get\+Width} ()=0
+\item 
+virtual G4double \hyperlink{classEMMAElementField_a3cbd223805ba24b5313e16ca540c326c}{Get\+Height} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static G4\+Vis\+Attributes $\ast$ \hyperlink{classEMMAElementField_adcc4e33f5615dbf4266823277281bf79}{Get\+Vis\+Attribute} (G4\+String color)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEMMAElementField_adcc4e33f5615dbf4266823277281bf79}{Get\+Vis\+Attribute()} returns the appropriate G4\+Vis\+Attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEMMAElementField_a6b53a26e3a5e14a3d9eaec5b9c257c31}{E\+M\+M\+A\+Element\+Field} (const \hyperlink{classEMMAElementField}{E\+M\+M\+A\+Element\+Field} \&)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G4\+Logical\+Volume $\ast$ \hyperlink{classEMMAElementField_a629f5c6b312c421ead41e82ae2e4e4a0}{f\+Volume}
+\item 
+G4\+Affine\+Transform \hyperlink{classEMMAElementField_a7702673f0f70ababdfc04fe007ea9d51}{f\+Global2local}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Element\+Field(const G4\+Three\+Vector, G4\+Logical\+Volume $\ast$)}{EMMAElementField(const G4ThreeVector, G4LogicalVolume *)}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Element\+Field\+::\+E\+M\+M\+A\+Element\+Field (
+\begin{DoxyParamCaption}
+\item[{const G4\+Three\+Vector}]{, }
+\item[{G4\+Logical\+Volume $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAElementField_add98f76bf86d66edd4f94119c20e95e5}{}\label{classEMMAElementField_add98f76bf86d66edd4f94119c20e95e5}
+
+
+Constructor. 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!````~E\+M\+M\+A\+Element\+Field@{$\sim$\+E\+M\+M\+A\+Element\+Field}}
+\index{````~E\+M\+M\+A\+Element\+Field@{$\sim$\+E\+M\+M\+A\+Element\+Field}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{$\sim$\+E\+M\+M\+A\+Element\+Field()}{~EMMAElementField()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual E\+M\+M\+A\+Element\+Field\+::$\sim$\+E\+M\+M\+A\+Element\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classEMMAElementField_afda9d839a3caadc03a68a603f8c64d1a}{}\label{classEMMAElementField_afda9d839a3caadc03a68a603f8c64d1a}
+
+
+Destructor. 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Element\+Field(const E\+M\+M\+A\+Element\+Field \&)}{EMMAElementField(const EMMAElementField &)}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Element\+Field\+::\+E\+M\+M\+A\+Element\+Field (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+M\+M\+A\+Element\+Field} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classEMMAElementField_a6b53a26e3a5e14a3d9eaec5b9c257c31}{}\label{classEMMAElementField_a6b53a26e3a5e14a3d9eaec5b9c257c31}
+
+
+\subsection{Member Function Documentation}
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Add\+Field\+Value@{Add\+Field\+Value}}
+\index{Add\+Field\+Value@{Add\+Field\+Value}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Add\+Field\+Value(const G4double point[4], G4double field[6]) const =0}{AddFieldValue(const G4double point[4], G4double field[6]) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void E\+M\+M\+A\+Element\+Field\+::\+Add\+Field\+Value (
+\begin{DoxyParamCaption}
+\item[{const G4double}]{point\mbox{[}4\mbox{]}, }
+\item[{G4double}]{field\mbox{[}6\mbox{]}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classEMMAElementField_acec8d9002f079755715ffd5b7ba7e900}{}\label{classEMMAElementField_acec8d9002f079755715ffd5b7ba7e900}
+\hyperlink{classEMMAElementField_acec8d9002f079755715ffd5b7ba7e900}{Add\+Field\+Value()} will add the field value for this element to field\mbox{[}\mbox{]}. Implementations must be sure to verify that point\mbox{[}\mbox{]} is within the field region, and do nothing if not. point\mbox{[}\mbox{]} is in global coordinates and geant4 units; x,y,z,t. field\mbox{[}\mbox{]} is in geant4 units; Bx,By,Bz,Ex,Ey,Ez. For efficiency, the caller may (but need not) call Is\+In\+Bounding\+Box(point), and only call this function if that returns true. \index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Construct@{Construct}}
+\index{Construct@{Construct}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Construct()}{Construct()}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Element\+Field\+::\+Construct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAElementField_ac9fc590e35ae0a7a81253de6a3271379}{}\label{classEMMAElementField_ac9fc590e35ae0a7a81253de6a3271379}
+
+
+the actual implementation constructs the F04\+Element\+Field 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Get\+Color@{Get\+Color}}
+\index{Get\+Color@{Get\+Color}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Color()}{GetColor()}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String E\+M\+M\+A\+Element\+Field\+::\+Get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAElementField_a0a67e3bc2f8393d62ee76503f9aeaf7c}{}\label{classEMMAElementField_a0a67e3bc2f8393d62ee76503f9aeaf7c}
+
+
+\hyperlink{classEMMAElementField_a0a67e3bc2f8393d62ee76503f9aeaf7c}{Get\+Color()} returns the color. 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Height()=0}{GetHeight()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4double E\+M\+M\+A\+Element\+Field\+::\+Get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classEMMAElementField_a3cbd223805ba24b5313e16ca540c326c}{}\label{classEMMAElementField_a3cbd223805ba24b5313e16ca540c326c}
+
+
+Implemented in \hyperlink{classBGField4_aaef21e47c9eb04de54c54eaaa447ddaa}{B\+G\+Field4}, \hyperlink{classBGField2_a8eb93f9ddd438617d363e8b194908d64}{B\+G\+Field2}, \hyperlink{classBGField1_af1b93a1566b1a53a00eb1d3ccc77815a}{B\+G\+Field1}, \hyperlink{classBGField3_a9a3274bc5f550093663680da846ba954}{B\+G\+Field3}, \hyperlink{classBGField5_ab9cdd6f73808a2e8cfc1ad14bc0ee4bb}{B\+G\+Field5}, \hyperlink{classBGField6_a47b7a214491b4317706fcd61d0f9feef}{B\+G\+Field6}, and \hyperlink{classBGField7_af997fdbf9563607d88ea8846674054f0}{B\+G\+Field7}.
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Get\+Length@{Get\+Length}}
+\index{Get\+Length@{Get\+Length}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Length()=0}{GetLength()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4double E\+M\+M\+A\+Element\+Field\+::\+Get\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classEMMAElementField_adb2d90c3fdf25e17be541903bffca35b}{}\label{classEMMAElementField_adb2d90c3fdf25e17be541903bffca35b}
+
+
+Implemented in \hyperlink{classBGField4_a96982694a0653d70dc49c0bddc9a1a0c}{B\+G\+Field4}, \hyperlink{classBGField2_a856d0ce173b04e35c0e59ab14694d6ac}{B\+G\+Field2}, \hyperlink{classBGField1_a11ba0cbb1190e5f2340aa7907f7d66f9}{B\+G\+Field1}, \hyperlink{classBGField3_ae49dd0f301f73bae6fae3d2672823cf8}{B\+G\+Field3}, \hyperlink{classBGField5_aa003bda3eb139d5c6f1bddbbc7ee9a3f}{B\+G\+Field5}, \hyperlink{classBGField6_ae0703e3eeb230040b028aaae44b2f2a4}{B\+G\+Field6}, and \hyperlink{classBGField7_a4a490c55acab01b0fdd558ed8117c20d}{B\+G\+Field7}.
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Get\+Max\+Step@{Get\+Max\+Step}}
+\index{Get\+Max\+Step@{Get\+Max\+Step}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Max\+Step()}{GetMaxStep()}}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+M\+M\+A\+Element\+Field\+::\+Get\+Max\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAElementField_ad3dc48616b3869104b10dc1007b6c95e}{}\label{classEMMAElementField_ad3dc48616b3869104b10dc1007b6c95e}
+
+
+\hyperlink{classEMMAElementField_ad3dc48616b3869104b10dc1007b6c95e}{Get\+Max\+Step()} returns the max. step size. 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Get\+Vis\+Attribute@{Get\+Vis\+Attribute}}
+\index{Get\+Vis\+Attribute@{Get\+Vis\+Attribute}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Vis\+Attribute(\+G4\+String color)}{GetVisAttribute(G4String color)}}]{\setlength{\rightskip}{0pt plus 5cm}static G4\+Vis\+Attributes$\ast$ E\+M\+M\+A\+Element\+Field\+::\+Get\+Vis\+Attribute (
+\begin{DoxyParamCaption}
+\item[{G4\+String}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classEMMAElementField_adcc4e33f5615dbf4266823277281bf79}{}\label{classEMMAElementField_adcc4e33f5615dbf4266823277281bf79}
+
+
+\hyperlink{classEMMAElementField_adcc4e33f5615dbf4266823277281bf79}{Get\+Vis\+Attribute()} returns the appropriate G4\+Vis\+Attributes. 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Width()=0}{GetWidth()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4double E\+M\+M\+A\+Element\+Field\+::\+Get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classEMMAElementField_a41708a8f1e72d7788c0a53c80c297bf9}{}\label{classEMMAElementField_a41708a8f1e72d7788c0a53c80c297bf9}
+
+
+Implemented in \hyperlink{classBGField4_a4fc6f543ddaf430f26df8d0d7687da02}{B\+G\+Field4}, \hyperlink{classBGField2_aa73fc7a95de254dd1aaba6d7b6248c68}{B\+G\+Field2}, \hyperlink{classBGField1_a44eca4d023aac7e4bf9dd959760afa28}{B\+G\+Field1}, \hyperlink{classBGField3_a84aaf81a6f511ca8d726c94d52f30336}{B\+G\+Field3}, \hyperlink{classBGField5_aca250c0313214b8ca38d47df1e1a45d2}{B\+G\+Field5}, \hyperlink{classBGField6_a620f1dfb4e72bf4cd8156eff68f4359a}{B\+G\+Field6}, and \hyperlink{classBGField7_a26a7446a2a71f53d7e6562636cbd6dec}{B\+G\+Field7}.
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Is\+In\+Bounding\+Box@{Is\+In\+Bounding\+Box}}
+\index{Is\+In\+Bounding\+Box@{Is\+In\+Bounding\+Box}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Is\+In\+Bounding\+Box(const G4double point[4]) const }{IsInBoundingBox(const G4double point[4]) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+M\+M\+A\+Element\+Field\+::\+Is\+In\+Bounding\+Box (
+\begin{DoxyParamCaption}
+\item[{const G4double}]{point\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAElementField_aabb0a5f52245b11bcd16efa8c9dc7338}{}\label{classEMMAElementField_aabb0a5f52245b11bcd16efa8c9dc7338}
+\hyperlink{classEMMAElementField_aabb0a5f52245b11bcd16efa8c9dc7338}{Is\+In\+Bounding\+Box()} returns true if the point is within the global bounding box -\/ global coordinates. \index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Set\+Color@{Set\+Color}}
+\index{Set\+Color@{Set\+Color}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Color(\+G4\+String c)}{SetColor(G4String c)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Element\+Field\+::\+Set\+Color (
+\begin{DoxyParamCaption}
+\item[{G4\+String}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAElementField_aa5c4c2ca091dd120a76a59ef790a6758}{}\label{classEMMAElementField_aa5c4c2ca091dd120a76a59ef790a6758}
+
+
+\hyperlink{classEMMAElementField_aa5c4c2ca091dd120a76a59ef790a6758}{Set\+Color(\+G4\+String)} sets the color. 
+
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Set\+Global\+Point@{Set\+Global\+Point}}
+\index{Set\+Global\+Point@{Set\+Global\+Point}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Global\+Point(const G4double point[4])}{SetGlobalPoint(const G4double point[4])}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Element\+Field\+::\+Set\+Global\+Point (
+\begin{DoxyParamCaption}
+\item[{const G4double}]{point\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAElementField_af4362c2dbb660e9eaab6d9207e29acda}{}\label{classEMMAElementField_af4362c2dbb660e9eaab6d9207e29acda}
+\hyperlink{classEMMAElementField_af4362c2dbb660e9eaab6d9207e29acda}{Set\+Global\+Point()} ensures that the point is within the global bounding box of this Element\+Field\textquotesingle{}s global coordinates. Normally called 8 times for the corners of the local bounding box, after a local-\/$>$global coordinate transform. If never called, the global bounding box is infinite. B\+E\+W\+A\+RE\+: if called only once, the bounding box is just a point. \index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!Set\+Max\+Step@{Set\+Max\+Step}}
+\index{Set\+Max\+Step@{Set\+Max\+Step}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Max\+Step(\+G4double stp)}{SetMaxStep(G4double stp)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Element\+Field\+::\+Set\+Max\+Step (
+\begin{DoxyParamCaption}
+\item[{G4double}]{stp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAElementField_ac77a8d456ddba267a86c37577b6d8237}{}\label{classEMMAElementField_ac77a8d456ddba267a86c37577b6d8237}
+
+
+\hyperlink{classEMMAElementField_ac77a8d456ddba267a86c37577b6d8237}{Set\+Max\+Step(\+G4double)} sets the max. step size. 
+
+
+
+\subsection{Member Data Documentation}
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!f\+Global2local@{f\+Global2local}}
+\index{f\+Global2local@{f\+Global2local}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{f\+Global2local}{fGlobal2local}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Affine\+Transform E\+M\+M\+A\+Element\+Field\+::f\+Global2local\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classEMMAElementField_a7702673f0f70ababdfc04fe007ea9d51}{}\label{classEMMAElementField_a7702673f0f70ababdfc04fe007ea9d51}
+\index{E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}!f\+Volume@{f\+Volume}}
+\index{f\+Volume@{f\+Volume}!E\+M\+M\+A\+Element\+Field@{E\+M\+M\+A\+Element\+Field}}
+\subsubsection[{\texorpdfstring{f\+Volume}{fVolume}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Logical\+Volume$\ast$ E\+M\+M\+A\+Element\+Field\+::f\+Volume\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classEMMAElementField_a629f5c6b312c421ead41e82ae2e4e4a0}{}\label{classEMMAElementField_a629f5c6b312c421ead41e82ae2e4e4a0}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{EMMAElementField_8hh}{E\+M\+M\+A\+Element\+Field.\+hh}\end{DoxyCompactItemize}

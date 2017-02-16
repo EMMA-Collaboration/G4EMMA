@@ -1,0 +1,4 @@
+<map id="G4VSensitiveDetector" name="G4VSensitiveDetector">
+<area shape="rect" id="node2" href="$classEMMADriftChamber.html" title="{EMMADriftChamber\n||+ EMMADriftChamber()\l+ ~EMMADriftChamber()\l+ Initialize()\l+ ProcessHits()\l+ EndOfEvent()\l}" alt="" coords="5,131,173,267"/>
+<area shape="rect" id="node3" href="$classEMMAIonChamber.html" title="{EMMAIonChamber\n||+ EMMAIonChamber()\l+ ~EMMAIonChamber()\l+ Initialize()\l+ ProcessHits()\l+ EndOfEvent()\l}" alt="" coords="198,131,359,267"/>
+</map>

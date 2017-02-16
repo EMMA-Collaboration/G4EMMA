@@ -1,0 +1,7 @@
+<map id="G4ScreenedNuclearRecoil" name="G4ScreenedNuclearRecoil">
+<area shape="rect" id="node2" href="$classG4ScreenedCoulombCrossSectionInfo.html" title="{G4ScreenedCoulombCrossSectionInfo\n||+ G4ScreenedCoulombCrossSectionInfo()\l+ ~G4ScreenedCoulombCrossSectionInfo()\l+ CVSHeaderVers()\l+ CVSFileVers()\l}" alt="" coords="132,5,407,127"/>
+<area shape="rect" id="node7" href="$classG4ScreenedCoulombCrossSection.html" title="{G4ScreenedCoulombCrossSection\n||+ G4ScreenedCoulombCrossSection()\l+ G4ScreenedCoulombCrossSection()\l+ ~G4ScreenedCoulombCrossSection()\l+ LoadData()\l+ BuildMFPTables()\l+ create()\l+ GetScreening()\l+ SetVerbosity()\l+ SelectRandomUnweightedTarget()\l+ standardmass()\l+ operator[]()\l}" alt="" coords="836,204,1090,428"/>
+<area shape="rect" id="node3" href="$classG4VDiscreteProcess.html" title="{G4VDiscreteProcess\n||}" alt="" coords="58,635,204,713"/>
+<area shape="rect" id="node6" href="$structG4CoulombKinematicsInfo.html" title="{G4CoulombKinematicsInfo\n||}" alt="" coords="642,635,820,713"/>
+<area shape="rect" id="node15" href="$classG4VNIELPartition.html" title="{G4VNIELPartition\n||+ G4VNIELPartition()\l+ ~G4VNIELPartition()\l+ PartitionNIEL()\l}" alt="" coords="1196,621,1351,727"/>
+</map>

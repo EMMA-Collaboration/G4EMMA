@@ -1,0 +1,107 @@
+\hypertarget{classG4ScreenedCoulombClassicalKinematics}{}\section{G4\+Screened\+Coulomb\+Classical\+Kinematics Class Reference}
+\label{classG4ScreenedCoulombClassicalKinematics}\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+
+
+{\ttfamily \#include \char`\"{}G4\+Screened\+Nuclear\+Recoil.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for G4\+Screened\+Coulomb\+Classical\+Kinematics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classG4ScreenedCoulombClassicalKinematics__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G4\+Screened\+Coulomb\+Classical\+Kinematics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classG4ScreenedCoulombClassicalKinematics__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classG4ScreenedCoulombClassicalKinematics_abd9b64d790ce2b887a7adb6707db447c}{G4\+Screened\+Coulomb\+Classical\+Kinematics} ()
+\item 
+virtual void \hyperlink{classG4ScreenedCoulombClassicalKinematics_a4d9894d234cdebccd4005d3a23e03db1}{Do\+Collision\+Step} (class \hyperlink{classG4ScreenedNuclearRecoil}{G4\+Screened\+Nuclear\+Recoil} $\ast$master, const class G4\+Track \&a\+Track, const class G4\+Step \&a\+Step)
+\item 
+G4bool \hyperlink{classG4ScreenedCoulombClassicalKinematics_a8e8d7873c4f99edac95ed00100d54844}{Do\+Screening\+Computation} (class \hyperlink{classG4ScreenedNuclearRecoil}{G4\+Screened\+Nuclear\+Recoil} $\ast$master, const \hyperlink{structG4ScreeningTables}{G4\+Screening\+Tables} $\ast$screen, G4double eps, G4double beta)
+\item 
+virtual \hyperlink{classG4ScreenedCoulombClassicalKinematics_ab03ecac3d449f4061534b36afb72b56f}{$\sim$\+G4\+Screened\+Coulomb\+Classical\+Kinematics} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classc2__const__plugin__function__p}{c2\+\_\+const\+\_\+plugin\+\_\+function\+\_\+p}$<$ G4double $>$ \& \hyperlink{classG4ScreenedCoulombClassicalKinematics_a8f5d883788d232da756cde3342b610cc}{phifunc}
+\item 
+\hyperlink{classc2__linear__p}{c2\+\_\+linear\+\_\+p}$<$ G4double $>$ \& \hyperlink{classG4ScreenedCoulombClassicalKinematics_addbca9f6d5c2acb2966216b2fab20aea}{xovereps}
+\item 
+\hyperlink{G4ScreenedNuclearRecoil_8hh_a54f93f48440e736bf99cf574ecf80385}{G4\+\_\+c2\+\_\+ptr} \hyperlink{classG4ScreenedCoulombClassicalKinematics_adf3f28f417ca19bbb80f9341b134cd0c}{diff}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{G4\+Screened\+Coulomb\+Classical\+Kinematics()}{G4ScreenedCoulombClassicalKinematics()}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Screened\+Coulomb\+Classical\+Kinematics\+::\+G4\+Screened\+Coulomb\+Classical\+Kinematics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedCoulombClassicalKinematics_abd9b64d790ce2b887a7adb6707db447c}{}\label{classG4ScreenedCoulombClassicalKinematics_abd9b64d790ce2b887a7adb6707db447c}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!````~G4\+Screened\+Coulomb\+Classical\+Kinematics@{$\sim$\+G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\index{````~G4\+Screened\+Coulomb\+Classical\+Kinematics@{$\sim$\+G4\+Screened\+Coulomb\+Classical\+Kinematics}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{$\sim$\+G4\+Screened\+Coulomb\+Classical\+Kinematics()}{~G4ScreenedCoulombClassicalKinematics()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4\+Screened\+Coulomb\+Classical\+Kinematics\+::$\sim$\+G4\+Screened\+Coulomb\+Classical\+Kinematics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classG4ScreenedCoulombClassicalKinematics_ab03ecac3d449f4061534b36afb72b56f}{}\label{classG4ScreenedCoulombClassicalKinematics_ab03ecac3d449f4061534b36afb72b56f}
+
+
+\subsection{Member Function Documentation}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!Do\+Collision\+Step@{Do\+Collision\+Step}}
+\index{Do\+Collision\+Step@{Do\+Collision\+Step}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{Do\+Collision\+Step(class G4\+Screened\+Nuclear\+Recoil $\ast$master, const class G4\+Track \&a\+Track, const class G4\+Step \&a\+Step)}{DoCollisionStep(class G4ScreenedNuclearRecoil *master, const class G4Track &aTrack, const class G4Step &aStep)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G4\+Screened\+Coulomb\+Classical\+Kinematics\+::\+Do\+Collision\+Step (
+\begin{DoxyParamCaption}
+\item[{class {\bf G4\+Screened\+Nuclear\+Recoil} $\ast$}]{master, }
+\item[{const class G4\+Track \&}]{a\+Track, }
+\item[{const class G4\+Step \&}]{a\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classG4ScreenedCoulombClassicalKinematics_a4d9894d234cdebccd4005d3a23e03db1}{}\label{classG4ScreenedCoulombClassicalKinematics_a4d9894d234cdebccd4005d3a23e03db1}
+
+
+Implements \hyperlink{classG4ScreenedCollisionStage_aabba02b3b46ce6a425c4c7c70b88dbad}{G4\+Screened\+Collision\+Stage}.
+
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!Do\+Screening\+Computation@{Do\+Screening\+Computation}}
+\index{Do\+Screening\+Computation@{Do\+Screening\+Computation}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{Do\+Screening\+Computation(class G4\+Screened\+Nuclear\+Recoil $\ast$master, const G4\+Screening\+Tables $\ast$screen, G4double eps, G4double beta)}{DoScreeningComputation(class G4ScreenedNuclearRecoil *master, const G4ScreeningTables *screen, G4double eps, G4double beta)}}]{\setlength{\rightskip}{0pt plus 5cm}G4bool G4\+Screened\+Coulomb\+Classical\+Kinematics\+::\+Do\+Screening\+Computation (
+\begin{DoxyParamCaption}
+\item[{class {\bf G4\+Screened\+Nuclear\+Recoil} $\ast$}]{master, }
+\item[{const {\bf G4\+Screening\+Tables} $\ast$}]{screen, }
+\item[{G4double}]{eps, }
+\item[{G4double}]{beta}
+\end{DoxyParamCaption}
+)}\hypertarget{classG4ScreenedCoulombClassicalKinematics_a8e8d7873c4f99edac95ed00100d54844}{}\label{classG4ScreenedCoulombClassicalKinematics_a8e8d7873c4f99edac95ed00100d54844}
+
+
+\subsection{Member Data Documentation}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!diff@{diff}}
+\index{diff@{diff}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{diff}{diff}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G4\+\_\+c2\+\_\+ptr} G4\+Screened\+Coulomb\+Classical\+Kinematics\+::diff\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombClassicalKinematics_adf3f28f417ca19bbb80f9341b134cd0c}{}\label{classG4ScreenedCoulombClassicalKinematics_adf3f28f417ca19bbb80f9341b134cd0c}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!phifunc@{phifunc}}
+\index{phifunc@{phifunc}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{phifunc}{phifunc}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf c2\+\_\+const\+\_\+plugin\+\_\+function\+\_\+p}$<$G4double$>$\& G4\+Screened\+Coulomb\+Classical\+Kinematics\+::phifunc\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombClassicalKinematics_a8f5d883788d232da756cde3342b610cc}{}\label{classG4ScreenedCoulombClassicalKinematics_a8f5d883788d232da756cde3342b610cc}
+\index{G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}!xovereps@{xovereps}}
+\index{xovereps@{xovereps}!G4\+Screened\+Coulomb\+Classical\+Kinematics@{G4\+Screened\+Coulomb\+Classical\+Kinematics}}
+\subsubsection[{\texorpdfstring{xovereps}{xovereps}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf c2\+\_\+linear\+\_\+p}$<$G4double$>$\& G4\+Screened\+Coulomb\+Classical\+Kinematics\+::xovereps\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classG4ScreenedCoulombClassicalKinematics_addbca9f6d5c2acb2966216b2fab20aea}{}\label{classG4ScreenedCoulombClassicalKinematics_addbca9f6d5c2acb2966216b2fab20aea}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{G4ScreenedNuclearRecoil_8hh}{G4\+Screened\+Nuclear\+Recoil.\+hh}\end{DoxyCompactItemize}

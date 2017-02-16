@@ -1,0 +1,26 @@
+\hypertarget{CMakeLists_8txt}{}\section{C\+Make\+Lists.\+txt File Reference}
+\label{CMakeLists_8txt}\index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{CMakeLists_8txt_a96d513d95f99c6a7d814bc5219aa207a}{cmake\+\_\+minimum\+\_\+required} (V\+E\+R\+S\+I\+ON 2.\+6 F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR) project(E\+M\+MA) option(W\+I\+T\+H\+\_\+\+G\+E\+A\+N\+T4\+\_\+\+U\+I\+V\+IS\char`\"{}Build example with Geant4 UI and Vis drivers\char`\"{}ON) if(W\+I\+T\+H\+\_\+\+G\+E\+A\+N\+T4\+\_\+\+U\+I\+V\+IS) \hyperlink{CMakeLists_8txt_ac8b9ea4be7802858ed602bf5474e31b4}{find\+\_\+package}(Geant4 R\+E\+Q\+U\+I\+R\+ED ui\+\_\+all vis\+\_\+all) else() \hyperlink{CMakeLists_8txt_ac8b9ea4be7802858ed602bf5474e31b4}{find\+\_\+package}(Geant4 R\+E\+Q\+U\+I\+R\+ED) endif() include(\$
+\item 
+\hyperlink{CMakeLists_8txt_ac8b9ea4be7802858ed602bf5474e31b4}{find\+\_\+package} (R\+O\+OT) if(R\+O\+O\+T\+\_\+\+F\+O\+U\+ND) add\+\_\+definitions(-\/D\+G4\+A\+N\+A\+L\+Y\+S\+I\+S\+\_\+\+U\+SE) endif() include\+\_\+directories(\$
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}!cmake\+\_\+minimum\+\_\+required@{cmake\+\_\+minimum\+\_\+required}}
+\index{cmake\+\_\+minimum\+\_\+required@{cmake\+\_\+minimum\+\_\+required}!C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
+\subsubsection[{\texorpdfstring{cmake\+\_\+minimum\+\_\+required(\+V\+E\+R\+S\+I\+O\+N 2.\+6 F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R) project(\+E\+M\+M\+A) option(\+W\+I\+T\+H\+\_\+\+G\+E\+A\+N\+T4\+\_\+\+U\+I\+V\+IS""Build example with Geant4 U\+I and Vis drivers""O\+N) if(\+W\+I\+T\+H\+\_\+\+G\+E\+A\+N\+T4\+\_\+\+U\+I\+V\+I\+S) find\+\_\+package(\+Geant4 R\+E\+Q\+U\+I\+R\+E\+D ui\+\_\+all vis\+\_\+all) else() find\+\_\+package(\+Geant4 R\+E\+Q\+U\+I\+R\+E\+D) endif() include(\$}{cmake_minimum_required(VERSION 2.6 FATAL_ERROR) project(EMMA) option(WITH_GEANT4_UIVIS"Build example with Geant4 UI and Vis drivers"ON) if(WITH_GEANT4_UIVIS) find_package(Geant4 REQUIRED ui_all vis_all) else() find_package(Geant4 REQUIRED) endif() include($}}]{\setlength{\rightskip}{0pt plus 5cm}cmake\+\_\+minimum\+\_\+required (
+\begin{DoxyParamCaption}
+\item[{V\+E\+R\+S\+I\+ON 2.\+6}]{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}
+\end{DoxyParamCaption}
+)}\hypertarget{CMakeLists_8txt_a96d513d95f99c6a7d814bc5219aa207a}{}\label{CMakeLists_8txt_a96d513d95f99c6a7d814bc5219aa207a}
+\index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}!find\+\_\+package@{find\+\_\+package}}
+\index{find\+\_\+package@{find\+\_\+package}!C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
+\subsubsection[{\texorpdfstring{find\+\_\+package(\+R\+O\+O\+T) if(\+R\+O\+O\+T\+\_\+\+F\+O\+U\+N\+D) add\+\_\+definitions(-\/\+D\+G4\+A\+N\+A\+L\+Y\+S\+I\+S\+\_\+\+U\+S\+E) endif() include\+\_\+directories(\$}{find_package(ROOT) if(ROOT_FOUND) add_definitions(-DG4ANALYSIS_USE) endif() include_directories($}}]{\setlength{\rightskip}{0pt plus 5cm}find\+\_\+package (
+\begin{DoxyParamCaption}
+\item[{R\+O\+OT}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{CMakeLists_8txt_ac8b9ea4be7802858ed602bf5474e31b4}{}\label{CMakeLists_8txt_ac8b9ea4be7802858ed602bf5474e31b4}

@@ -1,0 +1,83 @@
+\hypertarget{classaccumulated__histogram}{}\section{accumulated\+\_\+histogram$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classaccumulated__histogram}\index{accumulated\+\_\+histogram$<$ float\+\_\+type $>$@{accumulated\+\_\+histogram$<$ float\+\_\+type $>$}}
+
+
+An \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the cumulative integral of a histogram.
+
+Note than binedges should be one element longer than binheights, since the lower \& upper edges are specified. Note that this is a malformed spline, since the second derivatives are all zero, so it has less continuity. Also, note that the bin edges can be given in backwards order to generate the reversed accumulation (starting at the high end)  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for accumulated\+\_\+histogram$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classaccumulated__histogram__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for accumulated\+\_\+histogram$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classaccumulated__histogram__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classaccumulated__histogram_a54f0bb356a90baa58ff635ef8094dfc8}{accumulated\+\_\+histogram} (const std\+::vector$<$ float\+\_\+type $>$binedges, const std\+::vector$<$ float\+\_\+type $>$ binheights, bool normalize=false, bool inverse\+\_\+function=false, bool drop\+\_\+zeros=true)
+\begin{DoxyCompactList}\small\item\em Construct the integrated histogram. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type = double$>$\\*
+class accumulated\+\_\+histogram$<$ float\+\_\+type $>$}
+
+An \hyperlink{classinterpolating__function__p}{interpolating\+\_\+function\+\_\+p} which is the cumulative integral of a histogram.
+
+Note than binedges should be one element longer than binheights, since the lower \& upper edges are specified. Note that this is a malformed spline, since the second derivatives are all zero, so it has less continuity. Also, note that the bin edges can be given in backwards order to generate the reversed accumulation (starting at the high end) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{accumulated\+\_\+histogram@{accumulated\+\_\+histogram}!accumulated\+\_\+histogram@{accumulated\+\_\+histogram}}
+\index{accumulated\+\_\+histogram@{accumulated\+\_\+histogram}!accumulated\+\_\+histogram@{accumulated\+\_\+histogram}}
+\subsubsection[{\texorpdfstring{accumulated\+\_\+histogram(const std\+::vector$<$ float\+\_\+type $>$binedges, const std\+::vector$<$ float\+\_\+type $>$ binheights, bool normalize=false, bool inverse\+\_\+function=false, bool drop\+\_\+zeros=true)}{accumulated_histogram(const std::vector< float_type >binedges, const std::vector< float_type > binheights, bool normalize=false, bool inverse_function=false, bool drop_zeros=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type  = double$>$ {\bf accumulated\+\_\+histogram}$<$ float\+\_\+type $>$\+::{\bf accumulated\+\_\+histogram} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ float\+\_\+type $>$}]{binedges, }
+\item[{const std\+::vector$<$ float\+\_\+type $>$}]{binheights, }
+\item[{bool}]{normalize = {\ttfamily false}, }
+\item[{bool}]{inverse\+\_\+function = {\ttfamily false}, }
+\item[{bool}]{drop\+\_\+zeros = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classaccumulated__histogram_a54f0bb356a90baa58ff635ef8094dfc8}{}\label{classaccumulated__histogram_a54f0bb356a90baa58ff635ef8094dfc8}
+
+
+Construct the integrated histogram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binedges} & the edges of the bins in {\itshape binheights}. It should have one more element than {\itshape binheights} \\
+\hline
+{\em binheights} & the number of counts in each bin. \\
+\hline
+{\em normalize} & if true, normalize integral to 1 \\
+\hline
+{\em inverse\+\_\+function} & if true, drop zero channels, and return inverse function for random generation \\
+\hline
+{\em drop\+\_\+zeros} & eliminate null bins before integrating, so integral is strictly monotonic. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

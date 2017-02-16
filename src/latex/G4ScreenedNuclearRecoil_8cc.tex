@@ -1,0 +1,109 @@
+\hypertarget{G4ScreenedNuclearRecoil_8cc}{}\section{G4\+Screened\+Nuclear\+Recoil.\+cc File Reference}
+\label{G4ScreenedNuclearRecoil_8cc}\index{G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}globals.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Screened\+Nuclear\+Recoil.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Types.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Particle\+Change.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Change\+For\+Loss.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Data\+Vector.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Track.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Step.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Material.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Element.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Isotope.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Material\+Cuts\+Couple.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Element\+Vector.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Isotope\+Vector.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Em\+Process\+Sub\+Type.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Range\+Test.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Definition.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Dynamic\+Particle.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Process\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Stable\+Isotopes.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Lindhard\+Partition.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Physical\+Constants.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+System\+Of\+Units.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Randomize.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include \char`\"{}c2\+\_\+factory.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for G4\+Screened\+Nuclear\+Recoil.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{G4ScreenedNuclearRecoil_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef c2\+\_\+ptr$<$ G4double $>$ \hyperlink{G4ScreenedNuclearRecoil_8cc_a6c336ea4b7120ec7a7ed097d8865b4b7}{c2p}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+G4\+\_\+c2\+\_\+function \& \hyperlink{G4ScreenedNuclearRecoil_8cc_a38390a6f2bb8ba250affdccb1c9cc49c}{Z\+B\+L\+Screening} (G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)
+\item 
+G4\+\_\+c2\+\_\+function \& \hyperlink{G4ScreenedNuclearRecoil_8cc_af83b8ddfa7c0df319b4573c74bb4afd3}{Moliere\+Screening} (G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)
+\item 
+G4\+\_\+c2\+\_\+function \& \hyperlink{G4ScreenedNuclearRecoil_8cc_afab442d2da9f659d2c7d4b9bb1e64f5e}{L\+J\+Screening} (G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)
+\item 
+G4\+\_\+c2\+\_\+function \& \hyperlink{G4ScreenedNuclearRecoil_8cc_a1e2dbe4b8a87ad052a14e6c21ad98cbf}{L\+J\+Z\+B\+L\+Screening} (G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}!c2p@{c2p}}
+\index{c2p@{c2p}!G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}}
+\subsubsection[{\texorpdfstring{c2p}{c2p}}]{\setlength{\rightskip}{0pt plus 5cm}typedef c2\+\_\+ptr$<$G4double$>$ {\bf c2p}}\hypertarget{G4ScreenedNuclearRecoil_8cc_a6c336ea4b7120ec7a7ed097d8865b4b7}{}\label{G4ScreenedNuclearRecoil_8cc_a6c336ea4b7120ec7a7ed097d8865b4b7}
+
+
+\subsection{Function Documentation}
+\index{G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}!L\+J\+Screening@{L\+J\+Screening}}
+\index{L\+J\+Screening@{L\+J\+Screening}!G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}}
+\subsubsection[{\texorpdfstring{L\+J\+Screening(\+G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)}{LJScreening(G4int z1, G4int z2, size_t npoints, G4double rMax, G4double *auval)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+\_\+c2\+\_\+function\& L\+J\+Screening (
+\begin{DoxyParamCaption}
+\item[{G4int}]{z1, }
+\item[{G4int}]{z2, }
+\item[{size\+\_\+t}]{npoints, }
+\item[{G4double}]{r\+Max, }
+\item[{G4double $\ast$}]{auval}
+\end{DoxyParamCaption}
+)}\hypertarget{G4ScreenedNuclearRecoil_8cc_afab442d2da9f659d2c7d4b9bb1e64f5e}{}\label{G4ScreenedNuclearRecoil_8cc_afab442d2da9f659d2c7d4b9bb1e64f5e}
+\index{G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}!L\+J\+Z\+B\+L\+Screening@{L\+J\+Z\+B\+L\+Screening}}
+\index{L\+J\+Z\+B\+L\+Screening@{L\+J\+Z\+B\+L\+Screening}!G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}}
+\subsubsection[{\texorpdfstring{L\+J\+Z\+B\+L\+Screening(\+G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)}{LJZBLScreening(G4int z1, G4int z2, size_t npoints, G4double rMax, G4double *auval)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+\_\+c2\+\_\+function\& L\+J\+Z\+B\+L\+Screening (
+\begin{DoxyParamCaption}
+\item[{G4int}]{z1, }
+\item[{G4int}]{z2, }
+\item[{size\+\_\+t}]{npoints, }
+\item[{G4double}]{r\+Max, }
+\item[{G4double $\ast$}]{auval}
+\end{DoxyParamCaption}
+)}\hypertarget{G4ScreenedNuclearRecoil_8cc_a1e2dbe4b8a87ad052a14e6c21ad98cbf}{}\label{G4ScreenedNuclearRecoil_8cc_a1e2dbe4b8a87ad052a14e6c21ad98cbf}
+connector in between. These numbers are selected so the switchover \index{G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}!Moliere\+Screening@{Moliere\+Screening}}
+\index{Moliere\+Screening@{Moliere\+Screening}!G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}}
+\subsubsection[{\texorpdfstring{Moliere\+Screening(\+G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)}{MoliereScreening(G4int z1, G4int z2, size_t npoints, G4double rMax, G4double *auval)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+\_\+c2\+\_\+function\& Moliere\+Screening (
+\begin{DoxyParamCaption}
+\item[{G4int}]{z1, }
+\item[{G4int}]{z2, }
+\item[{size\+\_\+t}]{npoints, }
+\item[{G4double}]{r\+Max, }
+\item[{G4double $\ast$}]{auval}
+\end{DoxyParamCaption}
+)}\hypertarget{G4ScreenedNuclearRecoil_8cc_af83b8ddfa7c0df319b4573c74bb4afd3}{}\label{G4ScreenedNuclearRecoil_8cc_af83b8ddfa7c0df319b4573c74bb4afd3}
+\index{G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}!Z\+B\+L\+Screening@{Z\+B\+L\+Screening}}
+\index{Z\+B\+L\+Screening@{Z\+B\+L\+Screening}!G4\+Screened\+Nuclear\+Recoil.\+cc@{G4\+Screened\+Nuclear\+Recoil.\+cc}}
+\subsubsection[{\texorpdfstring{Z\+B\+L\+Screening(\+G4int z1, G4int z2, size\+\_\+t npoints, G4double r\+Max, G4double $\ast$auval)}{ZBLScreening(G4int z1, G4int z2, size_t npoints, G4double rMax, G4double *auval)}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+\_\+c2\+\_\+function\& Z\+B\+L\+Screening (
+\begin{DoxyParamCaption}
+\item[{G4int}]{z1, }
+\item[{G4int}]{z2, }
+\item[{size\+\_\+t}]{npoints, }
+\item[{G4double}]{r\+Max, }
+\item[{G4double $\ast$}]{auval}
+\end{DoxyParamCaption}
+)}\hypertarget{G4ScreenedNuclearRecoil_8cc_a38390a6f2bb8ba250affdccb1c9cc49c}{}\label{G4ScreenedNuclearRecoil_8cc_a38390a6f2bb8ba250affdccb1c9cc49c}

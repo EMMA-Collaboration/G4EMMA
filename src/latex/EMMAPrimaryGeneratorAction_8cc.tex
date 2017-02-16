@@ -1,0 +1,76 @@
+\hypertarget{EMMAPrimaryGeneratorAction_8cc}{}\section{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc File Reference}
+\label{EMMAPrimaryGeneratorAction_8cc}\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Primary\+Generator\+Action.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Primary\+Generator\+Messenger.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Event.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Gun.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Definition.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Randomize.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4ios.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Units\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Track.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Step.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Particle\+Types.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Physical\+Constants.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+System\+Of\+Units.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Ion\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Nuclei\+Properties.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Gamma.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Run\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Logical\+Volume\+Store.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Logical\+Volume.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Solid.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Box.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+Include dependency graph for E\+M\+M\+A\+Primary\+Generator\+Action.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EMMAPrimaryGeneratorAction_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+G4bool \hyperlink{EMMAPrimaryGeneratorAction_8cc_accd97970a0ee52817a02f8bdf0969668}{prepare\+Beam} = true
+\item 
+G4\+String \hyperlink{EMMAPrimaryGeneratorAction_8cc_ab5043f10e6a2b6521cf9bdc5f9b50a14}{in\+Target\+File\+Name}
+\item 
+G4\+String \hyperlink{EMMAPrimaryGeneratorAction_8cc_a44c8e472e5202caa69e70c5e8d18adf7}{post\+Target\+File\+Name}
+\item 
+G4\+String \hyperlink{EMMAPrimaryGeneratorAction_8cc_a3dbaf7156a8d958508b9806a0ef50aa6}{focal\+Plane\+File\+Name}
+\item 
+G4double \hyperlink{EMMAPrimaryGeneratorAction_8cc_a2d61cdd1b1b5ed409f7c91b54737c1b9}{user\+Charge} = 54.
+\item 
+G4\+String \hyperlink{EMMAPrimaryGeneratorAction_8cc_ae92d83921bde0242f8c619b79b457b23}{post\+Degrader1\+File\+Name}
+\item 
+G4double \hyperlink{EMMAPrimaryGeneratorAction_8cc_a08a40c9f48981a0140f43cbf773f3eea}{depth}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!depth@{depth}}
+\index{depth@{depth}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{depth}{depth}}]{\setlength{\rightskip}{0pt plus 5cm}G4double depth}\hypertarget{EMMAPrimaryGeneratorAction_8cc_a08a40c9f48981a0140f43cbf773f3eea}{}\label{EMMAPrimaryGeneratorAction_8cc_a08a40c9f48981a0140f43cbf773f3eea}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!focal\+Plane\+File\+Name@{focal\+Plane\+File\+Name}}
+\index{focal\+Plane\+File\+Name@{focal\+Plane\+File\+Name}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{focal\+Plane\+File\+Name}{focalPlaneFileName}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String focal\+Plane\+File\+Name}\hypertarget{EMMAPrimaryGeneratorAction_8cc_a3dbaf7156a8d958508b9806a0ef50aa6}{}\label{EMMAPrimaryGeneratorAction_8cc_a3dbaf7156a8d958508b9806a0ef50aa6}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!in\+Target\+File\+Name@{in\+Target\+File\+Name}}
+\index{in\+Target\+File\+Name@{in\+Target\+File\+Name}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{in\+Target\+File\+Name}{inTargetFileName}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String in\+Target\+File\+Name}\hypertarget{EMMAPrimaryGeneratorAction_8cc_ab5043f10e6a2b6521cf9bdc5f9b50a14}{}\label{EMMAPrimaryGeneratorAction_8cc_ab5043f10e6a2b6521cf9bdc5f9b50a14}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!post\+Degrader1\+File\+Name@{post\+Degrader1\+File\+Name}}
+\index{post\+Degrader1\+File\+Name@{post\+Degrader1\+File\+Name}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{post\+Degrader1\+File\+Name}{postDegrader1FileName}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String post\+Degrader1\+File\+Name}\hypertarget{EMMAPrimaryGeneratorAction_8cc_ae92d83921bde0242f8c619b79b457b23}{}\label{EMMAPrimaryGeneratorAction_8cc_ae92d83921bde0242f8c619b79b457b23}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!post\+Target\+File\+Name@{post\+Target\+File\+Name}}
+\index{post\+Target\+File\+Name@{post\+Target\+File\+Name}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{post\+Target\+File\+Name}{postTargetFileName}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String post\+Target\+File\+Name}\hypertarget{EMMAPrimaryGeneratorAction_8cc_a44c8e472e5202caa69e70c5e8d18adf7}{}\label{EMMAPrimaryGeneratorAction_8cc_a44c8e472e5202caa69e70c5e8d18adf7}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!prepare\+Beam@{prepare\+Beam}}
+\index{prepare\+Beam@{prepare\+Beam}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{prepare\+Beam}{prepareBeam}}]{\setlength{\rightskip}{0pt plus 5cm}G4bool prepare\+Beam = true}\hypertarget{EMMAPrimaryGeneratorAction_8cc_accd97970a0ee52817a02f8bdf0969668}{}\label{EMMAPrimaryGeneratorAction_8cc_accd97970a0ee52817a02f8bdf0969668}
+\index{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}!user\+Charge@{user\+Charge}}
+\index{user\+Charge@{user\+Charge}!E\+M\+M\+A\+Primary\+Generator\+Action.\+cc@{E\+M\+M\+A\+Primary\+Generator\+Action.\+cc}}
+\subsubsection[{\texorpdfstring{user\+Charge}{userCharge}}]{\setlength{\rightskip}{0pt plus 5cm}G4double user\+Charge = 54.}\hypertarget{EMMAPrimaryGeneratorAction_8cc_a2d61cdd1b1b5ed409f7c91b54737c1b9}{}\label{EMMAPrimaryGeneratorAction_8cc_a2d61cdd1b1b5ed409f7c91b54737c1b9}

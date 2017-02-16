@@ -1,0 +1,94 @@
+\hypertarget{classc2__fblock}{}\section{c2\+\_\+fblock$<$ float\+\_\+type $>$ Class Template Reference}
+\label{classc2__fblock}\index{c2\+\_\+fblock$<$ float\+\_\+type $>$@{c2\+\_\+fblock$<$ float\+\_\+type $>$}}
+
+
+structure used to hold evaluated function data at a point.  
+
+
+
+
+{\ttfamily \#include \char`\"{}c2\+\_\+function.\+hh\char`\"{}}
+
+
+
+Collaboration diagram for c2\+\_\+fblock$<$ float\+\_\+type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classc2__fblock__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+type \hyperlink{classc2__fblock_ad5560516bfc794724226af6d3678d518}{x}
+\begin{DoxyCompactList}\small\item\em the abscissa \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__fblock_a0de289aaf1b624af8cb1461164ea0dfd}{y}
+\begin{DoxyCompactList}\small\item\em the value of the function at {\itshape x} \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__fblock_a4df4413818bad95cd88e33d29fa7334e}{yp}
+\begin{DoxyCompactList}\small\item\em the derivative at {\itshape x} \end{DoxyCompactList}\item 
+float\+\_\+type \hyperlink{classc2__fblock_aad33c0adbb2d83549139ab8e9f69c0d3}{ypp}
+\begin{DoxyCompactList}\small\item\em the second derivative at {\itshape x} \end{DoxyCompactList}\item 
+bool \hyperlink{classc2__fblock_aa75a5d9ec9549d6fa22f6959a101de64}{ypbad}
+\begin{DoxyCompactList}\small\item\em flag, filled in by \hyperlink{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}{c2\+\_\+function\+::fill\+\_\+fblock()}, indicating the derivative is NaN of Inf \end{DoxyCompactList}\item 
+bool \hyperlink{classc2__fblock_ad07bac2622d2bcfeb7e7892a7db536d3}{yppbad}
+\begin{DoxyCompactList}\small\item\em flag, filled in by \hyperlink{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}{c2\+\_\+function\+::fill\+\_\+fblock()}, indicating the second derivative is NaN of Inf \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename float\+\_\+type$>$\\*
+class c2\+\_\+fblock$<$ float\+\_\+type $>$}
+
+structure used to hold evaluated function data at a point. 
+
+Contains all the information for the function at one point. 
+
+\subsection{Member Data Documentation}
+\index{c2\+\_\+fblock@{c2\+\_\+fblock}!x@{x}}
+\index{x@{x}!c2\+\_\+fblock@{c2\+\_\+fblock}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type {\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$\+::x}\hypertarget{classc2__fblock_ad5560516bfc794724226af6d3678d518}{}\label{classc2__fblock_ad5560516bfc794724226af6d3678d518}
+
+
+the abscissa 
+
+\index{c2\+\_\+fblock@{c2\+\_\+fblock}!y@{y}}
+\index{y@{y}!c2\+\_\+fblock@{c2\+\_\+fblock}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type {\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$\+::y}\hypertarget{classc2__fblock_a0de289aaf1b624af8cb1461164ea0dfd}{}\label{classc2__fblock_a0de289aaf1b624af8cb1461164ea0dfd}
+
+
+the value of the function at {\itshape x} 
+
+\index{c2\+\_\+fblock@{c2\+\_\+fblock}!yp@{yp}}
+\index{yp@{yp}!c2\+\_\+fblock@{c2\+\_\+fblock}}
+\subsubsection[{\texorpdfstring{yp}{yp}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type {\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$\+::yp}\hypertarget{classc2__fblock_a4df4413818bad95cd88e33d29fa7334e}{}\label{classc2__fblock_a4df4413818bad95cd88e33d29fa7334e}
+
+
+the derivative at {\itshape x} 
+
+\index{c2\+\_\+fblock@{c2\+\_\+fblock}!ypbad@{ypbad}}
+\index{ypbad@{ypbad}!c2\+\_\+fblock@{c2\+\_\+fblock}}
+\subsubsection[{\texorpdfstring{ypbad}{ypbad}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ bool {\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$\+::ypbad}\hypertarget{classc2__fblock_aa75a5d9ec9549d6fa22f6959a101de64}{}\label{classc2__fblock_aa75a5d9ec9549d6fa22f6959a101de64}
+
+
+flag, filled in by \hyperlink{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}{c2\+\_\+function\+::fill\+\_\+fblock()}, indicating the derivative is NaN of Inf 
+
+\index{c2\+\_\+fblock@{c2\+\_\+fblock}!ypp@{ypp}}
+\index{ypp@{ypp}!c2\+\_\+fblock@{c2\+\_\+fblock}}
+\subsubsection[{\texorpdfstring{ypp}{ypp}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ float\+\_\+type {\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$\+::ypp}\hypertarget{classc2__fblock_aad33c0adbb2d83549139ab8e9f69c0d3}{}\label{classc2__fblock_aad33c0adbb2d83549139ab8e9f69c0d3}
+
+
+the second derivative at {\itshape x} 
+
+\index{c2\+\_\+fblock@{c2\+\_\+fblock}!yppbad@{yppbad}}
+\index{yppbad@{yppbad}!c2\+\_\+fblock@{c2\+\_\+fblock}}
+\subsubsection[{\texorpdfstring{yppbad}{yppbad}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename float\+\_\+type$>$ bool {\bf c2\+\_\+fblock}$<$ float\+\_\+type $>$\+::yppbad}\hypertarget{classc2__fblock_ad07bac2622d2bcfeb7e7892a7db536d3}{}\label{classc2__fblock_ad07bac2622d2bcfeb7e7892a7db536d3}
+
+
+flag, filled in by \hyperlink{classc2__function_abdce52d0b89ff5bde13d9390ff8c2ba4}{c2\+\_\+function\+::fill\+\_\+fblock()}, indicating the second derivative is NaN of Inf 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{c2__function_8hh}{c2\+\_\+function.\+hh}\end{DoxyCompactItemize}

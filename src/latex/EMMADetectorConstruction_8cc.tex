@@ -1,0 +1,77 @@
+\hypertarget{EMMADetectorConstruction_8cc}{}\section{E\+M\+M\+A\+Detector\+Construction.\+cc File Reference}
+\label{EMMADetectorConstruction_8cc}\index{E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}}
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Detector\+Construction.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Field\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Transportation\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Mag\+\_\+\+Usual\+Eq\+Rhs.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Material.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Element.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Material\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Nist\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Solid.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Union\+Solid.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Box.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Tubs.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Logical\+Volume.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Physical\+Volume.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+P\+V\+Placement.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+P\+V\+Replica.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+P\+V\+Parameterised.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+User\+Limits.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Trap.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Transform3\+D.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Region.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Region\+Store.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Units\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Subtraction\+Solid.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+System\+Of\+Units.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+S\+D\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Sensitive\+Detector.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Run\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Vis\+Attributes.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Colour.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4ios.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Detector\+Const\+Messenger.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Drift\+Chamber.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Ion\+Chamber.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Spectrometer\+Construction.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+Field\+Debugger.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cathode\+Wire\+Parameterisation.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}C\+L\+H\+E\+P/\+Units/\+System\+Of\+Units.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Uniform\+Mag\+Field.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for E\+M\+M\+A\+Detector\+Construction.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EMMADetectorConstruction_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+G4double \hyperlink{EMMADetectorConstruction_8cc_aeb29decdede3d925164d390a2bf4a67a}{magnetic\+Scaling} = 1
+\item 
+G4double \hyperlink{EMMADetectorConstruction_8cc_a528ee0b2618db44ed7b0734789834f3d}{electric\+Scaling} = 1
+\item 
+G4double \hyperlink{EMMADetectorConstruction_8cc_a168924eff042d94e1e59a05bbcdcca38}{target\+Thickness}
+\item 
+G4double \hyperlink{EMMADetectorConstruction_8cc_a7d65bdf83ece33e0fa248e3da81e825a}{target\+Zoffset}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}!electric\+Scaling@{electric\+Scaling}}
+\index{electric\+Scaling@{electric\+Scaling}!E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{electric\+Scaling}{electricScaling}}]{\setlength{\rightskip}{0pt plus 5cm}G4double electric\+Scaling = 1}\hypertarget{EMMADetectorConstruction_8cc_a528ee0b2618db44ed7b0734789834f3d}{}\label{EMMADetectorConstruction_8cc_a528ee0b2618db44ed7b0734789834f3d}
+\index{E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}!magnetic\+Scaling@{magnetic\+Scaling}}
+\index{magnetic\+Scaling@{magnetic\+Scaling}!E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{magnetic\+Scaling}{magneticScaling}}]{\setlength{\rightskip}{0pt plus 5cm}G4double magnetic\+Scaling = 1}\hypertarget{EMMADetectorConstruction_8cc_aeb29decdede3d925164d390a2bf4a67a}{}\label{EMMADetectorConstruction_8cc_aeb29decdede3d925164d390a2bf4a67a}
+\index{E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}!target\+Thickness@{target\+Thickness}}
+\index{target\+Thickness@{target\+Thickness}!E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{target\+Thickness}{targetThickness}}]{\setlength{\rightskip}{0pt plus 5cm}G4double target\+Thickness}\hypertarget{EMMADetectorConstruction_8cc_a168924eff042d94e1e59a05bbcdcca38}{}\label{EMMADetectorConstruction_8cc_a168924eff042d94e1e59a05bbcdcca38}
+\index{E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}!target\+Zoffset@{target\+Zoffset}}
+\index{target\+Zoffset@{target\+Zoffset}!E\+M\+M\+A\+Detector\+Construction.\+cc@{E\+M\+M\+A\+Detector\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{target\+Zoffset}{targetZoffset}}]{\setlength{\rightskip}{0pt plus 5cm}G4double target\+Zoffset}\hypertarget{EMMADetectorConstruction_8cc_a7d65bdf83ece33e0fa248e3da81e825a}{}\label{EMMADetectorConstruction_8cc_a7d65bdf83ece33e0fa248e3da81e825a}

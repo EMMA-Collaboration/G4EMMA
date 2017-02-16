@@ -1,0 +1,89 @@
+\hypertarget{classPGACWireParameterisation}{}\section{P\+G\+A\+C\+Wire\+Parameterisation Class Reference}
+\label{classPGACWireParameterisation}\index{P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}}
+
+
+{\ttfamily \#include \char`\"{}P\+G\+A\+C\+Wire\+Parameterisation.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for P\+G\+A\+C\+Wire\+Parameterisation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classPGACWireParameterisation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for P\+G\+A\+C\+Wire\+Parameterisation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classPGACWireParameterisation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPGACWireParameterisation_a10d7eafe16d20cdc03db95db0e4fe153}{P\+G\+A\+C\+Wire\+Parameterisation} (G4int no\+Chambers, G4double startZ, G4double spacing, G4double width\+Chamber, G4double length\+Initial, G4double length\+Final)
+\item 
+virtual \hyperlink{classPGACWireParameterisation_adaaf2864ef9f0dcd8da35b7d00fd5294}{$\sim$\+P\+G\+A\+C\+Wire\+Parameterisation} ()
+\item 
+void \hyperlink{classPGACWireParameterisation_a5f44af81ac5b7be74e9ea2ca35e35d24}{Compute\+Transformation} (const G4int copy\+No, G4\+V\+Physical\+Volume $\ast$phys\+Vol) const 
+\item 
+void \hyperlink{classPGACWireParameterisation_acb47b7dcd2f4227f08d14195d37b6b6d}{Compute\+Dimensions} (G4\+Tubs \&tracker\+Layer, const G4int copy\+No, const G4\+V\+Physical\+Volume $\ast$phys\+Vol) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A parameterisation that describes a series of cylinders along Z.
+
+The cylinders have equal width, \& their lengths are a linear equation. They are spaced an equal distance apart, starting from given location. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}!P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}}
+\index{P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}!P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}}
+\subsubsection[{\texorpdfstring{P\+G\+A\+C\+Wire\+Parameterisation(\+G4int no\+Chambers, G4double start\+Z, G4double spacing, G4double width\+Chamber, G4double length\+Initial, G4double length\+Final)}{PGACWireParameterisation(G4int noChambers, G4double startZ, G4double spacing, G4double widthChamber, G4double lengthInitial, G4double lengthFinal)}}]{\setlength{\rightskip}{0pt plus 5cm}P\+G\+A\+C\+Wire\+Parameterisation\+::\+P\+G\+A\+C\+Wire\+Parameterisation (
+\begin{DoxyParamCaption}
+\item[{G4int}]{no\+Chambers, }
+\item[{G4double}]{startZ, }
+\item[{G4double}]{spacing, }
+\item[{G4double}]{width\+Chamber, }
+\item[{G4double}]{length\+Initial, }
+\item[{G4double}]{length\+Final}
+\end{DoxyParamCaption}
+)}\hypertarget{classPGACWireParameterisation_a10d7eafe16d20cdc03db95db0e4fe153}{}\label{classPGACWireParameterisation_a10d7eafe16d20cdc03db95db0e4fe153}
+\index{P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}!````~P\+G\+A\+C\+Wire\+Parameterisation@{$\sim$\+P\+G\+A\+C\+Wire\+Parameterisation}}
+\index{````~P\+G\+A\+C\+Wire\+Parameterisation@{$\sim$\+P\+G\+A\+C\+Wire\+Parameterisation}!P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}}
+\subsubsection[{\texorpdfstring{$\sim$\+P\+G\+A\+C\+Wire\+Parameterisation()}{~PGACWireParameterisation()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual P\+G\+A\+C\+Wire\+Parameterisation\+::$\sim$\+P\+G\+A\+C\+Wire\+Parameterisation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPGACWireParameterisation_adaaf2864ef9f0dcd8da35b7d00fd5294}{}\label{classPGACWireParameterisation_adaaf2864ef9f0dcd8da35b7d00fd5294}
+
+
+\subsection{Member Function Documentation}
+\index{P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}!Compute\+Dimensions@{Compute\+Dimensions}}
+\index{Compute\+Dimensions@{Compute\+Dimensions}!P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}}
+\subsubsection[{\texorpdfstring{Compute\+Dimensions(\+G4\+Tubs \&tracker\+Layer, const G4int copy\+No, const G4\+V\+Physical\+Volume $\ast$phys\+Vol) const }{ComputeDimensions(G4Tubs &trackerLayer, const G4int copyNo, const G4VPhysicalVolume *physVol) const }}]{\setlength{\rightskip}{0pt plus 5cm}void P\+G\+A\+C\+Wire\+Parameterisation\+::\+Compute\+Dimensions (
+\begin{DoxyParamCaption}
+\item[{G4\+Tubs \&}]{tracker\+Layer, }
+\item[{const G4int}]{copy\+No, }
+\item[{const G4\+V\+Physical\+Volume $\ast$}]{phys\+Vol}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPGACWireParameterisation_acb47b7dcd2f4227f08d14195d37b6b6d}{}\label{classPGACWireParameterisation_acb47b7dcd2f4227f08d14195d37b6b6d}
+\index{P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}!Compute\+Transformation@{Compute\+Transformation}}
+\index{Compute\+Transformation@{Compute\+Transformation}!P\+G\+A\+C\+Wire\+Parameterisation@{P\+G\+A\+C\+Wire\+Parameterisation}}
+\subsubsection[{\texorpdfstring{Compute\+Transformation(const G4int copy\+No, G4\+V\+Physical\+Volume $\ast$phys\+Vol) const }{ComputeTransformation(const G4int copyNo, G4VPhysicalVolume *physVol) const }}]{\setlength{\rightskip}{0pt plus 5cm}void P\+G\+A\+C\+Wire\+Parameterisation\+::\+Compute\+Transformation (
+\begin{DoxyParamCaption}
+\item[{const G4int}]{copy\+No, }
+\item[{G4\+V\+Physical\+Volume $\ast$}]{phys\+Vol}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPGACWireParameterisation_a5f44af81ac5b7be74e9ea2ca35e35d24}{}\label{classPGACWireParameterisation_a5f44af81ac5b7be74e9ea2ca35e35d24}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{PGACWireParameterisation_8hh}{P\+G\+A\+C\+Wire\+Parameterisation.\+hh}\end{DoxyCompactItemize}

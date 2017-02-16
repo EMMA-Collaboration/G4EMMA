@@ -1,0 +1,311 @@
+\hypertarget{SpectrometerConstruction_8cc}{}\section{Spectrometer\+Construction.\+cc File Reference}
+\label{SpectrometerConstruction_8cc}\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+{\ttfamily \#include \char`\"{}Spectrometer\+Construction.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Solid.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Box.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Tubs.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Logical\+Volume.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+V\+Physical\+Volume.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+P\+V\+Placement.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Production\+Cuts\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Global\+Field.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+Field\+Debugger.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Vis\+Attributes.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Colour.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Region.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Union\+Solid.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Region\+Store.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+User\+Limits.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Material.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Material\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Element.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Units\+Table.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Transform3\+D.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field1.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field2.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field3.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field4.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field5.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field6.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}B\+G\+Field7.\+hh\char`\"{}}\\*
+Include dependency graph for Spectrometer\+Construction.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SpectrometerConstruction_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a63b4d37f848ab857400025988ebc68ac}{z\+Q1begins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_aaefdf69418ceee3aabc72a346eef1799}{z\+Q4ends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a9906ccfd8985bb28a72c37e7cd16f277}{z\+Anode}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a499096b9dc56ffa559bd1aec0bafe28e}{z\+Focal\+Plane}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a8825e4bac9c627d0fc56ceb808baee99}{z\+Q1ends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a0389aed4a205ff7970a9c57db9776625}{z\+Q2ends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_aa309293d04a3e9edd55505001bb8842f}{z\+Q3ends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a62d0de84d7d6b0923e982b354afad285}{z\+Q2begins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a12daa717eecd47b0ce06c1314040fc3c}{z\+Q3begins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ab2b8c71527a18e35d81eb8bd6e7691f4}{z\+Q4begins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_aad92ec801d3e4699e64b73238d977d97}{z\+Q1fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a312fb44f7507d957ccc70c34d5d94a43}{z\+Q2fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a92fc8c51d58e20801f34d52f8a2c7a2b}{z\+Q2fieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a077f13a115281633166d7450d5f26fa0}{z\+Q3fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_afb3a8a6427088f204ef91b7361831904}{z\+Q4fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a2f06aa9a2a32a33fa1100ce176ab4636}{z\+Q4fieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a3feee11b7c51f66f2b05335422fd6766}{z\+E\+D1fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ab9ae78ef340f126ece97727282006616}{x\+E\+D1fieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a233a000653cf27b6f9124c2a55731df1}{z\+E\+D1fieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a20f1012cd491461a26923d2c5e7bf9e9}{x\+M\+Dfieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a69783c655a650a2d465aa29adb99becd}{z\+M\+Dfieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a159fc7800979fa9630bfc45a7f78596c}{x\+M\+Dfieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ac69dbd129f1b938df9976d51f7593e8d}{z\+M\+Dfieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a1756cc9671bdb5e3fef3244359b6d3cc}{x\+E\+D2fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ad016826f85af9d76258e59348edeb364}{z\+E\+D2fieldbegins}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a9d0bd55552fe4d1f2f44f49d35cc081e}{z\+E\+D2fieldends}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a244d4cfe9b2fed8a950b5260924858ff}{x\+E\+D1center}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a74ebfc53f3a93114f6d28295ee4ab9f4}{z\+E\+D1center}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a3c58a920166faad49e1879314c55c5be}{x\+E\+D2center}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ac98e44690840a121652fcb08b156a635}{z\+E\+D2center}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a715d053d73470185e7c2c4702d9dc2de}{r\+ED}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_aebdd7edbdb400c898923e8d3722725bf}{x\+M\+Dcenter}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ac5e70ecd77b70fb29053de3d744defbe}{z\+M\+Dcenter}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a7fd4fbedfa36308277282111f3a02a2e}{r\+MD}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a6a82266fb838ffa86812c6000c9dc287}{Q1before}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a5566ea3bf099349decdfcf3c26fc376c}{Q2before}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a75fe85cecce8dd0b8fa08cf97cee4ce2}{E\+D1before}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a003204f9438882eab89ba42ae5708f37}{M\+Dbefore}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a1fb2ee29034baaf6ed6e2acbdbf8b578}{E\+D2before}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a2fe0c19691575193f51b8ef4c4301aad}{Q3before}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a807b9ab7f57ec0c8bdc7764053d3e516}{Q4before}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a79e8de762c55f46eaf341c33ddcdfabd}{Q1after}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a9d33b4b693d4f7341602ab26cb44359c}{Q2after}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a56c3dd0f81ddd6f90cfcc044fb51dff1}{E\+D1after}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_af04f7784a3cdd89375e6c74b915d255c}{M\+Dafter}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ad4c429af59f2e7eee31d1480df299599}{E\+D2after}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a7a55e4b1397f5859cde14aa271bb3717}{Q3after}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a47d7897cbc13a67cc420cfb3ec97fd60}{Q4after}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a58acf77da23d6d58252d729d4d8212d1}{Pipe4z}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_ab20b3e8fa2797e410fb9110cfad39796}{Pipe4\+HL}
+\item 
+G4double \hyperlink{SpectrometerConstruction_8cc_a7369eeb2c228d92eeb2a6e7ad496e13f}{Pipe7\+HL}
+\item 
+G4\+String \hyperlink{SpectrometerConstruction_8cc_ae9b14cfeccc31b1bf76af2f4c3aae43d}{field\+File\+Name}
+\item 
+G4\+String \hyperlink{SpectrometerConstruction_8cc_a8558631b93942e4ae79b3feb21c97c8f}{User\+Dir}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!E\+D1after@{E\+D1after}}
+\index{E\+D1after@{E\+D1after}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{E\+D1after}{ED1after}}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+D1after}\hypertarget{SpectrometerConstruction_8cc_a56c3dd0f81ddd6f90cfcc044fb51dff1}{}\label{SpectrometerConstruction_8cc_a56c3dd0f81ddd6f90cfcc044fb51dff1}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!E\+D1before@{E\+D1before}}
+\index{E\+D1before@{E\+D1before}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{E\+D1before}{ED1before}}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+D1before}\hypertarget{SpectrometerConstruction_8cc_a75fe85cecce8dd0b8fa08cf97cee4ce2}{}\label{SpectrometerConstruction_8cc_a75fe85cecce8dd0b8fa08cf97cee4ce2}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!E\+D2after@{E\+D2after}}
+\index{E\+D2after@{E\+D2after}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{E\+D2after}{ED2after}}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+D2after}\hypertarget{SpectrometerConstruction_8cc_ad4c429af59f2e7eee31d1480df299599}{}\label{SpectrometerConstruction_8cc_ad4c429af59f2e7eee31d1480df299599}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!E\+D2before@{E\+D2before}}
+\index{E\+D2before@{E\+D2before}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{E\+D2before}{ED2before}}]{\setlength{\rightskip}{0pt plus 5cm}G4double E\+D2before}\hypertarget{SpectrometerConstruction_8cc_a1fb2ee29034baaf6ed6e2acbdbf8b578}{}\label{SpectrometerConstruction_8cc_a1fb2ee29034baaf6ed6e2acbdbf8b578}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!field\+File\+Name@{field\+File\+Name}}
+\index{field\+File\+Name@{field\+File\+Name}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{field\+File\+Name}{fieldFileName}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String field\+File\+Name}\hypertarget{SpectrometerConstruction_8cc_ae9b14cfeccc31b1bf76af2f4c3aae43d}{}\label{SpectrometerConstruction_8cc_ae9b14cfeccc31b1bf76af2f4c3aae43d}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!M\+Dafter@{M\+Dafter}}
+\index{M\+Dafter@{M\+Dafter}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{M\+Dafter}{MDafter}}]{\setlength{\rightskip}{0pt plus 5cm}G4double M\+Dafter}\hypertarget{SpectrometerConstruction_8cc_af04f7784a3cdd89375e6c74b915d255c}{}\label{SpectrometerConstruction_8cc_af04f7784a3cdd89375e6c74b915d255c}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!M\+Dbefore@{M\+Dbefore}}
+\index{M\+Dbefore@{M\+Dbefore}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{M\+Dbefore}{MDbefore}}]{\setlength{\rightskip}{0pt plus 5cm}G4double M\+Dbefore}\hypertarget{SpectrometerConstruction_8cc_a003204f9438882eab89ba42ae5708f37}{}\label{SpectrometerConstruction_8cc_a003204f9438882eab89ba42ae5708f37}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Pipe4\+HL@{Pipe4\+HL}}
+\index{Pipe4\+HL@{Pipe4\+HL}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Pipe4\+HL}{Pipe4HL}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Pipe4\+HL}\hypertarget{SpectrometerConstruction_8cc_ab20b3e8fa2797e410fb9110cfad39796}{}\label{SpectrometerConstruction_8cc_ab20b3e8fa2797e410fb9110cfad39796}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Pipe4z@{Pipe4z}}
+\index{Pipe4z@{Pipe4z}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Pipe4z}{Pipe4z}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Pipe4z}\hypertarget{SpectrometerConstruction_8cc_a58acf77da23d6d58252d729d4d8212d1}{}\label{SpectrometerConstruction_8cc_a58acf77da23d6d58252d729d4d8212d1}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Pipe7\+HL@{Pipe7\+HL}}
+\index{Pipe7\+HL@{Pipe7\+HL}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Pipe7\+HL}{Pipe7HL}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Pipe7\+HL}\hypertarget{SpectrometerConstruction_8cc_a7369eeb2c228d92eeb2a6e7ad496e13f}{}\label{SpectrometerConstruction_8cc_a7369eeb2c228d92eeb2a6e7ad496e13f}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q1after@{Q1after}}
+\index{Q1after@{Q1after}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q1after}{Q1after}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q1after}\hypertarget{SpectrometerConstruction_8cc_a79e8de762c55f46eaf341c33ddcdfabd}{}\label{SpectrometerConstruction_8cc_a79e8de762c55f46eaf341c33ddcdfabd}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q1before@{Q1before}}
+\index{Q1before@{Q1before}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q1before}{Q1before}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q1before}\hypertarget{SpectrometerConstruction_8cc_a6a82266fb838ffa86812c6000c9dc287}{}\label{SpectrometerConstruction_8cc_a6a82266fb838ffa86812c6000c9dc287}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q2after@{Q2after}}
+\index{Q2after@{Q2after}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q2after}{Q2after}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q2after}\hypertarget{SpectrometerConstruction_8cc_a9d33b4b693d4f7341602ab26cb44359c}{}\label{SpectrometerConstruction_8cc_a9d33b4b693d4f7341602ab26cb44359c}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q2before@{Q2before}}
+\index{Q2before@{Q2before}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q2before}{Q2before}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q2before}\hypertarget{SpectrometerConstruction_8cc_a5566ea3bf099349decdfcf3c26fc376c}{}\label{SpectrometerConstruction_8cc_a5566ea3bf099349decdfcf3c26fc376c}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q3after@{Q3after}}
+\index{Q3after@{Q3after}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q3after}{Q3after}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q3after}\hypertarget{SpectrometerConstruction_8cc_a7a55e4b1397f5859cde14aa271bb3717}{}\label{SpectrometerConstruction_8cc_a7a55e4b1397f5859cde14aa271bb3717}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q3before@{Q3before}}
+\index{Q3before@{Q3before}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q3before}{Q3before}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q3before}\hypertarget{SpectrometerConstruction_8cc_a2fe0c19691575193f51b8ef4c4301aad}{}\label{SpectrometerConstruction_8cc_a2fe0c19691575193f51b8ef4c4301aad}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q4after@{Q4after}}
+\index{Q4after@{Q4after}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q4after}{Q4after}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q4after}\hypertarget{SpectrometerConstruction_8cc_a47d7897cbc13a67cc420cfb3ec97fd60}{}\label{SpectrometerConstruction_8cc_a47d7897cbc13a67cc420cfb3ec97fd60}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!Q4before@{Q4before}}
+\index{Q4before@{Q4before}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{Q4before}{Q4before}}]{\setlength{\rightskip}{0pt plus 5cm}G4double Q4before}\hypertarget{SpectrometerConstruction_8cc_a807b9ab7f57ec0c8bdc7764053d3e516}{}\label{SpectrometerConstruction_8cc_a807b9ab7f57ec0c8bdc7764053d3e516}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!r\+ED@{r\+ED}}
+\index{r\+ED@{r\+ED}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{r\+ED}{rED}}]{\setlength{\rightskip}{0pt plus 5cm}G4double r\+ED}\hypertarget{SpectrometerConstruction_8cc_a715d053d73470185e7c2c4702d9dc2de}{}\label{SpectrometerConstruction_8cc_a715d053d73470185e7c2c4702d9dc2de}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!r\+MD@{r\+MD}}
+\index{r\+MD@{r\+MD}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{r\+MD}{rMD}}]{\setlength{\rightskip}{0pt plus 5cm}G4double r\+MD}\hypertarget{SpectrometerConstruction_8cc_a7fd4fbedfa36308277282111f3a02a2e}{}\label{SpectrometerConstruction_8cc_a7fd4fbedfa36308277282111f3a02a2e}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!User\+Dir@{User\+Dir}}
+\index{User\+Dir@{User\+Dir}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{User\+Dir}{UserDir}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String User\+Dir}\hypertarget{SpectrometerConstruction_8cc_a8558631b93942e4ae79b3feb21c97c8f}{}\label{SpectrometerConstruction_8cc_a8558631b93942e4ae79b3feb21c97c8f}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+E\+D1center@{x\+E\+D1center}}
+\index{x\+E\+D1center@{x\+E\+D1center}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+E\+D1center}{xED1center}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+E\+D1center}\hypertarget{SpectrometerConstruction_8cc_a244d4cfe9b2fed8a950b5260924858ff}{}\label{SpectrometerConstruction_8cc_a244d4cfe9b2fed8a950b5260924858ff}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+E\+D1fieldends@{x\+E\+D1fieldends}}
+\index{x\+E\+D1fieldends@{x\+E\+D1fieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+E\+D1fieldends}{xED1fieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+E\+D1fieldends}\hypertarget{SpectrometerConstruction_8cc_ab9ae78ef340f126ece97727282006616}{}\label{SpectrometerConstruction_8cc_ab9ae78ef340f126ece97727282006616}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+E\+D2center@{x\+E\+D2center}}
+\index{x\+E\+D2center@{x\+E\+D2center}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+E\+D2center}{xED2center}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+E\+D2center}\hypertarget{SpectrometerConstruction_8cc_a3c58a920166faad49e1879314c55c5be}{}\label{SpectrometerConstruction_8cc_a3c58a920166faad49e1879314c55c5be}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+E\+D2fieldbegins@{x\+E\+D2fieldbegins}}
+\index{x\+E\+D2fieldbegins@{x\+E\+D2fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+E\+D2fieldbegins}{xED2fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+E\+D2fieldbegins}\hypertarget{SpectrometerConstruction_8cc_a1756cc9671bdb5e3fef3244359b6d3cc}{}\label{SpectrometerConstruction_8cc_a1756cc9671bdb5e3fef3244359b6d3cc}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+M\+Dcenter@{x\+M\+Dcenter}}
+\index{x\+M\+Dcenter@{x\+M\+Dcenter}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+M\+Dcenter}{xMDcenter}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+M\+Dcenter}\hypertarget{SpectrometerConstruction_8cc_aebdd7edbdb400c898923e8d3722725bf}{}\label{SpectrometerConstruction_8cc_aebdd7edbdb400c898923e8d3722725bf}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+M\+Dfieldbegins@{x\+M\+Dfieldbegins}}
+\index{x\+M\+Dfieldbegins@{x\+M\+Dfieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+M\+Dfieldbegins}{xMDfieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+M\+Dfieldbegins}\hypertarget{SpectrometerConstruction_8cc_a20f1012cd491461a26923d2c5e7bf9e9}{}\label{SpectrometerConstruction_8cc_a20f1012cd491461a26923d2c5e7bf9e9}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!x\+M\+Dfieldends@{x\+M\+Dfieldends}}
+\index{x\+M\+Dfieldends@{x\+M\+Dfieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{x\+M\+Dfieldends}{xMDfieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double x\+M\+Dfieldends}\hypertarget{SpectrometerConstruction_8cc_a159fc7800979fa9630bfc45a7f78596c}{}\label{SpectrometerConstruction_8cc_a159fc7800979fa9630bfc45a7f78596c}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Anode@{z\+Anode}}
+\index{z\+Anode@{z\+Anode}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Anode}{zAnode}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Anode}\hypertarget{SpectrometerConstruction_8cc_a9906ccfd8985bb28a72c37e7cd16f277}{}\label{SpectrometerConstruction_8cc_a9906ccfd8985bb28a72c37e7cd16f277}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+E\+D1center@{z\+E\+D1center}}
+\index{z\+E\+D1center@{z\+E\+D1center}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+E\+D1center}{zED1center}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+E\+D1center}\hypertarget{SpectrometerConstruction_8cc_a74ebfc53f3a93114f6d28295ee4ab9f4}{}\label{SpectrometerConstruction_8cc_a74ebfc53f3a93114f6d28295ee4ab9f4}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+E\+D1fieldbegins@{z\+E\+D1fieldbegins}}
+\index{z\+E\+D1fieldbegins@{z\+E\+D1fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+E\+D1fieldbegins}{zED1fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+E\+D1fieldbegins}\hypertarget{SpectrometerConstruction_8cc_a3feee11b7c51f66f2b05335422fd6766}{}\label{SpectrometerConstruction_8cc_a3feee11b7c51f66f2b05335422fd6766}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+E\+D1fieldends@{z\+E\+D1fieldends}}
+\index{z\+E\+D1fieldends@{z\+E\+D1fieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+E\+D1fieldends}{zED1fieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+E\+D1fieldends}\hypertarget{SpectrometerConstruction_8cc_a233a000653cf27b6f9124c2a55731df1}{}\label{SpectrometerConstruction_8cc_a233a000653cf27b6f9124c2a55731df1}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+E\+D2center@{z\+E\+D2center}}
+\index{z\+E\+D2center@{z\+E\+D2center}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+E\+D2center}{zED2center}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+E\+D2center}\hypertarget{SpectrometerConstruction_8cc_ac98e44690840a121652fcb08b156a635}{}\label{SpectrometerConstruction_8cc_ac98e44690840a121652fcb08b156a635}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+E\+D2fieldbegins@{z\+E\+D2fieldbegins}}
+\index{z\+E\+D2fieldbegins@{z\+E\+D2fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+E\+D2fieldbegins}{zED2fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+E\+D2fieldbegins}\hypertarget{SpectrometerConstruction_8cc_ad016826f85af9d76258e59348edeb364}{}\label{SpectrometerConstruction_8cc_ad016826f85af9d76258e59348edeb364}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+E\+D2fieldends@{z\+E\+D2fieldends}}
+\index{z\+E\+D2fieldends@{z\+E\+D2fieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+E\+D2fieldends}{zED2fieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+E\+D2fieldends}\hypertarget{SpectrometerConstruction_8cc_a9d0bd55552fe4d1f2f44f49d35cc081e}{}\label{SpectrometerConstruction_8cc_a9d0bd55552fe4d1f2f44f49d35cc081e}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Focal\+Plane@{z\+Focal\+Plane}}
+\index{z\+Focal\+Plane@{z\+Focal\+Plane}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Focal\+Plane}{zFocalPlane}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Focal\+Plane}\hypertarget{SpectrometerConstruction_8cc_a499096b9dc56ffa559bd1aec0bafe28e}{}\label{SpectrometerConstruction_8cc_a499096b9dc56ffa559bd1aec0bafe28e}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+M\+Dcenter@{z\+M\+Dcenter}}
+\index{z\+M\+Dcenter@{z\+M\+Dcenter}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+M\+Dcenter}{zMDcenter}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+M\+Dcenter}\hypertarget{SpectrometerConstruction_8cc_ac5e70ecd77b70fb29053de3d744defbe}{}\label{SpectrometerConstruction_8cc_ac5e70ecd77b70fb29053de3d744defbe}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+M\+Dfieldbegins@{z\+M\+Dfieldbegins}}
+\index{z\+M\+Dfieldbegins@{z\+M\+Dfieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+M\+Dfieldbegins}{zMDfieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+M\+Dfieldbegins}\hypertarget{SpectrometerConstruction_8cc_a69783c655a650a2d465aa29adb99becd}{}\label{SpectrometerConstruction_8cc_a69783c655a650a2d465aa29adb99becd}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+M\+Dfieldends@{z\+M\+Dfieldends}}
+\index{z\+M\+Dfieldends@{z\+M\+Dfieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+M\+Dfieldends}{zMDfieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+M\+Dfieldends}\hypertarget{SpectrometerConstruction_8cc_ac69dbd129f1b938df9976d51f7593e8d}{}\label{SpectrometerConstruction_8cc_ac69dbd129f1b938df9976d51f7593e8d}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q1begins@{z\+Q1begins}}
+\index{z\+Q1begins@{z\+Q1begins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q1begins}{zQ1begins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q1begins}\hypertarget{SpectrometerConstruction_8cc_a63b4d37f848ab857400025988ebc68ac}{}\label{SpectrometerConstruction_8cc_a63b4d37f848ab857400025988ebc68ac}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q1ends@{z\+Q1ends}}
+\index{z\+Q1ends@{z\+Q1ends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q1ends}{zQ1ends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q1ends}\hypertarget{SpectrometerConstruction_8cc_a8825e4bac9c627d0fc56ceb808baee99}{}\label{SpectrometerConstruction_8cc_a8825e4bac9c627d0fc56ceb808baee99}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q1fieldbegins@{z\+Q1fieldbegins}}
+\index{z\+Q1fieldbegins@{z\+Q1fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q1fieldbegins}{zQ1fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q1fieldbegins}\hypertarget{SpectrometerConstruction_8cc_aad92ec801d3e4699e64b73238d977d97}{}\label{SpectrometerConstruction_8cc_aad92ec801d3e4699e64b73238d977d97}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q2begins@{z\+Q2begins}}
+\index{z\+Q2begins@{z\+Q2begins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q2begins}{zQ2begins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q2begins}\hypertarget{SpectrometerConstruction_8cc_a62d0de84d7d6b0923e982b354afad285}{}\label{SpectrometerConstruction_8cc_a62d0de84d7d6b0923e982b354afad285}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q2ends@{z\+Q2ends}}
+\index{z\+Q2ends@{z\+Q2ends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q2ends}{zQ2ends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q2ends}\hypertarget{SpectrometerConstruction_8cc_a0389aed4a205ff7970a9c57db9776625}{}\label{SpectrometerConstruction_8cc_a0389aed4a205ff7970a9c57db9776625}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q2fieldbegins@{z\+Q2fieldbegins}}
+\index{z\+Q2fieldbegins@{z\+Q2fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q2fieldbegins}{zQ2fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q2fieldbegins}\hypertarget{SpectrometerConstruction_8cc_a312fb44f7507d957ccc70c34d5d94a43}{}\label{SpectrometerConstruction_8cc_a312fb44f7507d957ccc70c34d5d94a43}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q2fieldends@{z\+Q2fieldends}}
+\index{z\+Q2fieldends@{z\+Q2fieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q2fieldends}{zQ2fieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q2fieldends}\hypertarget{SpectrometerConstruction_8cc_a92fc8c51d58e20801f34d52f8a2c7a2b}{}\label{SpectrometerConstruction_8cc_a92fc8c51d58e20801f34d52f8a2c7a2b}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q3begins@{z\+Q3begins}}
+\index{z\+Q3begins@{z\+Q3begins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q3begins}{zQ3begins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q3begins}\hypertarget{SpectrometerConstruction_8cc_a12daa717eecd47b0ce06c1314040fc3c}{}\label{SpectrometerConstruction_8cc_a12daa717eecd47b0ce06c1314040fc3c}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q3ends@{z\+Q3ends}}
+\index{z\+Q3ends@{z\+Q3ends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q3ends}{zQ3ends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q3ends}\hypertarget{SpectrometerConstruction_8cc_aa309293d04a3e9edd55505001bb8842f}{}\label{SpectrometerConstruction_8cc_aa309293d04a3e9edd55505001bb8842f}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q3fieldbegins@{z\+Q3fieldbegins}}
+\index{z\+Q3fieldbegins@{z\+Q3fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q3fieldbegins}{zQ3fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q3fieldbegins}\hypertarget{SpectrometerConstruction_8cc_a077f13a115281633166d7450d5f26fa0}{}\label{SpectrometerConstruction_8cc_a077f13a115281633166d7450d5f26fa0}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q4begins@{z\+Q4begins}}
+\index{z\+Q4begins@{z\+Q4begins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q4begins}{zQ4begins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q4begins}\hypertarget{SpectrometerConstruction_8cc_ab2b8c71527a18e35d81eb8bd6e7691f4}{}\label{SpectrometerConstruction_8cc_ab2b8c71527a18e35d81eb8bd6e7691f4}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q4ends@{z\+Q4ends}}
+\index{z\+Q4ends@{z\+Q4ends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q4ends}{zQ4ends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q4ends}\hypertarget{SpectrometerConstruction_8cc_aaefdf69418ceee3aabc72a346eef1799}{}\label{SpectrometerConstruction_8cc_aaefdf69418ceee3aabc72a346eef1799}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q4fieldbegins@{z\+Q4fieldbegins}}
+\index{z\+Q4fieldbegins@{z\+Q4fieldbegins}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q4fieldbegins}{zQ4fieldbegins}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q4fieldbegins}\hypertarget{SpectrometerConstruction_8cc_afb3a8a6427088f204ef91b7361831904}{}\label{SpectrometerConstruction_8cc_afb3a8a6427088f204ef91b7361831904}
+\index{Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}!z\+Q4fieldends@{z\+Q4fieldends}}
+\index{z\+Q4fieldends@{z\+Q4fieldends}!Spectrometer\+Construction.\+cc@{Spectrometer\+Construction.\+cc}}
+\subsubsection[{\texorpdfstring{z\+Q4fieldends}{zQ4fieldends}}]{\setlength{\rightskip}{0pt plus 5cm}G4double z\+Q4fieldends}\hypertarget{SpectrometerConstruction_8cc_a2f06aa9a2a32a33fa1100ce176ab4636}{}\label{SpectrometerConstruction_8cc_a2f06aa9a2a32a33fa1100ce176ab4636}

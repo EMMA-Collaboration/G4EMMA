@@ -1,0 +1,52 @@
+\hypertarget{group__containers}{}\section{Functions which are containers for, or functions of, other functions}
+\label{group__containers}\index{Functions which are containers for, or functions of, other functions@{Functions which are containers for, or functions of, other functions}}
+Collaboration diagram for Functions which are containers for, or functions of, other functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__containers}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classc2__classic__function__p}{c2\+\_\+classic\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em a container into which any conventional c-\/style function can be dropped, to create a degenerate \hyperlink{classc2__function}{c2\+\_\+function} without derivatives. Mostly useful for sampling into interpolating functions. construct a reference to this with c2\+\_\+classic\+\_\+function()
+
+The factory function \hyperlink{classc2__factory_ae5c9140b2bfcc6416682562b99479974}{c2\+\_\+factory\+::classic\+\_\+function()} creates $\ast$new \hyperlink{classc2__classic__function__p_a8b2d09d67a8835902fd6c684d5b183b7}{c2\+\_\+classic\+\_\+function\+\_\+p()} \end{DoxyCompactList}\item 
+class \hyperlink{classc2__const__ptr}{c2\+\_\+const\+\_\+ptr$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a container for a \hyperlink{classc2__function}{c2\+\_\+function} which handles the reference counting.
+
+It is useful as a smart container to hold a \hyperlink{classc2__function}{c2\+\_\+function} and keep the reference count correct. The recommended way for a class to store a \hyperlink{classc2__function}{c2\+\_\+function} which is handed in from the outside is for it to have a \hyperlink{classc2__ptr}{c2\+\_\+ptr} member into which the passed-\/in function is stored. This way, when the class instance is deleted, it will automatically dereference any function which it was handed. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__ptr}{c2\+\_\+ptr$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a container for a \hyperlink{classc2__function}{c2\+\_\+function} which handles the reference counting. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__typed__ptr}{c2\+\_\+typed\+\_\+ptr$<$ float\+\_\+type, c2\+\_\+class $>$}
+\begin{DoxyCompactList}\small\item\em create a non-\/generic container for a \hyperlink{classc2__function}{c2\+\_\+function} which handles the reference counting. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__plugin__function__p}{c2\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em a container into which any other \hyperlink{classc2__function}{c2\+\_\+function} can be dropped, to allow expressions with replacable components.
+
+It is useful for plugging different Interpolating\+Functions into a \hyperlink{classc2__function}{c2\+\_\+function} expression. It saves a lot of effort in other places with casting away const declarations. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__const__plugin__function__p}{c2\+\_\+const\+\_\+plugin\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em a \hyperlink{classc2__plugin__function__p}{c2\+\_\+plugin\+\_\+function\+\_\+p} which promises not to fiddle with the plugged function.
+
+The factory function \hyperlink{classc2__factory_aebeb20651a347e1fa8f14118faf2588e}{c2\+\_\+factory\+::const\+\_\+plugin\+\_\+function()} creates $\ast$new \hyperlink{classc2__const__plugin__function__p_a443dc7bcbdc6e458673b98aedf53ad56}{c2\+\_\+const\+\_\+plugin\+\_\+function\+\_\+p()} \end{DoxyCompactList}\item 
+class \hyperlink{classc2__scaled__function__p}{c2\+\_\+scaled\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em Create a very lightweight method to return a scalar multiple of another function. \textbackslash{} \textbackslash{}
+
+The factory function \hyperlink{classc2__factory_a81a7b686b7ffa389ad4dcd8d18997332}{c2\+\_\+factory\+::scaled\+\_\+function()} creates $\ast$new \hyperlink{classc2__scaled__function__p}{c2\+\_\+scaled\+\_\+function\+\_\+p}. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__cached__function__p}{c2\+\_\+cached\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em A container into which any other \hyperlink{classc2__function}{c2\+\_\+function} can be dropped.
+
+It allows a function to be pre-\/evaluated at a point, and used at multiple places in an expression efficiently. If it is re-\/evaluated at the previous point, it returns the remembered values; otherwise, it re-\/evauates the function at the new point. \end{DoxyCompactList}\item 
+class \hyperlink{classc2__inverse__function__p}{c2\+\_\+inverse\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create the formal inverse function of another function
+
+for example, given a \hyperlink{classc2__function}{c2\+\_\+function} {\itshape f} \end{DoxyCompactList}\item 
+class \hyperlink{classc2__piecewise__function__p}{c2\+\_\+piecewise\+\_\+function\+\_\+p$<$ float\+\_\+type $>$}
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classc2__function}{c2\+\_\+function} which is a piecewise assembly of other c2\+\_\+functions.
+
+The functions must have increasing, non-\/overlapping domains. Any empty space between functions will be filled with a linear interpolation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

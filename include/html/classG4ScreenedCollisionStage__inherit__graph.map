@@ -1,0 +1,4 @@
+<map id="G4ScreenedCollisionStage" name="G4ScreenedCollisionStage">
+<area shape="rect" id="node2" href="$classG4ScreenedCoulombClassicalKinematics.html" title="{G4ScreenedCoulombClassical\lKinematics\n|# phifunc\l# xovereps\l# diff\l|+ G4ScreenedCoulombClassical\lKinematics()\l+ DoCollisionStep()\l+ DoScreeningComputation()\l+ ~G4ScreenedCoulombClassical\lKinematics()\l}" alt="" coords="5,145,225,340"/>
+<area shape="rect" id="node3" href="$classG4SingleScatter.html" title="{G4SingleScatter\n||+ G4SingleScatter()\l+ DoCollisionStep()\l+ ~G4SingleScatter()\l}" alt="" coords="249,189,395,296"/>
+</map>

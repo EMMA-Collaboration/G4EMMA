@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['usercharge',['userCharge',['../BGField1_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField1.hh'],['../BGField2_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField2.hh'],['../BGField3_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField3.hh'],['../BGField4_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField4.hh'],['../BGField5_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField5.hh'],['../BGField6_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField6.hh'],['../BGField7_8hh.html#a2d61cdd1b1b5ed409f7c91b54737c1b9',1,'userCharge():&#160;BGField7.hh']]],
+  ['userdir',['UserDir',['../EMMADetectorConstruction_8hh.html#a8558631b93942e4ae79b3feb21c97c8f',1,'UserDir():&#160;EMMADetectorConstruction.hh'],['../EMMAPrimaryGeneratorAction_8hh.html#a8558631b93942e4ae79b3feb21c97c8f',1,'UserDir():&#160;EMMAPrimaryGeneratorAction.hh'],['../SpectrometerConstruction_8hh.html#a8558631b93942e4ae79b3feb21c97c8f',1,'UserDir():&#160;SpectrometerConstruction.hh']]]
+];

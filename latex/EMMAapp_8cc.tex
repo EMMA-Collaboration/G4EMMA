@@ -1,0 +1,125 @@
+\hypertarget{EMMAapp_8cc}{}\section{E\+M\+M\+Aapp.\+cc File Reference}
+\label{EMMAapp_8cc}\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+{\ttfamily \#include \char`\"{}G4\+Run\+Manager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+U\+Imanager.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Detector\+Construction.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Physics\+List.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Primary\+Generator\+Action.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Event\+Action.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Stepping\+Action.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Stepping\+Verbose.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tracking\+Action.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Stacking\+Action.\+hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G4\+Event.\+hh\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+Include dependency graph for E\+M\+M\+Aapp.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EMMAapp_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{EMMAapp_8cc_a9c3d1609dab49b55541e7a55935dec66}{Read\+User\+Input\+\_\+\+Beam} (G4\+String \&s1, G4\+String \&s2, G4\+String \&s3, G4\+String \&s4, G4\+String \&s5, G4\+String \&s6, G4\+String \&s7, G4\+String \&s8)
+\item 
+void \hyperlink{EMMAapp_8cc_a243acf7fbf6807f825e460762776e7c5}{Read\+User\+Input\+\_\+\+Reaction} (G4\+String \&s1, G4\+String \&s2, G4\+String \&s3, G4\+String \&s4, G4\+String \&s5, G4\+String \&s6, G4\+String \&s7, G4\+String \&s8, G4\+String \&s9, G4\+String \&s10, G4\+String \&s11, G4\+String \&s12, G4double \&s13)
+\item 
+void \hyperlink{EMMAapp_8cc_aff2065a5a30dacccfa52f346dbf4586c}{Read\+User\+Input\+\_\+\+Central\+Trajectory} (G4\+String \&s1, G4\+String \&s2, G4\+String \&s3, G4\+String \&s4)
+\item 
+int \hyperlink{EMMAapp_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+G4\+String \hyperlink{EMMAapp_8cc_a28a3faf9b4768b420044f0d81fa645b7}{Mother\+Dir}
+\item 
+G4\+String \hyperlink{EMMAapp_8cc_a8558631b93942e4ae79b3feb21c97c8f}{User\+Dir}
+\item 
+G4int \hyperlink{EMMAapp_8cc_a9692863287fc6c571e3d80523f52aaec}{N\+O\+Hslits1} =0
+\item 
+G4int \hyperlink{EMMAapp_8cc_a5a1b8ea664140faf390f322e99ff9eae}{N\+O\+Hslits2} =0
+\item 
+G4int \hyperlink{EMMAapp_8cc_acd5e5641cf42ac1ee6029f01552f1242}{N\+O\+Hslits3} =0
+\item 
+G4int \hyperlink{EMMAapp_8cc_a2999d2feb52b63936e73e99587a94643}{N\+O\+Hslits4} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!main@{main}}
+\index{main@{main}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{EMMAapp_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{EMMAapp_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!Read\+User\+Input\+\_\+\+Beam@{Read\+User\+Input\+\_\+\+Beam}}
+\index{Read\+User\+Input\+\_\+\+Beam@{Read\+User\+Input\+\_\+\+Beam}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{Read\+User\+Input\+\_\+\+Beam(\+G4\+String \&s1, G4\+String \&s2, G4\+String \&s3, G4\+String \&s4, G4\+String \&s5, G4\+String \&s6, G4\+String \&s7, G4\+String \&s8)}{ReadUserInput_Beam(G4String &s1, G4String &s2, G4String &s3, G4String &s4, G4String &s5, G4String &s6, G4String &s7, G4String &s8)}}]{\setlength{\rightskip}{0pt plus 5cm}void Read\+User\+Input\+\_\+\+Beam (
+\begin{DoxyParamCaption}
+\item[{G4\+String \&}]{s1, }
+\item[{G4\+String \&}]{s2, }
+\item[{G4\+String \&}]{s3, }
+\item[{G4\+String \&}]{s4, }
+\item[{G4\+String \&}]{s5, }
+\item[{G4\+String \&}]{s6, }
+\item[{G4\+String \&}]{s7, }
+\item[{G4\+String \&}]{s8}
+\end{DoxyParamCaption}
+)}\hypertarget{EMMAapp_8cc_a9c3d1609dab49b55541e7a55935dec66}{}\label{EMMAapp_8cc_a9c3d1609dab49b55541e7a55935dec66}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!Read\+User\+Input\+\_\+\+Central\+Trajectory@{Read\+User\+Input\+\_\+\+Central\+Trajectory}}
+\index{Read\+User\+Input\+\_\+\+Central\+Trajectory@{Read\+User\+Input\+\_\+\+Central\+Trajectory}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{Read\+User\+Input\+\_\+\+Central\+Trajectory(\+G4\+String \&s1, G4\+String \&s2, G4\+String \&s3, G4\+String \&s4)}{ReadUserInput_CentralTrajectory(G4String &s1, G4String &s2, G4String &s3, G4String &s4)}}]{\setlength{\rightskip}{0pt plus 5cm}void Read\+User\+Input\+\_\+\+Central\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{G4\+String \&}]{s1, }
+\item[{G4\+String \&}]{s2, }
+\item[{G4\+String \&}]{s3, }
+\item[{G4\+String \&}]{s4}
+\end{DoxyParamCaption}
+)}\hypertarget{EMMAapp_8cc_aff2065a5a30dacccfa52f346dbf4586c}{}\label{EMMAapp_8cc_aff2065a5a30dacccfa52f346dbf4586c}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!Read\+User\+Input\+\_\+\+Reaction@{Read\+User\+Input\+\_\+\+Reaction}}
+\index{Read\+User\+Input\+\_\+\+Reaction@{Read\+User\+Input\+\_\+\+Reaction}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{Read\+User\+Input\+\_\+\+Reaction(\+G4\+String \&s1, G4\+String \&s2, G4\+String \&s3, G4\+String \&s4, G4\+String \&s5, G4\+String \&s6, G4\+String \&s7, G4\+String \&s8, G4\+String \&s9, G4\+String \&s10, G4\+String \&s11, G4\+String \&s12, G4double \&s13)}{ReadUserInput_Reaction(G4String &s1, G4String &s2, G4String &s3, G4String &s4, G4String &s5, G4String &s6, G4String &s7, G4String &s8, G4String &s9, G4String &s10, G4String &s11, G4String &s12, G4double &s13)}}]{\setlength{\rightskip}{0pt plus 5cm}void Read\+User\+Input\+\_\+\+Reaction (
+\begin{DoxyParamCaption}
+\item[{G4\+String \&}]{s1, }
+\item[{G4\+String \&}]{s2, }
+\item[{G4\+String \&}]{s3, }
+\item[{G4\+String \&}]{s4, }
+\item[{G4\+String \&}]{s5, }
+\item[{G4\+String \&}]{s6, }
+\item[{G4\+String \&}]{s7, }
+\item[{G4\+String \&}]{s8, }
+\item[{G4\+String \&}]{s9, }
+\item[{G4\+String \&}]{s10, }
+\item[{G4\+String \&}]{s11, }
+\item[{G4\+String \&}]{s12, }
+\item[{G4double \&}]{s13}
+\end{DoxyParamCaption}
+)}\hypertarget{EMMAapp_8cc_a243acf7fbf6807f825e460762776e7c5}{}\label{EMMAapp_8cc_a243acf7fbf6807f825e460762776e7c5}
+
+
+\subsection{Variable Documentation}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!Mother\+Dir@{Mother\+Dir}}
+\index{Mother\+Dir@{Mother\+Dir}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{Mother\+Dir}{MotherDir}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String Mother\+Dir}\hypertarget{EMMAapp_8cc_a28a3faf9b4768b420044f0d81fa645b7}{}\label{EMMAapp_8cc_a28a3faf9b4768b420044f0d81fa645b7}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!N\+O\+Hslits1@{N\+O\+Hslits1}}
+\index{N\+O\+Hslits1@{N\+O\+Hslits1}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{N\+O\+Hslits1}{NOHslits1}}]{\setlength{\rightskip}{0pt plus 5cm}G4int N\+O\+Hslits1 =0}\hypertarget{EMMAapp_8cc_a9692863287fc6c571e3d80523f52aaec}{}\label{EMMAapp_8cc_a9692863287fc6c571e3d80523f52aaec}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!N\+O\+Hslits2@{N\+O\+Hslits2}}
+\index{N\+O\+Hslits2@{N\+O\+Hslits2}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{N\+O\+Hslits2}{NOHslits2}}]{\setlength{\rightskip}{0pt plus 5cm}G4int N\+O\+Hslits2 =0}\hypertarget{EMMAapp_8cc_a5a1b8ea664140faf390f322e99ff9eae}{}\label{EMMAapp_8cc_a5a1b8ea664140faf390f322e99ff9eae}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!N\+O\+Hslits3@{N\+O\+Hslits3}}
+\index{N\+O\+Hslits3@{N\+O\+Hslits3}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{N\+O\+Hslits3}{NOHslits3}}]{\setlength{\rightskip}{0pt plus 5cm}G4int N\+O\+Hslits3 =0}\hypertarget{EMMAapp_8cc_acd5e5641cf42ac1ee6029f01552f1242}{}\label{EMMAapp_8cc_acd5e5641cf42ac1ee6029f01552f1242}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!N\+O\+Hslits4@{N\+O\+Hslits4}}
+\index{N\+O\+Hslits4@{N\+O\+Hslits4}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{N\+O\+Hslits4}{NOHslits4}}]{\setlength{\rightskip}{0pt plus 5cm}G4int N\+O\+Hslits4 =0}\hypertarget{EMMAapp_8cc_a2999d2feb52b63936e73e99587a94643}{}\label{EMMAapp_8cc_a2999d2feb52b63936e73e99587a94643}
+\index{E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}!User\+Dir@{User\+Dir}}
+\index{User\+Dir@{User\+Dir}!E\+M\+M\+Aapp.\+cc@{E\+M\+M\+Aapp.\+cc}}
+\subsubsection[{\texorpdfstring{User\+Dir}{UserDir}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+String User\+Dir}\hypertarget{EMMAapp_8cc_a8558631b93942e4ae79b3feb21c97c8f}{}\label{EMMAapp_8cc_a8558631b93942e4ae79b3feb21c97c8f}

@@ -1,0 +1,257 @@
+\hypertarget{classEMMAGlobalField}{}\section{E\+M\+M\+A\+Global\+Field Class Reference}
+\label{classEMMAGlobalField}\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+
+
+{\ttfamily \#include \char`\"{}E\+M\+M\+A\+Global\+Field.\+hh\char`\"{}}
+
+
+
+Inheritance diagram for E\+M\+M\+A\+Global\+Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classEMMAGlobalField__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for E\+M\+M\+A\+Global\+Field\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classEMMAGlobalField__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEMMAGlobalField_aa7da25d6b1bd0dcb2de9c1abff624d06}{E\+M\+M\+A\+Global\+Field} ()
+\item 
+\hyperlink{classEMMAGlobalField_aa9210ce2f1f4f7b84c59dacb2ddaa4f4}{E\+M\+M\+A\+Global\+Field} (const \hyperlink{classEMMAGlobalField}{E\+M\+M\+A\+Global\+Field} \&)
+\item 
+virtual void \hyperlink{classEMMAGlobalField_ac88fc8d757a71e47c720d9954a575d92}{Get\+Field\+Value} (const G4double $\ast$point, G4double $\ast$field) const 
+\item 
+virtual G4bool \hyperlink{classEMMAGlobalField_a92e2746d98c6504ff36881afd3a96628}{Does\+Field\+Change\+Energy} () const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEMMAGlobalField_a92e2746d98c6504ff36881afd3a96628}{Does\+Field\+Change\+Energy()} returns true. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_a42a0c7aa1746b0f11c3be62e7c7da49c}{Add\+Element\+Field} (\hyperlink{classEMMAElementField}{E\+M\+M\+A\+Element\+Field} $\ast$f)
+\item 
+void \hyperlink{classEMMAGlobalField_a82ae7d2395858dbc63145e1f00a73c72}{Clear} ()
+\item 
+void \hyperlink{classEMMAGlobalField_a89ebf29cff77048404ea6955333d5ae3}{Update\+Field} ()
+\begin{DoxyCompactList}\small\item\em updates all field tracking objects and \hyperlink{classEMMAGlobalField_a82ae7d2395858dbc63145e1f00a73c72}{Clear()} \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_affba41c140eb80d7815e659e8633da3f}{Set\+Stepper\+Type} (G4int i)
+\begin{DoxyCompactList}\small\item\em Set the Stepper types. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_aeeded90085be4bfec4fc248550dc389d}{Set\+Stepper} ()
+\begin{DoxyCompactList}\small\item\em Set the Stepper. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_a74172566a3711b8a6195cb0c2d3dd913}{Set\+Min\+Step} (G4double stp)
+\begin{DoxyCompactList}\small\item\em Set the minimum step length. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_a722745942e02c644f2c77594dcd9be10}{Set\+Delta\+Chord} (G4double dcr)
+\begin{DoxyCompactList}\small\item\em Set the delta chord length. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_ab441674d282ecec31aca00ced9d39395}{Set\+Delta\+One\+Step} (G4double stp)
+\begin{DoxyCompactList}\small\item\em Set the delta one step length. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_ac5f63326e36ca8aee6e2b57489d1aebf}{Set\+Delta\+Intersection} (G4double its)
+\begin{DoxyCompactList}\small\item\em Set the delta intersection length. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_a9fe3615c5d73f4822e7d1a943bc8438c}{Set\+Eps\+Min} (G4double eps)
+\begin{DoxyCompactList}\small\item\em Set the minimum eps length. \end{DoxyCompactList}\item 
+void \hyperlink{classEMMAGlobalField_ad31573ebe91b18d3de81365ff5c02b0b}{Set\+Eps\+Max} (G4double eps)
+\begin{DoxyCompactList}\small\item\em Set the maximum eps length. \end{DoxyCompactList}\item 
+\hyperlink{EMMAGlobalField_8hh_a40431785b28c5a3bdd4df87d5f637c5b}{Field\+List} $\ast$ \hyperlink{classEMMAGlobalField_a44035b4b2d642ec3faa2719bc6ed6b06}{Get\+Fields} ()
+\begin{DoxyCompactList}\small\item\em Return the list of Element Fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classEMMAGlobalField}{E\+M\+M\+A\+Global\+Field} $\ast$ \hyperlink{classEMMAGlobalField_a7824c5b6a605797979abe3e9c20bac3c}{Get\+Object} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G4\+Field\+Manager $\ast$ \hyperlink{classEMMAGlobalField_a5a447e35fe4336d12b0635298e9dce51}{Get\+Global\+Field\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Get the global field manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Global\+Field()}{EMMAGlobalField()}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Global\+Field\+::\+E\+M\+M\+A\+Global\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAGlobalField_aa7da25d6b1bd0dcb2de9c1abff624d06}{}\label{classEMMAGlobalField_aa7da25d6b1bd0dcb2de9c1abff624d06}
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{E\+M\+M\+A\+Global\+Field(const E\+M\+M\+A\+Global\+Field \&)}{EMMAGlobalField(const EMMAGlobalField &)}}]{\setlength{\rightskip}{0pt plus 5cm}E\+M\+M\+A\+Global\+Field\+::\+E\+M\+M\+A\+Global\+Field (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\+M\+M\+A\+Global\+Field} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAGlobalField_aa9210ce2f1f4f7b84c59dacb2ddaa4f4}{}\label{classEMMAGlobalField_aa9210ce2f1f4f7b84c59dacb2ddaa4f4}
+
+
+\subsection{Member Function Documentation}
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Add\+Element\+Field@{Add\+Element\+Field}}
+\index{Add\+Element\+Field@{Add\+Element\+Field}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Add\+Element\+Field(\+E\+M\+M\+A\+Element\+Field $\ast$f)}{AddElementField(EMMAElementField *f)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Add\+Element\+Field (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+M\+M\+A\+Element\+Field} $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_a42a0c7aa1746b0f11c3be62e7c7da49c}{}\label{classEMMAGlobalField_a42a0c7aa1746b0f11c3be62e7c7da49c}
+\hyperlink{classEMMAGlobalField_a42a0c7aa1746b0f11c3be62e7c7da49c}{Add\+Element\+Field()} adds the Element\+Field object for a single element to the global field. \index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Clear@{Clear}}
+\index{Clear@{Clear}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Clear()}{Clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAGlobalField_a82ae7d2395858dbc63145e1f00a73c72}{}\label{classEMMAGlobalField_a82ae7d2395858dbc63145e1f00a73c72}
+\hyperlink{classEMMAGlobalField_a82ae7d2395858dbc63145e1f00a73c72}{Clear()} removes all Element\+Field-\/s from the global object, and destroys them. Used before the geometry is completely re-\/created. \index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Does\+Field\+Change\+Energy@{Does\+Field\+Change\+Energy}}
+\index{Does\+Field\+Change\+Energy@{Does\+Field\+Change\+Energy}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Does\+Field\+Change\+Energy() const }{DoesFieldChangeEnergy() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual G4bool E\+M\+M\+A\+Global\+Field\+::\+Does\+Field\+Change\+Energy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classEMMAGlobalField_a92e2746d98c6504ff36881afd3a96628}{}\label{classEMMAGlobalField_a92e2746d98c6504ff36881afd3a96628}
+
+
+\hyperlink{classEMMAGlobalField_a92e2746d98c6504ff36881afd3a96628}{Does\+Field\+Change\+Energy()} returns true. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Get\+Fields@{Get\+Fields}}
+\index{Get\+Fields@{Get\+Fields}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Fields()}{GetFields()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field\+List}$\ast$ E\+M\+M\+A\+Global\+Field\+::\+Get\+Fields (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_a44035b4b2d642ec3faa2719bc6ed6b06}{}\label{classEMMAGlobalField_a44035b4b2d642ec3faa2719bc6ed6b06}
+
+
+Return the list of Element Fields. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Get\+Field\+Value@{Get\+Field\+Value}}
+\index{Get\+Field\+Value@{Get\+Field\+Value}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Field\+Value(const G4double $\ast$point, G4double $\ast$field) const }{GetFieldValue(const G4double *point, G4double *field) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual void E\+M\+M\+A\+Global\+Field\+::\+Get\+Field\+Value (
+\begin{DoxyParamCaption}
+\item[{const G4double $\ast$}]{point, }
+\item[{G4double $\ast$}]{field}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classEMMAGlobalField_ac88fc8d757a71e47c720d9954a575d92}{}\label{classEMMAGlobalField_ac88fc8d757a71e47c720d9954a575d92}
+\hyperlink{classEMMAGlobalField_ac88fc8d757a71e47c720d9954a575d92}{Get\+Field\+Value()} returns the field value at a given point\mbox{[}\mbox{]}. field is really field\mbox{[}6\mbox{]}\+: Bx,By,Bz,Ex,Ey,Ez. point\mbox{[}\mbox{]} is in global coordinates\+: x,y,z,t. \index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Get\+Global\+Field\+Manager@{Get\+Global\+Field\+Manager}}
+\index{Get\+Global\+Field\+Manager@{Get\+Global\+Field\+Manager}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Global\+Field\+Manager()}{GetGlobalFieldManager()}}]{\setlength{\rightskip}{0pt plus 5cm}G4\+Field\+Manager$\ast$ E\+M\+M\+A\+Global\+Field\+::\+Get\+Global\+Field\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classEMMAGlobalField_a5a447e35fe4336d12b0635298e9dce51}{}\label{classEMMAGlobalField_a5a447e35fe4336d12b0635298e9dce51}
+
+
+Get the global field manager. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Get\+Object@{Get\+Object}}
+\index{Get\+Object@{Get\+Object}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Get\+Object()}{GetObject()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf E\+M\+M\+A\+Global\+Field}$\ast$ E\+M\+M\+A\+Global\+Field\+::\+Get\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classEMMAGlobalField_a7824c5b6a605797979abe3e9c20bac3c}{}\label{classEMMAGlobalField_a7824c5b6a605797979abe3e9c20bac3c}
+\hyperlink{classEMMAGlobalField_a7824c5b6a605797979abe3e9c20bac3c}{Get\+Object()} returns the single \hyperlink{classEMMAGlobalField}{E\+M\+M\+A\+Global\+Field} object. It is constructed, if necessary. \index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Delta\+Chord@{Set\+Delta\+Chord}}
+\index{Set\+Delta\+Chord@{Set\+Delta\+Chord}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Delta\+Chord(\+G4double dcr)}{SetDeltaChord(G4double dcr)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Delta\+Chord (
+\begin{DoxyParamCaption}
+\item[{G4double}]{dcr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_a722745942e02c644f2c77594dcd9be10}{}\label{classEMMAGlobalField_a722745942e02c644f2c77594dcd9be10}
+
+
+Set the delta chord length. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Delta\+Intersection@{Set\+Delta\+Intersection}}
+\index{Set\+Delta\+Intersection@{Set\+Delta\+Intersection}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Delta\+Intersection(\+G4double its)}{SetDeltaIntersection(G4double its)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Delta\+Intersection (
+\begin{DoxyParamCaption}
+\item[{G4double}]{its}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_ac5f63326e36ca8aee6e2b57489d1aebf}{}\label{classEMMAGlobalField_ac5f63326e36ca8aee6e2b57489d1aebf}
+
+
+Set the delta intersection length. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Delta\+One\+Step@{Set\+Delta\+One\+Step}}
+\index{Set\+Delta\+One\+Step@{Set\+Delta\+One\+Step}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Delta\+One\+Step(\+G4double stp)}{SetDeltaOneStep(G4double stp)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Delta\+One\+Step (
+\begin{DoxyParamCaption}
+\item[{G4double}]{stp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_ab441674d282ecec31aca00ced9d39395}{}\label{classEMMAGlobalField_ab441674d282ecec31aca00ced9d39395}
+
+
+Set the delta one step length. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Eps\+Max@{Set\+Eps\+Max}}
+\index{Set\+Eps\+Max@{Set\+Eps\+Max}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Eps\+Max(\+G4double eps)}{SetEpsMax(G4double eps)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Eps\+Max (
+\begin{DoxyParamCaption}
+\item[{G4double}]{eps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_ad31573ebe91b18d3de81365ff5c02b0b}{}\label{classEMMAGlobalField_ad31573ebe91b18d3de81365ff5c02b0b}
+
+
+Set the maximum eps length. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Eps\+Min@{Set\+Eps\+Min}}
+\index{Set\+Eps\+Min@{Set\+Eps\+Min}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Eps\+Min(\+G4double eps)}{SetEpsMin(G4double eps)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Eps\+Min (
+\begin{DoxyParamCaption}
+\item[{G4double}]{eps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_a9fe3615c5d73f4822e7d1a943bc8438c}{}\label{classEMMAGlobalField_a9fe3615c5d73f4822e7d1a943bc8438c}
+
+
+Set the minimum eps length. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Min\+Step@{Set\+Min\+Step}}
+\index{Set\+Min\+Step@{Set\+Min\+Step}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Min\+Step(\+G4double stp)}{SetMinStep(G4double stp)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Min\+Step (
+\begin{DoxyParamCaption}
+\item[{G4double}]{stp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_a74172566a3711b8a6195cb0c2d3dd913}{}\label{classEMMAGlobalField_a74172566a3711b8a6195cb0c2d3dd913}
+
+
+Set the minimum step length. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Stepper@{Set\+Stepper}}
+\index{Set\+Stepper@{Set\+Stepper}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Stepper()}{SetStepper()}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Stepper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAGlobalField_aeeded90085be4bfec4fc248550dc389d}{}\label{classEMMAGlobalField_aeeded90085be4bfec4fc248550dc389d}
+
+
+Set the Stepper. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Set\+Stepper\+Type@{Set\+Stepper\+Type}}
+\index{Set\+Stepper\+Type@{Set\+Stepper\+Type}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Set\+Stepper\+Type(\+G4int i)}{SetStepperType(G4int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Set\+Stepper\+Type (
+\begin{DoxyParamCaption}
+\item[{G4int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classEMMAGlobalField_affba41c140eb80d7815e659e8633da3f}{}\label{classEMMAGlobalField_affba41c140eb80d7815e659e8633da3f}
+
+
+Set the Stepper types. 
+
+\index{E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}!Update\+Field@{Update\+Field}}
+\index{Update\+Field@{Update\+Field}!E\+M\+M\+A\+Global\+Field@{E\+M\+M\+A\+Global\+Field}}
+\subsubsection[{\texorpdfstring{Update\+Field()}{UpdateField()}}]{\setlength{\rightskip}{0pt plus 5cm}void E\+M\+M\+A\+Global\+Field\+::\+Update\+Field (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEMMAGlobalField_a89ebf29cff77048404ea6955333d5ae3}{}\label{classEMMAGlobalField_a89ebf29cff77048404ea6955333d5ae3}
+
+
+updates all field tracking objects and \hyperlink{classEMMAGlobalField_a82ae7d2395858dbc63145e1f00a73c72}{Clear()} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{EMMAGlobalField_8hh}{E\+M\+M\+A\+Global\+Field.\+hh}\end{DoxyCompactItemize}
