@@ -1,7 +1,5 @@
 # Macro for EMMA GEANT4 simulation
 
-
-
 # Prepare beam
 #---------------------------------------------------------------
 /mydet/beamZ 8
