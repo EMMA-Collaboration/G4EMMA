@@ -38,9 +38,9 @@
 #include "G4RotationMatrix.hh"
 
 
-// GLobal variables
+//! Global variables
 extern G4String focalPlaneFileName;
-extern G4String MotherDir; // EMMAapp.cc
+extern G4String MotherDir; //! EMMAapp.cc
 
 
 class G4AttDef;
@@ -49,27 +49,34 @@ class G4AttValue;
 class EMMADriftChamberHit : public G4VHit
 {
 public:
+  //! Two Constructors and a Destructor
   EMMADriftChamberHit();
   EMMADriftChamberHit(G4int z);
   virtual ~EMMADriftChamberHit();
-  //Operators
+  //! Operators
   EMMADriftChamberHit(const EMMADriftChamberHit &right);
   const EMMADriftChamberHit& operator=(const EMMADriftChamberHit &right);
   int operator==(const EMMADriftChamberHit &right) const;
   
+  //! Inline methods
   inline void* operator new(size_t);
   inline void  operator delete(void*);
   //inline void operator delete(void *aHit);  
 
+  //! Inline methods x and y that return a float
   inline float x();
   inline float y();
   
+  //! Virtual methods
   virtual void Draw();
   virtual const std::map<G4String,G4AttDef>* GetAttDefs() const;
   virtual std::vector<G4AttValue>* CreateAttValues() const;
   virtual void Print();
   
 private:
+  //! Private variables layerID of type G4int,
+  //! time, Ekin, dirn, theta, Edep of type G4double,
+  //! localPos, worldPos, Momentum of type G4ThreeVector
   G4int layerID;
   G4double time;
   G4ThreeVector localPos;
@@ -82,6 +89,8 @@ private:
 
   
 public:
+  //! Public methods to get and set layerID, time,
+  //! localPos, worldPos, theta, Momentum, and Ekin
   inline void SetLayerID(G4int z) { layerID = z; }
   inline G4int GetLayerID() const { return layerID; }
   inline void SetTime(G4double t) { time = t; }
@@ -103,8 +112,9 @@ public:
 	
 };
 
+//! EMMADriftChamberHitsCollection counts the number of hits
 typedef G4THitsCollection<EMMADriftChamberHit> EMMADriftChamberHitsCollection;
-
+//! EMMADriftChamberHitAllocator allocates hits
 extern G4Allocator<EMMADriftChamberHit> EMMADriftChamberHitAllocator;
 
 inline void* EMMADriftChamberHit::operator new(size_t)
