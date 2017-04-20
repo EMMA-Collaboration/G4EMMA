@@ -53,14 +53,20 @@ class EMMAEventActionMessenger;
 class EMMAEventAction : public G4UserEventAction
 {
   public:
+  //! Constructor and Destructor.
     EMMAEventAction();
     virtual ~EMMAEventAction();
 
   public:
+  //! Public virtual methods BeginOfEventAction and
+  //! EndOfEventAction takes in a G4Event* and returns nothing
     virtual void BeginOfEventAction(const G4Event*);
     virtual void EndOfEventAction(const G4Event*);
 
   private:
+  //! Private variables DHC2ID of type G4int, localPos of type
+  //! G4ThreeVector, and theta, Edep, Ekin, fp_pos[2], fp_theta,
+  //! fp_Ekin, fp_Edep, fp_posEdep[2], fp_posX all of type G4double
     G4int DHC2ID;
     G4ThreeVector localPos;
     G4double theta;
@@ -68,14 +74,23 @@ class EMMAEventAction : public G4UserEventAction
     G4double Ekin;
     G4double fp_pos[2],fp_theta,fp_Ekin,fp_Edep,fp_posEdep[2],fp_posX;
 
+  //! Private variables messenger of type EMMAEventActionMessenger*, and
+  //! verboseLevel of type G4int
     EMMAEventActionMessenger* messenger;
     G4int verboseLevel;
 
+  //! Private method GetHitsCollection takes in a const G4String&, a const
+  //! G4Event*, and returns an EMMAIonChamberHitsCollection* (a count of
+  //! the number of hits, while private method PrintEventStatistics takes in
+  //! two g4double, returns nothing but prints event statistics
     EMMAIonChamberHitsCollection* GetHitsCollection(const G4String& hcName,
 						const G4Event* event) const;
     void PrintEventStatistics(G4double IonChamberEdep, G4double IonChamberTrackLength) const; 
 
 #ifdef G4ANALYSIS_USE
+  //! Private variables rootfile of type TFile*, fp_tree of type TTree*,
+  //! fp_hitpos, fp_hitposEdep both of type TH2F*, and
+  //! fp_hitposX, fp_hitangle, fp_hitEkin, fp_hitEdep, all of type TH1F*, 
 	TFile* rootfile;
 	TTree* fp_tree;
 	TH2F* fp_hitpos;
@@ -87,6 +102,7 @@ class EMMAEventAction : public G4UserEventAction
 #endif // G4ANALYSIS_USE
 
   public:
+  //! Public inline methods to set and get verboseLevel
     inline void SetVerbose(G4int val) { verboseLevel = val; }
     inline G4int GetVerbose() const { return verboseLevel; }
 };
