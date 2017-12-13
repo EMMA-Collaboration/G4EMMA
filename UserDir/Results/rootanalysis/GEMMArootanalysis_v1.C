@@ -28,6 +28,8 @@ void GEMMArootanalysis_v1(){
   Double_t fp_theta;
   Double_t fp_Ekin;
   Double_t fp_Edep;
+  Double_t fp_Edep2;
+  Double_t fp_Edep_Silicon;
   Int_t Nentries;
   string comp[14];
 
@@ -57,14 +59,20 @@ void GEMMArootanalysis_v1(){
   fp_hitEkin->SetDirectory(0);
   TH1F* fp_hitEdep = (TH1F*)f.Get("hitEdep");
   fp_hitEdep->SetDirectory(0);
-  TH2F* fp_hitposEdep = (TH2F*)f.Get("hitposEdep");
-  fp_hitposEdep->SetDirectory(0);
+  TH1F* fp_hitEdep2 = (TH1F*)f.Get("hitEdep2");
+  fp_hitEdep2->SetDirectory(0);
+
+  TH1F* fp_hitEdep_Silicon = (TH1F*)f.Get("hitEdepSilicon");
+  fp_hitEdep_Silicon->SetDirectory(0);
+
+  TH2F* fp_hit2DEdep = (TH2F*)f.Get("hit2DEdep");
+  fp_hit2DEdep->SetDirectory(0);
 
   // Preferences:
   fp_hitpos->SetMarkerStyle(20);
   fp_hitpos->SetMarkerSize(0.5);
-  fp_hitposEdep->SetMarkerStyle(20);
-  fp_hitposEdep->SetMarkerSize(0.5);
+  fp_hit2DEdep->SetMarkerStyle(20);
+  fp_hit2DEdep->SetMarkerSize(0.5);
   
 //plotting histograms (two methods)
 
@@ -82,7 +90,7 @@ void GEMMArootanalysis_v1(){
 
 //method 2: create a new canvas for each histogram
   TCanvas* c2 = new TCanvas("canvas2","GEMMA output",800,500);
-  fp_hitpos->Draw();
+  fp_hitpos->Draw("colz");
   TCanvas* c3 = new TCanvas("canvas3","GEMMA output",800,500);
   fp_hitang->Draw();
   TCanvas* c4 = new TCanvas("canvas4","GEMMA output",800,500);
@@ -92,6 +100,10 @@ void GEMMArootanalysis_v1(){
   TCanvas* c6 = new TCanvas("canvas6","GEMMA output",800,500);
   fp_hitEdep->Draw();
   TCanvas* c7 = new TCanvas("canvas7","GEMMA output",800,500);
-  fp_hitposEdep->Draw();   
+  fp_hitEdep2->Draw();
+  TCanvas* c8 = new TCanvas("canvas8","GEMMA output",800,500);
+  fp_hit2DEdep->Draw("colz");
+  TCanvas* c9 = new TCanvas("canvas9","GEMMA output",800,500);
+  fp_hitEdep_Silicon->Draw();
 
 }

@@ -49,6 +49,9 @@
 #include "EMMADriftChamberHit.hh"
 #include "EMMAIonChamber.hh"
 #include "EMMAIonChamberHit.hh"
+#include "EMMASiliconDetector.hh"
+#include "EMMASiliconDetectorHit.hh"
+
 
 using namespace std;
 
@@ -76,21 +79,34 @@ EMMAEventAction::EMMAEventAction()
   fp_hitpos = new TH2F("hitpos","Focal plane hit position",160,-80,80,60,-30,30);
   fp_hitpos->GetXaxis()->SetTitle("X position (mm)");	//axis labels
   fp_hitpos->GetYaxis()->SetTitle("Y position (mm)");
+
   fp_hitposX = new TH1F("hitposX","Focal Plane X Position",160,-80,80);
   fp_hitposX->GetXaxis()->SetTitle("X position (mm)");	//axis labels
   fp_hitposX->GetYaxis()->SetTitle("Counts");
+
   fp_hitangle = new TH1F("hitangle","Focal plane hit angle",100,0,10);
   fp_hitangle->GetXaxis()->SetTitle("Theta (deg)");	//axis labels
   fp_hitangle->GetYaxis()->SetTitle("Counts");
+
   fp_hitEkin = new TH1F("hitEkin","Focal Plane Ekin",5000,0,200);
   fp_hitEkin->GetXaxis()->SetTitle("Energy (MeV)");
   fp_hitEkin->GetYaxis()->SetTitle("Counts");
-  fp_hitEdep = new TH1F("hitEdep","Edep in Ion Chamber",5000,0,200);
+
+  fp_hitEdep = new TH1F("hitEdep","Edep in Ion Chamber (Front)",400,0,200);
   fp_hitEdep->GetXaxis()->SetTitle("Energy (MeV)");
   fp_hitEdep->GetYaxis()->SetTitle("Counts");
-  fp_hitposEdep = new TH2F("hitposEdep","Position vs Edep",160,-80,80,2000,0,200);
-  fp_hitposEdep->GetXaxis()->SetTitle("x Position (mm)");
-  fp_hitposEdep->GetYaxis()->SetTitle("Edep (MeV)");
+
+  fp_hitEdep2 = new TH1F("hitEdep2","Edep in Ion Chamber (Back)",400,0,200);
+  fp_hitEdep2->GetXaxis()->SetTitle("Energy (MeV)");
+  fp_hitEdep2->GetYaxis()->SetTitle("Counts");
+
+  fp_hitEdep_Silicon = new TH1F("hitEdepSilicon","Edep in Silicon Detector",5000,0,200);
+  fp_hitEdep_Silicon->GetXaxis()->SetTitle("Energy (MeV)");
+  fp_hitEdep_Silicon->GetYaxis()->SetTitle("Counts");
+
+  fp_hit2DEdep = new TH2F("hit2DEdep","Edep IC Front vs Back",160,0,40,160,0,40);
+  fp_hit2DEdep->GetXaxis()->SetTitle("Edep Back (MeV)");
+  fp_hit2DEdep->GetYaxis()->SetTitle("Edep Front (MeV)");
   
   //call root tree and creates branches to store event by event data
   fp_tree = analysisManager->getRoottree();
@@ -99,7 +115,9 @@ EMMAEventAction::EMMAEventAction()
   fp_tree->Branch("fp_theta",&fp_theta,"fp_theta/D");
   fp_tree->Branch("fp_Ekin",&fp_Edep,"fp_Ekin/D");
   fp_tree->Branch("fp_Edep",&fp_Edep,"fp_Edep/D");
-  fp_tree->Branch("fp_posEdep",&fp_posEdep,"fp_posEdep/D");
+  fp_tree->Branch("fp_Edep2",&fp_Edep2,"fp_Edep2/D");
+  fp_tree->Branch("fp_2DEdep",&fp_2DEdep,"fp_2DEdep/D");
+  fp_tree->Branch("fp_EdepSilicon",&fp_Edep_Silicon,"fp_Edep_Silicon/D");
   
 #endif // G4ANALYSIS_USE
 }
@@ -134,7 +152,8 @@ EMMAEventAction::GetHitsCollection(const G4String& hcName,
 }
 
 void EMMAEventAction::PrintEventStatistics(
-				G4double IonChamberEdep, G4double IonChamberTrackLength) const
+				G4double IonChamberEdep, G4double IonChamberTrackLength, 
+				G4double SiliconDetectorEdep, G4double SiliconDetectorTrackLength) const
 {
   // print event statistics
   G4cout
@@ -142,6 +161,10 @@ void EMMAEventAction::PrintEventStatistics(
      << std::setw(7) << G4BestUnit(IonChamberEdep, "Energy")
      <<"	total track length: "
      << std::setw(7) << G4BestUnit(IonChamberTrackLength, "Length")
+     <<" Silicon Detector total energy: "
+     << std::setw(7) << G4BestUnit(SiliconDetectorEdep, "Energy")
+     <<"	total track length: "
+     << std::setw(7) << G4BestUnit(SiliconDetectorTrackLength, "Length")
      <<G4endl;
 }
 
@@ -172,14 +195,21 @@ void EMMAEventAction::EndOfEventAction(const G4Event* event)
          << " " << primary->GetMomentum() << G4endl;
 
   //Get Hits Collection
-  EMMAIonChamberHitsCollection* IonChamberHC
-    = GetHitsCollection("IonChamberHitsCollection", event);
+  EMMAIonChamberHitsCollection* IonChamberFrontHC
+    = GetHitsCollection("IonChamberFrontHitsCollection", event);
+
+  EMMAIonChamberHitsCollection* IonChamberBackHC
+    = GetHitsCollection("IonChamberBackHitsCollection", event);
+
+  EMMAIonChamberHitsCollection* SiliconDetectorHC
+    = GetHitsCollection("SiliconDetectorHitsCollection", event);
 
   //Get hit with total values
-  EMMAIonChamberHit* IonChamberHit = (*IonChamberHC)[IonChamberHC->entries()-1];
+  EMMAIonChamberHit* IonChamberFrontHit = (*IonChamberFrontHC)[IonChamberFrontHC->entries()-1];
 
-  PrintEventStatistics(
-	IonChamberHit->GetEdep(), IonChamberHit->GetTrackLength());
+  EMMAIonChamberHit* IonChamberBackHit = (*IonChamberBackHC)[IonChamberBackHC->entries()-1];
+
+  EMMAIonChamberHit* SiliconDetectorHit = (*SiliconDetectorHC)[SiliconDetectorHC->entries()-1];  // <<< I know. Don't judge me. 
 
   if(DHC2)
   {
@@ -197,19 +227,27 @@ void EMMAEventAction::EndOfEventAction(const G4Event* event)
             localPos = aHit->GetLocalPos();	//local position at focal plane
             theta = aHit->GetTheta()/deg; //angle at focal place
 	    Ekin = aHit->GetEkin()/MeV;
-	    Edep = IonChamberHit->GetEdep();
+	    Edep = IonChamberFrontHit->GetEdep();
+            Edep2 = IonChamberBackHit->GetEdep();
+	    EdepSilicon = SiliconDetectorHit->GetEdep();
             if (fp_hitpos) fp_hitpos->Fill(localPos.x()/mm, localPos.y()/mm); //fill histogram
 	    if (fp_hitposX) fp_hitposX->Fill(localPos.x()/mm);
             if (fp_hitangle) fp_hitangle->Fill(theta); //fill histogram
 	    if (fp_hitEkin) fp_hitEkin->Fill(Ekin);
 	    if (fp_hitEdep) fp_hitEdep->Fill(Edep);
-	    if (fp_hitposEdep) fp_hitposEdep->Fill(localPos.x()/mm,Edep);
+	    if (fp_hitEdep2) fp_hitEdep2->Fill(Edep2);
+            if (fp_hitEdep_Silicon) fp_hitEdep_Silicon->Fill(EdepSilicon);
+	    if (fp_hit2DEdep) fp_hit2DEdep->Fill(Edep,Edep2);
             if (fp_tree){ //fill branch with position and angle for each event
               fp_pos[0]=localPos.x()/mm;
               fp_pos[1]=localPos.y()/mm;
               fp_theta=theta;
 	      fp_Edep=Edep;
+	      fp_Edep2=Edep2;
+	      fp_Edep_Silicon = EdepSilicon;
               fp_tree->Fill();
+
+		PrintEventStatistics(IonChamberBackHit->GetEdep(), IonChamberBackHit->GetTrackLength(), SiliconDetectorHit->GetEdep(), SiliconDetectorHit->GetTrackLength());
             }
 #endif // G4ANALYSIS_USE
         }

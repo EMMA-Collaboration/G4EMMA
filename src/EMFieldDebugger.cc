@@ -68,7 +68,7 @@ EMFieldDebugger::EMFieldDebugger(int icomp)
   
   //change the step length with nn. To calculate the effective field length use nn=10000.
   //To look at the field shapes nn=3 is sufficient.
-  nn=100;
+  nn=10000;
   G4bool transpose = FALSE; //The fields for the quads are cutoff at the boundary of the volume. The
                             //interference of the B fields of the quads has not been implemented in
                             //gemma1.7. Therefore if you want to calculate the effective field length
@@ -212,7 +212,7 @@ EMFieldDebugger::EMFieldDebugger(int icomp)
     fieldFile<<"Maxfield(kV/cm)"<<"\t"<<sqrt(pow(field[3],2)+pow(field[5],2))<<"\n";
     G4cout<<"Maxfield(kV/cm)"<<"\t"<<sqrt(pow(field[3],2)+pow(field[5],2))<<G4endl;
 
-    n=nn*20;
+    //n=nn*20;
 	
     if(transpose==TRUE){
       worldpos[0]=0;
@@ -233,31 +233,32 @@ EMFieldDebugger::EMFieldDebugger(int icomp)
         }
       }
     } 
-    n=nn*60;
-	
+
+    n=109288;
+
     for(int i=0;i<n;i++){ //before ED1
       worldpos[0]=0;
-      worldpos[2]=/*zED1fieldbegins+*/i*(zED1center/*-zED1fieldbegins*/)/n; //straight line
+      worldpos[2]=i*(zED1center)/n; //straight line
       GlobalField->GetFieldValue(worldpos,field);
-      pathlength=(worldpos[2]/*-zED1fieldbegins*/)/cm;
+      pathlength=(worldpos[2])/cm;
       fieldFile<<pathlength<<"\t"<<10000*sqrt(pow(field[3],2)+pow(field[5],2))<<"\n";
     }
-    n=nn*60;
+    n=174533;
     for(int i=0;i<n;i++){ //inside ED1
       theta = i*angle/n;
       worldpos[0]=xED1center+rED*cos(theta); // the optical axis bends
       worldpos[2]=zED1center+rED*sin(theta);
       GlobalField->GetFieldValue(worldpos,field);
-      pathlength=(zED1center/*-zED1fieldbegins*/+rED*theta)/cm; // = 2*pi*rED*theta/(2*pi)
+      pathlength=(zED1center+rED*theta)/cm; // = 2*pi*rED*theta/(2*pi)
       fieldFile<<pathlength<<"\t"<<10000*sqrt(pow(field[3],2)+pow(field[5],2))<<"\n";
     }
-    n=nn*60;
+    n=122500;
     for(int i=0;i<n;i++){ //after ED1
       delz=i*(zED1fieldends-(zED1center+rED*sin(angle)))/n;
       worldpos[2]=(zED1center+rED*sin(angle))+delz; //straight line at a 20deg angle
       worldpos[0]=(xED1center+rED*cos(angle))-delz*tan(angle);
       GlobalField->GetFieldValue(worldpos,field);
-      pathlength=(zED1center/*-zED1fieldbegins*/+rED*angle+sqrt(pow(delz*tan(angle),2)+pow(delz,2)))/cm; // = 2*pi*rED*angle/(2*pi)
+      pathlength=(zED1center+rED*angle+sqrt(pow(delz*tan(angle),2)+pow(delz,2)))/cm;
       fieldFile<<pathlength<<"\t"<<10000*sqrt(pow(field[3],2)+pow(field[5],2))<<"\n";
     }
   }

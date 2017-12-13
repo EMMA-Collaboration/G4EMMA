@@ -97,7 +97,7 @@ public:
   void initializeBeamSimulation();
   void initializeBeamPreparation();
 
-  void simulateTwoBodyReaction( G4double &Ebeam, G4ThreeVector &dir, G4double &Eejc, G4ThreeVector &dir2 );
+  void simulateTwoBodyReaction( G4double &Ebeam, G4ThreeVector &dir);
 
   inline void SetBeamZ(G4double val) { beamZ = val; }
   inline G4double GetBeamZ() const { return beamZ; }

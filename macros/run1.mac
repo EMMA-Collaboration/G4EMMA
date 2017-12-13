@@ -1,0 +1,20 @@
+###########################
+
+/mydet/centralZ 18
+/mydet/centralA 36
+/mydet/centralQ 13
+/mydet/centralE 50
+/mydet/updategeo
+
+###########################
+/mydet/beamZ 18
+/mydet/beamA 36
+/mydet/beamCharge 13
+/mydet/energy 50 MeV
+/mydet/sigmaEnergy 30
+
+/mydet/nEvents 1000
+/mydet/doPrepare
+/mydet/doBeam
+##########################
+

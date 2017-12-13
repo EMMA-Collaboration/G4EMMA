@@ -115,6 +115,7 @@ private:
   G4double MWPCwindowCathodeSeparation;
   G4double MWPCgasThickness;
   G4double MWPCwindowThickness;
+  G4double ICwindowThick;
   G4double pTorr;
   G4double pTorrIC;
   G4double TCelsius;

@@ -13,7 +13,7 @@ BGField3::BGField3(G4double xoffset, G4double zoffset,G4double zbefore,G4double 
 
 {
 
-  FieldStrength_0 = -35.9634; //2*electricRigidity_0 (EMMADetectorConstruction.cc) in kV/cm
+  FieldStrength_0 = -35.9652; //2*electricRigidity_0 (EMMADetectorConstruction.cc) in kV/cm
 
   Pi = 3.1415926535898;
   for (i = 0; i < 75; i++) data[i] = 0;

@@ -35,6 +35,7 @@
 #include "globals.hh"
 #include "EMMADriftChamberHit.hh"
 #include "EMMAIonChamber.hh"
+#include "EMMASiliconDetector.hh"
 
 #ifdef G4ANALYSIS_USE
 
@@ -65,24 +66,32 @@ class EMMAEventAction : public G4UserEventAction
     G4ThreeVector localPos;
     G4double theta;
     G4double Edep;
+    G4double EdepSilicon;
     G4double Ekin;
-    G4double fp_pos[2],fp_theta,fp_Ekin,fp_Edep,fp_posEdep[2];
+    G4double fp_pos[2],fp_theta,fp_Ekin,fp_Edep,fp_Edep2,fp_2DEdep[2],fp_posX,fp_Edep_Silicon;
 
     EMMAEventActionMessenger* messenger;
     G4int verboseLevel;
 
     EMMAIonChamberHitsCollection* GetHitsCollection(const G4String& hcName,
 						const G4Event* event) const;
-    void PrintEventStatistics(G4double IonChamberEdep, G4double IonChamberTrackLength) const; 
+
+   // EMMASiliconDetectorHitsCollection* GetHitsCollection(const G4String& hcName,
+//						const G4Event* event) const;
+
+    void PrintEventStatistics(G4double IonChamberEdep, G4double IonChamberTrackLength, G4double SiliconDetectorEdep, G4double SiliconDetectorTrackLength) const; 
 
 #ifdef G4ANALYSIS_USE
 	TFile* rootfile;
 	TTree* fp_tree;
 	TH2F* fp_hitpos;
+	TH1F* fp_hitposX;
 	TH1F* fp_hitangle;
         TH1F* fp_hitEkin;
 	TH1F* fp_hitEdep;
-	TH2F* fp_hitposEdep;
+        TH1F* fp_hitEdep2;
+	TH1F* fp_hitEdep_Silicon;
+	TH2F* fp_hit2DEdep;
 #endif // G4ANALYSIS_USE
 
   public:

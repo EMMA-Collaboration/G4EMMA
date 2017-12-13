@@ -61,7 +61,7 @@ EMMASteppingAction::EMMASteppingAction()
 {
 
 #ifdef G4ANALYSIS_USE
-  G4int nelements=16; //number of elements listed below
+  G4int nelements=17; //number of elements listed below
   dead_hit = new TH1I("dead_hit","Dead hits",nelements,0,nelements);	//create root histogram
   dead_hit->GetXaxis()->SetTitle("EMMA component number");	//axis labels
   dead_hit->GetYaxis()->SetTitle("Counts");
@@ -84,6 +84,7 @@ EMMASteppingAction::EMMASteppingAction()
   deadname[13]="hSlits3";
   deadname[14]="vSlits3";
   deadname[15]="MWPCwires"; //if you added elements make sure nelements (number of elements) includes this one
+  deadname[16]="Aperture";
   for(Int_t i=0;i<nelements;i++){ //set axis labels to EMMA component names
     dead_hit->GetXaxis()->SetBinLabel(i+1,deadname[i].c_str());
   }
@@ -287,7 +288,9 @@ void EMMASteppingAction::UserSteppingAction(const G4Step* theStep)
   if (name=="Pipe13WallLogical" || name=="Pipe14WallLogical"){
     deadint=10; //drift space between Q4 and focal plane
   }
-
+   if (name=="apertureLogical"){
+    deadint=16; //aperture
+  }
   // terminate event if trajectory hits a wall or slit
   if(deadint!=0)dead=true;	//hit EMMA wall true
   if (dead==true){

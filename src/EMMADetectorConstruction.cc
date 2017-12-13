@@ -66,6 +66,7 @@
 #include "EMMADetectorConstMessenger.hh"
 #include "EMMADriftChamber.hh"
 #include "EMMAIonChamber.hh"
+#include "EMMASiliconDetector.hh"
 #include "SpectrometerConstruction.hh"
 
 #include "EMFieldDebugger.hh"
@@ -133,6 +134,7 @@ G4VPhysicalVolume* EMMADetectorConstruction::Construct()
   // All managed (deleted) by SDManager
   G4VSensitiveDetector* detector;
   G4VSensitiveDetector* detector2;
+  G4VSensitiveDetector* silicondetector;
   ConstructMaterials();
   	
   // User Limits	
@@ -255,7 +257,7 @@ G4VPhysicalVolume* EMMADetectorConstruction::Construct()
   }
   //
   //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-
+ 
   //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
   //
   //                                               SPECTROMETER
@@ -279,8 +281,7 @@ G4VPhysicalVolume* EMMADetectorConstruction::Construct()
   //
   
   G4double PGACWindowSeparation = 80.*mm;
-  G4double PGACwindowThickness = 1*um;
-  G4double ICwindowThick = 2*um;
+  G4double PGACwindowThickness = 0.9*um;
   G4double PGACwidth = 166*mm;
   G4double PGACheight = 66*mm;
 
@@ -315,39 +316,60 @@ G4VPhysicalVolume* EMMADetectorConstruction::Construct()
   //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
   //
   //                                               Ionization Chamber
-  //    Modified by Naomi Galinski: focal plane is now made of mylar 
-  //
-  //    dimensions: 15.4cm x 5.4cm x 2*DetThick
-  //
   
-  G4double zIonChamber;
+  G4double zIonChamber, zIonChamberFront, zIonChamberBack;
   G4double zIonChamberEntranceWindow;
   G4int nofLayers = 12;
   G4double layerThickness = 2*cm;
+  G4double ICwindowThick = 2*um;
   G4double IC_Thick = nofLayers * layerThickness;
-  // this ensures that upstream edge of Lead block is at Focal Plane:
+  
   zIonChamber = zPGAC + PGACWindowSeparation/2 + PGACwindowThickness + ICwindowThick + IC_Thick/2;
+  zIonChamberFront = zPGAC + PGACWindowSeparation/2 + PGACwindowThickness + ICwindowThick + IC_Thick/4;
+  zIonChamberBack = zPGAC + PGACWindowSeparation/2 + PGACwindowThickness + ICwindowThick + IC_Thick/4 + IC_Thick/2;
   zIonChamberEntranceWindow = zIonChamber - IC_Thick/2 - ICwindowThick/2;
 
-  G4VSolid* IonChamberWindow = new G4Box("IonChamberWindow",(PGACwidth/2),(PGACheight/2),(ICwindowThick/2));
-  
-  G4VSolid* IonChamberSolid = new G4Box("IonChamber",(PGACwidth/2),(PGACheight/2),(IC_Thick/2));
+  G4VSolid* IonChamberWindow = new G4Box("IonChamberWindow",(PGACwidth/2),(PGACheight/2),(ICwindowThick/2)); 
+  G4VSolid* IonChamberSolid_FrontHalf = new G4Box("IonChamber_FrontSolid",(PGACwidth/2),(PGACheight/2),(IC_Thick/4));
+  G4VSolid* IonChamberSolid_BackHalf = new G4Box("IonChamber_BackSolid",(PGACwidth/2),(PGACheight/2),(IC_Thick/4));
   G4VSolid* IonChamberLayerS = new G4Box("IonChamberLayer", (PGACwidth/2),(PGACheight/2),layerThickness);
 
   G4LogicalVolume* IonChamberWindowLogical = new G4LogicalVolume(IonChamberWindow,mylar,"IonChamberWindowLogical",0,0,0);
-
-  G4LogicalVolume* IonChamberLogical = new G4LogicalVolume(IonChamberSolid,Vacuum,"IonChamberLogical",0,0,0);
-  G4LogicalVolume* IonChamberLayerLV = new G4LogicalVolume(IonChamberLayerS, silicon,"IonChamberLayerLV",0,0,0);
+  G4LogicalVolume* IonChamberLogicalFront = new G4LogicalVolume(IonChamberSolid_FrontHalf,Vacuum,"IonChamberLogical_Front",0,0,0);
+  G4LogicalVolume* IonChamberLogicalBack = new G4LogicalVolume(IonChamberSolid_BackHalf,Vacuum,"IonChamberLogical_Back",0,0,0);
+  G4LogicalVolume* IonChamberLayerLV_Front = new G4LogicalVolume(IonChamberLayerS, isobutaneIC,"IonChamberLayerLV_Front",0,0,0);
+  G4LogicalVolume* IonChamberLayerLV_Back = new G4LogicalVolume(IonChamberLayerS, isobutaneIC,"IonChamberLayerLV_Back",0,0,0);
  
-  //new G4PVPlacement(0,G4ThreeVector(0.,0.,zIonChamberEntranceWindow),IonChamberWindowLogical, "IonChamberWindow",worldLogical,0,0,fCheckOverlaps);
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,zIonChamberEntranceWindow),IonChamberWindowLogical, "IonChamberWindow",worldLogical,0,0,fCheckOverlaps);
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,zIonChamberFront),IonChamberLogicalFront, "IonChamberFrontPhys",worldLogical,0,0,fCheckOverlaps);
+   new G4PVPlacement(0,G4ThreeVector(0.,0.,zIonChamberBack),IonChamberLogicalBack, "IonChamberBackPhys",worldLogical,0,0,fCheckOverlaps);
 
-  new G4PVPlacement(0,G4ThreeVector(0.,0.,zIonChamber),IonChamberLogical, "IonChamberPhys",worldLogical,0,0,fCheckOverlaps);
-  new G4PVReplica("IonChamberLayer",
-			IonChamberLayerLV,
-			IonChamberLogical,
+  new G4PVReplica("IonChamberLayer_Front",
+			IonChamberLayerLV_Front,
+			IonChamberLogicalFront,
 			kZAxis,
-			nofLayers,
+			nofLayers/2,
 			layerThickness);
+   new G4PVReplica("IonChamberLayer_Back",
+			IonChamberLayerLV_Back,
+			IonChamberLogicalBack,
+			kZAxis,
+			nofLayers/2,
+			layerThickness);
+  
+  //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+  //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+  //
+  //                                            Silicon Detector
+  //
+
+  G4double SiliconDetThickness = 1*cm;
+  G4double zSiliconDet = zIonChamber + IC_Thick + ICwindowThick + 5*cm + SiliconDetThickness/2;
+
+  G4VSolid* SiliconDetSolid = new G4Box("siliconDetector",(PGACwidth/2),(PGACheight/2),(SiliconDetThickness/2));
+  G4LogicalVolume* SiliconDetLogical = new G4LogicalVolume(SiliconDetSolid,silicon,"SiliconDetLogical",0,0,0);
+  new G4PVPlacement(0,G4ThreeVector(0.,0.,zSiliconDet),SiliconDetLogical, "SiliconDetPhys",worldLogical,0,0,fCheckOverlaps);
   
   //
   //
@@ -363,11 +385,31 @@ G4VPhysicalVolume* EMMADetectorConstruction::Construct()
   SDman->AddNewDetector(detector);
   PGAC_FP_Logical->SetSensitiveDetector(detector);
   
-  EMMAIonChamber* IonChamber
-    = new EMMAIonChamber("IonChamber", "IonChamberHitsCollection", nofLayers);
-  SDman->AddNewDetector(IonChamber);
-  IonChamberLayerLV->SetSensitiveDetector(IonChamber);
+  EMMAIonChamber* IonChamberFront
+    = new EMMAIonChamber("IonChamberFront", "IonChamberFrontHitsCollection", nofLayers/2);
+  SDman->AddNewDetector(IonChamberFront);
+  IonChamberLayerLV_Front->SetSensitiveDetector(IonChamberFront);
 
+  EMMAIonChamber* IonChamberBack
+    = new EMMAIonChamber("IonChamberBack", "IonChamberBackHitsCollection", nofLayers);
+  SDman->AddNewDetector(IonChamberBack);
+  IonChamberLayerLV_Back->SetSensitiveDetector(IonChamberBack);
+
+  EMMAIonChamber* SiliconDetector
+    = new EMMAIonChamber("SiliconDetector", "SiliconDetectorHitsCollection", nofLayers);
+  SDman->AddNewDetector(SiliconDetector);
+  SiliconDetLogical->SetSensitiveDetector(SiliconDetector);
+
+//  EMMASiliconDetector* SiliconDetector
+//   = new EMMASiliconDetector("SiliconDetector", "SiliconDetectorHitsCollection", 1);
+ // SDman->AddNewDetector(SiliconDetector);
+//  SiliconDetLogical->SetSensitiveDetector(SiliconDetector);
+/*
+  EMMAIonChamber* IonChamber
+    = new EMMAIonChamber("IonChamber", "IonChamberHitsCollection", 1);
+  SDman->AddNewDetector(IonChamber);
+  SiliconDetLogical->SetSensitiveDetector(IonChamber);
+*/
   //detector2 = new EMMADriftChamber(SDname="/detector2");
   //SDman->AddNewDetector(detector2);
   //IonChamberLogical->SetSensitiveDetector(detector2);
@@ -399,7 +441,7 @@ G4VPhysicalVolume* EMMADetectorConstruction::Construct()
   G4cout << G4endl << "(Uncomment 'DumpGeometricalTree(worldPhysical)' line in "
     "EMMADetectorConstruction.cc if you don't see the list.)" << G4endl << G4endl;
 //************************** if I forget: uncomment this. Useful output on volumes created
-  DumpGeometricalTree(worldPhysical);
+  //DumpGeometricalTree(worldPhysical);
   
   return worldPhysical;
 
@@ -509,8 +551,8 @@ void EMMADetectorConstruction::ConstructMaterials()
 
   // iso-Butane (methylpropane), STP
   G4double density0 = 2.51*mg/cm3;
-  G4double p0=100; // kPA
-  G4double p=pTorr*0.133322368; // kPA
+  G4double p0=760; // kPA
+  G4double p=pTorr; // kPA
   G4double p2=pTorrIC; //kPA
   G4double T0=288.15; // K
   G4double T=273.15+TCelsius; // K
@@ -580,7 +622,20 @@ void EMMADetectorConstruction::CalculateScalingFactors()
   // rigidities of central trajectory
   G4double excitationEnergy = 0.*keV;
   G4ParticleDefinition* ic = G4ParticleTable::GetParticleTable()->GetIon(centralZ,centralA,excitationEnergy);
-  G4double mc = ic->GetPDGMass();
+
+  G4double mc = centralA*931.4940954;  //(centralZ - centralQ)*0.510998910;
+  //G4double mc = ic->GetPDGMass();
+
+  G4cout << "central mass: " << centralA << endl;
+ // G4cout << "centralA: " << centralA <<endl;
+ // G4cout << "central mass propper: " << mc1 << endl;
+
+  //G4ParticleDefinition* particle = G4ParticleTable::GetParticleTable()->FindParticle("proton");
+  //G4ParticleDefinition* particle = particleTable->FindParticle("proton");
+  //G4double mass_proton = particle->GetPDGMass();
+  //G4cout << "proton mass: " << mass_proton << endl;
+
+
   G4double pc = std::sqrt((centralE + mc)*(centralE + mc)-(mc*mc));
   G4double magneticRigidity = pc/Qc;
   G4double vc = pc/(centralE+mc);

@@ -24,10 +24,10 @@ BGField3::BGField3(G4double xoffset, G4double zoffset,G4double zbefore,G4double 
   data[3] = 1;
   data[10] = zbefore/cm; //drift length before quad
   data[11] = zafter/cm; //drift length after quad
-  data[12] = 12.5;
+  data[12] = 12.5; // gap
   data[13] = 500; //radius of ED in cm
   data[14] = FieldStrength_0;
-  data[15] = 20;	//20.024; //angle subtended by ED in deg (modified to get correct eff. field length)
+  data[15] = 20;  //angle subtended by ED in deg (modified to get correct eff. field length)
   data[24] = 50;
   data[25] = -25;
   data[26] = -25;

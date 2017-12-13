@@ -1,45 +1,41 @@
 # Macro for EMMA GEANT4 simulation
 
-
-
 # Prepare beam
 #---------------------------------------------------------------
-/mydet/beamZ 8
-/mydet/beamA 16
-/mydet/beamCharge 8
-/mydet/energy 90.1 MeV
-/mydet/sigmaEnergy 1           # beam-energy resolution (sigma) in percent of beam energy
-#/mydet/Angle 0.036 deg   	  # beam angle sampled uniformly between 0 and theta=sigmaAngle
+/mydet/beamZ 38
+/mydet/beamA 84
+/mydet/beamCharge 25
+/mydet/energy 164 MeV
+/mydet/sigmaEnergy 0.01         # beam-energy resolution (sigma) in percent of beam energy
+/mydet/Angle 0.0 deg   	  	# beam angle sampled uniformly between 0 and theta=sigmaAngle
 /mydet/beamSpotDiameter 1.0 mm
-#/mydet/transEmittance 2.0 mm
+/mydet/transEmittance 0.20 mm
 #---------------------------------------------------------------
-
-
 
 # Add nuclear-reaction process: 
 # (Z1,A1)+(Z2,A2)->(Z3,A3)+(Z4,A4)
 #-----------------------------------------
-/twoBodyReaction/Z1 8         
-/twoBodyReaction/A1 17         
-/twoBodyReaction/Z2 3         
-/twoBodyReaction/A2 6         
-/twoBodyReaction/Z3 10         
-/twoBodyReaction/A3 21         
-/twoBodyReaction/Z4 1        
-/twoBodyReaction/A4 2         
-/twoBodyReaction/qmin 0.0   # minimum scattering angle in C.M. (deg)         
-/twoBodyReaction/qmax 1.0   # maximum ...	   
-/twoBodyReaction/Charge3 10   # charge state of fragment 3        
+#/twoBodyReaction/Z1 37         
+#/twoBodyReaction/A1 83         
+#/twoBodyReaction/Z2 1        
+#/twoBodyReaction/A2 2         
+#/twoBodyReaction/Z3 11         
+#/twoBodyReaction/A3 84         
+#/twoBodyReaction/Z4 0        
+#/twoBodyReaction/A4 0         
+#/twoBodyReaction/qmin 0.0   # minimum scattering angle in C.M. (deg)         
+#/twoBodyReaction/qmax 180.0   # maximum ...	   
+#/twoBodyReaction/Charge3 10   # charge state of fragment 3        
 #-----------------------------------------
 
 
 
 # Specify central trajectory
 #----------------------------
-/mydet/centralZ 10
-/mydet/centralA 21
-/mydet/centralQ 10
-/mydet/centralE 37.5
+/mydet/centralZ 38
+/mydet/centralA 84
+/mydet/centralQ 25
+/mydet/centralE 163.0
 /mydet/updategeo           # necessary for changes to take effect
 #----------------------------
 
@@ -53,68 +49,12 @@
 #-----------------------
 
 
-
 # Run simulation
 #-----------------------
-/mydet/nEvents 10     
-/mydet/doPrepare
+/mydet/nEvents 50     
+#/mydet/doPrepare
 /mydet/doBeam
-/mydet/doReaction
-#-----------------------
-
-#-----------------------------------------
-/twoBodyReaction/Z1 8         
-/twoBodyReaction/A1 17         
-/twoBodyReaction/Z2 3         
-/twoBodyReaction/A2 6         
-/twoBodyReaction/Z3 10         
-/twoBodyReaction/A3 20         
-/twoBodyReaction/Z4 1        
-/twoBodyReaction/A4 3         
-/twoBodyReaction/qmin 0.0   # minimum scattering angle in C.M. (deg)         
-/twoBodyReaction/qmax 1.0   # maximum ...	   
-/twoBodyReaction/Charge3 10   # charge state of fragment 3        
-#-----------------------------------------
-#-----------------------
-#/mydet/doPrepare
-#/mydet/doBeam
 #/mydet/doReaction
 #-----------------------
 
 #-----------------------------------------
-/twoBodyReaction/Z1 8         
-/twoBodyReaction/A1 17         
-/twoBodyReaction/Z2 3         
-/twoBodyReaction/A2 6         
-/twoBodyReaction/Z3 9         
-/twoBodyReaction/A3 20         
-/twoBodyReaction/Z4 2        
-/twoBodyReaction/A4 3         
-/twoBodyReaction/qmin 0.0   # minimum scattering angle in C.M. (deg)         
-/twoBodyReaction/qmax 1.0   # maximum ...	   
-/twoBodyReaction/Charge3 9   # charge state of fragment 3        
-#-----------------------------------------
-#-----------------------
-#/mydet/doPrepare
-#/mydet/doBeam
-#/mydet/doReaction
-#-----------------------
-
-#-----------------------------------------
-/twoBodyReaction/Z1 8         
-/twoBodyReaction/A1 17         
-/twoBodyReaction/Z2 3         
-/twoBodyReaction/A2 6         
-/twoBodyReaction/Z3 10         
-/twoBodyReaction/A3 20         
-/twoBodyReaction/Z4 1        
-/twoBodyReaction/A4 3         
-/twoBodyReaction/qmin 0.0   # minimum scattering angle in C.M. (deg)         
-/twoBodyReaction/qmax 1.0   # maximum ...	   
-/twoBodyReaction/Charge3 9   # charge state of fragment 3        
-#-----------------------------------------
-#-----------------------
-#/mydet/doPrepare
-#/mydet/doBeam
-#/mydet/doReaction
-#-----------------------

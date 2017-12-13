@@ -52,7 +52,6 @@ int main(int argc, char *argv[]){
     fgets(line,100,file);
     
     if(first=="ED1" || first=="MD" || first=="ED2"){
-    //if(first=="ED2"){
       if(header<1){ //read in header parameters
         sscanf(line,"%s %s",z,f); //read formatted data from string
         fieldmax=atof(f); //max field strength

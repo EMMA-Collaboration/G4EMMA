@@ -1,0 +1,135 @@
+{
+
+  TChain ch2("fphits");
+  ch2.Add("../Na22beam.root");
+  ch2.Add("../Mg22beam.root");
+  ch2.Add("../Ne22beam.root");
+  ch2.Merge("../beam.root");
+
+  TFile *file = TFile::Open("../beam.root");
+  TFile *file1 = TFile::Open("../Na22beam.root");
+  TFile *file2 = TFile::Open("../Mg22beam.root");
+  TFile *file3 = TFile::Open("../Ne22beam.root");
+
+  TTree *fphits = (TTree*) file->Get("fphits");
+  TTree *fphits1 = (TTree*) file1->Get("fphits");
+  TTree *fphits2 = (TTree*) file2->Get("fphits");
+  TTree *fphits3 = (TTree*) file3->Get("fphits");
+
+  fphits->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+  fphits1->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits1->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+  fphits2->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits2->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+  fphits3->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits3->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//				Plot IC front half vs back half					//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+  TCanvas *c1 = new TCanvas("c1");
+
+  TH2F *icplot1a = new TH2F("icplot1a","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits1->Draw("fp_Edep:fp_Edep2>>icplot1a","","colz");
+  icplot1a->GetXaxis()->SetTitle("Back (MeV)");
+  icplot1a->GetYaxis()->SetTitle("Front (MeV)");
+  icplot1a->SetMarkerColor(1);
+  icplot1a->SetMarkerStyle(20);
+
+  TH2F *icplot1b = new TH2F("icplot1b","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits2->Draw("fp_Edep:fp_Edep2>>icplot1b","","same");
+  icplot1b->SetMarkerColor(2);
+  icplot1b->SetMarkerStyle(21); 
+
+  TH2F *icplot1c = new TH2F("icplot1c","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits3->Draw("fp_Edep:fp_Edep2>>icplot1c","","same");
+  icplot1c->SetMarkerColor(4);
+  icplot1c->SetMarkerStyle(22);
+ 
+  TLegend *leg = new TLegend(0.6,0.7,0.9,0.9);
+  leg->SetHeader("Legend"); // option "C" allows to center the header
+  leg->AddEntry(icplot1a,"Na-22 Beam");
+  leg->AddEntry(icplot1b,"Mg-22 Beam");
+  leg->AddEntry(icplot1c,"Ne-22 Beam");
+  leg->Draw();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//				Plot IC front half IC Total					//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  TCanvas *c2 = new TCanvas("c2");
+
+  TH2F *icplot2a = new TH2F("icplot2a","IC Energy Front vs IC Total",400,0,80,200,0,40);
+  fphits1->Draw("fp_Edep:ictot>>icplot2a","","colz");
+  icplot2a->GetXaxis()->SetTitle("Total (MeV)");
+  icplot2a->GetYaxis()->SetTitle("Front (MeV)");
+  icplot2a->SetMarkerColor(1);
+  icplot2a->SetMarkerStyle(20);
+
+  TH2F *icplot2b = new TH2F("icplot2b","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits2->Draw("fp_Edep:fp_Edep2>>icplot2b","","same");
+  icplot2b->SetMarkerColor(2);
+  icplot2b->SetMarkerStyle(21); 
+
+  TH2F *icplot2c = new TH2F("icplot2c","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits3->Draw("fp_Edep:fp_Edep2>>icplot2c","","same");
+  icplot2c->SetMarkerColor(4);
+  icplot2c->SetMarkerStyle(22);
+
+  leg->Draw();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//				Plot IC Total vs Silicon					//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  TCanvas *c3 = new TCanvas("c3");
+
+  TH2F *icplot3a = new TH2F("icplot3a","IC Energy Total vs Silicon",200,0,40,400,0,80);
+  fphits1->Draw("ictot:fp_EdepSilicon>>icplot3a","","colz");
+  icplot3a->GetXaxis()->SetTitle("Silicon (MeV)");
+  icplot3a->GetYaxis()->SetTitle("IC Total (MeV)");
+  icplot3a->SetMarkerColor(1);
+  icplot3a->SetMarkerStyle(20);
+
+  TH2F *icplot3b = new TH2F("icplot3b","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits2->Draw("fp_Edep:fp_Edep2>>icplot3b","","same");
+  icplot3b->SetMarkerColor(2);
+  icplot3b->SetMarkerStyle(21); 
+
+  TH2F *icplot3c = new TH2F("icplot3c","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits3->Draw("fp_Edep:fp_Edep2>>icplot3c","","same");
+  icplot3c->SetMarkerColor(4);
+  icplot3c->SetMarkerStyle(22);
+
+  leg->Draw();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//				Plot IC Front vs Toal Edep					//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+  TCanvas *c4 = new TCanvas("c4");
+
+  TH2F *icplot4a = new TH2F("icplot4a","IC Energy Front vs IC+Silicon",800,0,160,200,0,40);
+  fphits1->Draw("fp_Edep:fptot>>icplot4a","","colz");
+  icplot4a->GetXaxis()->SetTitle("Total (MeV)");
+  icplot4a->GetYaxis()->SetTitle("IC Front (MeV)");
+  icplot4a->SetMarkerColor(1);
+  icplot4a->SetMarkerStyle(20);
+
+  TH2F *icplot4b = new TH2F("icplot4b","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits2->Draw("fp_Edep:fp_Edep2>>icplot4b","","same");
+  icplot4b->SetMarkerColor(2);
+  icplot4b->SetMarkerStyle(21); 
+
+  TH2F *icplot4c = new TH2F("icplot4c","IC Energy Front vs Back",200,0,40,200,0,40);
+  fphits3->Draw("fp_Edep:fp_Edep2>>icplot4c","","same");
+  icplot4c->SetMarkerColor(4);
+  icplot4c->SetMarkerStyle(22);
+
+  leg->Draw();
+ 
+}

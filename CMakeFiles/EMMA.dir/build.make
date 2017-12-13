@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matthew/G4EMMA
+CMAKE_SOURCE_DIR = /home/mwilliams/Documents/EMMA/G4EMMA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matthew/G4EMMA
+CMAKE_BINARY_DIR = /home/mwilliams/Documents/EMMA/G4EMMA
 
 # Utility rule file for EMMA.
 
@@ -63,6 +63,6 @@ CMakeFiles/EMMA.dir/clean:
 .PHONY : CMakeFiles/EMMA.dir/clean
 
 CMakeFiles/EMMA.dir/depend:
-	cd /home/matthew/G4EMMA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matthew/G4EMMA /home/matthew/G4EMMA /home/matthew/G4EMMA /home/matthew/G4EMMA /home/matthew/G4EMMA/CMakeFiles/EMMA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mwilliams/Documents/EMMA/G4EMMA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mwilliams/Documents/EMMA/G4EMMA /home/mwilliams/Documents/EMMA/G4EMMA /home/mwilliams/Documents/EMMA/G4EMMA /home/mwilliams/Documents/EMMA/G4EMMA /home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles/EMMA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/EMMA.dir/depend
 

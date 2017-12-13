@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matthew/G4EMMA
+CMAKE_SOURCE_DIR = /home/mwilliams/Documents/EMMA/G4EMMA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matthew/G4EMMA
+CMAKE_BINARY_DIR = /home/mwilliams/Documents/EMMA/G4EMMA
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,9 +113,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/G4EMMA/CMakeFiles /home/matthew/G4EMMA/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles /home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/G4EMMA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -936,6 +936,54 @@ src/EMMAPrimaryGeneratorMessenger.cc.s:
 	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMAPrimaryGeneratorMessenger.cc.s
 .PHONY : src/EMMAPrimaryGeneratorMessenger.cc.s
 
+src/EMMASiliconDetector.o: src/EMMASiliconDetector.cc.o
+.PHONY : src/EMMASiliconDetector.o
+
+# target to build an object file
+src/EMMASiliconDetector.cc.o:
+	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMASiliconDetector.cc.o
+.PHONY : src/EMMASiliconDetector.cc.o
+
+src/EMMASiliconDetector.i: src/EMMASiliconDetector.cc.i
+.PHONY : src/EMMASiliconDetector.i
+
+# target to preprocess a source file
+src/EMMASiliconDetector.cc.i:
+	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMASiliconDetector.cc.i
+.PHONY : src/EMMASiliconDetector.cc.i
+
+src/EMMASiliconDetector.s: src/EMMASiliconDetector.cc.s
+.PHONY : src/EMMASiliconDetector.s
+
+# target to generate assembly for a file
+src/EMMASiliconDetector.cc.s:
+	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMASiliconDetector.cc.s
+.PHONY : src/EMMASiliconDetector.cc.s
+
+src/EMMASiliconDetectorHit.o: src/EMMASiliconDetectorHit.cc.o
+.PHONY : src/EMMASiliconDetectorHit.o
+
+# target to build an object file
+src/EMMASiliconDetectorHit.cc.o:
+	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMASiliconDetectorHit.cc.o
+.PHONY : src/EMMASiliconDetectorHit.cc.o
+
+src/EMMASiliconDetectorHit.i: src/EMMASiliconDetectorHit.cc.i
+.PHONY : src/EMMASiliconDetectorHit.i
+
+# target to preprocess a source file
+src/EMMASiliconDetectorHit.cc.i:
+	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMASiliconDetectorHit.cc.i
+.PHONY : src/EMMASiliconDetectorHit.cc.i
+
+src/EMMASiliconDetectorHit.s: src/EMMASiliconDetectorHit.cc.s
+.PHONY : src/EMMASiliconDetectorHit.s
+
+# target to generate assembly for a file
+src/EMMASiliconDetectorHit.cc.s:
+	$(MAKE) -f CMakeFiles/EMMAapp.dir/build.make CMakeFiles/EMMAapp.dir/src/EMMASiliconDetectorHit.cc.s
+.PHONY : src/EMMASiliconDetectorHit.cc.s
+
 src/EMMASteppingAction.o: src/EMMASteppingAction.cc.o
 .PHONY : src/EMMASteppingAction.o
 
@@ -1262,6 +1310,12 @@ help:
 	@echo "... src/EMMAPrimaryGeneratorMessenger.o"
 	@echo "... src/EMMAPrimaryGeneratorMessenger.i"
 	@echo "... src/EMMAPrimaryGeneratorMessenger.s"
+	@echo "... src/EMMASiliconDetector.o"
+	@echo "... src/EMMASiliconDetector.i"
+	@echo "... src/EMMASiliconDetector.s"
+	@echo "... src/EMMASiliconDetectorHit.o"
+	@echo "... src/EMMASiliconDetectorHit.i"
+	@echo "... src/EMMASiliconDetectorHit.s"
 	@echo "... src/EMMASteppingAction.o"
 	@echo "... src/EMMASteppingAction.i"
 	@echo "... src/EMMASteppingAction.s"

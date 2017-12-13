@@ -122,7 +122,7 @@ int main(int argc,char** argv)
 {
 
   // input arguments
-  G4String vis = "visON";
+  G4String vis = "visOFF";
   MotherDir = ".";
   UserDir = MotherDir + "/UserDir/";
   if (argc > 1) vis = argv[1];
@@ -170,7 +170,7 @@ int main(int argc,char** argv)
   // start interactive session
 #ifdef G4VIS_USE
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
-  //if (vis=="visON") UImanager->ApplyCommand("/control/execute visEMMA.mac");   
+  if (vis=="visON") UImanager->ApplyCommand("/control/execute visEMMA.mac");   
   //      UImanager->ApplyCommand("/control/execute BeamSetup.mac");
   
   
@@ -285,7 +285,8 @@ int main(int argc,char** argv)
 #endif
 #ifdef G4UI_USE
   G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-  UImanager->ApplyCommand("/control/execute visEMMA.mac"); 
+  //UImanager->ApplyCommand("/control/execute visEMMA.mac"); 
+  //UImanager->ApplyCommand("/control/execute macros/BeamSetup.mac"); 
   ui->SessionStart();
   delete ui;
 #endif

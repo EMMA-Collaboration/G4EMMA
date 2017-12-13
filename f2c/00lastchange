@@ -1,0 +1,4 @@
+Thu Sep 26 16:42:35 MDT 2013
+  arithchk.c and sysdep1.h0 updated.  The former has a new
+"#ifdef NO_SSZIZE_T" section for use elsewhere.  The latter has a
+change supplied by Gregor Richards for use with some libc variants.

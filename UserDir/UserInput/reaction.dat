@@ -1,14 +1,14 @@
 # Two-body reaction: 1+2->3+4
-50       # Z1 beam
-132      # A1
-1        # Z2 target
-2        # A2
-50       # Z3 recoil
-133      # A3
-1        # Z4 ejectile
-1        # A4
-157.3    # min c.m. angle of ejectile
-180.0    # max c.m. angle of ejectile
-30       # charge state of recoil
+18       # Z1 beam
+40      # A1
+79        # Z2 target
+197        # A2
+79       # Z3 recoil
+197      # A3
+18        # Z4 ejectile
+40        # A4
+172.0    # min c.m. angle
+180.0    # max c.m. angle
+23       # charge state of recoil
 0.0      # excitation energy of recoil
 7        # solid-angle averaged cross section (mb/sr) inside the angular range specified above
