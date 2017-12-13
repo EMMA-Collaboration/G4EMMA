@@ -1,0 +1,2 @@
+/home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles/EMMA.dir
+/home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles/EMMAapp.dir

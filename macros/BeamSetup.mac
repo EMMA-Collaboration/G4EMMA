@@ -1,0 +1,121 @@
+# Macro for EMMA GEANT4 simulation
+
+
+
+# Prepare beam
+#---------------------------------------------------------------
+/mydet/beamZ 18
+/mydet/beamA 40
+/mydet/beamCharge 9
+/mydet/energy 120.0 MeV
+/mydet/sigmaEnergy 0.001           # beam-energy resolution (sigma) in percent of beam energy
+/mydet/Angle 0.4 deg   	           # Set mean incident beam angle.
+/mydet/beamSpotDiameter 1.0 mm
+/mydet/transEmittance 0.2 mm 
+#---------------------------------------------------------------
+
+
+
+# Add nuclear-reaction process: 
+# (Z1,A1)+(Z2,A2)->(Z3,A3)+(Z4,A4)
+#-----------------------------------------
+/twoBodyReaction/Z1 18         
+/twoBodyReaction/A1 40         
+/twoBodyReaction/Z2 79        
+/twoBodyReaction/A2 197         
+/twoBodyReaction/Z3 79         
+/twoBodyReaction/A3 197         
+/twoBodyReaction/Z4 18        
+/twoBodyReaction/A4 40         
+/twoBodyReaction/qmin 172.0   # minimum scattering angle in C.M. (deg)         
+/twoBodyReaction/qmax 180.0   # maximum ...	   
+/twoBodyReaction/Charge3 22   # charge state of fragment 3        
+#-----------------------------------------
+
+# 205.157
+# 203.052
+# 200.980
+# 198.949
+# 196.960
+# 195.010
+# 193.098
+# 191.223
+# 189.385
+# 188.478
+
+# Specify central trajectory
+#----------------------------
+/mydet/centralZ 79
+/mydet/centralA 193.063
+/mydet/centralQ 22
+/mydet/centralE 66.00
+/mydet/updategeo           # necessary for changes to take effect
+#----------------------------
+
+#/mydet/centralA 188.444
+
+# Amount of output info
+#-----------------------
+/run/verbose      0
+/event/verbose    0
+/tracking/verbose 0
+#-----------------------
+
+
+
+# Run simulation
+#-----------------------
+/mydet/nEvents 2000   
+/mydet/doPrepare
+/mydet/doBeam
+/mydet/doReaction
+#-----------------------
+
+# 205.157
+# 203.052
+# 200.980
+# 198.949
+# 196.960
+# 195.010
+# 193.098
+# 191.223
+# 189.385
+# 188.478
+
+#/mydet/centralA 205.129
+#/mydet/updategeo  
+#/mydet/doReaction
+
+#/mydet/centralA 203.014
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 200.943
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 198.913
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 194.974
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 193.063
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 191.188
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 189.350
+#/mydet/updategeo
+#/mydet/doReaction
+
+#/mydet/centralA 188.444
+#/mydet/updategeo
+#/mydet/doReaction
+
+

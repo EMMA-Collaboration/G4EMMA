@@ -1,0 +1,111 @@
+{
+
+  TChain ch1("fphits");
+  ch1.Add("../rootfiles/22Narecoils.root");
+  ch1.Add("../rootfiles/22Mgrecoils.root");
+  //ch1.Add("../rootfiles/22Nerecoils.root");
+  ch1.Merge("../rootfiles/recoils.root");
+
+  TFile *file0 = TFile::Open("../rootfiles/recoils.root");
+  TFile *file1 = TFile::Open("../rootfiles/22Narecoils.root");
+  TFile *file2 = TFile::Open("../rootfiles/22Mgrecoils.root");
+  //TFile *file3 = TFile::Open("../rootfiles/22Nerecoils.root");
+
+  TTree *fphits0 = (TTree*) file0->Get("fphits");
+  TTree *fphits1 = (TTree*) file1->Get("fphits");
+  TTree *fphits2 = (TTree*) file2->Get("fphits");
+  //TTree *fphits3 = (TTree*) file3->Get("fphits");
+
+  fphits0->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits0->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+  fphits1->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits1->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+  fphits2->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  fphits2->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+  //fphits3->SetAlias("ictot", "fp_Edep + fp_Edep2");
+  //fphits3->SetAlias("fptot", "fp_Edep + fp_Edep2 + fp_EdepSilicon");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//				Plot IC front half vs back half					//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+  TCanvas *c1 = new TCanvas("c1");
+
+  TH2F *icplot1a = new TH2F("icplot1a","IC Energy Front vs Back",200,0,80,200,0,80);
+  icplot1a->GetXaxis()->SetTitle("Back (MeV)");
+  icplot1a->GetYaxis()->SetTitle("Front (MeV)");
+  icplot1a->SetMarkerColor(1);
+  icplot1a->SetMarkerStyle(20);
+  icplot1a->SetMarkerSize(0.5);
+  fphits1->Draw("fp_Edep:fp_Edep2>>icplot1a");
+  
+  TH2F *icplot1b = new TH2F("icplot1b","IC Energy Front vs Back",200,0,80,200,0,80);
+  icplot1b->SetMarkerColor(2);
+  icplot1b->SetMarkerStyle(21);
+  icplot1b->SetMarkerSize(0.5); 
+  fphits2->Draw("fp_Edep:fp_Edep2>>icplot1b","","same");
+/*
+  TH2F *icplot1c = new TH2F("icplot1c","IC Energy Front vs Back",200,0,80,300,0,60);
+  icplot1c->SetMarkerColor(4);
+  icplot1c->SetMarkerStyle(22);
+  icplot1c->SetMarkerSize(0.5);
+  fphits3->Draw("fp_Edep:fp_Edep2>>icplot1c","","same");
+*/
+  TLegend *leg = new TLegend(0.6,0.7,0.9,0.9);
+  leg->SetHeader("Legend"); // option "C" allows to center the header
+  leg->AddEntry(icplot1a,"^{21}Na(d,p)^{22}Na Recoils");
+  leg->AddEntry(icplot1b,"^{21}Na(d,n)^{22}Mg Recoils");
+  //leg->AddEntry(icplot1c,"^{21}Ne(d,p)^{22}Ne Recoils");
+  leg->Draw();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//				Plot IC front half IC Total					//
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  TCanvas *c2 = new TCanvas("c2");
+
+  TH2F *icplot2a = new TH2F("icplot2a","Ion Chamber Particle ID",320,0,140,300,0,100);
+  fphits1->Draw("fp_Edep:ictot>>icplot2a");
+  icplot2a->GetXaxis()->SetTitle("Total Energy (MeV)");
+  icplot2a->GetYaxis()->SetTitle("Front Energy (MeV)");
+  icplot2a->SetMarkerSize(0.5);
+  icplot2a->SetMarkerColor(1);
+  icplot2a->SetMarkerStyle(20);
+
+  TH2F *icplot2b = new TH2F("icplot2b","IC Energy Front vs Back",320,0,140,300,0,100);
+  fphits2->Draw("fp_Edep:ictot>>icplot2b","","same");
+  icplot2b->SetMarkerColor(2);
+  icplot2b->SetMarkerStyle(21); 
+  icplot2b->SetMarkerSize(0.5);
+/*
+  TH2F *icplot2c = new TH2F("icplot2c","IC Energy Front vs Back",320,0,140,300,0,100);
+  fphits3->Draw("fp_Edep:ictot>>icplot2c","","same");
+  icplot2c->SetMarkerColor(4);
+  icplot2c->SetMarkerStyle(22);
+  icplot2c->SetMarkerSize(0.5);
+*/
+  leg->Draw();
+
+
+  TCanvas *c3 = new TCanvas("c3");
+
+  TH2F *icplot1d = new TH2F("icplot1d","IC Energy Front vs Back",200,0,80,200,0,80);
+  icplot1d->GetXaxis()->SetTitle("Back (MeV)");
+  icplot1d->GetYaxis()->SetTitle("Front (MeV)");
+  fphits0->Draw("fp_Edep:fp_Edep2>>icplot1d","","colz");
+   
+
+  TCanvas *c4 = new TCanvas("c4");
+
+  TH2F *icplot2d = new TH2F("icplot2d","Ion Chamber Particle ID",280,0,140,200,0,100);
+  fphits0->Draw("fp_Edep:ictot>>icplot2d","","colz");
+  icplot2d->GetXaxis()->SetTitle("Total Energy (MeV)");
+  icplot2d->GetYaxis()->SetTitle("Front Energy (MeV)");
+
+
+  TCanvas *c5 = new TCanvas("c5");
+  hitpos->Draw("colz");
+
+  
+}
