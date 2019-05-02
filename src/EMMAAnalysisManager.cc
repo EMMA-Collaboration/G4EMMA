@@ -65,16 +65,17 @@ EMMAAnalysisManager* EMMAAnalysisManager::instance = 0;
 EMMAAnalysisManager::EMMAAnalysisManager()
 :Hlist(0)
 {
-  
+
   //create root file
   G4String filename = UserDir + "/Results/GEMMAoutput.root";
-  rootfile = new TFile(filename,"recreate");  
-  
+  rootfile = new TFile(filename,"recreate");
+
   //create root tree
   if(rootfile){
-    roottree = new TTree("fphits","Focal plane hits");
+    fproottree = new TTree("fphits","Focal plane hits");
+    targetroottree = new TTree("targetplane","Target Plane Data");
   }
-  
+
 }
 
 EMMAAnalysisManager::~EMMAAnalysisManager()
@@ -91,9 +92,14 @@ TObjArray* EMMAAnalysisManager::getRootarray()
   return Hlist;
 }
 
-TTree* EMMAAnalysisManager::getRoottree()
+TTree* EMMAAnalysisManager::getfpRoottree()
 {
-  return roottree;
+  return fproottree;
+}
+
+TTree* EMMAAnalysisManager::gettargetRoottree()
+{
+  return targetroottree;
 }
 
 EMMAAnalysisManager* EMMAAnalysisManager::getInstance()
@@ -112,4 +118,3 @@ void EMMAAnalysisManager::dispose()
 }
 
 #endif // G4ANALYSIS_USE
-

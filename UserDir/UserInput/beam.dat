@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 10       # number of events
 18      # beam Z
 40     # beam A
@@ -6,3 +7,15 @@
 0.001     # fractional energy spread (Sigma %)
 1.0     # beam-spot diameter (mm)
 0.2     # normalized transverse emittance (pi mm mrad)
+=======
+5000     # number of events
+18     # beam Z
+40    # beam A
+13     # beam charge state Q
+20    # beam kinetic energy (MeV)
+0     # fractional energy spread (Sigma %)
+10.0    # beam-spot diameter (mm)
+0.    # normalized transverse emittance (pi mm mrad)
+GAUS   # source of energy data (either SPEC from user-defined spectrum or GAUS for gaussian)
+RUNI   # type of angular distribution (either UNIF for uniform or RUNI for only radially-uniform)
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b

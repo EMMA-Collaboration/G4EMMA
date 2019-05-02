@@ -36,6 +36,10 @@
 #include "EMMADriftChamberHit.hh"
 #include "EMMAIonChamber.hh"
 #include "EMMASiliconDetector.hh"
+<<<<<<< HEAD
+=======
+#include "EMMAPrimaryGeneratorAction.hh"
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
 
 #ifdef G4ANALYSIS_USE
 
@@ -49,6 +53,8 @@
 
 #endif // G4ANALYSIS_USE
 
+
+
 class EMMAEventActionMessenger;
 
 class EMMAEventAction : public G4UserEventAction
@@ -56,6 +62,7 @@ class EMMAEventAction : public G4UserEventAction
   public:
     EMMAEventAction();
     virtual ~EMMAEventAction();
+
 
   public:
     virtual void BeginOfEventAction(const G4Event*);
@@ -68,7 +75,17 @@ class EMMAEventAction : public G4UserEventAction
     G4double Edep, Edep2;
     G4double EdepSilicon;
     G4double Ekin;
+<<<<<<< HEAD
     G4double fp_pos[2],fp_theta,fp_Ekin,fp_Edep,fp_Edep2,fp_2DEdep[2],fp_posX,fp_Edep_Silicon;
+=======
+    G4double fp_posX, fp_posY, fp_theta,fp_Ekin,fp_Edep,fp_Edep2,fp_2DEdep[2],fp_Edep_Silicon;
+    G4double target_posX, target_posY, target_Ekin_tree, target_angX, target_angY;
+    G4double target_x;
+    G4double target_y;
+    G4double target_xang;
+    G4double target_yang;
+    G4double target_Ekint;
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
 
     EMMAEventActionMessenger* messenger;
     G4int verboseLevel;
@@ -79,17 +96,29 @@ class EMMAEventAction : public G4UserEventAction
    // EMMASiliconDetectorHitsCollection* GetHitsCollection(const G4String& hcName,
 //						const G4Event* event) const;
 
+<<<<<<< HEAD
     void PrintEventStatistics(G4double IonChamberEdep, G4double IonChamberTrackLength, G4double SiliconDetectorEdep, G4double SiliconDetectorTrackLength) const; 
+=======
+    void PrintEventStatistics(G4double IonChamberEdep, G4double IonChamberTrackLength, G4double SiliconDetectorEdep, G4double SiliconDetectorTrackLength) const;
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
 
 #ifdef G4ANALYSIS_USE
 	TFile* rootfile;
 	TTree* fp_tree;
+  TTree* target_tree;
+  TH1F* target_Ekin;
+  TH2F* target_pos;
+  TH2F* target_dir;
 	TH2F* fp_hitpos;
 	TH1F* fp_hitposX;
 	TH1F* fp_hitangle;
-        TH1F* fp_hitEkin;
+  TH1F* fp_hitEkin;
 	TH1F* fp_hitEdep;
+<<<<<<< HEAD
         TH1F* fp_hitEdep2;
+=======
+  TH1F* fp_hitEdep2;
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
 	TH1F* fp_hitEdep_Silicon;
 	TH2F* fp_hit2DEdep;
 #endif // G4ANALYSIS_USE

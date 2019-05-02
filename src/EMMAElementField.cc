@@ -53,7 +53,7 @@ EMMAElementField::EMMAElementField(G4ThreeVector c, G4LogicalVolume* lv)
 
   fColor = "1,1,1";
 
-	G4cout<<"Debug statement 1"<<G4endl;
+	//G4cout<<"Debug statement 1"<<G4endl;
 
   fUserLimits = new G4UserLimits();
 

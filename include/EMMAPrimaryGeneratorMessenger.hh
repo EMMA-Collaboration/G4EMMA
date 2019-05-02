@@ -34,6 +34,7 @@ class G4UIcmdWithADoubleAndUnit;
 class G4UIcmdWithADouble;
 class G4UIcmdWithABool;
 class G4UIcmdWithAnInteger;
+class G4UIcmdWithAString;
 
 #include "G4UImessenger.hh"
 #include "globals.hh"
@@ -43,15 +44,15 @@ class EMMAPrimaryGeneratorMessenger: public G4UImessenger
 public:
   EMMAPrimaryGeneratorMessenger(EMMAPrimaryGeneratorAction* mpga);
   ~EMMAPrimaryGeneratorMessenger();
-  
+
 public:
   void SetNewValue(G4UIcommand * command,G4String newValues);
   G4String GetCurrentValue(G4UIcommand * command);
-  
+
 private:
   EMMAPrimaryGeneratorAction * target;
   G4UIdirectory * reactionDirectory;
-  
+
 private: //commands
   G4UIcmdWithADouble  *beamZCmd, *beamACmd, *beamChargeCmd;
   G4UIcmdWithADoubleAndUnit*  energyCmd;
@@ -65,9 +66,8 @@ private: //commands
   G4UIcmdWithADoubleAndUnit *fqminCmd,*fqmaxCmd;
   G4UIcmdWithADouble *fCharge3Cmd;
   G4UIcmdWithADoubleAndUnit *fExcitationEnergy3Cmd;
+  G4UIcmdWithAString* energyDataCmd, *angularDataCmd;
 
 };
 
 #endif
-
-

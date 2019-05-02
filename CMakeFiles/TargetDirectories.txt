@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 /home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles/EMMA.dir
 /home/mwilliams/Documents/EMMA/G4EMMA/CMakeFiles/EMMAapp.dir
+=======
+/home/awen/G4EMMA/CMakeFiles/rebuild_cache.dir
+/home/awen/G4EMMA/CMakeFiles/install.dir
+/home/awen/G4EMMA/CMakeFiles/list_install_components.dir
+/home/awen/G4EMMA/CMakeFiles/EMMA.dir
+/home/awen/G4EMMA/CMakeFiles/edit_cache.dir
+/home/awen/G4EMMA/CMakeFiles/EMMAapp.dir
+/home/awen/G4EMMA/CMakeFiles/install/local.dir
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b

@@ -32,6 +32,7 @@
 #include "G4UIcmdWithABool.hh"
 #include "G4UIcmdWithADouble.hh"
 #include "G4UIcmdWithAnInteger.hh"
+#include "G4UIcmdWithAString.hh"
 #include "G4ios.hh"
 
 EMMAPrimaryGeneratorMessenger::EMMAPrimaryGeneratorMessenger(EMMAPrimaryGeneratorAction * mpga)
@@ -76,7 +77,7 @@ EMMAPrimaryGeneratorMessenger::EMMAPrimaryGeneratorMessenger(EMMAPrimaryGenerato
   AngCmd->SetRange("t<360.");
   AngCmd->SetDefaultValue(0.0);
   AngCmd->SetDefaultUnit("deg");
-	
+
   beamSpotDiameterCmd = new G4UIcmdWithADoubleAndUnit("/mydet/beamSpotDiameter",this);
   beamSpotDiameterCmd->SetGuidance("Beam spot diamater in mm.");
   beamSpotDiameterCmd->SetParameterName("t",true);
@@ -91,6 +92,15 @@ EMMAPrimaryGeneratorMessenger::EMMAPrimaryGeneratorMessenger(EMMAPrimaryGenerato
   transEmittanceCmd->SetDefaultValue(0.0);
   transEmittanceCmd->SetDefaultUnit("mm");
 
+  energyDataCmd = new G4UIcmdWithAString("/mydet/energyData",this);
+  energyDataCmd->SetGuidance("How the energies (spectra) of the beam is determined");
+  energyDataCmd->SetParameterName("t",true);
+  energyDataCmd->SetDefaultValue("SPEC");
+
+  angularDataCmd = new G4UIcmdWithAString("/mydet/angularData",this);
+  angularDataCmd->SetGuidance("How the angular distribution (spectra) of the beam is determined");
+  angularDataCmd->SetParameterName("ang",true);
+  angularDataCmd->SetDefaultValue("UNIF");
 
 
 
@@ -205,6 +215,8 @@ EMMAPrimaryGeneratorMessenger::~EMMAPrimaryGeneratorMessenger()
   delete AngCmd;
   delete beamSpotDiameterCmd;
   delete transEmittanceCmd;
+  delete energyDataCmd;
+  delete angularDataCmd;
   delete doPrepareCmd;
   delete doBeamCmd;
   delete doReactionCmd;
@@ -241,59 +253,63 @@ void EMMAPrimaryGeneratorMessenger::SetNewValue(G4UIcommand * command,G4String n
     { target->SetAngle(AngCmd->GetNewDoubleValue(newValue)); }	//NOT USED
   if( command==transEmittanceCmd )
     { target->SetTransEmittance(transEmittanceCmd->GetNewDoubleValue(newValue)); }
+  if( command==energyDataCmd )
+    { target->SetEnergyData(newValue); }
+  if( command==angularDataCmd )
+    { target->SetAngularData(newValue); }
   if( command==beamSpotDiameterCmd )
     { target->SetBeamSpotDiameter(beamSpotDiameterCmd->GetNewDoubleValue(newValue)); }
 
-  if( command==doPrepareCmd ) 
+  if( command==doPrepareCmd )
     { target->initializeBeamPreparation(); }
-  if( command==doBeamCmd ) 
+  if( command==doBeamCmd )
     { target->initializeBeamSimulation(); }
-  if( command==doReactionCmd ) 
+  if( command==doReactionCmd )
     { target->initializeReactionSimulation(); }
 
   if( command==nEventsCmd )
     { target->SetNEvents(nEventsCmd->GetNewIntValue(newValue)); }
 
-  if( command==fZ1Cmd ) { 
-    target->SetZ1(fZ1Cmd->GetNewDoubleValue(newValue)); 
+  if( command==fZ1Cmd ) {
+    target->SetZ1(fZ1Cmd->GetNewDoubleValue(newValue));
   }
-  if( command==fA1Cmd ) { 
-    target->SetA1(fA1Cmd->GetNewDoubleValue(newValue)); 
-  }
-
-  if( command==fZ2Cmd ) { 
-    target->SetZ2(fZ2Cmd->GetNewDoubleValue(newValue)); 
-  }
-  if( command==fA2Cmd ) { 
-    target->SetA2(fA2Cmd->GetNewDoubleValue(newValue)); 
+  if( command==fA1Cmd ) {
+    target->SetA1(fA1Cmd->GetNewDoubleValue(newValue));
   }
 
-  if( command==fZ3Cmd ) { 
-    target->SetZ3(fZ3Cmd->GetNewDoubleValue(newValue)); 
+  if( command==fZ2Cmd ) {
+    target->SetZ2(fZ2Cmd->GetNewDoubleValue(newValue));
   }
-  if( command==fA3Cmd ) { 
-    target->SetA3(fA3Cmd->GetNewDoubleValue(newValue)); 
-  }
-
-  if( command==fZ4Cmd ) { 
-    target->SetZ4(fZ4Cmd->GetNewDoubleValue(newValue)); 
-  }
-  if( command==fA4Cmd ) { 
-    target->SetA4(fA4Cmd->GetNewDoubleValue(newValue)); 
+  if( command==fA2Cmd ) {
+    target->SetA2(fA2Cmd->GetNewDoubleValue(newValue));
   }
 
-  if( command==fqminCmd ) { 
+  if( command==fZ3Cmd ) {
+    target->SetZ3(fZ3Cmd->GetNewDoubleValue(newValue));
+  }
+  if( command==fA3Cmd ) {
+    target->SetA3(fA3Cmd->GetNewDoubleValue(newValue));
+  }
+
+  if( command==fZ4Cmd ) {
+    target->SetZ4(fZ4Cmd->GetNewDoubleValue(newValue));
+  }
+  if( command==fA4Cmd ) {
+    target->SetA4(fA4Cmd->GetNewDoubleValue(newValue));
+  }
+
+  if( command==fqminCmd ) {
     target->Setqmin(fqminCmd->GetNewDoubleValue(newValue));
   }
-  if( command==fqmaxCmd ) { 
-    target->Setqmax(fqmaxCmd->GetNewDoubleValue(newValue)); 
+  if( command==fqmaxCmd ) {
+    target->Setqmax(fqmaxCmd->GetNewDoubleValue(newValue));
   }
 
-  if( command==fCharge3Cmd ) { 
-    target->SetCharge3(fCharge3Cmd->GetNewDoubleValue(newValue)); 
+  if( command==fCharge3Cmd ) {
+    target->SetCharge3(fCharge3Cmd->GetNewDoubleValue(newValue));
   }
-  if( command==fExcitationEnergy3Cmd ) { 
-    target->SetExcitationEnergy3(fExcitationEnergy3Cmd->GetNewDoubleValue(newValue)); 
+  if( command==fExcitationEnergy3Cmd ) {
+    target->SetExcitationEnergy3(fExcitationEnergy3Cmd->GetNewDoubleValue(newValue));
   }
 
 }
@@ -315,10 +331,14 @@ G4String EMMAPrimaryGeneratorMessenger::GetCurrentValue(G4UIcommand * command)
     { cv = AngCmd->ConvertToString(target->GetAngle(),"deg"); }
   if( command==transEmittanceCmd )
     { cv = transEmittanceCmd->ConvertToString(target->GetTransEmittance(),"mm"); }
+  if( command==energyDataCmd )
+    { cv = target->GetEnergyData(); }
+  if( command==angularDataCmd )
+    { cv = target->GetAngularData(); }
   if( command==beamSpotDiameterCmd )
     { cv = beamSpotDiameterCmd->ConvertToString(target->GetBeamSpotDiameter(),"mm"); }
- 
- if( command==nEventsCmd )
+
+  if( command==nEventsCmd )
     { cv = nEventsCmd->ConvertToString(target->GetNEvents(),""); }
 
   if( command==fZ1Cmd )
@@ -353,4 +373,3 @@ G4String EMMAPrimaryGeneratorMessenger::GetCurrentValue(G4UIcommand * command)
 
   return cv;
 }
-

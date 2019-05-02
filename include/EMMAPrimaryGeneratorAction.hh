@@ -40,20 +40,24 @@
 #include "G4PhysicsVector.hh"
 #include "G4LPhysicsFreeVector.hh"
 #include "G4ThreeVector.hh"
+#include <G4Types.hh>
+#include <string>
+#include <vector>
 
 
-// global variables 
+// global variables
 extern G4double targetThickness; // EMMADetectorConstMessenger.cc
 extern G4double targetZoffset; // EMMADetectorConstMessenger.cc
 extern G4String MotherDir; // EMMAapp.cc
 extern G4String UserDir; // EMMAapp.cc
 
 
+
 class G4ParticleGun;
+class G4GeneralParticleSource;
 class G4Event;
 class G4ParticleDefinition;
 class EMMAPrimaryGeneratorMessenger;
-
 
 class EMMAPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -62,13 +66,20 @@ public:
   EMMAPrimaryGeneratorAction();
   virtual ~EMMAPrimaryGeneratorAction();
   virtual void GeneratePrimaries(G4Event*);
-  	
+
+  static G4double targetEkin;
+  static G4double targetX, targetY;
+  static G4double targetXdir, targetYdir;
+
 private:
   G4ParticleGun* particleGun;
   G4ParticleGun* particleGun2;
+  G4GeneralParticleSource* GPSparticleGun;
   EMMAPrimaryGeneratorMessenger* gunMessenger;
   G4double beamZ, beamA, beamCharge;
   G4double energy;
+  G4String energyData;
+  G4String angularData;
   G4double sigmaEnergy;
   G4double Angle;
   G4double transEmittance;
@@ -91,13 +102,45 @@ private:
   G4bool useAlphaSource;
   G4double energyAlphaSource;
   G4double maxAngleAlphaSource;
+  G4String energyFile;
+
+  G4double Theta;
+  G4double Phi;
+
+  std::vector<G4double> energy_v;
+  std::vector<G4double> frequency_v;
+  std::vector<G4double> slope;
+  G4double fMax;
+  G4int nPoints;
+
+  G4double mean_energy, std_energy;
+
+
+
 
 public:
   void initializeReactionSimulation();
   void initializeBeamSimulation();
   void initializeBeamPreparation();
+  void GetPrimaryGeneratorActionParameters();
+
+
+<<<<<<< HEAD
+  void simulateTwoBodyReaction( G4double &Ebeam, G4ThreeVector &dir);
+=======
+  void energyDistributionInit(G4String fileName);
+  G4double energyDistribution();
+
 
   void simulateTwoBodyReaction( G4double &Ebeam, G4ThreeVector &dir);
+
+  /*
+  void SetTheta(G4double val) {Theta = val;}
+  G4double GetTheta() const {return Theta; }
+  void SetPhi(G4double val) {Phi = val;}
+  G4double GetPhi() const {return Phi; }
+  */
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
 
   inline void SetBeamZ(G4double val) { beamZ = val; }
   inline G4double GetBeamZ() const { return beamZ; }
@@ -108,12 +151,21 @@ public:
 
   inline void SetEnergy(G4double val) { energy = val; }
   inline G4double GetEnergy() const { return energy; }
+
   inline void SetSigmaEnergy(G4double val) { sigmaEnergy = val; }
   inline G4double GetSigmaEnergy() const { return sigmaEnergy; }
   inline void SetAngle(G4double val) { Angle = val; }
   inline G4double GetAngle() const { return Angle; }
   inline void SetTransEmittance(G4double val) { transEmittance = val; }
   inline G4double GetTransEmittance() const { return transEmittance; }
+
+  inline void SetEnergyData(G4String val) { energyData = val; }
+  inline G4String GetEnergyData() const { return energyData; }
+
+  inline void SetAngularData(G4String val) { angularData = val; }
+  inline G4String GetAngularData() const { return angularData; }
+
+
   inline void SetBeamSpotDiameter(G4double val) { beamSpotDiameter = val; }
   inline G4double GetBeamSpotDiameter() const { return beamSpotDiameter; }
 
@@ -152,8 +204,9 @@ public:
   inline void SetExcitationEnergy3(G4double val) { fExcitationEnergy3 = val; }
   inline G4double GetExcitationEnergy3() const { return fExcitationEnergy3; }
 
+
 };
 
+
+
 #endif
-
-

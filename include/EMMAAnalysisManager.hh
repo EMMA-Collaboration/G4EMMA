@@ -81,7 +81,8 @@ public:
   IPlotter* getPlotter();*/
 
   TFile* getRootfile();
-  TTree * getRoottree();
+  TTree * getfpRoottree();
+  TTree * gettargetRoottree();
   TObjArray* getRootarray();
 
 private:
@@ -90,10 +91,10 @@ private:
   static EMMAAnalysisManager* instance;
 
   TFile* rootfile;
-  TTree* roottree;
+  TTree* fproottree;
+  TTree* targetroottree;
   TObjArray* Hlist;
 
 };
 
 #endif
-

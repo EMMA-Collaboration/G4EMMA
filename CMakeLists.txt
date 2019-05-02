@@ -42,7 +42,13 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 #----------------------------------------------------------------------------
 # Add the executable, and link it to the Geant4 libraries
 #
+<<<<<<< HEAD
 set(F2C_LIBRARIES /home/mwilliams/Documents/EMMA/G4EMMA/f2c/lib/libf2c.a)
+=======
+set(F2C_LIBRARIES /home/awen/G4EMMA/f2c/lib/libf2c.a)
+# make sure you put the right path to your libf2c here
+
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
 add_executable(EMMAapp EMMAapp.cc ${sources} ${headers})
 target_link_libraries(EMMAapp ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} 
 ${F2C_LIBRARIES} )

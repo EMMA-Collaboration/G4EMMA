@@ -1,8 +1,12 @@
 # SLITS 1 (HORIZONTAL)
-OUT                 #OUT/(mm)  
+OUT                 #OUT/(mm)
 # SLITS 2 (HORIZONTAL)
-OUT                 #OUT/(mm)  
+OUT                 #OUT/(mm)
 # SLITS 3 (RIGHT)
-OUT                 #OUT/(mm)  
+OUT                 #OUT/(mm)
 # SLITS 4 (LEFT)
+<<<<<<< HEAD
 30                 #OUT/(mm)  
+=======
+OUT                #OUT/(mm)  
+>>>>>>> 328d247d31d8d865b2def4e9637587fef9e7941b
