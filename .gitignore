@@ -12,3 +12,9 @@ G4EMMA-build/*
 /Makefile~~328d247d31d8d865b2def4e9637587fef9e7941b
 /Makefile~~328d247d31d8d865b2def4e9637587fef9e7941b_0
 /Makefile~~HEAD
+/Makefile~~HEAD_0
+/.
+/.EMMAapp.swp
+*.swp
+/UserDir/UserInput/energySpectrum.dat
+/save_data.sh.save
